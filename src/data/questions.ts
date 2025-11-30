@@ -1,7 +1,21 @@
 export interface Question {
   id: number;
   question: string;
+  questions?: {
+    it: string;
+    en: string;
+    es: string;
+    pt: string;
+    fr: string;
+  };
   options: string[];
+  optionsTranslated?: {
+    it: string[];
+    en: string[];
+    es: string[];
+    pt: string[];
+    fr: string[];
+  };
   correctAnswer: number;
   category: string;
   difficulty: "easy" | "medium" | "hard";
@@ -214,6 +228,20 @@ export const questions: Question[] = [
 
 export const getQuestionsByCategory = (category: string): Question[] => {
   return questions.filter((q) => q.category === category);
+};
+
+export const getTranslatedQuestion = (question: Question, lang: string): string => {
+  if (question.questions && question.questions[lang as keyof typeof question.questions]) {
+    return question.questions[lang as keyof typeof question.questions];
+  }
+  return question.question;
+};
+
+export const getTranslatedOptions = (question: Question, lang: string): string[] => {
+  if (question.optionsTranslated && question.optionsTranslated[lang as keyof typeof question.optionsTranslated]) {
+    return question.optionsTranslated[lang as keyof typeof question.optionsTranslated];
+  }
+  return question.options;
 };
 
 export const categories = [

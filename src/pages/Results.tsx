@@ -2,8 +2,11 @@ import { useSearchParams, useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Trophy, Home, RotateCcw, Star } from "lucide-react";
 import { useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
+import LanguageSwitcher from "@/components/LanguageSwitcher";
 
 const Results = () => {
+  const { t } = useTranslation();
   const [searchParams] = useSearchParams();
   const navigate = useNavigate();
   const score = parseInt(searchParams.get("score") || "0");
@@ -19,10 +22,10 @@ const Results = () => {
   }, []);
 
   const getMessage = () => {
-    if (percentage >= 90) return "Eccellente! Conosci perfettamente la Bibbia!";
-    if (percentage >= 70) return "Ottimo lavoro! Hai una buona conoscenza biblica!";
-    if (percentage >= 50) return "Buon risultato! Continua a studiare la Parola!";
-    return "Non arrenderti! La Bibbia ha ancora molto da insegnarti!";
+    if (percentage >= 90) return t('results.messages.excellent');
+    if (percentage >= 70) return t('results.messages.great');
+    if (percentage >= 50) return t('results.messages.good');
+    return t('results.messages.keepGoing');
   };
 
   const getEmoji = () => {
@@ -34,6 +37,10 @@ const Results = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-background via-background to-secondary/20 flex items-center justify-center p-4">
+      <div className="absolute top-4 right-4">
+        <LanguageSwitcher />
+      </div>
+      
       <div className={`w-full max-w-2xl animate-scale-in ${showConfetti ? "animate-fade-in" : ""}`}>
         <div className="bg-gradient-to-br from-card to-card/80 rounded-3xl p-8 md:p-12 shadow-2xl border">
           <div className="text-center mb-8">
@@ -42,7 +49,7 @@ const Results = () => {
             </div>
             
             <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-2">
-              Quiz Completato! {getEmoji()}
+              {t('results.completed')} {getEmoji()}
             </h1>
             
             <p className="text-xl text-muted-foreground mb-6">
@@ -56,7 +63,7 @@ const Results = () => {
                 {score}/{total}
               </div>
               <div className="text-2xl font-semibold text-muted-foreground">
-                {percentage}% Corretto
+                {percentage}% {t('results.correct')}
               </div>
             </div>
 
@@ -92,7 +99,7 @@ const Results = () => {
               onClick={() => navigate(`/quiz?category=${category}`)}
             >
               <RotateCcw className="w-5 h-5" />
-              Riprova
+              {t('results.retry')}
             </Button>
             
             <Button
@@ -102,7 +109,7 @@ const Results = () => {
               onClick={() => navigate("/")}
             >
               <Home className="w-5 h-5" />
-              Menu Principale
+              {t('results.mainMenu')}
             </Button>
           </div>
         </div>

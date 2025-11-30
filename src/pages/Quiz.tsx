@@ -5,8 +5,11 @@ import QuestionCard from "@/components/QuestionCard";
 import Timer from "@/components/Timer";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, Trophy } from "lucide-react";
+import { useTranslation } from "react-i18next";
+import LanguageSwitcher from "@/components/LanguageSwitcher";
 
 const Quiz = () => {
+  const { t } = useTranslation();
   const [searchParams] = useSearchParams();
   const navigate = useNavigate();
   const category = searchParams.get("category") || "Antico Testamento";
@@ -23,16 +26,17 @@ const Quiz = () => {
   }, [questions, navigate]);
 
   const handleAnswer = (isCorrect: boolean) => {
-    if (isCorrect) {
-      setScore((prev) => prev + 1);
-    }
+    // Nuovo sistema: +5 per corretta, -1 per sbagliata
+    const points = isCorrect ? 5 : -1;
+    setScore((prev) => Math.max(0, prev + points));
 
     if (currentQuestionIndex + 1 < questions.length) {
       setCurrentQuestionIndex((prev) => prev + 1);
       setIsTimerActive(true);
     } else {
       // Quiz completato
-      navigate(`/results?score=${score + (isCorrect ? 1 : 0)}&total=${questions.length}&category=${category}`);
+      const finalScore = Math.max(0, score + points);
+      navigate(`/results?score=${finalScore}&total=${questions.length * 5}&category=${category}`);
     }
   };
 
@@ -57,13 +61,16 @@ const Quiz = () => {
             className="gap-2"
           >
             <ArrowLeft className="w-4 h-4" />
-            Torna al Menu
+            {t('quiz.backToMenu')}
           </Button>
 
-          <div className="flex items-center gap-2 bg-card px-4 py-2 rounded-lg border shadow-sm">
-            <Trophy className="w-5 h-5 text-primary" />
-            <span className="font-bold text-lg">{score}</span>
-            <span className="text-muted-foreground text-sm">/ {questions.length}</span>
+          <div className="flex items-center gap-3">
+            <div className="flex items-center gap-2 bg-card px-4 py-2 rounded-lg border shadow-sm">
+              <Trophy className="w-5 h-5 text-primary" />
+              <span className="font-bold text-lg">{score}</span>
+              <span className="text-muted-foreground text-sm">/ {questions.length * 5}</span>
+            </div>
+            <LanguageSwitcher />
           </div>
         </div>
 

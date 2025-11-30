@@ -1,0 +1,54 @@
+{
+  "app": {
+    "title": "Bible Quiz",
+    "subtitle": "Test your knowledge of the Bible"
+  },
+  "home": {
+    "welcome": "Welcome",
+    "selectCategory": "Select a Category",
+    "features": {
+      "questions": "questions per category",
+      "timer": "timer per question",
+      "adaptive": "adaptive difficulty",
+      "multilang": "multilingual support"
+    },
+    "startQuiz": "Start Quiz"
+  },
+  "quiz": {
+    "backToMenu": "Back to Menu",
+    "question": "Question",
+    "of": "of",
+    "score": "Score"
+  },
+  "results": {
+    "completed": "Quiz Completed!",
+    "yourScore": "Your Score",
+    "correct": "Correct",
+    "messages": {
+      "excellent": "Excellent! You know the Bible perfectly!",
+      "great": "Great work! You have good biblical knowledge!",
+      "good": "Good result! Keep studying the Word!",
+      "keepGoing": "Don't give up! The Bible has much more to teach you!"
+    },
+    "retry": "Retry",
+    "mainMenu": "Main Menu"
+  },
+  "categories": {
+    "oldTestament": {
+      "name": "Old Testament",
+      "description": "From creation to the prophets"
+    },
+    "newTestament": {
+      "name": "New Testament",
+      "description": "The life of Jesus and the apostles"
+    },
+    "biblicalCharacters": {
+      "name": "Biblical Characters",
+      "description": "The great protagonists of the Bible"
+    }
+  },
+  "scoring": {
+    "correct": "+5 points",
+    "incorrect": "-1 point"
+  }
+}
