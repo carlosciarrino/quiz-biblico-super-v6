@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { BookOpen, Scroll, Users, ArrowRight } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 interface CategoryCardProps {
   name: string;
@@ -10,6 +11,8 @@ interface CategoryCardProps {
 }
 
 const CategoryCard = ({ name, description, icon, color, onClick }: CategoryCardProps) => {
+  const { t } = useTranslation();
+  
   const getIcon = () => {
     switch (icon) {
       case "scroll":
@@ -36,23 +39,32 @@ const CategoryCard = ({ name, description, icon, color, onClick }: CategoryCardP
         </div>
         
         <h3 className="text-xl font-bold text-foreground mb-2 group-hover:text-primary transition-colors">
-          {name}
+          {t(`categories.${getCategoryKey(name)}.name`)}
         </h3>
         
         <p className="text-muted-foreground mb-4 text-sm leading-relaxed">
-          {description}
+          {t(`categories.${getCategoryKey(name)}.description`)}
         </p>
         
         <Button 
           variant="ghost" 
           className="w-full justify-between group-hover:bg-primary group-hover:text-primary-foreground transition-all"
         >
-          <span>Inizia Quiz</span>
+          <span>{t('home.startQuiz')}</span>
           <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
         </Button>
       </div>
     </div>
   );
+};
+
+const getCategoryKey = (categoryName: string) => {
+  const map: Record<string, string> = {
+    "Antico Testamento": "oldTestament",
+    "Nuovo Testamento": "newTestament",
+    "Personaggi Biblici": "biblicalCharacters"
+  };
+  return map[categoryName] || "oldTestament";
 };
 
 export default CategoryCard;

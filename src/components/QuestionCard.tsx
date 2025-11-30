@@ -1,7 +1,8 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Check, X } from "lucide-react";
-import { Question } from "@/data/questions";
+import { Question, getTranslatedQuestion, getTranslatedOptions } from "@/data/questions";
+import { useTranslation } from "react-i18next";
 
 interface QuestionCardProps {
   question: Question;
@@ -11,8 +12,12 @@ interface QuestionCardProps {
 }
 
 const QuestionCard = ({ question, onAnswer, questionNumber, totalQuestions }: QuestionCardProps) => {
+  const { t, i18n } = useTranslation();
   const [selectedAnswer, setSelectedAnswer] = useState<number | null>(null);
   const [showResult, setShowResult] = useState(false);
+
+  const translatedQuestion = getTranslatedQuestion(question, i18n.language);
+  const translatedOptions = getTranslatedOptions(question, i18n.language);
 
   const handleAnswer = (index: number) => {
     if (showResult) return;
@@ -46,7 +51,7 @@ const QuestionCard = ({ question, onAnswer, questionNumber, totalQuestions }: Qu
     <div className="w-full max-w-2xl mx-auto animate-fade-in">
       <div className="mb-6 flex items-center justify-between">
         <span className="text-sm font-medium text-muted-foreground">
-          Domanda {questionNumber} di {totalQuestions}
+          {t('quiz.question')} {questionNumber} {t('quiz.of')} {totalQuestions}
         </span>
         <div className="flex gap-1">
           {Array.from({ length: totalQuestions }).map((_, i) => (
@@ -62,11 +67,11 @@ const QuestionCard = ({ question, onAnswer, questionNumber, totalQuestions }: Qu
 
       <div className="bg-gradient-to-br from-card to-card/80 rounded-2xl p-8 shadow-lg border">
         <h2 className="text-2xl font-bold text-foreground mb-8 leading-relaxed">
-          {question.question}
+          {translatedQuestion}
         </h2>
 
         <div className="space-y-3">
-          {question.options.map((option, index) => (
+          {translatedOptions.map((option, index) => (
             <Button
               key={index}
               variant={getButtonVariant(index)}

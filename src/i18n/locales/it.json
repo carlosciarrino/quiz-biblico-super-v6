@@ -1,0 +1,54 @@
+{
+  "app": {
+    "title": "Quiz Biblico",
+    "subtitle": "Metti alla prova la tua conoscenza della Bibbia"
+  },
+  "home": {
+    "welcome": "Benvenuto",
+    "selectCategory": "Seleziona una Categoria",
+    "features": {
+      "questions": "domande per categoria",
+      "timer": "timer per domanda",
+      "adaptive": "difficoltà adattiva",
+      "multilang": "supporto multilingua"
+    },
+    "startQuiz": "Inizia Quiz"
+  },
+  "quiz": {
+    "backToMenu": "Torna al Menu",
+    "question": "Domanda",
+    "of": "di",
+    "score": "Punteggio"
+  },
+  "results": {
+    "completed": "Quiz Completato!",
+    "yourScore": "Il Tuo Punteggio",
+    "correct": "Corretto",
+    "messages": {
+      "excellent": "Eccellente! Conosci perfettamente la Bibbia!",
+      "great": "Ottimo lavoro! Hai una buona conoscenza biblica!",
+      "good": "Buon risultato! Continua a studiare la Parola!",
+      "keepGoing": "Non arrenderti! La Bibbia ha ancora molto da insegnarti!"
+    },
+    "retry": "Riprova",
+    "mainMenu": "Menu Principale"
+  },
+  "categories": {
+    "oldTestament": {
+      "name": "Antico Testamento",
+      "description": "Dalla creazione fino ai profeti"
+    },
+    "newTestament": {
+      "name": "Nuovo Testamento",
+      "description": "La vita di Gesù e gli apostoli"
+    },
+    "biblicalCharacters": {
+      "name": "Personaggi Biblici",
+      "description": "I grandi protagonisti della Bibbia"
+    }
+  },
+  "scoring": {
+    "correct": "+5 punti",
+    "incorrect": "-1 punto"
+  }
+}

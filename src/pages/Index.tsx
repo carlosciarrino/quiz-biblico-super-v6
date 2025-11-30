@@ -2,8 +2,11 @@ import { useNavigate } from "react-router-dom";
 import CategoryCard from "@/components/CategoryCard";
 import { categories } from "@/data/questions";
 import { Book, Sparkles } from "lucide-react";
+import { useTranslation } from "react-i18next";
+import LanguageSwitcher from "@/components/LanguageSwitcher";
 
 const Index = () => {
+  const { t } = useTranslation();
   const navigate = useNavigate();
 
   const handleCategoryClick = (categoryName: string) => {
@@ -13,32 +16,36 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-background via-background to-secondary/20">
       <div className="container mx-auto px-4 py-12">
+        <div className="absolute top-4 right-4">
+          <LanguageSwitcher />
+        </div>
+        
         <header className="text-center mb-16 animate-fade-in">
           <div className="inline-flex items-center justify-center w-20 h-20 rounded-2xl bg-gradient-to-br from-primary to-accent text-white mb-6 shadow-lg">
             <Book className="w-10 h-10" />
           </div>
           
           <h1 className="text-5xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent animate-slide-up">
-            Quiz Biblico
+            {t('app.title')}
           </h1>
           
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-            Metti alla prova la tua conoscenza delle Sacre Scritture con domande avvincenti
+            {t('app.subtitle')}
           </p>
 
           <div className="flex items-center justify-center gap-2 mt-6 text-sm text-muted-foreground">
             <Sparkles className="w-4 h-4 text-primary" />
-            <span>30 secondi per domanda</span>
+            <span>30s {t('home.features.timer')}</span>
             <span>•</span>
-            <span>Sistema di punteggio</span>
+            <span>{t('scoring.correct')} / {t('scoring.incorrect')}</span>
             <span>•</span>
-            <span>3 categorie</span>
+            <span>{t('home.features.multilang')}</span>
           </div>
         </header>
 
         <main className="max-w-5xl mx-auto">
           <h2 className="text-2xl font-bold text-center mb-8 text-foreground">
-            Scegli una Categoria
+            {t('home.selectCategory')}
           </h2>
           
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
