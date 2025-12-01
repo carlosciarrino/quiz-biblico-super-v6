@@ -45,10 +45,44 @@
     "biblicalCharacters": {
       "name": "Personnages Bibliques",
       "description": "Les grands protagonistes de la Bible"
+    },
+    "pentateuch": {
+      "name": "Pentateuque",
+      "description": "Les cinq premiers livres de la Bible"
+    },
+    "minorProphets": {
+      "name": "Prophètes Mineurs",
+      "description": "Les douze prophètes mineurs"
+    },
+    "fourGospels": {
+      "name": "Quatre Évangiles",
+      "description": "La vie de Jésus dans les quatre Évangiles"
+    },
+    "paulineLetters": {
+      "name": "Lettres Pauliniennes",
+      "description": "Les épîtres de Saint Paul"
     }
   },
   "scoring": {
     "correct": "+5 points",
     "incorrect": "-1 point"
+  },
+  "bible": {
+    "title": "Lecteur de la Bible",
+    "subtitle": "Lisez la Bible et sauvegardez vos versets préférés",
+    "readOnline": "Lire la Bible en Ligne",
+    "readDescription": "Accédez à Bible.com pour lire la Bible complète dans différentes versions (CEI, ESV, NIV et plus)",
+    "openBible": "Ouvrir Bible.com",
+    "favorites": "Versets Préférés",
+    "referencePlaceholder": "Ex: Jean 3:16",
+    "notePlaceholder": "Ajouter une note (optionnel)",
+    "addFavorite": "Sauvegarder le Verset",
+    "noFavorites": "Aucun verset sauvegardé. Ajoutez vos favoris!",
+    "saved": "Sauvegardé",
+    "verseSaved": "Verset ajouté aux favoris",
+    "deleted": "Supprimé",
+    "verseDeleted": "Verset retiré des favoris",
+    "error": "Erreur",
+    "enterReference": "Entrez une référence biblique"
   }
 }

@@ -45,10 +45,44 @@
     "biblicalCharacters": {
       "name": "Biblical Characters",
       "description": "The great protagonists of the Bible"
+    },
+    "pentateuch": {
+      "name": "Pentateuch",
+      "description": "The first five books of the Bible"
+    },
+    "minorProphets": {
+      "name": "Minor Prophets",
+      "description": "The twelve minor prophets"
+    },
+    "fourGospels": {
+      "name": "Four Gospels",
+      "description": "The life of Jesus in the four Gospels"
+    },
+    "paulineLetters": {
+      "name": "Pauline Letters",
+      "description": "The epistles of St. Paul"
     }
   },
   "scoring": {
     "correct": "+5 points",
     "incorrect": "-1 point"
+  },
+  "bible": {
+    "title": "Bible Reader",
+    "subtitle": "Read the Bible and save your favorite verses",
+    "readOnline": "Read the Bible Online",
+    "readDescription": "Access Bible.com to read the complete Bible in different versions (CEI, ESV, NIV and more)",
+    "openBible": "Open Bible.com",
+    "favorites": "Favorite Verses",
+    "referencePlaceholder": "E.g: John 3:16",
+    "notePlaceholder": "Add a note (optional)",
+    "addFavorite": "Save Verse",
+    "noFavorites": "No saved verses. Add your favorites!",
+    "saved": "Saved",
+    "verseSaved": "Verse added to favorites",
+    "deleted": "Deleted",
+    "verseDeleted": "Verse removed from favorites",
+    "error": "Error",
+    "enterReference": "Enter a biblical reference"
   }
 }

@@ -4,6 +4,7 @@ import { categories } from "@/data/questions";
 import { Book, Sparkles } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
+import { Button } from "@/components/ui/button";
 
 const Index = () => {
   const { t } = useTranslation();
@@ -44,6 +45,17 @@ const Index = () => {
         </header>
 
         <main className="max-w-5xl mx-auto">
+          <div className="mb-8 flex justify-center">
+            <Button
+              onClick={() => navigate("/bible")}
+              variant="outline"
+              className="gap-2"
+            >
+              <Book className="w-4 h-4" />
+              {t('bible.title')}
+            </Button>
+          </div>
+          
           <h2 className="text-2xl font-bold text-center mb-8 text-foreground">
             {t('home.selectCategory')}
           </h2>
@@ -70,12 +82,12 @@ const Index = () => {
           <div className="mt-16 text-center">
             <div className="inline-flex items-center gap-4 bg-card px-8 py-4 rounded-2xl border shadow-md">
               <div className="text-left">
-                <div className="text-3xl font-bold text-primary">24</div>
+                <div className="text-3xl font-bold text-primary">140</div>
                 <div className="text-sm text-muted-foreground">Domande Totali</div>
               </div>
               <div className="h-12 w-px bg-border" />
               <div className="text-left">
-                <div className="text-3xl font-bold text-accent">3</div>
+                <div className="text-3xl font-bold text-accent">7</div>
                 <div className="text-sm text-muted-foreground">Categorie</div>
               </div>
               <div className="h-12 w-px bg-border" />

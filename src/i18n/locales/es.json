@@ -45,10 +45,44 @@
     "biblicalCharacters": {
       "name": "Personajes Bíblicos",
       "description": "Los grandes protagonistas de la Biblia"
+    },
+    "pentateuch": {
+      "name": "Pentateuco",
+      "description": "Los primeros cinco libros de la Biblia"
+    },
+    "minorProphets": {
+      "name": "Profetas Menores",
+      "description": "Los doce profetas menores"
+    },
+    "fourGospels": {
+      "name": "Cuatro Evangelios",
+      "description": "La vida de Jesús en los cuatro Evangelios"
+    },
+    "paulineLetters": {
+      "name": "Cartas Paulinas",
+      "description": "Las epístolas de San Pablo"
     }
   },
   "scoring": {
     "correct": "+5 puntos",
     "incorrect": "-1 punto"
+  },
+  "bible": {
+    "title": "Lector Bíblico",
+    "subtitle": "Lee la Biblia y guarda tus versículos favoritos",
+    "readOnline": "Lee la Biblia en Línea",
+    "readDescription": "Accede a Bible.com para leer la Biblia completa en diferentes versiones (CEI, ESV, NIV y más)",
+    "openBible": "Abrir Bible.com",
+    "favorites": "Versículos Favoritos",
+    "referencePlaceholder": "Ej: Juan 3:16",
+    "notePlaceholder": "Agregar una nota (opcional)",
+    "addFavorite": "Guardar Versículo",
+    "noFavorites": "No hay versículos guardados. ¡Agrega tus favoritos!",
+    "saved": "Guardado",
+    "verseSaved": "Versículo agregado a favoritos",
+    "deleted": "Eliminado",
+    "verseDeleted": "Versículo eliminado de favoritos",
+    "error": "Error",
+    "enterReference": "Ingresa una referencia bíblica"
   }
 }
