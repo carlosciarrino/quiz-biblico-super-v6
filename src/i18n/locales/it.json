@@ -47,8 +47,56 @@
       "description": "I grandi protagonisti della Bibbia"
     }
   },
+  "categories": {
+    "oldTestament": {
+      "name": "Antico Testamento",
+      "description": "Dalla creazione fino ai profeti"
+    },
+    "newTestament": {
+      "name": "Nuovo Testamento",
+      "description": "La vita di Gesù e gli apostoli"
+    },
+    "biblicalCharacters": {
+      "name": "Personaggi Biblici",
+      "description": "I grandi protagonisti della Bibbia"
+    },
+    "pentateuch": {
+      "name": "Pentateuco",
+      "description": "I primi cinque libri della Bibbia"
+    },
+    "minorProphets": {
+      "name": "Profeti Minori",
+      "description": "I dodici profeti minori"
+    },
+    "fourGospels": {
+      "name": "Quattro Vangeli",
+      "description": "La vita di Gesù nei quattro Vangeli"
+    },
+    "paulineLetters": {
+      "name": "Lettere Paoline",
+      "description": "Le epistole di San Paolo"
+    }
+  },
   "scoring": {
     "correct": "+5 punti",
     "incorrect": "-1 punto"
+  },
+  "bible": {
+    "title": "Lettore Bibbia",
+    "subtitle": "Leggi la Bibbia e salva i tuoi versetti preferiti",
+    "readOnline": "Leggi la Bibbia Online",
+    "readDescription": "Accedi a Bible.com per leggere la Bibbia completa in diverse versioni (CEI, ESV, NIV e altre)",
+    "openBible": "Apri Bible.com",
+    "favorites": "Versetti Preferiti",
+    "referencePlaceholder": "Es: Giovanni 3:16",
+    "notePlaceholder": "Aggiungi una nota (opzionale)",
+    "addFavorite": "Salva Versetto",
+    "noFavorites": "Nessun versetto salvato. Aggiungi i tuoi preferiti!",
+    "saved": "Salvato",
+    "verseSaved": "Versetto aggiunto ai preferiti",
+    "deleted": "Eliminato",
+    "verseDeleted": "Versetto rimosso dai preferiti",
+    "error": "Errore",
+    "enterReference": "Inserisci un riferimento biblico"
   }
 }
