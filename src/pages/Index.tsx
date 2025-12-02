@@ -1,7 +1,8 @@
 import { useNavigate } from "react-router-dom";
 import CategoryCard from "@/components/CategoryCard";
+import QuizTypeSelector from "@/components/QuizTypeSelector";
 import { categories } from "@/data/questions";
-import { Book, Sparkles } from "lucide-react";
+import { Book, Sparkles, BookOpen, Shuffle } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
 import { Button } from "@/components/ui/button";
@@ -11,7 +12,15 @@ const Index = () => {
   const navigate = useNavigate();
 
   const handleCategoryClick = (categoryName: string) => {
-    navigate(`/quiz?category=${encodeURIComponent(categoryName)}`);
+    navigate(`/quiz?category=${encodeURIComponent(categoryName)}&type=thematic`);
+  };
+
+  const handleQuizTypeSelect = (type: "thematic" | "fullBible" | "random") => {
+    if (type === "fullBible") {
+      navigate(`/quiz?type=fullBible`);
+    } else if (type === "random") {
+      navigate(`/quiz?type=random`);
+    }
   };
 
   return (
@@ -40,7 +49,7 @@ const Index = () => {
             <span>•</span>
             <span>{t('scoring.correct')} / {t('scoring.incorrect')}</span>
             <span>•</span>
-            <span>{t('home.features.multilang')}</span>
+            <span>{t('home.features.adaptive')}</span>
           </div>
         </header>
 
@@ -55,10 +64,50 @@ const Index = () => {
               {t('bible.title')}
             </Button>
           </div>
+
+          {/* Special Quiz Types */}
+          <div className="mb-12 space-y-6">
+            <h2 className="text-2xl font-bold text-center text-foreground">
+              {t('quizTypes.specialQuizzes')}
+            </h2>
+            
+            <div className="grid gap-4 md:grid-cols-2 max-w-2xl mx-auto">
+              <Button
+                variant="outline"
+                className="h-auto p-6 flex flex-col items-center gap-3 bg-gradient-to-br from-primary/10 to-accent/10 hover:from-primary/20 hover:to-accent/20 border-primary/30"
+                onClick={() => handleQuizTypeSelect("fullBible")}
+              >
+                <div className="w-12 h-12 rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center text-white">
+                  <BookOpen className="w-6 h-6" />
+                </div>
+                <div className="text-center">
+                  <div className="font-bold text-lg">{t('quizTypes.fullBible.title')}</div>
+                  <div className="text-sm text-muted-foreground">{t('quizTypes.fullBible.description')}</div>
+                </div>
+              </Button>
+
+              <Button
+                variant="outline"
+                className="h-auto p-6 flex flex-col items-center gap-3 bg-gradient-to-br from-accent/10 to-secondary/10 hover:from-accent/20 hover:to-secondary/20 border-accent/30"
+                onClick={() => handleQuizTypeSelect("random")}
+              >
+                <div className="w-12 h-12 rounded-full bg-gradient-to-br from-accent to-primary flex items-center justify-center text-white">
+                  <Shuffle className="w-6 h-6" />
+                </div>
+                <div className="text-center">
+                  <div className="font-bold text-lg">{t('quizTypes.random.title')}</div>
+                  <div className="text-sm text-muted-foreground">{t('quizTypes.random.description')}</div>
+                </div>
+              </Button>
+            </div>
+          </div>
           
           <h2 className="text-2xl font-bold text-center mb-8 text-foreground">
-            {t('home.selectCategory')}
+            {t('quizTypes.thematic.title')}
           </h2>
+          <p className="text-center text-muted-foreground mb-8">
+            {t('quizTypes.thematic.description')}
+          </p>
           
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {categories.map((category, index) => (
@@ -83,17 +132,17 @@ const Index = () => {
             <div className="inline-flex items-center gap-4 bg-card px-8 py-4 rounded-2xl border shadow-md">
               <div className="text-left">
                 <div className="text-3xl font-bold text-primary">140</div>
-                <div className="text-sm text-muted-foreground">Domande Totali</div>
+                <div className="text-sm text-muted-foreground">{t('stats.totalQuestions')}</div>
               </div>
               <div className="h-12 w-px bg-border" />
               <div className="text-left">
                 <div className="text-3xl font-bold text-accent">7</div>
-                <div className="text-sm text-muted-foreground">Categorie</div>
+                <div className="text-sm text-muted-foreground">{t('stats.categories')}</div>
               </div>
               <div className="h-12 w-px bg-border" />
               <div className="text-left">
-                <div className="text-3xl font-bold text-success">30s</div>
-                <div className="text-sm text-muted-foreground">Per Domanda</div>
+                <div className="text-3xl font-bold text-green-500">3</div>
+                <div className="text-sm text-muted-foreground">{t('stats.difficultyLevels')}</div>
               </div>
             </div>
           </div>

@@ -26,7 +26,7 @@
     "correct": "Correcto",
     "messages": {
       "excellent": "¡Excelente! ¡Conoces perfectamente la Biblia!",
-      "great": "¡Gran trabajo! ¡Tienes un buen conocimiento bíblico!",
+      "great": "¡Gran trabajo! ¡Tienes buen conocimiento bíblico!",
       "good": "¡Buen resultado! ¡Sigue estudiando la Palabra!",
       "keepGoing": "¡No te rindas! ¡La Biblia tiene mucho más que enseñarte!"
     },
@@ -68,21 +68,62 @@
     "incorrect": "-1 punto"
   },
   "bible": {
-    "title": "Lector Bíblico",
+    "title": "Lector de Biblia",
     "subtitle": "Lee la Biblia y guarda tus versículos favoritos",
-    "readOnline": "Lee la Biblia en Línea",
+    "readOnline": "Leer la Biblia en Línea",
     "readDescription": "Accede a Bible.com para leer la Biblia completa en diferentes versiones (CEI, ESV, NIV y más)",
     "openBible": "Abrir Bible.com",
     "favorites": "Versículos Favoritos",
     "referencePlaceholder": "Ej: Juan 3:16",
-    "notePlaceholder": "Agregar una nota (opcional)",
+    "notePlaceholder": "Añadir una nota (opcional)",
     "addFavorite": "Guardar Versículo",
-    "noFavorites": "No hay versículos guardados. ¡Agrega tus favoritos!",
+    "noFavorites": "No hay versículos guardados. ¡Añade tus favoritos!",
     "saved": "Guardado",
-    "verseSaved": "Versículo agregado a favoritos",
+    "verseSaved": "Versículo añadido a favoritos",
     "deleted": "Eliminado",
     "verseDeleted": "Versículo eliminado de favoritos",
     "error": "Error",
-    "enterReference": "Ingresa una referencia bíblica"
+    "enterReference": "Introduce una referencia bíblica"
+  },
+  "quizTypes": {
+    "specialQuizzes": "Quizzes Especiales",
+    "fullBible": {
+      "title": "Quiz Biblia Completa",
+      "description": "100 preguntas de toda la Biblia"
+    },
+    "random": {
+      "title": "Quiz Sorpresa",
+      "description": "100 preguntas aleatorias mezcladas"
+    },
+    "thematic": {
+      "title": "Quizzes Temáticos",
+      "description": "20 preguntas por categoría específica"
+    }
+  },
+  "difficulty": {
+    "easy": "Fácil",
+    "medium": "Medio",
+    "hard": "Difícil",
+    "toIncrease": "{{count}} para aumentar",
+    "toDecrease": "{{count}} para disminuir"
+  },
+  "motivational": {
+    "keepGoing": "¡Sigue así! ¡Lo estás haciendo genial!",
+    "youreGreat": "¡Eres muy bueno estudiando la Biblia!",
+    "learnedToday": "¡Aprendiste algo nuevo hoy!",
+    "everyStep": "¡Cada paso te acerca más a la verdad!",
+    "amazing": "¡Increíble! ¡Tu dedicación es admirable!"
+  },
+  "share": {
+    "title": "Comparte tus resultados",
+    "message": "¡Completé el Quiz Bíblico! Puntuación: {{score}}/{{total}} ({{percentage}}%) - Categoría: {{category}}",
+    "copied": "¡Enlace copiado al portapapeles!",
+    "copyError": "Error al copiar",
+    "copyLink": "Copiar enlace"
+  },
+  "stats": {
+    "totalQuestions": "Preguntas Totales",
+    "categories": "Categorías",
+    "difficultyLevels": "Niveles de Dificultad"
   }
 }
