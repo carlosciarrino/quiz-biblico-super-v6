@@ -45,20 +45,6 @@
     "biblicalCharacters": {
       "name": "Personaggi Biblici",
       "description": "I grandi protagonisti della Bibbia"
-    }
-  },
-  "categories": {
-    "oldTestament": {
-      "name": "Antico Testamento",
-      "description": "Dalla creazione fino ai profeti"
-    },
-    "newTestament": {
-      "name": "Nuovo Testamento",
-      "description": "La vita di Gesù e gli apostoli"
-    },
-    "biblicalCharacters": {
-      "name": "Personaggi Biblici",
-      "description": "I grandi protagonisti della Bibbia"
     },
     "pentateuch": {
       "name": "Pentateuco",
@@ -98,5 +84,46 @@
     "verseDeleted": "Versetto rimosso dai preferiti",
     "error": "Errore",
     "enterReference": "Inserisci un riferimento biblico"
+  },
+  "quizTypes": {
+    "specialQuizzes": "Quiz Speciali",
+    "fullBible": {
+      "title": "Quiz Bibbia Completa",
+      "description": "100 domande da tutta la Bibbia"
+    },
+    "random": {
+      "title": "Quiz Sorpresa",
+      "description": "100 domande casuali mescolate"
+    },
+    "thematic": {
+      "title": "Quiz Tematici",
+      "description": "20 domande per categoria specifica"
+    }
+  },
+  "difficulty": {
+    "easy": "Facile",
+    "medium": "Medio",
+    "hard": "Difficile",
+    "toIncrease": "{{count}} per aumentare",
+    "toDecrease": "{{count}} per diminuire"
+  },
+  "motivational": {
+    "keepGoing": "Continua così! Stai andando alla grande!",
+    "youreGreat": "Sei bravo a studiare la Bibbia!",
+    "learnedToday": "Hai imparato qualcosa di nuovo oggi!",
+    "everyStep": "Ogni passo ti avvicina alla verità!",
+    "amazing": "Straordinario! La tua dedizione è ammirevole!"
+  },
+  "share": {
+    "title": "Condividi i tuoi risultati",
+    "message": "Ho completato il Quiz Biblico! Punteggio: {{score}}/{{total}} ({{percentage}}%) - Categoria: {{category}}",
+    "copied": "Link copiato negli appunti!",
+    "copyError": "Errore durante la copia",
+    "copyLink": "Copia link"
+  },
+  "stats": {
+    "totalQuestions": "Domande Totali",
+    "categories": "Categorie",
+    "difficultyLevels": "Livelli Difficoltà"
   }
 }

@@ -12,7 +12,7 @@
       "adaptive": "dificuldade adaptativa",
       "multilang": "suporte multilíngue"
     },
-    "startQuiz": "Começar Quiz"
+    "startQuiz": "Iniciar Quiz"
   },
   "quiz": {
     "backToMenu": "Voltar ao Menu",
@@ -25,10 +25,10 @@
     "yourScore": "Sua Pontuação",
     "correct": "Correto",
     "messages": {
-      "excellent": "Excelente! Você conhece perfeitamente a Bíblia!",
-      "great": "Ótimo trabalho! Você tem um bom conhecimento bíblico!",
+      "excellent": "Excelente! Você conhece a Bíblia perfeitamente!",
+      "great": "Ótimo trabalho! Você tem bom conhecimento bíblico!",
       "good": "Bom resultado! Continue estudando a Palavra!",
-      "keepGoing": "Não desista! A Bíblia tem muito mais para lhe ensinar!"
+      "keepGoing": "Não desista! A Bíblia tem muito mais a te ensinar!"
     },
     "retry": "Tentar Novamente",
     "mainMenu": "Menu Principal"
@@ -84,5 +84,46 @@
     "verseDeleted": "Versículo removido dos favoritos",
     "error": "Erro",
     "enterReference": "Digite uma referência bíblica"
+  },
+  "quizTypes": {
+    "specialQuizzes": "Quizzes Especiais",
+    "fullBible": {
+      "title": "Quiz Bíblia Completa",
+      "description": "100 perguntas de toda a Bíblia"
+    },
+    "random": {
+      "title": "Quiz Surpresa",
+      "description": "100 perguntas aleatórias misturadas"
+    },
+    "thematic": {
+      "title": "Quizzes Temáticos",
+      "description": "20 perguntas por categoria específica"
+    }
+  },
+  "difficulty": {
+    "easy": "Fácil",
+    "medium": "Médio",
+    "hard": "Difícil",
+    "toIncrease": "{{count}} para aumentar",
+    "toDecrease": "{{count}} para diminuir"
+  },
+  "motivational": {
+    "keepGoing": "Continue assim! Você está indo muito bem!",
+    "youreGreat": "Você é ótimo em estudar a Bíblia!",
+    "learnedToday": "Você aprendeu algo novo hoje!",
+    "everyStep": "Cada passo te aproxima mais da verdade!",
+    "amazing": "Incrível! Sua dedicação é admirável!"
+  },
+  "share": {
+    "title": "Compartilhe seus resultados",
+    "message": "Completei o Quiz Bíblico! Pontuação: {{score}}/{{total}} ({{percentage}}%) - Categoria: {{category}}",
+    "copied": "Link copiado para a área de transferência!",
+    "copyError": "Erro ao copiar",
+    "copyLink": "Copiar link"
+  },
+  "stats": {
+    "totalQuestions": "Perguntas Totais",
+    "categories": "Categorias",
+    "difficultyLevels": "Níveis de Dificuldade"
   }
 }

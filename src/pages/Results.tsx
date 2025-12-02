@@ -4,6 +4,7 @@ import { Trophy, Home, RotateCcw, Star } from "lucide-react";
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
+import SocialShare from "@/components/SocialShare";
 
 const Results = () => {
   const { t } = useTranslation();
@@ -33,6 +34,16 @@ const Results = () => {
     if (percentage >= 70) return "🎉";
     if (percentage >= 50) return "👍";
     return "📖";
+  };
+
+  const getRetryPath = () => {
+    if (category === t('quizTypes.fullBible.title')) {
+      return `/quiz?type=fullBible`;
+    }
+    if (category === t('quizTypes.random.title')) {
+      return `/quiz?type=random`;
+    }
+    return `/quiz?category=${encodeURIComponent(category)}`;
   };
 
   return (
@@ -92,11 +103,16 @@ const Results = () => {
             </p>
           </div>
 
+          {/* Social Share Buttons */}
+          <div className="mb-8">
+            <SocialShare score={score} total={total} category={category} />
+          </div>
+
           <div className="grid gap-3 sm:grid-cols-2">
             <Button
               size="lg"
               className="w-full gap-2"
-              onClick={() => navigate(`/quiz?category=${category}`)}
+              onClick={() => navigate(getRetryPath())}
             >
               <RotateCcw className="w-5 h-5" />
               {t('results.retry')}

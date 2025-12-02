@@ -3186,3 +3186,44 @@ export const categories = [
     color: "from-yellow-500 to-amber-600",
   },
 ];
+
+// Get all questions for full Bible quiz (100 questions)
+export const getFullBibleQuestions = (count: number = 100): Question[] => {
+  const shuffled = [...questions].sort(() => Math.random() - 0.5);
+  return shuffled.slice(0, Math.min(count, questions.length));
+};
+
+// Get random questions from all categories
+export const getRandomQuestions = (count: number = 100): Question[] => {
+  const shuffled = [...questions].sort(() => Math.random() - 0.5);
+  return shuffled.slice(0, Math.min(count, questions.length));
+};
+
+// Get questions filtered by difficulty
+export const getQuestionsByDifficulty = (
+  categoryQuestions: Question[],
+  difficulty: "easy" | "medium" | "hard"
+): Question[] => {
+  return categoryQuestions.filter(q => q.difficulty === difficulty);
+};
+
+// Get next question based on adaptive difficulty
+export const getNextQuestionAdaptive = (
+  availableQuestions: Question[],
+  currentDifficulty: "easy" | "medium" | "hard",
+  answeredIds: number[]
+): Question | null => {
+  const unanswered = availableQuestions.filter(q => !answeredIds.includes(q.id));
+  
+  // Try to get a question at current difficulty
+  let candidates = unanswered.filter(q => q.difficulty === currentDifficulty);
+  
+  // If no questions at current difficulty, get any unanswered
+  if (candidates.length === 0) {
+    candidates = unanswered;
+  }
+  
+  if (candidates.length === 0) return null;
+  
+  return candidates[Math.floor(Math.random() * candidates.length)];
+};
