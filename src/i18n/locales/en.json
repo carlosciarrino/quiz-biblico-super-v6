@@ -63,9 +63,47 @@
       "description": "The epistles of St. Paul"
     }
   },
-  "scoring": {
+"scoring": {
     "correct": "+5 points",
     "incorrect": "-1 point"
+  },
+  "stats": {
+    "totalQuestions": "Total Questions",
+    "categories": "Categories",
+    "difficultyLevels": "Difficulty Levels",
+    "yourProgress": "Your Progress",
+    "noData": "No data yet",
+    "startQuiz": "Complete a quiz to see your stats!",
+    "quizzesCompleted": "Quizzes Completed",
+    "averageScore": "Average Score",
+    "streakDays": "Day Streak",
+    "achievements": "Achievements",
+    "strongest": "Strongest Category",
+    "weakest": "Needs Improvement",
+    "average": "average",
+    "unlockedAchievements": "Unlocked Achievements"
+  },
+  "study": {
+    "learnMore": "Learn More",
+    "readVerse": "Read the verse on Bible.com"
+  },
+  "achievements": {
+    "firstQuiz": "First Step",
+    "firstQuizDesc": "Complete your first quiz",
+    "fiveQuizzes": "Diligent Student",
+    "fiveQuizzesDesc": "Complete 5 quizzes",
+    "tenQuizzes": "Bible Expert",
+    "tenQuizzesDesc": "Complete 10 quizzes",
+    "perfectScore": "Perfection",
+    "perfectScoreDesc": "Get 100% on a quiz",
+    "scholar": "Scholar",
+    "scholarDesc": "Maintain an average above 80%",
+    "explorer": "Explorer",
+    "explorerDesc": "Try 5 different categories",
+    "dedicated": "Dedicated",
+    "dedicatedDesc": "Play for 3 consecutive days",
+    "master": "Master",
+    "masterDesc": "Answer 500 questions"
   },
   "bible": {
     "title": "Bible Reader",

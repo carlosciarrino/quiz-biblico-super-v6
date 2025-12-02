@@ -121,9 +121,42 @@
     "copyError": "Error al copiar",
     "copyLink": "Copiar enlace"
   },
-  "stats": {
+"stats": {
     "totalQuestions": "Preguntas Totales",
     "categories": "Categorías",
-    "difficultyLevels": "Niveles de Dificultad"
+    "difficultyLevels": "Niveles de Dificultad",
+    "yourProgress": "Tu Progreso",
+    "noData": "Sin datos aún",
+    "startQuiz": "¡Completa un quiz para ver tus estadísticas!",
+    "quizzesCompleted": "Quizzes Completados",
+    "averageScore": "Puntuación Media",
+    "streakDays": "Días Consecutivos",
+    "achievements": "Logros",
+    "strongest": "Categoría Más Fuerte",
+    "weakest": "A Mejorar",
+    "average": "promedio",
+    "unlockedAchievements": "Logros Desbloqueados"
+  },
+  "study": {
+    "learnMore": "Aprende Más",
+    "readVerse": "Lee el versículo en Bible.com"
+  },
+  "achievements": {
+    "firstQuiz": "Primer Paso",
+    "firstQuizDesc": "Completa tu primer quiz",
+    "fiveQuizzes": "Estudiante Diligente",
+    "fiveQuizzesDesc": "Completa 5 quizzes",
+    "tenQuizzes": "Experto Bíblico",
+    "tenQuizzesDesc": "Completa 10 quizzes",
+    "perfectScore": "Perfección",
+    "perfectScoreDesc": "Obtén el 100% en un quiz",
+    "scholar": "Erudito",
+    "scholarDesc": "Mantén un promedio superior al 80%",
+    "explorer": "Explorador",
+    "explorerDesc": "Prueba 5 categorías diferentes",
+    "dedicated": "Dedicado",
+    "dedicatedDesc": "Juega por 3 días consecutivos",
+    "master": "Maestro",
+    "masterDesc": "Responde 500 preguntas"
   }
 }

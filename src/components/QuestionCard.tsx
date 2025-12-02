@@ -2,7 +2,9 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Check, X } from "lucide-react";
 import { Question, getTranslatedQuestion, getTranslatedOptions } from "@/data/questions";
+import { getTranslatedExplanation } from "@/data/bibleReferences";
 import { useTranslation } from "react-i18next";
+import BibleExplanation from "./BibleExplanation";
 
 interface QuestionCardProps {
   question: Question;
@@ -15,9 +17,12 @@ const QuestionCard = ({ question, onAnswer, questionNumber, totalQuestions }: Qu
   const { t, i18n } = useTranslation();
   const [selectedAnswer, setSelectedAnswer] = useState<number | null>(null);
   const [showResult, setShowResult] = useState(false);
+  const [showExplanation, setShowExplanation] = useState(false);
+  const [wasIncorrect, setWasIncorrect] = useState(false);
 
   const translatedQuestion = getTranslatedQuestion(question, i18n.language);
   const translatedOptions = getTranslatedOptions(question, i18n.language);
+  const { reference, explanation } = getTranslatedExplanation(question.id, i18n.language);
 
   const handleAnswer = (index: number) => {
     if (showResult) return;
@@ -25,12 +30,27 @@ const QuestionCard = ({ question, onAnswer, questionNumber, totalQuestions }: Qu
     setSelectedAnswer(index);
     setShowResult(true);
     const isCorrect = index === question.correctAnswer;
+    setWasIncorrect(!isCorrect);
 
-    setTimeout(() => {
-      onAnswer(isCorrect);
-      setSelectedAnswer(null);
-      setShowResult(false);
-    }, 1500);
+    // Show explanation for wrong answers, then continue
+    if (!isCorrect) {
+      setShowExplanation(true);
+      setTimeout(() => {
+        onAnswer(isCorrect);
+        setSelectedAnswer(null);
+        setShowResult(false);
+        setShowExplanation(false);
+        setWasIncorrect(false);
+      }, 4000); // Longer delay to read explanation
+    } else {
+      setTimeout(() => {
+        onAnswer(isCorrect);
+        setSelectedAnswer(null);
+        setShowResult(false);
+        setShowExplanation(false);
+        setWasIncorrect(false);
+      }, 1500);
+    }
   };
 
   const getButtonVariant = (index: number) => {
@@ -54,7 +74,7 @@ const QuestionCard = ({ question, onAnswer, questionNumber, totalQuestions }: Qu
           {t('quiz.question')} {questionNumber} {t('quiz.of')} {totalQuestions}
         </span>
         <div className="flex gap-1">
-          {Array.from({ length: totalQuestions }).map((_, i) => (
+          {Array.from({ length: Math.min(totalQuestions, 20) }).map((_, i) => (
             <div
               key={i}
               className={`h-1.5 w-8 rounded-full transition-colors ${
@@ -62,6 +82,11 @@ const QuestionCard = ({ question, onAnswer, questionNumber, totalQuestions }: Qu
               }`}
             />
           ))}
+          {totalQuestions > 20 && (
+            <span className="text-xs text-muted-foreground ml-1">
+              +{totalQuestions - 20}
+            </span>
+          )}
         </div>
       </div>
 
@@ -90,6 +115,13 @@ const QuestionCard = ({ question, onAnswer, questionNumber, totalQuestions }: Qu
             </Button>
           ))}
         </div>
+
+        {/* Bible Explanation for wrong answers */}
+        <BibleExplanation
+          reference={reference}
+          explanation={explanation}
+          show={showExplanation && wasIncorrect}
+        />
       </div>
     </div>
   );
