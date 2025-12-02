@@ -5,22 +5,37 @@ import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
 import SocialShare from "@/components/SocialShare";
+import { useUserStats } from "@/hooks/useUserStats";
 
 const Results = () => {
   const { t } = useTranslation();
   const [searchParams] = useSearchParams();
   const navigate = useNavigate();
+  const { recordQuizResult } = useUserStats();
+  
   const score = parseInt(searchParams.get("score") || "0");
   const total = parseInt(searchParams.get("total") || "0");
   const category = searchParams.get("category") || "";
   
   const [showConfetti, setShowConfetti] = useState(false);
+  const [hasRecorded, setHasRecorded] = useState(false);
 
   const percentage = Math.round((score / total) * 100);
 
   useEffect(() => {
     setShowConfetti(true);
-  }, []);
+    
+    if (!hasRecorded && category && total > 0) {
+      recordQuizResult({
+        category,
+        score,
+        total,
+        percentage,
+        date: new Date().toISOString()
+      });
+      setHasRecorded(true);
+    }
+  }, [hasRecorded, category, score, total, percentage, recordQuizResult]);
 
   const getMessage = () => {
     if (percentage >= 90) return t('results.messages.excellent');
@@ -103,7 +118,6 @@ const Results = () => {
             </p>
           </div>
 
-          {/* Social Share Buttons */}
           <div className="mb-8">
             <SocialShare score={score} total={total} category={category} />
           </div>
