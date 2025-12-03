@@ -173,5 +173,23 @@
     "enterName": "Inserisci il tuo nome",
     "save": "Salva",
     "skip": "Salta"
+  },
+  "challenge": {
+    "createTitle": "Sfida i Tuoi Amici",
+    "createDescription": "Crea una sfida e condividi il link per competere con i tuoi amici!",
+    "challengeFriends": "Sfida i Tuoi Amici",
+    "enterYourName": "Inserisci il tuo nome",
+    "create": "Crea Sfida",
+    "cancel": "Annulla",
+    "shareTitle": "Condividi la Sfida",
+    "shareDescription": "Invia questo link ai tuoi amici per sfidarli!",
+    "code": "Codice Sfida",
+    "done": "Fatto",
+    "shareMessage": "Ti sfido al Quiz Biblico! Codice: {{id}}",
+    "receivedTitle": "Sfida Ricevuta!",
+    "from": "Da",
+    "category": "Categoria",
+    "leaderboard": "Classifica Sfida",
+    "accept": "Accetta Sfida"
   }
 }
