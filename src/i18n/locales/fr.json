@@ -158,5 +158,20 @@
     "dedicatedDesc": "Jouez pendant 3 jours consécutifs",
     "master": "Maître",
     "masterDesc": "Répondez à 500 questions"
+  },
+  "review": {
+    "smartSuggestion": "Révision Intelligente",
+    "suggestionText": "Selon vos résultats, nous vous suggérons de réviser ces catégories :",
+    "practice": "Pratiquer"
+  },
+  "leaderboard": {
+    "title": "Classement",
+    "noEntries": "Aucun score enregistré",
+    "beFirst": "Soyez le premier à entrer dans le classement !",
+    "newHighScore": "Nouveau Meilleur Score !",
+    "congratulations": "Félicitations ! Vous avez atteint un score de classement !",
+    "enterName": "Entrez votre nom",
+    "save": "Sauvegarder",
+    "skip": "Passer"
   }
 }

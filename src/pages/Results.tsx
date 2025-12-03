@@ -5,13 +5,16 @@ import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
 import SocialShare from "@/components/SocialShare";
+import HighScoreDialog from "@/components/HighScoreDialog";
 import { useUserStats } from "@/hooks/useUserStats";
+import { useLeaderboard } from "@/hooks/useLeaderboard";
 
 const Results = () => {
   const { t } = useTranslation();
   const [searchParams] = useSearchParams();
   const navigate = useNavigate();
   const { recordQuizResult } = useUserStats();
+  const { addEntry, isHighScore } = useLeaderboard();
   
   const score = parseInt(searchParams.get("score") || "0");
   const total = parseInt(searchParams.get("total") || "0");
@@ -19,6 +22,8 @@ const Results = () => {
   
   const [showConfetti, setShowConfetti] = useState(false);
   const [hasRecorded, setHasRecorded] = useState(false);
+  const [showHighScoreDialog, setShowHighScoreDialog] = useState(false);
+  const [highScoreChecked, setHighScoreChecked] = useState(false);
 
   const percentage = Math.round((score / total) * 100);
 
@@ -35,7 +40,20 @@ const Results = () => {
       });
       setHasRecorded(true);
     }
-  }, [hasRecorded, category, score, total, percentage, recordQuizResult]);
+
+    // Check for high score
+    if (!highScoreChecked && total > 0) {
+      if (isHighScore(percentage)) {
+        setShowHighScoreDialog(true);
+      }
+      setHighScoreChecked(true);
+    }
+  }, [hasRecorded, category, score, total, percentage, recordQuizResult, isHighScore, highScoreChecked]);
+
+  const handleHighScoreSubmit = (username: string) => {
+    addEntry({ username, score, total, percentage, category });
+    setShowHighScoreDialog(false);
+  };
 
   const getMessage = () => {
     if (percentage >= 90) return t('results.messages.excellent');
@@ -144,6 +162,15 @@ const Results = () => {
           </div>
         </div>
       </div>
+
+      <HighScoreDialog
+        open={showHighScoreDialog}
+        onClose={() => setShowHighScoreDialog(false)}
+        onSubmit={handleHighScoreSubmit}
+        score={score}
+        total={total}
+        percentage={percentage}
+      />
     </div>
   );
 };

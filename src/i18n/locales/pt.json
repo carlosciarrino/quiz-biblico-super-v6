@@ -158,5 +158,20 @@
     "dedicatedDesc": "Jogue por 3 dias consecutivos",
     "master": "Mestre",
     "masterDesc": "Responda 500 perguntas"
+  },
+  "review": {
+    "smartSuggestion": "Revisão Inteligente",
+    "suggestionText": "Com base nos seus resultados, sugerimos revisar estas categorias:",
+    "practice": "Praticar"
+  },
+  "leaderboard": {
+    "title": "Classificação",
+    "noEntries": "Sem pontuações registradas",
+    "beFirst": "Seja o primeiro a entrar na classificação!",
+    "newHighScore": "Nova Pontuação Alta!",
+    "congratulations": "Parabéns! Você alcançou uma pontuação de classificação!",
+    "enterName": "Digite seu nome",
+    "save": "Salvar",
+    "skip": "Pular"
   }
 }

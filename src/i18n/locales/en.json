@@ -122,5 +122,56 @@
     "verseDeleted": "Verse removed from favorites",
     "error": "Error",
     "enterReference": "Enter a biblical reference"
+  },
+  "quizTypes": {
+    "specialQuizzes": "Special Quizzes",
+    "fullBible": {
+      "title": "Full Bible Quiz",
+      "description": "100 questions from the entire Bible"
+    },
+    "random": {
+      "title": "Surprise Quiz",
+      "description": "100 random mixed questions"
+    },
+    "thematic": {
+      "title": "Thematic Quizzes",
+      "description": "20 questions per specific category"
+    }
+  },
+  "difficulty": {
+    "easy": "Easy",
+    "medium": "Medium",
+    "hard": "Hard",
+    "toIncrease": "{{count}} to increase",
+    "toDecrease": "{{count}} to decrease"
+  },
+  "motivational": {
+    "keepGoing": "Keep going! You're doing great!",
+    "youreGreat": "You're great at studying the Bible!",
+    "learnedToday": "You've learned something new today!",
+    "everyStep": "Every step brings you closer to the truth!",
+    "amazing": "Amazing! Your dedication is admirable!"
+  },
+  "share": {
+    "title": "Share your results",
+    "message": "I completed the Bible Quiz! Score: {{score}}/{{total}} ({{percentage}}%) - Category: {{category}}",
+    "copied": "Link copied to clipboard!",
+    "copyError": "Error copying",
+    "copyLink": "Copy link"
+  },
+  "review": {
+    "smartSuggestion": "Smart Review",
+    "suggestionText": "Based on your results, we suggest reviewing these categories:",
+    "practice": "Practice"
+  },
+  "leaderboard": {
+    "title": "Leaderboard",
+    "noEntries": "No scores recorded",
+    "beFirst": "Be the first to enter the leaderboard!",
+    "newHighScore": "New High Score!",
+    "congratulations": "Congratulations! You achieved a leaderboard score!",
+    "enterName": "Enter your name",
+    "save": "Save",
+    "skip": "Skip"
   }
 }
