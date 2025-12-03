@@ -158,5 +158,20 @@
     "dedicatedDesc": "Gioca per 3 giorni consecutivi",
     "master": "Maestro",
     "masterDesc": "Rispondi a 500 domande"
+  },
+  "review": {
+    "smartSuggestion": "Ripasso Intelligente",
+    "suggestionText": "Basandoci sui tuoi risultati, ti suggeriamo di ripassare queste categorie:",
+    "practice": "Ripassa"
+  },
+  "leaderboard": {
+    "title": "Classifica",
+    "noEntries": "Nessun punteggio registrato",
+    "beFirst": "Sii il primo a entrare in classifica!",
+    "newHighScore": "Nuovo Record!",
+    "congratulations": "Complimenti! Hai ottenuto un punteggio da classifica!",
+    "enterName": "Inserisci il tuo nome",
+    "save": "Salva",
+    "skip": "Salta"
   }
 }

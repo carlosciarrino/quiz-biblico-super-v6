@@ -2,19 +2,24 @@ import { useNavigate } from "react-router-dom";
 import CategoryCard from "@/components/CategoryCard";
 import QuizTypeSelector from "@/components/QuizTypeSelector";
 import UserStatsDisplay from "@/components/UserStatsDisplay";
+import SmartReviewSuggestion from "@/components/SmartReviewSuggestion";
+import Leaderboard from "@/components/Leaderboard";
 import { categories } from "@/data/questions";
-import { Book, Sparkles, BookOpen, Shuffle, BarChart3 } from "lucide-react";
+import { Book, Sparkles, BookOpen, Shuffle, BarChart3, Trophy } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
 import { Button } from "@/components/ui/button";
 import { useUserStats } from "@/hooks/useUserStats";
+import { useLeaderboard } from "@/hooks/useLeaderboard";
 import { useState } from "react";
 
 const Index = () => {
   const { t } = useTranslation();
   const navigate = useNavigate();
   const { stats, getStrongestCategory, getWeakestCategory } = useUserStats();
+  const { entries } = useLeaderboard();
   const [showStats, setShowStats] = useState(false);
+  const [showLeaderboard, setShowLeaderboard] = useState(false);
 
   const handleCategoryClick = (categoryName: string) => {
     navigate(`/quiz?category=${encodeURIComponent(categoryName)}&type=thematic`);
@@ -59,7 +64,7 @@ const Index = () => {
         </header>
 
         <main className="max-w-5xl mx-auto">
-          <div className="mb-8 flex justify-center gap-3">
+          <div className="mb-8 flex flex-wrap justify-center gap-3">
             <Button
               onClick={() => navigate("/bible")}
               variant="outline"
@@ -76,12 +81,20 @@ const Index = () => {
               <BarChart3 className="w-4 h-4" />
               {t('stats.yourProgress')}
             </Button>
+            <Button
+              onClick={() => setShowLeaderboard(!showLeaderboard)}
+              variant="outline"
+              className="gap-2"
+            >
+              <Trophy className="w-4 h-4" />
+              {t('leaderboard.title')}
+            </Button>
           </div>
 
           {/* User Stats Display */}
           {showStats && (
-            <div className="mb-12 animate-fade-in">
-              <h2 className="text-2xl font-bold text-center mb-6 text-foreground">
+            <div className="mb-12 animate-fade-in space-y-6">
+              <h2 className="text-2xl font-bold text-center text-foreground">
                 {t('stats.yourProgress')}
               </h2>
               <UserStatsDisplay
@@ -89,6 +102,14 @@ const Index = () => {
                 strongestCategory={getStrongestCategory()}
                 weakestCategory={getWeakestCategory()}
               />
+              <SmartReviewSuggestion stats={stats} />
+            </div>
+          )}
+
+          {/* Leaderboard */}
+          {showLeaderboard && (
+            <div className="mb-12 animate-fade-in">
+              <Leaderboard entries={entries} />
             </div>
           )}
 
