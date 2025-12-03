@@ -173,5 +173,23 @@
     "enterName": "Entrez votre nom",
     "save": "Sauvegarder",
     "skip": "Passer"
+  },
+  "challenge": {
+    "createTitle": "Défiez Vos Amis",
+    "createDescription": "Créez un défi et partagez le lien pour rivaliser avec vos amis !",
+    "challengeFriends": "Défiez Vos Amis",
+    "enterYourName": "Entrez votre nom",
+    "create": "Créer un Défi",
+    "cancel": "Annuler",
+    "shareTitle": "Partagez le Défi",
+    "shareDescription": "Envoyez ce lien à vos amis pour les défier !",
+    "code": "Code du Défi",
+    "done": "Terminé",
+    "shareMessage": "Je te défie au Quiz Biblique ! Code : {{id}}",
+    "receivedTitle": "Défi Reçu !",
+    "from": "De",
+    "category": "Catégorie",
+    "leaderboard": "Classement du Défi",
+    "accept": "Accepter le Défi"
   }
 }

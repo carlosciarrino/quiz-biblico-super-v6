@@ -173,5 +173,23 @@
     "enterName": "Enter your name",
     "save": "Save",
     "skip": "Skip"
+  },
+  "challenge": {
+    "createTitle": "Challenge Your Friends",
+    "createDescription": "Create a challenge and share the link to compete with your friends!",
+    "challengeFriends": "Challenge Your Friends",
+    "enterYourName": "Enter your name",
+    "create": "Create Challenge",
+    "cancel": "Cancel",
+    "shareTitle": "Share the Challenge",
+    "shareDescription": "Send this link to your friends to challenge them!",
+    "code": "Challenge Code",
+    "done": "Done",
+    "shareMessage": "I challenge you to the Bible Quiz! Code: {{id}}",
+    "receivedTitle": "Challenge Received!",
+    "from": "From",
+    "category": "Category",
+    "leaderboard": "Challenge Leaderboard",
+    "accept": "Accept Challenge"
   }
 }

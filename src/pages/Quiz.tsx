@@ -9,14 +9,18 @@ import { Button } from "@/components/ui/button";
 import { ArrowLeft, Trophy } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
+import { useSoundEffects } from "@/hooks/useSoundEffects";
+import { fireCorrectAnswer } from "@/lib/confetti";
 
 const Quiz = () => {
   const { t } = useTranslation();
   const [searchParams] = useSearchParams();
   const navigate = useNavigate();
+  const { playCorrect, playIncorrect } = useSoundEffects();
   
   const category = searchParams.get("category") || "Antico Testamento";
   const quizType = searchParams.get("type") || "thematic";
+  const challengeId = searchParams.get("challenge");
   
   const [questions, setQuestions] = useState<Question[]>([]);
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
@@ -57,9 +61,10 @@ const Quiz = () => {
         : quizType === "random"
         ? t('quizTypes.random.title')
         : category;
-      navigate(`/results?score=${finalScore}&total=${questions.length * 5}&category=${encodeURIComponent(quizCategory)}`);
+      const challengeParam = challengeId ? `&challengeId=${challengeId}` : '';
+      navigate(`/results?score=${finalScore}&total=${questions.length * 5}&category=${encodeURIComponent(quizCategory)}&type=${quizType}${challengeParam}`);
     }
-  }, [currentQuestionIndex, questions.length, navigate, score, category, quizType, t]);
+  }, [currentQuestionIndex, questions.length, navigate, score, category, quizType, t, challengeId]);
 
   const updateDifficulty = useCallback((isCorrect: boolean) => {
     // Update consecutive correct count
@@ -89,6 +94,14 @@ const Quiz = () => {
   }, [consecutiveCorrect, difficulty, recentAnswers]);
 
   const handleAnswer = (isCorrect: boolean) => {
+    // Play sound and confetti for correct answers
+    if (isCorrect) {
+      playCorrect();
+      fireCorrectAnswer();
+    } else {
+      playIncorrect();
+    }
+    
     // Scoring: +5 for correct, -1 for wrong
     const points = isCorrect ? 5 : -1;
     setScore((prev) => Math.max(0, prev + points));

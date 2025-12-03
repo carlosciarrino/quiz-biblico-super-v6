@@ -1,9 +1,10 @@
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useSearchParams } from "react-router-dom";
 import CategoryCard from "@/components/CategoryCard";
 import QuizTypeSelector from "@/components/QuizTypeSelector";
 import UserStatsDisplay from "@/components/UserStatsDisplay";
 import SmartReviewSuggestion from "@/components/SmartReviewSuggestion";
 import Leaderboard from "@/components/Leaderboard";
+import ChallengeCard from "@/components/ChallengeCard";
 import { categories } from "@/data/questions";
 import { Book, Sparkles, BookOpen, Shuffle, BarChart3, Trophy } from "lucide-react";
 import { useTranslation } from "react-i18next";
@@ -11,15 +12,21 @@ import LanguageSwitcher from "@/components/LanguageSwitcher";
 import { Button } from "@/components/ui/button";
 import { useUserStats } from "@/hooks/useUserStats";
 import { useLeaderboard } from "@/hooks/useLeaderboard";
-import { useState } from "react";
+import { useChallenge } from "@/hooks/useChallenge";
+import { useState, useEffect } from "react";
 
 const Index = () => {
   const { t } = useTranslation();
   const navigate = useNavigate();
+  const [searchParams] = useSearchParams();
   const { stats, getStrongestCategory, getWeakestCategory } = useUserStats();
   const { entries } = useLeaderboard();
+  const { getChallenge } = useChallenge();
   const [showStats, setShowStats] = useState(false);
   const [showLeaderboard, setShowLeaderboard] = useState(false);
+  
+  const challengeId = searchParams.get("challenge");
+  const challenge = challengeId ? getChallenge(challengeId) : null;
 
   const handleCategoryClick = (categoryName: string) => {
     navigate(`/quiz?category=${encodeURIComponent(categoryName)}&type=thematic`);
@@ -30,6 +37,18 @@ const Index = () => {
       navigate(`/quiz?type=fullBible`);
     } else if (type === "random") {
       navigate(`/quiz?type=random`);
+    }
+  };
+
+  const handleAcceptChallenge = () => {
+    if (!challenge) return;
+    
+    if (challenge.quizType === "fullBible") {
+      navigate(`/quiz?type=fullBible&challenge=${challengeId}`);
+    } else if (challenge.quizType === "random") {
+      navigate(`/quiz?type=random&challenge=${challengeId}`);
+    } else {
+      navigate(`/quiz?category=${encodeURIComponent(challenge.category)}&type=thematic&challenge=${challengeId}`);
     }
   };
 
@@ -64,6 +83,13 @@ const Index = () => {
         </header>
 
         <main className="max-w-5xl mx-auto">
+          {/* Challenge Card */}
+          {challenge && (
+            <div className="mb-12 max-w-md mx-auto">
+              <ChallengeCard challenge={challenge} onAccept={handleAcceptChallenge} />
+            </div>
+          )}
+
           <div className="mb-8 flex flex-wrap justify-center gap-3">
             <Button
               onClick={() => navigate("/bible")}
