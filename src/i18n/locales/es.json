@@ -244,5 +244,31 @@
   "offline": {
     "ready": "App lista para uso sin conexión",
     "updated": "Nuevos contenidos disponibles"
+  },
+  "levels": {
+    "level": "Nivel",
+    "progress": "Progreso",
+    "toNextLevel": "para el próximo nivel",
+    "novice": "Novato",
+    "apprentice": "Aprendiz",
+    "student": "Estudiante",
+    "scholar": "Erudito",
+    "expert": "Experto",
+    "master": "Maestro",
+    "sage": "Sabio",
+    "prophet": "Profeta",
+    "apostle": "Apóstol",
+    "patriarch": "Patriarca"
+  },
+  "dashboard": {
+    "title": "Tu Dashboard",
+    "subtitle": "Visualiza tu progreso semanal y mensual",
+    "weeklyProgress": "Progreso Semanal",
+    "monthlyProgress": "Progreso Mensual",
+    "categoryPerformance": "Rendimiento por Categoría",
+    "quizzes": "Quizzes",
+    "avgScore": "Puntuación Media",
+    "correctAnswers": "Respuestas Correctas",
+    "week": "Sem."
   }
 }
