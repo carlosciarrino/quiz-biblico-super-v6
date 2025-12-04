@@ -244,5 +244,31 @@
   "offline": {
     "ready": "App ready for offline use",
     "updated": "New content available"
+  },
+  "levels": {
+    "level": "Level",
+    "progress": "Progress",
+    "toNextLevel": "to next level",
+    "novice": "Novice",
+    "apprentice": "Apprentice",
+    "student": "Student",
+    "scholar": "Scholar",
+    "expert": "Expert",
+    "master": "Master",
+    "sage": "Sage",
+    "prophet": "Prophet",
+    "apostle": "Apostle",
+    "patriarch": "Patriarch"
+  },
+  "dashboard": {
+    "title": "Your Dashboard",
+    "subtitle": "View your weekly and monthly progress",
+    "weeklyProgress": "Weekly Progress",
+    "monthlyProgress": "Monthly Progress",
+    "categoryPerformance": "Category Performance",
+    "quizzes": "Quizzes",
+    "avgScore": "Average Score",
+    "correctAnswers": "Correct Answers",
+    "week": "Week"
   }
 }

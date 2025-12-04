@@ -244,5 +244,31 @@
   "offline": {
     "ready": "App prête pour une utilisation hors ligne",
     "updated": "Nouveaux contenus disponibles"
+  },
+  "levels": {
+    "level": "Niveau",
+    "progress": "Progression",
+    "toNextLevel": "pour le prochain niveau",
+    "novice": "Novice",
+    "apprentice": "Apprenti",
+    "student": "Étudiant",
+    "scholar": "Érudit",
+    "expert": "Expert",
+    "master": "Maître",
+    "sage": "Sage",
+    "prophet": "Prophète",
+    "apostle": "Apôtre",
+    "patriarch": "Patriarche"
+  },
+  "dashboard": {
+    "title": "Votre Tableau de Bord",
+    "subtitle": "Visualisez vos progrès hebdomadaires et mensuels",
+    "weeklyProgress": "Progrès Hebdomadaires",
+    "monthlyProgress": "Progrès Mensuels",
+    "categoryPerformance": "Performance par Catégorie",
+    "quizzes": "Quiz",
+    "avgScore": "Score Moyen",
+    "correctAnswers": "Réponses Correctes",
+    "week": "Sem."
   }
 }

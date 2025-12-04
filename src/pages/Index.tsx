@@ -5,12 +5,14 @@ import UserStatsDisplay from "@/components/UserStatsDisplay";
 import SmartReviewSuggestion from "@/components/SmartReviewSuggestion";
 import Leaderboard from "@/components/Leaderboard";
 import ChallengeCard from "@/components/ChallengeCard";
+import LevelDisplay from "@/components/LevelDisplay";
 import { categories } from "@/data/questions";
-import { Book, Sparkles, BookOpen, Shuffle, BarChart3, Trophy, GraduationCap } from "lucide-react";
+import { Book, Sparkles, BookOpen, Shuffle, BarChart3, Trophy, GraduationCap, LayoutDashboard } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
 import { Button } from "@/components/ui/button";
 import { useUserStats } from "@/hooks/useUserStats";
+import { useUserLevel } from "@/hooks/useUserLevel";
 import { useLeaderboard } from "@/hooks/useLeaderboard";
 import { useChallenge } from "@/hooks/useChallenge";
 import { useState, useEffect } from "react";
@@ -20,6 +22,7 @@ const Index = () => {
   const navigate = useNavigate();
   const [searchParams] = useSearchParams();
   const { stats, getStrongestCategory, getWeakestCategory } = useUserStats();
+  const levelInfo = useUserLevel(stats);
   const { entries } = useLeaderboard();
   const { getChallenge } = useChallenge();
   const [showStats, setShowStats] = useState(false);
@@ -90,10 +93,25 @@ const Index = () => {
             </div>
           )}
 
+          {/* Level Display on Home */}
+          {stats.totalQuizzesCompleted > 0 && (
+            <div className="mb-8 max-w-md mx-auto animate-fade-in">
+              <LevelDisplay levelInfo={levelInfo} />
+            </div>
+          )}
+
           <div className="mb-8 flex flex-wrap justify-center gap-3">
             <Button
-              onClick={() => navigate("/study")}
+              onClick={() => navigate("/dashboard")}
               variant="default"
+              className="gap-2"
+            >
+              <LayoutDashboard className="w-4 h-4" />
+              {t('dashboard.title')}
+            </Button>
+            <Button
+              onClick={() => navigate("/study")}
+              variant="outline"
               className="gap-2"
             >
               <GraduationCap className="w-4 h-4" />
