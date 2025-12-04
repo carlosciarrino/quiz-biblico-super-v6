@@ -138,6 +138,8 @@
     "unlockedAchievements": "Logros Desbloqueados"
   },
   "study": {
+    "title": "Estudio Bíblico",
+    "subtitle": "Planes de lectura y objetivos personales",
     "learnMore": "Aprende Más",
     "readVerse": "Lee el versículo en Bible.com"
   },
@@ -191,5 +193,56 @@
     "category": "Categoría",
     "leaderboard": "Clasificación del Desafío",
     "accept": "Aceptar Desafío"
+  },
+  "readingPlans": {
+    "title": "Planes de Lectura",
+    "days": "días",
+    "completed": "completados",
+    "start": "Iniciar",
+    "continue": "Continuar",
+    "restart": "Reiniciar",
+    "gospels30": "Evangelios en 30 Días",
+    "gospels30Desc": "Lee los cuatro Evangelios en un mes",
+    "psalms30": "Salmos en 30 Días",
+    "psalms30Desc": "Un recorrido por todos los Salmos",
+    "proverbs31": "Proverbios en 31 Días",
+    "proverbs31Desc": "Un capítulo de Proverbios al día",
+    "genesis30": "Génesis y Éxodo",
+    "genesis30Desc": "Los orígenes y la liberación del pueblo de Dios"
+  },
+  "goals": {
+    "title": "Objetivos",
+    "daily": "Objetivo Diario",
+    "weekly": "Objetivo Semanal",
+    "complete": "Completado",
+    "dailyStreak": "días consecutivos",
+    "weeklyStreak": "semanas consecutivas"
+  },
+  "badges": {
+    "title": "Insignias y Recompensas",
+    "locked": "Insignia bloqueada",
+    "weekWarrior": "Guerrero de la Semana",
+    "weekWarriorDesc": "Completa los objetivos de una semana",
+    "monthMaster": "Maestro del Mes",
+    "monthMasterDesc": "Completa los objetivos por 4 semanas",
+    "bibleExpert": "Experto Bíblico",
+    "bibleExpertDesc": "Completa 50 quizzes",
+    "dailyDevotion": "Devoción Diaria",
+    "dailyDevotionDesc": "7 días consecutivos",
+    "speedReader": "Lector Veloz",
+    "speedReaderDesc": "Completa 10 quizzes",
+    "allCategories": "Todoterreno",
+    "allCategoriesDesc": "Prueba todas las categorías",
+    "perfectionist": "Perfeccionista",
+    "perfectionistDesc": "100% en 20 quizzes",
+    "consistent": "Constante",
+    "consistentDesc": "14 días consecutivos"
+  },
+  "common": {
+    "back": "Atrás"
+  },
+  "offline": {
+    "ready": "App lista para uso sin conexión",
+    "updated": "Nuevos contenidos disponibles"
   }
 }

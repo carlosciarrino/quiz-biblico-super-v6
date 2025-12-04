@@ -1,0 +1,16 @@
+{
+  "name": "Quiz Biblico",
+  "short_name": "Quiz Biblico",
+  "description": "Test your Bible knowledge with interactive quizzes",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f5f0e8",
+  "theme_color": "#8B7355",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "64x64",
+      "type": "image/x-icon"
+    }
+  ]
+}

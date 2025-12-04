@@ -84,6 +84,8 @@
     "unlockedAchievements": "Unlocked Achievements"
   },
   "study": {
+    "title": "Bible Study",
+    "subtitle": "Reading plans and personal goals",
     "learnMore": "Learn More",
     "readVerse": "Read the verse on Bible.com"
   },
@@ -191,5 +193,56 @@
     "category": "Category",
     "leaderboard": "Challenge Leaderboard",
     "accept": "Accept Challenge"
+  },
+  "readingPlans": {
+    "title": "Reading Plans",
+    "days": "days",
+    "completed": "completed",
+    "start": "Start",
+    "continue": "Continue",
+    "restart": "Restart",
+    "gospels30": "Gospels in 30 Days",
+    "gospels30Desc": "Read all four Gospels in one month",
+    "psalms30": "Psalms in 30 Days",
+    "psalms30Desc": "A journey through all the Psalms",
+    "proverbs31": "Proverbs in 31 Days",
+    "proverbs31Desc": "One chapter of Proverbs per day",
+    "genesis30": "Genesis and Exodus",
+    "genesis30Desc": "The origins and liberation of God's people"
+  },
+  "goals": {
+    "title": "Goals",
+    "daily": "Daily Goal",
+    "weekly": "Weekly Goal",
+    "complete": "Complete",
+    "dailyStreak": "consecutive days",
+    "weeklyStreak": "consecutive weeks"
+  },
+  "badges": {
+    "title": "Badges and Rewards",
+    "locked": "Badge locked",
+    "weekWarrior": "Week Warrior",
+    "weekWarriorDesc": "Complete a week's goals",
+    "monthMaster": "Month Master",
+    "monthMasterDesc": "Complete goals for 4 weeks",
+    "bibleExpert": "Bible Expert",
+    "bibleExpertDesc": "Complete 50 quizzes",
+    "dailyDevotion": "Daily Devotion",
+    "dailyDevotionDesc": "7 consecutive days",
+    "speedReader": "Speed Reader",
+    "speedReaderDesc": "Complete 10 quizzes",
+    "allCategories": "All-Rounder",
+    "allCategoriesDesc": "Try all categories",
+    "perfectionist": "Perfectionist",
+    "perfectionistDesc": "100% in 20 quizzes",
+    "consistent": "Consistent",
+    "consistentDesc": "14 consecutive days"
+  },
+  "common": {
+    "back": "Back"
+  },
+  "offline": {
+    "ready": "App ready for offline use",
+    "updated": "New content available"
   }
 }
