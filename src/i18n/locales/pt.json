@@ -138,6 +138,8 @@
     "unlockedAchievements": "Conquistas Desbloqueadas"
   },
   "study": {
+    "title": "Estudo Bíblico",
+    "subtitle": "Planos de leitura e objetivos pessoais",
     "learnMore": "Saiba Mais",
     "readVerse": "Leia o versículo em Bible.com"
   },
@@ -191,5 +193,56 @@
     "category": "Categoria",
     "leaderboard": "Classificação do Desafio",
     "accept": "Aceitar Desafio"
+  },
+  "readingPlans": {
+    "title": "Planos de Leitura",
+    "days": "dias",
+    "completed": "concluídos",
+    "start": "Iniciar",
+    "continue": "Continuar",
+    "restart": "Reiniciar",
+    "gospels30": "Evangelhos em 30 Dias",
+    "gospels30Desc": "Leia os quatro Evangelhos em um mês",
+    "psalms30": "Salmos em 30 Dias",
+    "psalms30Desc": "Uma jornada por todos os Salmos",
+    "proverbs31": "Provérbios em 31 Dias",
+    "proverbs31Desc": "Um capítulo de Provérbios por dia",
+    "genesis30": "Gênesis e Êxodo",
+    "genesis30Desc": "As origens e a libertação do povo de Deus"
+  },
+  "goals": {
+    "title": "Objetivos",
+    "daily": "Objetivo Diário",
+    "weekly": "Objetivo Semanal",
+    "complete": "Completo",
+    "dailyStreak": "dias consecutivos",
+    "weeklyStreak": "semanas consecutivas"
+  },
+  "badges": {
+    "title": "Distintivos e Recompensas",
+    "locked": "Distintivo bloqueado",
+    "weekWarrior": "Guerreiro da Semana",
+    "weekWarriorDesc": "Complete os objetivos de uma semana",
+    "monthMaster": "Mestre do Mês",
+    "monthMasterDesc": "Complete os objetivos por 4 semanas",
+    "bibleExpert": "Especialista Bíblico",
+    "bibleExpertDesc": "Complete 50 quizzes",
+    "dailyDevotion": "Devoção Diária",
+    "dailyDevotionDesc": "7 dias consecutivos",
+    "speedReader": "Leitor Veloz",
+    "speedReaderDesc": "Complete 10 quizzes",
+    "allCategories": "Versátil",
+    "allCategoriesDesc": "Experimente todas as categorias",
+    "perfectionist": "Perfeccionista",
+    "perfectionistDesc": "100% em 20 quizzes",
+    "consistent": "Consistente",
+    "consistentDesc": "14 dias consecutivos"
+  },
+  "common": {
+    "back": "Voltar"
+  },
+  "offline": {
+    "ready": "App pronto para uso offline",
+    "updated": "Novos conteúdos disponíveis"
   }
 }

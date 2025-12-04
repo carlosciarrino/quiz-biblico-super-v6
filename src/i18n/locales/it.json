@@ -174,7 +174,7 @@
     "save": "Salva",
     "skip": "Salta"
   },
-  "challenge": {
+"challenge": {
     "createTitle": "Sfida i Tuoi Amici",
     "createDescription": "Crea una sfida e condividi il link per competere con i tuoi amici!",
     "challengeFriends": "Sfida i Tuoi Amici",
@@ -191,5 +191,62 @@
     "category": "Categoria",
     "leaderboard": "Classifica Sfida",
     "accept": "Accetta Sfida"
+  },
+  "study": {
+    "title": "Studio Biblico",
+    "subtitle": "Piani di lettura e obiettivi personali",
+    "learnMore": "Scopri di più",
+    "readVerse": "Leggi il versetto su Bible.com"
+  },
+  "readingPlans": {
+    "title": "Piani di Lettura",
+    "days": "giorni",
+    "completed": "completati",
+    "start": "Inizia",
+    "continue": "Continua",
+    "restart": "Ricomincia",
+    "gospels30": "I Vangeli in 30 Giorni",
+    "gospels30Desc": "Leggi tutti e quattro i Vangeli in un mese",
+    "psalms30": "Salmi in 30 Giorni",
+    "psalms30Desc": "Un percorso attraverso tutti i Salmi",
+    "proverbs31": "Proverbi in 31 Giorni",
+    "proverbs31Desc": "Un capitolo di Proverbi al giorno",
+    "genesis30": "Genesi ed Esodo",
+    "genesis30Desc": "Le origini e la liberazione del popolo di Dio"
+  },
+  "goals": {
+    "title": "Obiettivi",
+    "daily": "Obiettivo Giornaliero",
+    "weekly": "Obiettivo Settimanale",
+    "complete": "Completato",
+    "dailyStreak": "giorni consecutivi",
+    "weeklyStreak": "settimane consecutive"
+  },
+  "badges": {
+    "title": "Badge e Ricompense",
+    "locked": "Badge bloccato",
+    "weekWarrior": "Guerriero della Settimana",
+    "weekWarriorDesc": "Completa gli obiettivi di una settimana",
+    "monthMaster": "Maestro del Mese",
+    "monthMasterDesc": "Completa gli obiettivi per 4 settimane",
+    "bibleExpert": "Esperto Biblico",
+    "bibleExpertDesc": "Completa 50 quiz",
+    "dailyDevotion": "Devozione Quotidiana",
+    "dailyDevotionDesc": "7 giorni consecutivi",
+    "speedReader": "Lettore Veloce",
+    "speedReaderDesc": "Completa 10 quiz",
+    "allCategories": "Tuttofare",
+    "allCategoriesDesc": "Prova tutte le categorie",
+    "perfectionist": "Perfezionista",
+    "perfectionistDesc": "100% in 20 quiz",
+    "consistent": "Costante",
+    "consistentDesc": "14 giorni consecutivi"
+  },
+  "common": {
+    "back": "Indietro"
+  },
+  "offline": {
+    "ready": "App pronta per uso offline",
+    "updated": "Nuovi contenuti disponibili"
   }
 }

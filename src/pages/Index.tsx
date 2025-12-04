@@ -6,7 +6,7 @@ import SmartReviewSuggestion from "@/components/SmartReviewSuggestion";
 import Leaderboard from "@/components/Leaderboard";
 import ChallengeCard from "@/components/ChallengeCard";
 import { categories } from "@/data/questions";
-import { Book, Sparkles, BookOpen, Shuffle, BarChart3, Trophy } from "lucide-react";
+import { Book, Sparkles, BookOpen, Shuffle, BarChart3, Trophy, GraduationCap } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
 import { Button } from "@/components/ui/button";
@@ -91,6 +91,14 @@ const Index = () => {
           )}
 
           <div className="mb-8 flex flex-wrap justify-center gap-3">
+            <Button
+              onClick={() => navigate("/study")}
+              variant="default"
+              className="gap-2"
+            >
+              <GraduationCap className="w-4 h-4" />
+              {t('study.title')}
+            </Button>
             <Button
               onClick={() => navigate("/bible")}
               variant="outline"

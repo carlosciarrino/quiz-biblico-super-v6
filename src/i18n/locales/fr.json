@@ -138,6 +138,8 @@
     "unlockedAchievements": "Réussites Débloquées"
   },
   "study": {
+    "title": "Étude Biblique",
+    "subtitle": "Plans de lecture et objectifs personnels",
     "learnMore": "En Savoir Plus",
     "readVerse": "Lire le verset sur Bible.com"
   },
@@ -191,5 +193,56 @@
     "category": "Catégorie",
     "leaderboard": "Classement du Défi",
     "accept": "Accepter le Défi"
+  },
+  "readingPlans": {
+    "title": "Plans de Lecture",
+    "days": "jours",
+    "completed": "complétés",
+    "start": "Commencer",
+    "continue": "Continuer",
+    "restart": "Recommencer",
+    "gospels30": "Évangiles en 30 Jours",
+    "gospels30Desc": "Lisez les quatre Évangiles en un mois",
+    "psalms30": "Psaumes en 30 Jours",
+    "psalms30Desc": "Un parcours à travers tous les Psaumes",
+    "proverbs31": "Proverbes en 31 Jours",
+    "proverbs31Desc": "Un chapitre de Proverbes par jour",
+    "genesis30": "Genèse et Exode",
+    "genesis30Desc": "Les origines et la libération du peuple de Dieu"
+  },
+  "goals": {
+    "title": "Objectifs",
+    "daily": "Objectif Quotidien",
+    "weekly": "Objectif Hebdomadaire",
+    "complete": "Terminé",
+    "dailyStreak": "jours consécutifs",
+    "weeklyStreak": "semaines consécutives"
+  },
+  "badges": {
+    "title": "Badges et Récompenses",
+    "locked": "Badge verrouillé",
+    "weekWarrior": "Guerrier de la Semaine",
+    "weekWarriorDesc": "Complétez les objectifs d'une semaine",
+    "monthMaster": "Maître du Mois",
+    "monthMasterDesc": "Complétez les objectifs pendant 4 semaines",
+    "bibleExpert": "Expert Biblique",
+    "bibleExpertDesc": "Complétez 50 quiz",
+    "dailyDevotion": "Dévotion Quotidienne",
+    "dailyDevotionDesc": "7 jours consécutifs",
+    "speedReader": "Lecteur Rapide",
+    "speedReaderDesc": "Complétez 10 quiz",
+    "allCategories": "Polyvalent",
+    "allCategoriesDesc": "Essayez toutes les catégories",
+    "perfectionist": "Perfectionniste",
+    "perfectionistDesc": "100% à 20 quiz",
+    "consistent": "Constant",
+    "consistentDesc": "14 jours consécutifs"
+  },
+  "common": {
+    "back": "Retour"
+  },
+  "offline": {
+    "ready": "App prête pour une utilisation hors ligne",
+    "updated": "Nouveaux contenus disponibles"
   }
 }
