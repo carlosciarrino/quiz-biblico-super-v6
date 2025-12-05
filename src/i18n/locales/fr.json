@@ -270,5 +270,20 @@
     "avgScore": "Score Moyen",
     "correctAnswers": "Réponses Correctes",
     "week": "Sem."
+  },
+  "dailyReward": {
+    "title": "Récompense Quotidienne !",
+    "description": "Connectez-vous chaque jour pour gagner des XP bonus !",
+    "day": "Jour",
+    "daysStreak": "jours consécutifs",
+    "claim": "Réclamer Récompense",
+    "claimed": "Vous avez reçu +{{xp}} XP !"
+  },
+  "levelUp": {
+    "title": "NIVEAU SUPÉRIEUR !",
+    "reached": "Vous avez atteint un nouveau niveau !",
+    "newTitle": "Nouveau Titre",
+    "congratulations": "Félicitations pour vos progrès !",
+    "continue": "Continuer"
   }
 }

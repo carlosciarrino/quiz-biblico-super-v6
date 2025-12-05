@@ -6,6 +6,8 @@ import SmartReviewSuggestion from "@/components/SmartReviewSuggestion";
 import Leaderboard from "@/components/Leaderboard";
 import ChallengeCard from "@/components/ChallengeCard";
 import LevelDisplay from "@/components/LevelDisplay";
+import DailyRewardPopup from "@/components/DailyRewardPopup";
+import LevelUpAnimation from "@/components/LevelUpAnimation";
 import { categories } from "@/data/questions";
 import { Book, Sparkles, BookOpen, Shuffle, BarChart3, Trophy, GraduationCap, LayoutDashboard } from "lucide-react";
 import { useTranslation } from "react-i18next";
@@ -15,7 +17,10 @@ import { useUserStats } from "@/hooks/useUserStats";
 import { useUserLevel } from "@/hooks/useUserLevel";
 import { useLeaderboard } from "@/hooks/useLeaderboard";
 import { useChallenge } from "@/hooks/useChallenge";
+import { useDailyLoginReward } from "@/hooks/useDailyLoginReward";
+import { useLevelUpDetector } from "@/hooks/useLevelUpDetector";
 import { useState, useEffect } from "react";
+import { toast } from "sonner";
 
 const Index = () => {
   const { t } = useTranslation();
@@ -25,11 +30,18 @@ const Index = () => {
   const levelInfo = useUserLevel(stats);
   const { entries } = useLeaderboard();
   const { getChallenge } = useChallenge();
+  const { state: loginState, showRewardPopup, claimReward, closePopup } = useDailyLoginReward();
+  const { showLevelUp, newLevel, newTitle, closeLevelUp } = useLevelUpDetector(stats);
   const [showStats, setShowStats] = useState(false);
   const [showLeaderboard, setShowLeaderboard] = useState(false);
   
   const challengeId = searchParams.get("challenge");
   const challenge = challengeId ? getChallenge(challengeId) : null;
+
+  const handleClaimReward = () => {
+    const xpBonus = claimReward();
+    toast.success(t('dailyReward.claimed', { xp: xpBonus }));
+  };
 
   const handleCategoryClick = (categoryName: string) => {
     navigate(`/quiz?category=${encodeURIComponent(categoryName)}&type=thematic`);
@@ -247,6 +259,23 @@ const Index = () => {
             </div>
           </div>
         </main>
+
+        {/* Daily Reward Popup */}
+        <DailyRewardPopup
+          open={showRewardPopup && !loginState.todayRewardClaimed}
+          onClose={closePopup}
+          onClaim={handleClaimReward}
+          reward={loginState.currentReward}
+          consecutiveDays={loginState.consecutiveDays}
+        />
+
+        {/* Level Up Animation */}
+        <LevelUpAnimation
+          open={showLevelUp}
+          onClose={closeLevelUp}
+          newLevel={newLevel}
+          title={newTitle}
+        />
       </div>
     </div>
   );

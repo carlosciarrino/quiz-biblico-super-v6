@@ -270,5 +270,20 @@
     "avgScore": "Puntuación Media",
     "correctAnswers": "Respuestas Correctas",
     "week": "Sem."
+  },
+  "dailyReward": {
+    "title": "¡Recompensa Diaria!",
+    "description": "¡Inicia sesión todos los días para ganar XP extra!",
+    "day": "Día",
+    "daysStreak": "días consecutivos",
+    "claim": "Reclamar Recompensa",
+    "claimed": "¡Has recibido +{{xp}} XP!"
+  },
+  "levelUp": {
+    "title": "¡SUBISTE DE NIVEL!",
+    "reached": "¡Has alcanzado un nuevo nivel!",
+    "newTitle": "Nuevo Título",
+    "congratulations": "¡Felicidades por tu progreso!",
+    "continue": "Continuar"
   }
 }
