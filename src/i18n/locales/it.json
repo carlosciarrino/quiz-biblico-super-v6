@@ -274,5 +274,20 @@
     "avgScore": "Punteggio Medio",
     "correctAnswers": "Risposte Corrette",
     "week": "Sett."
+  },
+  "dailyReward": {
+    "title": "Ricompensa Giornaliera!",
+    "description": "Accedi ogni giorno per guadagnare bonus XP!",
+    "day": "Giorno",
+    "daysStreak": "giorni consecutivi",
+    "claim": "Riscuoti Ricompensa",
+    "claimed": "Hai ricevuto +{{xp}} XP!"
+  },
+  "levelUp": {
+    "title": "LEVEL UP!",
+    "reached": "Hai raggiunto un nuovo livello!",
+    "newTitle": "Nuovo Titolo",
+    "congratulations": "Complimenti per i tuoi progressi!",
+    "continue": "Continua"
   }
 }
