@@ -61,6 +61,18 @@
     "paulineLetters": {
       "name": "Pauline Letters",
       "description": "The epistles of St. Paul"
+    },
+    "wisdomLiterature": {
+      "name": "Wisdom Literature",
+      "description": "Proverbs, Ecclesiastes and books of wisdom"
+    },
+    "actsApostles": {
+      "name": "Acts of the Apostles",
+      "description": "The birth of the early Church"
+    },
+    "revelation": {
+      "name": "Revelation",
+      "description": "The prophetic visions of John"
     }
   },
 "scoring": {

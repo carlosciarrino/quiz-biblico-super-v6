@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { BookOpen, Scroll, Users, ArrowRight } from "lucide-react";
+import { BookOpen, Scroll, Users, ArrowRight, Sparkles, Flame, Eye } from "lucide-react";
 import { useTranslation } from "react-i18next";
 
 interface CategoryCardProps {
@@ -21,6 +21,12 @@ const CategoryCard = ({ name, description, icon, color, onClick }: CategoryCardP
         return <BookOpen className="w-10 h-10" />;
       case "users":
         return <Users className="w-10 h-10" />;
+      case "sparkles":
+        return <Sparkles className="w-10 h-10" />;
+      case "flame":
+        return <Flame className="w-10 h-10" />;
+      case "eye":
+        return <Eye className="w-10 h-10" />;
       default:
         return <BookOpen className="w-10 h-10" />;
     }
@@ -62,7 +68,14 @@ const getCategoryKey = (categoryName: string) => {
   const map: Record<string, string> = {
     "Antico Testamento": "oldTestament",
     "Nuovo Testamento": "newTestament",
-    "Personaggi Biblici": "biblicalCharacters"
+    "Personaggi Biblici": "biblicalCharacters",
+    "Pentateuco": "pentateuch",
+    "Profeti Minori": "minorProphets",
+    "Quattro Vangeli": "fourGospels",
+    "Lettere Paoline": "paulineLetters",
+    "Letteratura Sapienziale": "wisdomLiterature",
+    "Atti degli Apostoli": "actsApostles",
+    "Apocalisse": "revelation"
   };
   return map[categoryName] || "oldTestament";
 };

@@ -61,6 +61,18 @@
     "paulineLetters": {
       "name": "Cartas Paulinas",
       "description": "As epístolas de São Paulo"
+    },
+    "wisdomLiterature": {
+      "name": "Literatura Sapiencial",
+      "description": "Provérbios, Eclesiastes e livros de sabedoria"
+    },
+    "actsApostles": {
+      "name": "Atos dos Apóstolos",
+      "description": "O nascimento da Igreja primitiva"
+    },
+    "revelation": {
+      "name": "Apocalipse",
+      "description": "As visões proféticas de João"
     }
   },
   "scoring": {

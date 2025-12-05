@@ -3115,6 +3115,1332 @@ export const questions: Question[] = [
     category: "Lettere Paoline",
     difficulty: "hard",
   },
+
+  // ============= LETTERATURA SAPIENZIALE (20 questions) =============
+  {
+    id: 141,
+    question: "Chi scrisse la maggior parte del libro dei Proverbi?",
+    questions: {
+      it: "Chi scrisse la maggior parte del libro dei Proverbi?",
+      en: "Who wrote most of the book of Proverbs?",
+      es: "¿Quién escribió la mayor parte del libro de Proverbios?",
+      pt: "Quem escreveu a maior parte do livro de Provérbios?",
+      fr: "Qui a écrit la majeure partie du livre des Proverbes?"
+    },
+    options: ["Davide", "Salomone", "Mosè", "Samuele"],
+    optionsTranslated: {
+      it: ["Davide", "Salomone", "Mosè", "Samuele"],
+      en: ["David", "Solomon", "Moses", "Samuel"],
+      es: ["David", "Salomón", "Moisés", "Samuel"],
+      pt: ["Davi", "Salomão", "Moisés", "Samuel"],
+      fr: ["David", "Salomon", "Moïse", "Samuel"]
+    },
+    correctAnswer: 1,
+    category: "Letteratura Sapienziale",
+    difficulty: "easy",
+  },
+  {
+    id: 142,
+    question: "Quale frase famosa inizia Ecclesiaste?",
+    questions: {
+      it: "Quale frase famosa inizia Ecclesiaste?",
+      en: "What famous phrase begins Ecclesiastes?",
+      es: "¿Qué frase famosa comienza Eclesiastés?",
+      pt: "Qual frase famosa começa Eclesiastes?",
+      fr: "Quelle phrase célèbre commence l'Ecclésiaste?"
+    },
+    options: ["In principio", "Vanità delle vanità", "Beato l'uomo", "Il Signore è il mio pastore"],
+    optionsTranslated: {
+      it: ["In principio", "Vanità delle vanità", "Beato l'uomo", "Il Signore è il mio pastore"],
+      en: ["In the beginning", "Vanity of vanities", "Blessed is the man", "The Lord is my shepherd"],
+      es: ["En el principio", "Vanidad de vanidades", "Bienaventurado el hombre", "El Señor es mi pastor"],
+      pt: ["No princípio", "Vaidade de vaidades", "Bem-aventurado o homem", "O Senhor é meu pastor"],
+      fr: ["Au commencement", "Vanité des vanités", "Heureux l'homme", "Le Seigneur est mon berger"]
+    },
+    correctAnswer: 1,
+    category: "Letteratura Sapienziale",
+    difficulty: "easy",
+  },
+  {
+    id: 143,
+    question: "Chi è il protagonista del libro di Giobbe?",
+    questions: {
+      it: "Chi è il protagonista del libro di Giobbe?",
+      en: "Who is the main character in the book of Job?",
+      es: "¿Quién es el protagonista del libro de Job?",
+      pt: "Quem é o protagonista do livro de Jó?",
+      fr: "Qui est le protagoniste du livre de Job?"
+    },
+    options: ["Un re", "Un sacerdote", "Un uomo giusto", "Un profeta"],
+    optionsTranslated: {
+      it: ["Un re", "Un sacerdote", "Un uomo giusto", "Un profeta"],
+      en: ["A king", "A priest", "A righteous man", "A prophet"],
+      es: ["Un rey", "Un sacerdote", "Un hombre justo", "Un profeta"],
+      pt: ["Um rei", "Um sacerdote", "Um homem justo", "Um profeta"],
+      fr: ["Un roi", "Un prêtre", "Un homme juste", "Un prophète"]
+    },
+    correctAnswer: 2,
+    category: "Letteratura Sapienziale",
+    difficulty: "easy",
+  },
+  {
+    id: 144,
+    question: "Quanti amici vennero a consolare Giobbe?",
+    questions: {
+      it: "Quanti amici vennero a consolare Giobbe?",
+      en: "How many friends came to comfort Job?",
+      es: "¿Cuántos amigos vinieron a consolar a Job?",
+      pt: "Quantos amigos vieram consolar Jó?",
+      fr: "Combien d'amis sont venus consoler Job?"
+    },
+    options: ["2", "3", "4", "5"],
+    optionsTranslated: {
+      it: ["2", "3", "4", "5"],
+      en: ["2", "3", "4", "5"],
+      es: ["2", "3", "4", "5"],
+      pt: ["2", "3", "4", "5"],
+      fr: ["2", "3", "4", "5"]
+    },
+    correctAnswer: 1,
+    category: "Letteratura Sapienziale",
+    difficulty: "medium",
+  },
+  {
+    id: 145,
+    question: "Secondo Proverbi, qual è l'inizio della sapienza?",
+    questions: {
+      it: "Secondo Proverbi, qual è l'inizio della sapienza?",
+      en: "According to Proverbs, what is the beginning of wisdom?",
+      es: "Según Proverbios, ¿cuál es el principio de la sabiduría?",
+      pt: "Segundo Provérbios, qual é o princípio da sabedoria?",
+      fr: "Selon les Proverbes, quel est le commencement de la sagesse?"
+    },
+    options: ["Lo studio", "Il timore del Signore", "L'esperienza", "La preghiera"],
+    optionsTranslated: {
+      it: ["Lo studio", "Il timore del Signore", "L'esperienza", "La preghiera"],
+      en: ["Study", "The fear of the Lord", "Experience", "Prayer"],
+      es: ["El estudio", "El temor del Señor", "La experiencia", "La oración"],
+      pt: ["O estudo", "O temor do Senhor", "A experiência", "A oração"],
+      fr: ["L'étude", "La crainte du Seigneur", "L'expérience", "La prière"]
+    },
+    correctAnswer: 1,
+    category: "Letteratura Sapienziale",
+    difficulty: "easy",
+  },
+  {
+    id: 146,
+    question: "Chi scrisse Ecclesiaste secondo la tradizione?",
+    questions: {
+      it: "Chi scrisse Ecclesiaste secondo la tradizione?",
+      en: "Who wrote Ecclesiastes according to tradition?",
+      es: "¿Quién escribió Eclesiastés según la tradición?",
+      pt: "Quem escreveu Eclesiastes segundo a tradição?",
+      fr: "Qui a écrit l'Ecclésiaste selon la tradition?"
+    },
+    options: ["Davide", "Salomone", "Isaia", "Geremia"],
+    optionsTranslated: {
+      it: ["Davide", "Salomone", "Isaia", "Geremia"],
+      en: ["David", "Solomon", "Isaiah", "Jeremiah"],
+      es: ["David", "Salomón", "Isaías", "Jeremías"],
+      pt: ["Davi", "Salomão", "Isaías", "Jeremias"],
+      fr: ["David", "Salomon", "Isaïe", "Jérémie"]
+    },
+    correctAnswer: 1,
+    category: "Letteratura Sapienziale",
+    difficulty: "medium",
+  },
+  {
+    id: 147,
+    question: "Quale libro sapienziale parla di un tempo per ogni cosa?",
+    questions: {
+      it: "Quale libro sapienziale parla di un tempo per ogni cosa?",
+      en: "Which wisdom book speaks of a time for everything?",
+      es: "¿Qué libro sapiencial habla de un tiempo para cada cosa?",
+      pt: "Qual livro sapiencial fala de um tempo para cada coisa?",
+      fr: "Quel livre de sagesse parle d'un temps pour chaque chose?"
+    },
+    options: ["Proverbi", "Giobbe", "Ecclesiaste", "Siracide"],
+    optionsTranslated: {
+      it: ["Proverbi", "Giobbe", "Ecclesiaste", "Siracide"],
+      en: ["Proverbs", "Job", "Ecclesiastes", "Sirach"],
+      es: ["Proverbios", "Job", "Eclesiastés", "Sirácida"],
+      pt: ["Provérbios", "Jó", "Eclesiastes", "Sirácida"],
+      fr: ["Proverbes", "Job", "Ecclésiaste", "Siracide"]
+    },
+    correctAnswer: 2,
+    category: "Letteratura Sapienziale",
+    difficulty: "easy",
+  },
+  {
+    id: 148,
+    question: "Cosa perse Giobbe all'inizio della sua prova?",
+    questions: {
+      it: "Cosa perse Giobbe all'inizio della sua prova?",
+      en: "What did Job lose at the beginning of his trial?",
+      es: "¿Qué perdió Job al comienzo de su prueba?",
+      pt: "O que Jó perdeu no início de sua provação?",
+      fr: "Qu'est-ce que Job a perdu au début de son épreuve?"
+    },
+    options: ["Solo i beni", "Solo i figli", "Tutto: beni, figli e salute", "Solo la salute"],
+    optionsTranslated: {
+      it: ["Solo i beni", "Solo i figli", "Tutto: beni, figli e salute", "Solo la salute"],
+      en: ["Only possessions", "Only children", "Everything: possessions, children and health", "Only health"],
+      es: ["Solo los bienes", "Solo los hijos", "Todo: bienes, hijos y salud", "Solo la salud"],
+      pt: ["Apenas os bens", "Apenas os filhos", "Tudo: bens, filhos e saúde", "Apenas a saúde"],
+      fr: ["Seulement les biens", "Seulement les enfants", "Tout: biens, enfants et santé", "Seulement la santé"]
+    },
+    correctAnswer: 2,
+    category: "Letteratura Sapienziale",
+    difficulty: "medium",
+  },
+  {
+    id: 149,
+    question: "Come si chiama la donna virtuosa descritta in Proverbi 31?",
+    questions: {
+      it: "Come si chiama la donna virtuosa descritta in Proverbi 31?",
+      en: "What is the virtuous woman described in Proverbs 31 called?",
+      es: "¿Cómo se llama la mujer virtuosa descrita en Proverbios 31?",
+      pt: "Como é chamada a mulher virtuosa descrita em Provérbios 31?",
+      fr: "Comment s'appelle la femme vertueuse décrite dans Proverbes 31?"
+    },
+    options: ["Ruth", "Donna di valore", "Sara", "Debora"],
+    optionsTranslated: {
+      it: ["Ruth", "Donna di valore", "Sara", "Debora"],
+      en: ["Ruth", "Woman of valor", "Sarah", "Deborah"],
+      es: ["Rut", "Mujer virtuosa", "Sara", "Débora"],
+      pt: ["Rute", "Mulher virtuosa", "Sara", "Débora"],
+      fr: ["Ruth", "Femme vaillante", "Sara", "Débora"]
+    },
+    correctAnswer: 1,
+    category: "Letteratura Sapienziale",
+    difficulty: "medium",
+  },
+  {
+    id: 150,
+    question: "Quanti capitoli ha il libro dei Proverbi?",
+    questions: {
+      it: "Quanti capitoli ha il libro dei Proverbi?",
+      en: "How many chapters does the book of Proverbs have?",
+      es: "¿Cuántos capítulos tiene el libro de Proverbios?",
+      pt: "Quantos capítulos tem o livro de Provérbios?",
+      fr: "Combien de chapitres le livre des Proverbes a-t-il?"
+    },
+    options: ["21", "31", "41", "51"],
+    optionsTranslated: {
+      it: ["21", "31", "41", "51"],
+      en: ["21", "31", "41", "51"],
+      es: ["21", "31", "41", "51"],
+      pt: ["21", "31", "41", "51"],
+      fr: ["21", "31", "41", "51"]
+    },
+    correctAnswer: 1,
+    category: "Letteratura Sapienziale",
+    difficulty: "hard",
+  },
+  {
+    id: 151,
+    question: "Quale personaggio biblico chiese a Dio la sapienza invece della ricchezza?",
+    questions: {
+      it: "Quale personaggio biblico chiese a Dio la sapienza invece della ricchezza?",
+      en: "Which biblical figure asked God for wisdom instead of riches?",
+      es: "¿Qué personaje bíblico pidió a Dios sabiduría en lugar de riquezas?",
+      pt: "Qual personagem bíblico pediu a Deus sabedoria em vez de riquezas?",
+      fr: "Quel personnage biblique a demandé à Dieu la sagesse au lieu de la richesse?"
+    },
+    options: ["Davide", "Salomone", "Mosè", "Abramo"],
+    optionsTranslated: {
+      it: ["Davide", "Salomone", "Mosè", "Abramo"],
+      en: ["David", "Solomon", "Moses", "Abraham"],
+      es: ["David", "Salomón", "Moisés", "Abraham"],
+      pt: ["Davi", "Salomão", "Moisés", "Abraão"],
+      fr: ["David", "Salomon", "Moïse", "Abraham"]
+    },
+    correctAnswer: 1,
+    category: "Letteratura Sapienziale",
+    difficulty: "easy",
+  },
+  {
+    id: 152,
+    question: "Secondo Ecclesiaste, cosa c'è sotto il sole?",
+    questions: {
+      it: "Secondo Ecclesiaste, cosa c'è sotto il sole?",
+      en: "According to Ecclesiastes, what is there under the sun?",
+      es: "Según Eclesiastés, ¿qué hay bajo el sol?",
+      pt: "Segundo Eclesiastes, o que há debaixo do sol?",
+      fr: "Selon l'Ecclésiaste, qu'y a-t-il sous le soleil?"
+    },
+    options: ["Solo gioia", "Niente di nuovo", "Eterna felicità", "Continuo progresso"],
+    optionsTranslated: {
+      it: ["Solo gioia", "Niente di nuovo", "Eterna felicità", "Continuo progresso"],
+      en: ["Only joy", "Nothing new", "Eternal happiness", "Continuous progress"],
+      es: ["Solo alegría", "Nada nuevo", "Felicidad eterna", "Progreso continuo"],
+      pt: ["Apenas alegria", "Nada de novo", "Felicidade eterna", "Progresso contínuo"],
+      fr: ["Seulement la joie", "Rien de nouveau", "Bonheur éternel", "Progrès continu"]
+    },
+    correctAnswer: 1,
+    category: "Letteratura Sapienziale",
+    difficulty: "easy",
+  },
+  {
+    id: 153,
+    question: "Chi tentò Giobbe secondo il libro?",
+    questions: {
+      it: "Chi tentò Giobbe secondo il libro?",
+      en: "Who tested Job according to the book?",
+      es: "¿Quién probó a Job según el libro?",
+      pt: "Quem provou Jó segundo o livro?",
+      fr: "Qui a éprouvé Job selon le livre?"
+    },
+    options: ["Gli amici", "Satana", "Un angelo", "Un profeta"],
+    optionsTranslated: {
+      it: ["Gli amici", "Satana", "Un angelo", "Un profeta"],
+      en: ["His friends", "Satan", "An angel", "A prophet"],
+      es: ["Sus amigos", "Satanás", "Un ángel", "Un profeta"],
+      pt: ["Os amigos", "Satanás", "Um anjo", "Um profeta"],
+      fr: ["Ses amis", "Satan", "Un ange", "Un prophète"]
+    },
+    correctAnswer: 1,
+    category: "Letteratura Sapienziale",
+    difficulty: "medium",
+  },
+  {
+    id: 154,
+    question: "Come termina il libro di Giobbe?",
+    questions: {
+      it: "Come termina il libro di Giobbe?",
+      en: "How does the book of Job end?",
+      es: "¿Cómo termina el libro de Job?",
+      pt: "Como termina o livro de Jó?",
+      fr: "Comment se termine le livre de Job?"
+    },
+    options: ["Con la morte di Giobbe", "Con la restaurazione di Giobbe", "Con la punizione degli amici", "Con una profezia"],
+    optionsTranslated: {
+      it: ["Con la morte di Giobbe", "Con la restaurazione di Giobbe", "Con la punizione degli amici", "Con una profezia"],
+      en: ["With Job's death", "With Job's restoration", "With the punishment of his friends", "With a prophecy"],
+      es: ["Con la muerte de Job", "Con la restauración de Job", "Con el castigo de sus amigos", "Con una profecía"],
+      pt: ["Com a morte de Jó", "Com a restauração de Jó", "Com a punição dos amigos", "Com uma profecia"],
+      fr: ["Avec la mort de Job", "Avec la restauration de Job", "Avec la punition de ses amis", "Avec une prophétie"]
+    },
+    correctAnswer: 1,
+    category: "Letteratura Sapienziale",
+    difficulty: "medium",
+  },
+  {
+    id: 155,
+    question: "Quale libro sapienziale contiene il 'Cantico dei Cantici'?",
+    questions: {
+      it: "Quale libro sapienziale contiene il 'Cantico dei Cantici'?",
+      en: "Which wisdom book is the 'Song of Songs'?",
+      es: "¿Qué libro sapiencial es el 'Cantar de los Cantares'?",
+      pt: "Qual livro sapiencial é o 'Cântico dos Cânticos'?",
+      fr: "Quel livre de sagesse est le 'Cantique des Cantiques'?"
+    },
+    options: ["È un libro a sé", "Parte dei Proverbi", "Parte di Ecclesiaste", "Parte dei Salmi"],
+    optionsTranslated: {
+      it: ["È un libro a sé", "Parte dei Proverbi", "Parte di Ecclesiaste", "Parte dei Salmi"],
+      en: ["It's a separate book", "Part of Proverbs", "Part of Ecclesiastes", "Part of Psalms"],
+      es: ["Es un libro separado", "Parte de Proverbios", "Parte de Eclesiastés", "Parte de los Salmos"],
+      pt: ["É um livro separado", "Parte de Provérbios", "Parte de Eclesiastes", "Parte dos Salmos"],
+      fr: ["C'est un livre séparé", "Partie des Proverbes", "Partie de l'Ecclésiaste", "Partie des Psaumes"]
+    },
+    correctAnswer: 0,
+    category: "Letteratura Sapienziale",
+    difficulty: "hard",
+  },
+  {
+    id: 156,
+    question: "Qual è il tema principale di Ecclesiaste?",
+    questions: {
+      it: "Qual è il tema principale di Ecclesiaste?",
+      en: "What is the main theme of Ecclesiastes?",
+      es: "¿Cuál es el tema principal de Eclesiastés?",
+      pt: "Qual é o tema principal de Eclesiastes?",
+      fr: "Quel est le thème principal de l'Ecclésiaste?"
+    },
+    options: ["La guerra santa", "La vanità delle cose terrene", "L'amore romantico", "Le leggi cerimoniali"],
+    optionsTranslated: {
+      it: ["La guerra santa", "La vanità delle cose terrene", "L'amore romantico", "Le leggi cerimoniali"],
+      en: ["Holy war", "The vanity of earthly things", "Romantic love", "Ceremonial laws"],
+      es: ["La guerra santa", "La vanidad de las cosas terrenales", "El amor romántico", "Las leyes ceremoniales"],
+      pt: ["A guerra santa", "A vaidade das coisas terrenas", "O amor romântico", "As leis cerimoniais"],
+      fr: ["La guerre sainte", "La vanité des choses terrestres", "L'amour romantique", "Les lois cérémonielles"]
+    },
+    correctAnswer: 1,
+    category: "Letteratura Sapienziale",
+    difficulty: "easy",
+  },
+  {
+    id: 157,
+    question: "Quanti figli ebbe Giobbe alla fine del libro?",
+    questions: {
+      it: "Quanti figli ebbe Giobbe alla fine del libro?",
+      en: "How many children did Job have at the end of the book?",
+      es: "¿Cuántos hijos tuvo Job al final del libro?",
+      pt: "Quantos filhos Jó teve no final do livro?",
+      fr: "Combien d'enfants Job a-t-il eu à la fin du livre?"
+    },
+    options: ["7", "10", "14", "20"],
+    optionsTranslated: {
+      it: ["7", "10", "14", "20"],
+      en: ["7", "10", "14", "20"],
+      es: ["7", "10", "14", "20"],
+      pt: ["7", "10", "14", "20"],
+      fr: ["7", "10", "14", "20"]
+    },
+    correctAnswer: 1,
+    category: "Letteratura Sapienziale",
+    difficulty: "hard",
+  },
+  {
+    id: 158,
+    question: "Cosa rappresenta la 'sapienza' nei libri sapienziali?",
+    questions: {
+      it: "Cosa rappresenta la 'sapienza' nei libri sapienziali?",
+      en: "What does 'wisdom' represent in the wisdom books?",
+      es: "¿Qué representa la 'sabiduría' en los libros sapienciales?",
+      pt: "O que a 'sabedoria' representa nos livros sapienciais?",
+      fr: "Que représente la 'sagesse' dans les livres de sagesse?"
+    },
+    options: ["Solo intelligenza", "La capacità di vivere rettamente secondo Dio", "Conoscenza scientifica", "Potere politico"],
+    optionsTranslated: {
+      it: ["Solo intelligenza", "La capacità di vivere rettamente secondo Dio", "Conoscenza scientifica", "Potere politico"],
+      en: ["Only intelligence", "The ability to live righteously according to God", "Scientific knowledge", "Political power"],
+      es: ["Solo inteligencia", "La capacidad de vivir rectamente según Dios", "Conocimiento científico", "Poder político"],
+      pt: ["Apenas inteligência", "A capacidade de viver retamente segundo Deus", "Conhecimento científico", "Poder político"],
+      fr: ["Seulement l'intelligence", "La capacité de vivre selon Dieu", "Connaissance scientifique", "Pouvoir politique"]
+    },
+    correctAnswer: 1,
+    category: "Letteratura Sapienziale",
+    difficulty: "medium",
+  },
+  {
+    id: 159,
+    question: "In quale libro si dice 'Mangia, bevi e stai allegro'?",
+    questions: {
+      it: "In quale libro si dice 'Mangia, bevi e stai allegro'?",
+      en: "In which book is it said 'Eat, drink and be merry'?",
+      es: "¿En qué libro se dice 'Come, bebe y alégrate'?",
+      pt: "Em qual livro se diz 'Come, bebe e alegra-te'?",
+      fr: "Dans quel livre est-il dit 'Mange, bois et réjouis-toi'?"
+    },
+    options: ["Proverbi", "Ecclesiaste", "Giobbe", "Siracide"],
+    optionsTranslated: {
+      it: ["Proverbi", "Ecclesiaste", "Giobbe", "Siracide"],
+      en: ["Proverbs", "Ecclesiastes", "Job", "Sirach"],
+      es: ["Proverbios", "Eclesiastés", "Job", "Sirácida"],
+      pt: ["Provérbios", "Eclesiastes", "Jó", "Sirácida"],
+      fr: ["Proverbes", "Ecclésiaste", "Job", "Siracide"]
+    },
+    correctAnswer: 1,
+    category: "Letteratura Sapienziale",
+    difficulty: "hard",
+  },
+  {
+    id: 160,
+    question: "Come si chiama il giovane che parla per ultimo a Giobbe?",
+    questions: {
+      it: "Come si chiama il giovane che parla per ultimo a Giobbe?",
+      en: "What is the name of the young man who speaks last to Job?",
+      es: "¿Cómo se llama el joven que habla último a Job?",
+      pt: "Como se chama o jovem que fala por último a Jó?",
+      fr: "Comment s'appelle le jeune homme qui parle en dernier à Job?"
+    },
+    options: ["Elifaz", "Bildad", "Zofar", "Eliu"],
+    optionsTranslated: {
+      it: ["Elifaz", "Bildad", "Zofar", "Eliu"],
+      en: ["Eliphaz", "Bildad", "Zophar", "Elihu"],
+      es: ["Elifaz", "Bildad", "Zofar", "Eliú"],
+      pt: ["Elifaz", "Bildad", "Zofar", "Eliú"],
+      fr: ["Éliphaz", "Bildad", "Tsophar", "Élihu"]
+    },
+    correctAnswer: 3,
+    category: "Letteratura Sapienziale",
+    difficulty: "hard",
+  },
+
+  // ============= ATTI DEGLI APOSTOLI (20 questions) =============
+  {
+    id: 161,
+    question: "Chi scrisse il libro degli Atti degli Apostoli?",
+    questions: {
+      it: "Chi scrisse il libro degli Atti degli Apostoli?",
+      en: "Who wrote the book of Acts of the Apostles?",
+      es: "¿Quién escribió el libro de los Hechos de los Apóstoles?",
+      pt: "Quem escreveu o livro dos Atos dos Apóstolos?",
+      fr: "Qui a écrit le livre des Actes des Apôtres?"
+    },
+    options: ["Paolo", "Luca", "Pietro", "Giovanni"],
+    optionsTranslated: {
+      it: ["Paolo", "Luca", "Pietro", "Giovanni"],
+      en: ["Paul", "Luke", "Peter", "John"],
+      es: ["Pablo", "Lucas", "Pedro", "Juan"],
+      pt: ["Paulo", "Lucas", "Pedro", "João"],
+      fr: ["Paul", "Luc", "Pierre", "Jean"]
+    },
+    correctAnswer: 1,
+    category: "Atti degli Apostoli",
+    difficulty: "easy",
+  },
+  {
+    id: 162,
+    question: "Cosa accadde nel giorno di Pentecoste?",
+    questions: {
+      it: "Cosa accadde nel giorno di Pentecoste?",
+      en: "What happened on the day of Pentecost?",
+      es: "¿Qué sucedió el día de Pentecostés?",
+      pt: "O que aconteceu no dia de Pentecostes?",
+      fr: "Que s'est-il passé le jour de la Pentecôte?"
+    },
+    options: ["La crocifissione", "La discesa dello Spirito Santo", "L'ascensione", "La trasfigurazione"],
+    optionsTranslated: {
+      it: ["La crocifissione", "La discesa dello Spirito Santo", "L'ascensione", "La trasfigurazione"],
+      en: ["The crucifixion", "The descent of the Holy Spirit", "The ascension", "The transfiguration"],
+      es: ["La crucifixión", "El descenso del Espíritu Santo", "La ascensión", "La transfiguración"],
+      pt: ["A crucificação", "A descida do Espírito Santo", "A ascensão", "A transfiguração"],
+      fr: ["La crucifixion", "La descente du Saint-Esprit", "L'ascension", "La transfiguration"]
+    },
+    correctAnswer: 1,
+    category: "Atti degli Apostoli",
+    difficulty: "easy",
+  },
+  {
+    id: 163,
+    question: "Chi fu il primo martire cristiano?",
+    questions: {
+      it: "Chi fu il primo martire cristiano?",
+      en: "Who was the first Christian martyr?",
+      es: "¿Quién fue el primer mártir cristiano?",
+      pt: "Quem foi o primeiro mártir cristão?",
+      fr: "Qui fut le premier martyr chrétien?"
+    },
+    options: ["Pietro", "Paolo", "Stefano", "Giacomo"],
+    optionsTranslated: {
+      it: ["Pietro", "Paolo", "Stefano", "Giacomo"],
+      en: ["Peter", "Paul", "Stephen", "James"],
+      es: ["Pedro", "Pablo", "Esteban", "Santiago"],
+      pt: ["Pedro", "Paulo", "Estêvão", "Tiago"],
+      fr: ["Pierre", "Paul", "Étienne", "Jacques"]
+    },
+    correctAnswer: 2,
+    category: "Atti degli Apostoli",
+    difficulty: "easy",
+  },
+  {
+    id: 164,
+    question: "Qual era il nome di Paolo prima della conversione?",
+    questions: {
+      it: "Qual era il nome di Paolo prima della conversione?",
+      en: "What was Paul's name before his conversion?",
+      es: "¿Cuál era el nombre de Pablo antes de su conversión?",
+      pt: "Qual era o nome de Paulo antes de sua conversão?",
+      fr: "Quel était le nom de Paul avant sa conversion?"
+    },
+    options: ["Simone", "Saulo", "Barnaba", "Timoteo"],
+    optionsTranslated: {
+      it: ["Simone", "Saulo", "Barnaba", "Timoteo"],
+      en: ["Simon", "Saul", "Barnabas", "Timothy"],
+      es: ["Simón", "Saulo", "Bernabé", "Timoteo"],
+      pt: ["Simão", "Saulo", "Barnabé", "Timóteo"],
+      fr: ["Simon", "Saul", "Barnabé", "Timothée"]
+    },
+    correctAnswer: 1,
+    category: "Atti degli Apostoli",
+    difficulty: "easy",
+  },
+  {
+    id: 165,
+    question: "Sulla via di quale città Paolo fu convertito?",
+    questions: {
+      it: "Sulla via di quale città Paolo fu convertito?",
+      en: "On the road to which city was Paul converted?",
+      es: "¿En el camino a qué ciudad se convirtió Pablo?",
+      pt: "No caminho para qual cidade Paulo se converteu?",
+      fr: "Sur la route de quelle ville Paul s'est-il converti?"
+    },
+    options: ["Gerusalemme", "Damasco", "Antiochia", "Roma"],
+    optionsTranslated: {
+      it: ["Gerusalemme", "Damasco", "Antiochia", "Roma"],
+      en: ["Jerusalem", "Damascus", "Antioch", "Rome"],
+      es: ["Jerusalén", "Damasco", "Antioquía", "Roma"],
+      pt: ["Jerusalém", "Damasco", "Antioquia", "Roma"],
+      fr: ["Jérusalem", "Damas", "Antioche", "Rome"]
+    },
+    correctAnswer: 1,
+    category: "Atti degli Apostoli",
+    difficulty: "easy",
+  },
+  {
+    id: 166,
+    question: "Chi fu liberato miracolosamente dalla prigione da un angelo?",
+    questions: {
+      it: "Chi fu liberato miracolosamente dalla prigione da un angelo?",
+      en: "Who was miraculously freed from prison by an angel?",
+      es: "¿Quién fue liberado milagrosamente de la prisión por un ángel?",
+      pt: "Quem foi libertado milagrosamente da prisão por um anjo?",
+      fr: "Qui a été miraculeusement libéré de prison par un ange?"
+    },
+    options: ["Paolo", "Pietro", "Giovanni", "Barnaba"],
+    optionsTranslated: {
+      it: ["Paolo", "Pietro", "Giovanni", "Barnaba"],
+      en: ["Paul", "Peter", "John", "Barnabas"],
+      es: ["Pablo", "Pedro", "Juan", "Bernabé"],
+      pt: ["Paulo", "Pedro", "João", "Barnabé"],
+      fr: ["Paul", "Pierre", "Jean", "Barnabé"]
+    },
+    correctAnswer: 1,
+    category: "Atti degli Apostoli",
+    difficulty: "medium",
+  },
+  {
+    id: 167,
+    question: "Chi accompagnò Paolo nel primo viaggio missionario?",
+    questions: {
+      it: "Chi accompagnò Paolo nel primo viaggio missionario?",
+      en: "Who accompanied Paul on his first missionary journey?",
+      es: "¿Quién acompañó a Pablo en su primer viaje misionero?",
+      pt: "Quem acompanhou Paulo em sua primeira viagem missionária?",
+      fr: "Qui a accompagné Paul lors de son premier voyage missionnaire?"
+    },
+    options: ["Pietro", "Barnaba", "Timoteo", "Luca"],
+    optionsTranslated: {
+      it: ["Pietro", "Barnaba", "Timoteo", "Luca"],
+      en: ["Peter", "Barnabas", "Timothy", "Luke"],
+      es: ["Pedro", "Bernabé", "Timoteo", "Lucas"],
+      pt: ["Pedro", "Barnabé", "Timóteo", "Lucas"],
+      fr: ["Pierre", "Barnabé", "Timothée", "Luc"]
+    },
+    correctAnswer: 1,
+    category: "Atti degli Apostoli",
+    difficulty: "medium",
+  },
+  {
+    id: 168,
+    question: "In quale città i discepoli furono chiamati 'cristiani' per la prima volta?",
+    questions: {
+      it: "In quale città i discepoli furono chiamati 'cristiani' per la prima volta?",
+      en: "In which city were the disciples first called 'Christians'?",
+      es: "¿En qué ciudad los discípulos fueron llamados 'cristianos' por primera vez?",
+      pt: "Em qual cidade os discípulos foram chamados de 'cristãos' pela primeira vez?",
+      fr: "Dans quelle ville les disciples ont-ils été appelés 'chrétiens' pour la première fois?"
+    },
+    options: ["Gerusalemme", "Roma", "Antiochia", "Efeso"],
+    optionsTranslated: {
+      it: ["Gerusalemme", "Roma", "Antiochia", "Efeso"],
+      en: ["Jerusalem", "Rome", "Antioch", "Ephesus"],
+      es: ["Jerusalén", "Roma", "Antioquía", "Éfeso"],
+      pt: ["Jerusalém", "Roma", "Antioquia", "Éfeso"],
+      fr: ["Jérusalem", "Rome", "Antioche", "Éphèse"]
+    },
+    correctAnswer: 2,
+    category: "Atti degli Apostoli",
+    difficulty: "medium",
+  },
+  {
+    id: 169,
+    question: "Chi battezzò l'eunuco etiope?",
+    questions: {
+      it: "Chi battezzò l'eunuco etiope?",
+      en: "Who baptized the Ethiopian eunuch?",
+      es: "¿Quién bautizó al eunuco etíope?",
+      pt: "Quem batizou o eunuco etíope?",
+      fr: "Qui a baptisé l'eunuque éthiopien?"
+    },
+    options: ["Pietro", "Paolo", "Filippo", "Giovanni"],
+    optionsTranslated: {
+      it: ["Pietro", "Paolo", "Filippo", "Giovanni"],
+      en: ["Peter", "Paul", "Philip", "John"],
+      es: ["Pedro", "Pablo", "Felipe", "Juan"],
+      pt: ["Pedro", "Paulo", "Filipe", "João"],
+      fr: ["Pierre", "Paul", "Philippe", "Jean"]
+    },
+    correctAnswer: 2,
+    category: "Atti degli Apostoli",
+    difficulty: "medium",
+  },
+  {
+    id: 170,
+    question: "Quanti viaggi missionari fece Paolo?",
+    questions: {
+      it: "Quanti viaggi missionari fece Paolo?",
+      en: "How many missionary journeys did Paul make?",
+      es: "¿Cuántos viajes misioneros hizo Pablo?",
+      pt: "Quantas viagens missionárias Paulo fez?",
+      fr: "Combien de voyages missionnaires Paul a-t-il faits?"
+    },
+    options: ["2", "3", "4", "5"],
+    optionsTranslated: {
+      it: ["2", "3", "4", "5"],
+      en: ["2", "3", "4", "5"],
+      es: ["2", "3", "4", "5"],
+      pt: ["2", "3", "4", "5"],
+      fr: ["2", "3", "4", "5"]
+    },
+    correctAnswer: 1,
+    category: "Atti degli Apostoli",
+    difficulty: "medium",
+  },
+  {
+    id: 171,
+    question: "Chi era Anania che visitò Paolo a Damasco?",
+    questions: {
+      it: "Chi era Anania che visitò Paolo a Damasco?",
+      en: "Who was Ananias who visited Paul in Damascus?",
+      es: "¿Quién era Ananías que visitó a Pablo en Damasco?",
+      pt: "Quem era Ananias que visitou Paulo em Damasco?",
+      fr: "Qui était Ananias qui a visité Paul à Damas?"
+    },
+    options: ["Un apostolo", "Un discepolo", "Un fariseo", "Un sacerdote"],
+    optionsTranslated: {
+      it: ["Un apostolo", "Un discepolo", "Un fariseo", "Un sacerdote"],
+      en: ["An apostle", "A disciple", "A Pharisee", "A priest"],
+      es: ["Un apóstol", "Un discípulo", "Un fariseo", "Un sacerdote"],
+      pt: ["Um apóstolo", "Um discípulo", "Um fariseu", "Um sacerdote"],
+      fr: ["Un apôtre", "Un disciple", "Un pharisien", "Un prêtre"]
+    },
+    correctAnswer: 1,
+    category: "Atti degli Apostoli",
+    difficulty: "hard",
+  },
+  {
+    id: 172,
+    question: "Dove Paolo tenne il discorso all'Areopago?",
+    questions: {
+      it: "Dove Paolo tenne il discorso all'Areopago?",
+      en: "Where did Paul give his speech at the Areopagus?",
+      es: "¿Dónde dio Pablo su discurso en el Areópago?",
+      pt: "Onde Paulo fez seu discurso no Areópago?",
+      fr: "Où Paul a-t-il prononcé son discours à l'Aréopage?"
+    },
+    options: ["Roma", "Gerusalemme", "Atene", "Corinto"],
+    optionsTranslated: {
+      it: ["Roma", "Gerusalemme", "Atene", "Corinto"],
+      en: ["Rome", "Jerusalem", "Athens", "Corinth"],
+      es: ["Roma", "Jerusalén", "Atenas", "Corinto"],
+      pt: ["Roma", "Jerusalém", "Atenas", "Corinto"],
+      fr: ["Rome", "Jérusalem", "Athènes", "Corinthe"]
+    },
+    correctAnswer: 2,
+    category: "Atti degli Apostoli",
+    difficulty: "medium",
+  },
+  {
+    id: 173,
+    question: "Chi era Lidia negli Atti degli Apostoli?",
+    questions: {
+      it: "Chi era Lidia negli Atti degli Apostoli?",
+      en: "Who was Lydia in the Acts of the Apostles?",
+      es: "¿Quién era Lidia en los Hechos de los Apóstoles?",
+      pt: "Quem era Lídia nos Atos dos Apóstolos?",
+      fr: "Qui était Lydie dans les Actes des Apôtres?"
+    },
+    options: ["Una profetessa", "Una venditrice di porpora", "Una vedova", "Una regina"],
+    optionsTranslated: {
+      it: ["Una profetessa", "Una venditrice di porpora", "Una vedova", "Una regina"],
+      en: ["A prophetess", "A seller of purple", "A widow", "A queen"],
+      es: ["Una profetisa", "Una vendedora de púrpura", "Una viuda", "Una reina"],
+      pt: ["Uma profetisa", "Uma vendedora de púrpura", "Uma viúva", "Uma rainha"],
+      fr: ["Une prophétesse", "Une marchande de pourpre", "Une veuve", "Une reine"]
+    },
+    correctAnswer: 1,
+    category: "Atti degli Apostoli",
+    difficulty: "hard",
+  },
+  {
+    id: 174,
+    question: "Come terminò Paolo a Roma?",
+    questions: {
+      it: "Come terminò Paolo a Roma?",
+      en: "How did Paul end up in Rome?",
+      es: "¿Cómo terminó Pablo en Roma?",
+      pt: "Como Paulo terminou em Roma?",
+      fr: "Comment Paul s'est-il retrouvé à Rome?"
+    },
+    options: ["Come missionario libero", "Come prigioniero", "Come turista", "Come commerciante"],
+    optionsTranslated: {
+      it: ["Come missionario libero", "Come prigioniero", "Come turista", "Come commerciante"],
+      en: ["As a free missionary", "As a prisoner", "As a tourist", "As a merchant"],
+      es: ["Como misionero libre", "Como prisionero", "Como turista", "Como comerciante"],
+      pt: ["Como missionário livre", "Como prisioneiro", "Como turista", "Como comerciante"],
+      fr: ["Comme missionnaire libre", "Comme prisonnier", "Comme touriste", "Comme marchand"]
+    },
+    correctAnswer: 1,
+    category: "Atti degli Apostoli",
+    difficulty: "easy",
+  },
+  {
+    id: 175,
+    question: "Cosa decise il Concilio di Gerusalemme riguardo ai gentili?",
+    questions: {
+      it: "Cosa decise il Concilio di Gerusalemme riguardo ai gentili?",
+      en: "What did the Council of Jerusalem decide regarding the Gentiles?",
+      es: "¿Qué decidió el Concilio de Jerusalén sobre los gentiles?",
+      pt: "O que o Concílio de Jerusalém decidiu sobre os gentios?",
+      fr: "Qu'a décidé le Concile de Jérusalem concernant les Gentils?"
+    },
+    options: ["Dovevano essere circoncisi", "Non era necessaria la circoncisione", "Dovevano diventare ebrei", "Erano esclusi"],
+    optionsTranslated: {
+      it: ["Dovevano essere circoncisi", "Non era necessaria la circoncisione", "Dovevano diventare ebrei", "Erano esclusi"],
+      en: ["They had to be circumcised", "Circumcision was not necessary", "They had to become Jews", "They were excluded"],
+      es: ["Debían ser circuncidados", "La circuncisión no era necesaria", "Debían convertirse al judaísmo", "Fueron excluidos"],
+      pt: ["Deveriam ser circuncidados", "A circuncisão não era necessária", "Deveriam se tornar judeus", "Foram excluídos"],
+      fr: ["Ils devaient être circoncis", "La circoncision n'était pas nécessaire", "Ils devaient devenir juifs", "Ils étaient exclus"]
+    },
+    correctAnswer: 1,
+    category: "Atti degli Apostoli",
+    difficulty: "hard",
+  },
+  {
+    id: 176,
+    question: "Chi risuscitò la giovane Tabita?",
+    questions: {
+      it: "Chi risuscitò la giovane Tabita?",
+      en: "Who raised the young woman Tabitha?",
+      es: "¿Quién resucitó a la joven Tabita?",
+      pt: "Quem ressuscitou a jovem Tabita?",
+      fr: "Qui a ressuscité la jeune Tabitha?"
+    },
+    options: ["Paolo", "Pietro", "Giovanni", "Filippo"],
+    optionsTranslated: {
+      it: ["Paolo", "Pietro", "Giovanni", "Filippo"],
+      en: ["Paul", "Peter", "John", "Philip"],
+      es: ["Pablo", "Pedro", "Juan", "Felipe"],
+      pt: ["Paulo", "Pedro", "João", "Filipe"],
+      fr: ["Paul", "Pierre", "Jean", "Philippe"]
+    },
+    correctAnswer: 1,
+    category: "Atti degli Apostoli",
+    difficulty: "hard",
+  },
+  {
+    id: 177,
+    question: "Chi disse: 'È più beato dare che ricevere'?",
+    questions: {
+      it: "Chi disse: 'È più beato dare che ricevere'?",
+      en: "Who said: 'It is more blessed to give than to receive'?",
+      es: "¿Quién dijo: 'Es más dichoso dar que recibir'?",
+      pt: "Quem disse: 'Mais bem-aventurado é dar que receber'?",
+      fr: "Qui a dit: 'Il y a plus de bonheur à donner qu'à recevoir'?"
+    },
+    options: ["Pietro", "Paolo citando Gesù", "Giovanni", "Giacomo"],
+    optionsTranslated: {
+      it: ["Pietro", "Paolo citando Gesù", "Giovanni", "Giacomo"],
+      en: ["Peter", "Paul quoting Jesus", "John", "James"],
+      es: ["Pedro", "Pablo citando a Jesús", "Juan", "Santiago"],
+      pt: ["Pedro", "Paulo citando Jesus", "João", "Tiago"],
+      fr: ["Pierre", "Paul citant Jésus", "Jean", "Jacques"]
+    },
+    correctAnswer: 1,
+    category: "Atti degli Apostoli",
+    difficulty: "hard",
+  },
+  {
+    id: 178,
+    question: "Chi erano Aquila e Priscilla?",
+    questions: {
+      it: "Chi erano Aquila e Priscilla?",
+      en: "Who were Aquila and Priscilla?",
+      es: "¿Quiénes eran Aquila y Priscila?",
+      pt: "Quem eram Áquila e Priscila?",
+      fr: "Qui étaient Aquila et Priscille?"
+    },
+    options: ["Apostoli", "Una coppia di fabbricanti di tende", "Sacerdoti", "Fratelli di Paolo"],
+    optionsTranslated: {
+      it: ["Apostoli", "Una coppia di fabbricanti di tende", "Sacerdoti", "Fratelli di Paolo"],
+      en: ["Apostles", "A couple of tentmakers", "Priests", "Paul's brothers"],
+      es: ["Apóstoles", "Una pareja de fabricantes de tiendas", "Sacerdotes", "Hermanos de Pablo"],
+      pt: ["Apóstolos", "Um casal de fabricantes de tendas", "Sacerdotes", "Irmãos de Paulo"],
+      fr: ["Apôtres", "Un couple de fabricants de tentes", "Prêtres", "Frères de Paul"]
+    },
+    correctAnswer: 1,
+    category: "Atti degli Apostoli",
+    difficulty: "medium",
+  },
+  {
+    id: 179,
+    question: "Cosa accadde quando Paolo e Sila cantavano in prigione?",
+    questions: {
+      it: "Cosa accadde quando Paolo e Sila cantavano in prigione?",
+      en: "What happened when Paul and Silas were singing in prison?",
+      es: "¿Qué sucedió cuando Pablo y Silas cantaban en la cárcel?",
+      pt: "O que aconteceu quando Paulo e Silas cantavam na prisão?",
+      fr: "Que s'est-il passé quand Paul et Silas chantaient en prison?"
+    },
+    options: ["Furono liberati dalle guardie", "Un terremoto aprì le porte", "Furono giustiziati", "Furono trasferiti"],
+    optionsTranslated: {
+      it: ["Furono liberati dalle guardie", "Un terremoto aprì le porte", "Furono giustiziati", "Furono trasferiti"],
+      en: ["They were freed by guards", "An earthquake opened the doors", "They were executed", "They were transferred"],
+      es: ["Fueron liberados por los guardias", "Un terremoto abrió las puertas", "Fueron ejecutados", "Fueron transferidos"],
+      pt: ["Foram libertados pelos guardas", "Um terremoto abriu as portas", "Foram executados", "Foram transferidos"],
+      fr: ["Ils ont été libérés par les gardes", "Un tremblement de terre a ouvert les portes", "Ils ont été exécutés", "Ils ont été transférés"]
+    },
+    correctAnswer: 1,
+    category: "Atti degli Apostoli",
+    difficulty: "medium",
+  },
+  {
+    id: 180,
+    question: "Quante lingue parlarono gli apostoli a Pentecoste?",
+    questions: {
+      it: "Quante lingue parlarono gli apostoli a Pentecoste?",
+      en: "How many languages did the apostles speak at Pentecost?",
+      es: "¿Cuántos idiomas hablaron los apóstoles en Pentecostés?",
+      pt: "Quantas línguas os apóstolos falaram em Pentecostes?",
+      fr: "Combien de langues les apôtres ont-ils parlé à la Pentecôte?"
+    },
+    options: ["7", "12", "Tutte le lingue dei presenti", "3"],
+    optionsTranslated: {
+      it: ["7", "12", "Tutte le lingue dei presenti", "3"],
+      en: ["7", "12", "All the languages of those present", "3"],
+      es: ["7", "12", "Todos los idiomas de los presentes", "3"],
+      pt: ["7", "12", "Todas as línguas dos presentes", "3"],
+      fr: ["7", "12", "Toutes les langues des présents", "3"]
+    },
+    correctAnswer: 2,
+    category: "Atti degli Apostoli",
+    difficulty: "medium",
+  },
+
+  // ============= APOCALISSE (20 questions) =============
+  {
+    id: 181,
+    question: "Chi scrisse il libro dell'Apocalisse?",
+    questions: {
+      it: "Chi scrisse il libro dell'Apocalisse?",
+      en: "Who wrote the book of Revelation?",
+      es: "¿Quién escribió el libro del Apocalipsis?",
+      pt: "Quem escreveu o livro do Apocalipse?",
+      fr: "Qui a écrit le livre de l'Apocalypse?"
+    },
+    options: ["Paolo", "Pietro", "Giovanni", "Luca"],
+    optionsTranslated: {
+      it: ["Paolo", "Pietro", "Giovanni", "Luca"],
+      en: ["Paul", "Peter", "John", "Luke"],
+      es: ["Pablo", "Pedro", "Juan", "Lucas"],
+      pt: ["Paulo", "Pedro", "João", "Lucas"],
+      fr: ["Paul", "Pierre", "Jean", "Luc"]
+    },
+    correctAnswer: 2,
+    category: "Apocalisse",
+    difficulty: "easy",
+  },
+  {
+    id: 182,
+    question: "Su quale isola Giovanni ebbe le visioni dell'Apocalisse?",
+    questions: {
+      it: "Su quale isola Giovanni ebbe le visioni dell'Apocalisse?",
+      en: "On which island did John have the visions of Revelation?",
+      es: "¿En qué isla tuvo Juan las visiones del Apocalipsis?",
+      pt: "Em qual ilha João teve as visões do Apocalipse?",
+      fr: "Sur quelle île Jean a-t-il eu les visions de l'Apocalypse?"
+    },
+    options: ["Cipro", "Creta", "Patmos", "Malta"],
+    optionsTranslated: {
+      it: ["Cipro", "Creta", "Patmos", "Malta"],
+      en: ["Cyprus", "Crete", "Patmos", "Malta"],
+      es: ["Chipre", "Creta", "Patmos", "Malta"],
+      pt: ["Chipre", "Creta", "Patmos", "Malta"],
+      fr: ["Chypre", "Crète", "Patmos", "Malte"]
+    },
+    correctAnswer: 2,
+    category: "Apocalisse",
+    difficulty: "easy",
+  },
+  {
+    id: 183,
+    question: "A quante chiese sono indirizzate le lettere dell'Apocalisse?",
+    questions: {
+      it: "A quante chiese sono indirizzate le lettere dell'Apocalisse?",
+      en: "To how many churches are the letters of Revelation addressed?",
+      es: "¿A cuántas iglesias están dirigidas las cartas del Apocalipsis?",
+      pt: "Para quantas igrejas são endereçadas as cartas do Apocalipse?",
+      fr: "À combien d'églises les lettres de l'Apocalypse sont-elles adressées?"
+    },
+    options: ["5", "7", "12", "10"],
+    optionsTranslated: {
+      it: ["5", "7", "12", "10"],
+      en: ["5", "7", "12", "10"],
+      es: ["5", "7", "12", "10"],
+      pt: ["5", "7", "12", "10"],
+      fr: ["5", "7", "12", "10"]
+    },
+    correctAnswer: 1,
+    category: "Apocalisse",
+    difficulty: "easy",
+  },
+  {
+    id: 184,
+    question: "Qual è il numero della bestia nell'Apocalisse?",
+    questions: {
+      it: "Qual è il numero della bestia nell'Apocalisse?",
+      en: "What is the number of the beast in Revelation?",
+      es: "¿Cuál es el número de la bestia en el Apocalipsis?",
+      pt: "Qual é o número da besta no Apocalipse?",
+      fr: "Quel est le nombre de la bête dans l'Apocalypse?"
+    },
+    options: ["333", "666", "777", "999"],
+    optionsTranslated: {
+      it: ["333", "666", "777", "999"],
+      en: ["333", "666", "777", "999"],
+      es: ["333", "666", "777", "999"],
+      pt: ["333", "666", "777", "999"],
+      fr: ["333", "666", "777", "999"]
+    },
+    correctAnswer: 1,
+    category: "Apocalisse",
+    difficulty: "easy",
+  },
+  {
+    id: 185,
+    question: "Quanti sigilli vengono aperti nell'Apocalisse?",
+    questions: {
+      it: "Quanti sigilli vengono aperti nell'Apocalisse?",
+      en: "How many seals are opened in Revelation?",
+      es: "¿Cuántos sellos se abren en el Apocalipsis?",
+      pt: "Quantos selos são abertos no Apocalipse?",
+      fr: "Combien de sceaux sont ouverts dans l'Apocalypse?"
+    },
+    options: ["5", "6", "7", "12"],
+    optionsTranslated: {
+      it: ["5", "6", "7", "12"],
+      en: ["5", "6", "7", "12"],
+      es: ["5", "6", "7", "12"],
+      pt: ["5", "6", "7", "12"],
+      fr: ["5", "6", "7", "12"]
+    },
+    correctAnswer: 2,
+    category: "Apocalisse",
+    difficulty: "medium",
+  },
+  {
+    id: 186,
+    question: "Chi è l'Agnello nell'Apocalisse?",
+    questions: {
+      it: "Chi è l'Agnello nell'Apocalisse?",
+      en: "Who is the Lamb in Revelation?",
+      es: "¿Quién es el Cordero en el Apocalipsis?",
+      pt: "Quem é o Cordeiro no Apocalipse?",
+      fr: "Qui est l'Agneau dans l'Apocalypse?"
+    },
+    options: ["Giovanni", "Mosè", "Cristo", "Un angelo"],
+    optionsTranslated: {
+      it: ["Giovanni", "Mosè", "Cristo", "Un angelo"],
+      en: ["John", "Moses", "Christ", "An angel"],
+      es: ["Juan", "Moisés", "Cristo", "Un ángel"],
+      pt: ["João", "Moisés", "Cristo", "Um anjo"],
+      fr: ["Jean", "Moïse", "Christ", "Un ange"]
+    },
+    correctAnswer: 2,
+    category: "Apocalisse",
+    difficulty: "easy",
+  },
+  {
+    id: 187,
+    question: "Quanti cavalieri dell'Apocalisse ci sono?",
+    questions: {
+      it: "Quanti cavalieri dell'Apocalisse ci sono?",
+      en: "How many horsemen of the Apocalypse are there?",
+      es: "¿Cuántos jinetes del Apocalipsis hay?",
+      pt: "Quantos cavaleiros do Apocalipse existem?",
+      fr: "Combien de cavaliers de l'Apocalypse y a-t-il?"
+    },
+    options: ["3", "4", "7", "12"],
+    optionsTranslated: {
+      it: ["3", "4", "7", "12"],
+      en: ["3", "4", "7", "12"],
+      es: ["3", "4", "7", "12"],
+      pt: ["3", "4", "7", "12"],
+      fr: ["3", "4", "7", "12"]
+    },
+    correctAnswer: 1,
+    category: "Apocalisse",
+    difficulty: "easy",
+  },
+  {
+    id: 188,
+    question: "Come si chiama la città celeste nell'Apocalisse?",
+    questions: {
+      it: "Come si chiama la città celeste nell'Apocalisse?",
+      en: "What is the name of the heavenly city in Revelation?",
+      es: "¿Cómo se llama la ciudad celestial en el Apocalipsis?",
+      pt: "Como se chama a cidade celestial no Apocalipse?",
+      fr: "Comment s'appelle la cité céleste dans l'Apocalypse?"
+    },
+    options: ["Babilonia", "La Nuova Gerusalemme", "Sion", "Il Paradiso"],
+    optionsTranslated: {
+      it: ["Babilonia", "La Nuova Gerusalemme", "Sion", "Il Paradiso"],
+      en: ["Babylon", "The New Jerusalem", "Zion", "Paradise"],
+      es: ["Babilonia", "La Nueva Jerusalén", "Sión", "El Paraíso"],
+      pt: ["Babilônia", "A Nova Jerusalém", "Sião", "O Paraíso"],
+      fr: ["Babylone", "La Nouvelle Jérusalem", "Sion", "Le Paradis"]
+    },
+    correctAnswer: 1,
+    category: "Apocalisse",
+    difficulty: "easy",
+  },
+  {
+    id: 189,
+    question: "Cosa rappresenta la 'grande prostituta' nell'Apocalisse?",
+    questions: {
+      it: "Cosa rappresenta la 'grande prostituta' nell'Apocalisse?",
+      en: "What does the 'great prostitute' represent in Revelation?",
+      es: "¿Qué representa la 'gran ramera' en el Apocalipsis?",
+      pt: "O que a 'grande prostituta' representa no Apocalipse?",
+      fr: "Que représente la 'grande prostituée' dans l'Apocalypse?"
+    },
+    options: ["Una persona", "Babilonia/Roma", "Gerusalemme", "L'Egitto"],
+    optionsTranslated: {
+      it: ["Una persona", "Babilonia/Roma", "Gerusalemme", "L'Egitto"],
+      en: ["A person", "Babylon/Rome", "Jerusalem", "Egypt"],
+      es: ["Una persona", "Babilonia/Roma", "Jerusalén", "Egipto"],
+      pt: ["Uma pessoa", "Babilônia/Roma", "Jerusalém", "Egito"],
+      fr: ["Une personne", "Babylone/Rome", "Jérusalem", "L'Égypte"]
+    },
+    correctAnswer: 1,
+    category: "Apocalisse",
+    difficulty: "medium",
+  },
+  {
+    id: 190,
+    question: "Quante trombe suonano gli angeli nell'Apocalisse?",
+    questions: {
+      it: "Quante trombe suonano gli angeli nell'Apocalisse?",
+      en: "How many trumpets do the angels sound in Revelation?",
+      es: "¿Cuántas trompetas tocan los ángeles en el Apocalipsis?",
+      pt: "Quantas trombetas os anjos tocam no Apocalipse?",
+      fr: "Combien de trompettes les anges sonnent-ils dans l'Apocalypse?"
+    },
+    options: ["5", "6", "7", "12"],
+    optionsTranslated: {
+      it: ["5", "6", "7", "12"],
+      en: ["5", "6", "7", "12"],
+      es: ["5", "6", "7", "12"],
+      pt: ["5", "6", "7", "12"],
+      fr: ["5", "6", "7", "12"]
+    },
+    correctAnswer: 2,
+    category: "Apocalisse",
+    difficulty: "medium",
+  },
+  {
+    id: 191,
+    question: "Cosa tiene l'Agnello nella visione celeste?",
+    questions: {
+      it: "Cosa tiene l'Agnello nella visione celeste?",
+      en: "What does the Lamb hold in the heavenly vision?",
+      es: "¿Qué sostiene el Cordero en la visión celestial?",
+      pt: "O que o Cordeiro segura na visão celestial?",
+      fr: "Que tient l'Agneau dans la vision céleste?"
+    },
+    options: ["Una spada", "Un libro con sette sigilli", "Una corona", "Un calice"],
+    optionsTranslated: {
+      it: ["Una spada", "Un libro con sette sigilli", "Una corona", "Un calice"],
+      en: ["A sword", "A scroll with seven seals", "A crown", "A chalice"],
+      es: ["Una espada", "Un libro con siete sellos", "Una corona", "Un cáliz"],
+      pt: ["Uma espada", "Um livro com sete selos", "Uma coroa", "Um cálice"],
+      fr: ["Une épée", "Un livre avec sept sceaux", "Une couronne", "Un calice"]
+    },
+    correctAnswer: 1,
+    category: "Apocalisse",
+    difficulty: "medium",
+  },
+  {
+    id: 192,
+    question: "Chi combatte contro il dragone nell'Apocalisse?",
+    questions: {
+      it: "Chi combatte contro il dragone nell'Apocalisse?",
+      en: "Who fights against the dragon in Revelation?",
+      es: "¿Quién lucha contra el dragón en el Apocalipsis?",
+      pt: "Quem luta contra o dragão no Apocalipse?",
+      fr: "Qui combat le dragon dans l'Apocalypse?"
+    },
+    options: ["Giovanni", "L'arcangelo Michele", "Pietro", "Gabriele"],
+    optionsTranslated: {
+      it: ["Giovanni", "L'arcangelo Michele", "Pietro", "Gabriele"],
+      en: ["John", "The Archangel Michael", "Peter", "Gabriel"],
+      es: ["Juan", "El arcángel Miguel", "Pedro", "Gabriel"],
+      pt: ["João", "O arcanjo Miguel", "Pedro", "Gabriel"],
+      fr: ["Jean", "L'archange Michel", "Pierre", "Gabriel"]
+    },
+    correctAnswer: 1,
+    category: "Apocalisse",
+    difficulty: "medium",
+  },
+  {
+    id: 193,
+    question: "Quanto durerà il regno millenario secondo l'Apocalisse?",
+    questions: {
+      it: "Quanto durerà il regno millenario secondo l'Apocalisse?",
+      en: "How long will the millennial kingdom last according to Revelation?",
+      es: "¿Cuánto durará el reino milenario según el Apocalipsis?",
+      pt: "Quanto durará o reino milenar segundo o Apocalipse?",
+      fr: "Combien de temps durera le règne millénaire selon l'Apocalypse?"
+    },
+    options: ["100 anni", "500 anni", "1000 anni", "Per sempre"],
+    optionsTranslated: {
+      it: ["100 anni", "500 anni", "1000 anni", "Per sempre"],
+      en: ["100 years", "500 years", "1000 years", "Forever"],
+      es: ["100 años", "500 años", "1000 años", "Para siempre"],
+      pt: ["100 anos", "500 anos", "1000 anos", "Para sempre"],
+      fr: ["100 ans", "500 ans", "1000 ans", "Pour toujours"]
+    },
+    correctAnswer: 2,
+    category: "Apocalisse",
+    difficulty: "easy",
+  },
+  {
+    id: 194,
+    question: "Di che colore è il cavallo della Morte nell'Apocalisse?",
+    questions: {
+      it: "Di che colore è il cavallo della Morte nell'Apocalisse?",
+      en: "What color is the horse of Death in Revelation?",
+      es: "¿De qué color es el caballo de la Muerte en el Apocalipsis?",
+      pt: "De que cor é o cavalo da Morte no Apocalipse?",
+      fr: "De quelle couleur est le cheval de la Mort dans l'Apocalypse?"
+    },
+    options: ["Bianco", "Rosso", "Nero", "Verdastro/Pallido"],
+    optionsTranslated: {
+      it: ["Bianco", "Rosso", "Nero", "Verdastro/Pallido"],
+      en: ["White", "Red", "Black", "Pale/Green"],
+      es: ["Blanco", "Rojo", "Negro", "Pálido/Verdoso"],
+      pt: ["Branco", "Vermelho", "Preto", "Pálido/Esverdeado"],
+      fr: ["Blanc", "Rouge", "Noir", "Pâle/Verdâtre"]
+    },
+    correctAnswer: 3,
+    category: "Apocalisse",
+    difficulty: "medium",
+  },
+  {
+    id: 195,
+    question: "Quante coppe dell'ira di Dio vengono versate?",
+    questions: {
+      it: "Quante coppe dell'ira di Dio vengono versate?",
+      en: "How many bowls of God's wrath are poured out?",
+      es: "¿Cuántas copas de la ira de Dios se derraman?",
+      pt: "Quantas taças da ira de Deus são derramadas?",
+      fr: "Combien de coupes de la colère de Dieu sont versées?"
+    },
+    options: ["5", "6", "7", "10"],
+    optionsTranslated: {
+      it: ["5", "6", "7", "10"],
+      en: ["5", "6", "7", "10"],
+      es: ["5", "6", "7", "10"],
+      pt: ["5", "6", "7", "10"],
+      fr: ["5", "6", "7", "10"]
+    },
+    correctAnswer: 2,
+    category: "Apocalisse",
+    difficulty: "hard",
+  },
+  {
+    id: 196,
+    question: "Chi sono i 144.000 segnati nell'Apocalisse?",
+    questions: {
+      it: "Chi sono i 144.000 segnati nell'Apocalisse?",
+      en: "Who are the 144,000 sealed in Revelation?",
+      es: "¿Quiénes son los 144.000 sellados en el Apocalipsis?",
+      pt: "Quem são os 144.000 selados no Apocalipse?",
+      fr: "Qui sont les 144 000 scellés dans l'Apocalypse?"
+    },
+    options: ["Angeli", "Servi di Dio dalle tribù d'Israele", "Martiri", "Profeti"],
+    optionsTranslated: {
+      it: ["Angeli", "Servi di Dio dalle tribù d'Israele", "Martiri", "Profeti"],
+      en: ["Angels", "Servants of God from the tribes of Israel", "Martyrs", "Prophets"],
+      es: ["Ángeles", "Siervos de Dios de las tribus de Israel", "Mártires", "Profetas"],
+      pt: ["Anjos", "Servos de Deus das tribos de Israel", "Mártires", "Profetas"],
+      fr: ["Anges", "Serviteurs de Dieu des tribus d'Israël", "Martyrs", "Prophètes"]
+    },
+    correctAnswer: 1,
+    category: "Apocalisse",
+    difficulty: "medium",
+  },
+  {
+    id: 197,
+    question: "Cosa avviene alla fine dell'Apocalisse?",
+    questions: {
+      it: "Cosa avviene alla fine dell'Apocalisse?",
+      en: "What happens at the end of Revelation?",
+      es: "¿Qué sucede al final del Apocalipsis?",
+      pt: "O que acontece no final do Apocalipse?",
+      fr: "Que se passe-t-il à la fin de l'Apocalypse?"
+    },
+    options: ["La distruzione totale", "Un nuovo cielo e una nuova terra", "Il ritorno in Eden", "Il silenzio eterno"],
+    optionsTranslated: {
+      it: ["La distruzione totale", "Un nuovo cielo e una nuova terra", "Il ritorno in Eden", "Il silenzio eterno"],
+      en: ["Total destruction", "A new heaven and a new earth", "Return to Eden", "Eternal silence"],
+      es: ["La destrucción total", "Un cielo nuevo y una tierra nueva", "El regreso al Edén", "El silencio eterno"],
+      pt: ["A destruição total", "Um novo céu e uma nova terra", "O retorno ao Éden", "O silêncio eterno"],
+      fr: ["La destruction totale", "Un nouveau ciel et une nouvelle terre", "Le retour à l'Éden", "Le silence éternel"]
+    },
+    correctAnswer: 1,
+    category: "Apocalisse",
+    difficulty: "easy",
+  },
+  {
+    id: 198,
+    question: "Quale albero si trova nella Nuova Gerusalemme?",
+    questions: {
+      it: "Quale albero si trova nella Nuova Gerusalemme?",
+      en: "Which tree is found in the New Jerusalem?",
+      es: "¿Qué árbol se encuentra en la Nueva Jerusalén?",
+      pt: "Qual árvore é encontrada na Nova Jerusalém?",
+      fr: "Quel arbre se trouve dans la Nouvelle Jérusalem?"
+    },
+    options: ["L'albero della conoscenza", "L'albero della vita", "L'albero di Davide", "L'ulivo"],
+    optionsTranslated: {
+      it: ["L'albero della conoscenza", "L'albero della vita", "L'albero di Davide", "L'ulivo"],
+      en: ["The tree of knowledge", "The tree of life", "The tree of David", "The olive tree"],
+      es: ["El árbol del conocimiento", "El árbol de la vida", "El árbol de David", "El olivo"],
+      pt: ["A árvore do conhecimento", "A árvore da vida", "A árvore de Davi", "A oliveira"],
+      fr: ["L'arbre de la connaissance", "L'arbre de vie", "L'arbre de David", "L'olivier"]
+    },
+    correctAnswer: 1,
+    category: "Apocalisse",
+    difficulty: "medium",
+  },
+  {
+    id: 199,
+    question: "Chi dice 'Ecco, io vengo presto' nell'Apocalisse?",
+    questions: {
+      it: "Chi dice 'Ecco, io vengo presto' nell'Apocalisse?",
+      en: "Who says 'Behold, I am coming soon' in Revelation?",
+      es: "¿Quién dice 'He aquí, yo vengo pronto' en el Apocalipsis?",
+      pt: "Quem diz 'Eis que venho em breve' no Apocalipse?",
+      fr: "Qui dit 'Voici, je viens bientôt' dans l'Apocalypse?"
+    },
+    options: ["Giovanni", "Un angelo", "Cristo", "Lo Spirito Santo"],
+    optionsTranslated: {
+      it: ["Giovanni", "Un angelo", "Cristo", "Lo Spirito Santo"],
+      en: ["John", "An angel", "Christ", "The Holy Spirit"],
+      es: ["Juan", "Un ángel", "Cristo", "El Espíritu Santo"],
+      pt: ["João", "Um anjo", "Cristo", "O Espírito Santo"],
+      fr: ["Jean", "Un ange", "Christ", "Le Saint-Esprit"]
+    },
+    correctAnswer: 2,
+    category: "Apocalisse",
+    difficulty: "medium",
+  },
+  {
+    id: 200,
+    question: "Qual è l'ultima parola dell'Apocalisse e della Bibbia?",
+    questions: {
+      it: "Qual è l'ultima parola dell'Apocalisse e della Bibbia?",
+      en: "What is the last word of Revelation and the Bible?",
+      es: "¿Cuál es la última palabra del Apocalipsis y de la Biblia?",
+      pt: "Qual é a última palavra do Apocalipse e da Bíblia?",
+      fr: "Quel est le dernier mot de l'Apocalypse et de la Bible?"
+    },
+    options: ["Gloria", "Amen", "Alleluia", "Pace"],
+    optionsTranslated: {
+      it: ["Gloria", "Amen", "Alleluia", "Pace"],
+      en: ["Glory", "Amen", "Hallelujah", "Peace"],
+      es: ["Gloria", "Amén", "Aleluya", "Paz"],
+      pt: ["Glória", "Amém", "Aleluia", "Paz"],
+      fr: ["Gloire", "Amen", "Alléluia", "Paix"]
+    },
+    correctAnswer: 1,
+    category: "Apocalisse",
+    difficulty: "hard",
+  },
 ];
 
 export const getTranslatedQuestion = (question: Question, lang: string): string => {
@@ -3184,6 +4510,27 @@ export const categories = [
     description: "Le epistole di San Paolo",
     icon: "scroll",
     color: "from-yellow-500 to-amber-600",
+  },
+  {
+    id: "letteratura-sapienziale",
+    name: "Letteratura Sapienziale",
+    description: "Proverbi, Ecclesiaste e libri di saggezza",
+    icon: "sparkles",
+    color: "from-emerald-500 to-green-600",
+  },
+  {
+    id: "atti-apostoli",
+    name: "Atti degli Apostoli",
+    description: "La nascita della Chiesa primitiva",
+    icon: "flame",
+    color: "from-orange-500 to-red-600",
+  },
+  {
+    id: "apocalisse",
+    name: "Apocalisse",
+    description: "Le visioni profetiche di Giovanni",
+    icon: "eye",
+    color: "from-violet-500 to-purple-600",
   },
 ];
 

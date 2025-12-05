@@ -61,6 +61,18 @@
     "paulineLetters": {
       "name": "Lettres Pauliniennes",
       "description": "Les épîtres de Saint Paul"
+    },
+    "wisdomLiterature": {
+      "name": "Littérature Sapientiale",
+      "description": "Proverbes, Ecclésiaste et livres de sagesse"
+    },
+    "actsApostles": {
+      "name": "Actes des Apôtres",
+      "description": "La naissance de l'Église primitive"
+    },
+    "revelation": {
+      "name": "Apocalypse",
+      "description": "Les visions prophétiques de Jean"
     }
   },
   "scoring": {
