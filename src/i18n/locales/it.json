@@ -61,6 +61,18 @@
     "paulineLetters": {
       "name": "Lettere Paoline",
       "description": "Le epistole di San Paolo"
+    },
+    "wisdomLiterature": {
+      "name": "Letteratura Sapienziale",
+      "description": "Proverbi, Ecclesiaste e libri di saggezza"
+    },
+    "actsApostles": {
+      "name": "Atti degli Apostoli",
+      "description": "La nascita della Chiesa primitiva"
+    },
+    "revelation": {
+      "name": "Apocalisse",
+      "description": "Le visioni profetiche di Giovanni"
     }
   },
   "scoring": {
