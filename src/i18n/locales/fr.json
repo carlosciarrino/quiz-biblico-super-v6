@@ -302,7 +302,18 @@
     "title": "Verset du Jour",
     "save": "Enregistrer",
     "saved": "Enregistré",
+    "share": "Partager",
     "savedToFavorites": "Verset enregistré dans les favoris",
     "removedFromFavorites": "Verset supprimé des favoris"
+  },
+  "verseSearch": {
+    "title": "Rechercher des Versets",
+    "description": "Recherchez des versets bibliques par mots-clés ou sujets",
+    "placeholder": "Rechercher amour, espoir, foi...",
+    "noResults": "Aucun verset trouvé. Essayez d'autres mots-clés.",
+    "resultsCount": "{{count}} verset(s) trouvé(s)",
+    "readMore": "Lire la suite",
+    "hint": "Entrez des mots-clés pour trouver des versets inspirants",
+    "alreadyFavorite": "Ce verset est déjà dans vos favoris"
   }
 }

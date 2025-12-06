@@ -306,7 +306,18 @@
     "title": "Versetto del Giorno",
     "save": "Salva",
     "saved": "Salvato",
+    "share": "Condividi",
     "savedToFavorites": "Versetto salvato nei preferiti",
     "removedFromFavorites": "Versetto rimosso dai preferiti"
+  },
+  "verseSearch": {
+    "title": "Cerca Versetti",
+    "description": "Cerca versetti biblici per parole chiave o argomenti",
+    "placeholder": "Cerca amore, speranza, fede...",
+    "noResults": "Nessun versetto trovato. Prova altre parole chiave.",
+    "resultsCount": "{{count}} versetto/i trovato/i",
+    "readMore": "Leggi di più",
+    "hint": "Inserisci parole chiave per trovare versetti ispiratori",
+    "alreadyFavorite": "Questo versetto è già nei tuoi preferiti"
   }
 }

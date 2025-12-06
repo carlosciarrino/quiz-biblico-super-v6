@@ -6,6 +6,7 @@ import { Card } from "@/components/ui/card";
 import { ArrowLeft, ExternalLink, Book, Heart, Trash2 } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
+import VerseSearch from "@/components/VerseSearch";
 import { useToast } from "@/hooks/use-toast";
 
 interface FavoriteVerse {
@@ -90,8 +91,13 @@ const BibleReader = () => {
             <p className="text-muted-foreground">{t('bible.subtitle')}</p>
           </header>
 
+          {/* Verse Search */}
+          <div className="animate-scale-in">
+            <VerseSearch />
+          </div>
+
           {/* Link to Bible.com */}
-          <Card className="p-6 animate-scale-in">
+          <Card className="p-6 animate-scale-in" style={{ animationDelay: "50ms" }}>
             <h2 className="text-xl font-bold mb-4 flex items-center gap-2">
               <Book className="w-5 h-5 text-primary" />
               {t('bible.readOnline')}
