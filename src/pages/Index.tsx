@@ -8,6 +8,7 @@ import ChallengeCard from "@/components/ChallengeCard";
 import LevelDisplay from "@/components/LevelDisplay";
 import DailyRewardPopup from "@/components/DailyRewardPopup";
 import LevelUpAnimation from "@/components/LevelUpAnimation";
+import DailyVerseCard from "@/components/DailyVerseCard";
 import { categories } from "@/data/questions";
 import { Book, Sparkles, BookOpen, Shuffle, BarChart3, Trophy, GraduationCap, LayoutDashboard } from "lucide-react";
 import { useTranslation } from "react-i18next";
@@ -19,9 +20,8 @@ import { useLeaderboard } from "@/hooks/useLeaderboard";
 import { useChallenge } from "@/hooks/useChallenge";
 import { useDailyLoginReward } from "@/hooks/useDailyLoginReward";
 import { useLevelUpDetector } from "@/hooks/useLevelUpDetector";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { toast } from "sonner";
-
 const Index = () => {
   const { t } = useTranslation();
   const navigate = useNavigate();
@@ -98,6 +98,11 @@ const Index = () => {
         </header>
 
         <main className="max-w-5xl mx-auto">
+          {/* Daily Verse Card */}
+          <div className="mb-8 max-w-lg mx-auto animate-fade-in">
+            <DailyVerseCard />
+          </div>
+
           {/* Challenge Card */}
           {challenge && (
             <div className="mb-12 max-w-md mx-auto">
@@ -243,12 +248,12 @@ const Index = () => {
           <div className="mt-16 text-center">
             <div className="inline-flex items-center gap-4 bg-card px-8 py-4 rounded-2xl border shadow-md">
               <div className="text-left">
-                <div className="text-3xl font-bold text-primary">140</div>
+                <div className="text-3xl font-bold text-primary">200</div>
                 <div className="text-sm text-muted-foreground">{t('stats.totalQuestions')}</div>
               </div>
               <div className="h-12 w-px bg-border" />
               <div className="text-left">
-                <div className="text-3xl font-bold text-accent">7</div>
+                <div className="text-3xl font-bold text-accent">10</div>
                 <div className="text-sm text-muted-foreground">{t('stats.categories')}</div>
               </div>
               <div className="h-12 w-px bg-border" />

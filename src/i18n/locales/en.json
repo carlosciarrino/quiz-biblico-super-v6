@@ -297,5 +297,12 @@
     "newTitle": "New Title",
     "congratulations": "Congratulations on your progress!",
     "continue": "Continue"
+  },
+  "dailyVerse": {
+    "title": "Daily Verse",
+    "save": "Save",
+    "saved": "Saved",
+    "savedToFavorites": "Verse saved to favorites",
+    "removedFromFavorites": "Verse removed from favorites"
   }
 }
