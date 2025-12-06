@@ -301,5 +301,12 @@
     "newTitle": "Nuovo Titolo",
     "congratulations": "Complimenti per i tuoi progressi!",
     "continue": "Continua"
+  },
+  "dailyVerse": {
+    "title": "Versetto del Giorno",
+    "save": "Salva",
+    "saved": "Salvato",
+    "savedToFavorites": "Versetto salvato nei preferiti",
+    "removedFromFavorites": "Versetto rimosso dai preferiti"
   }
 }

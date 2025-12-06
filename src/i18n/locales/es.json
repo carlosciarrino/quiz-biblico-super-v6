@@ -297,5 +297,12 @@
     "newTitle": "Nuevo Título",
     "congratulations": "¡Felicidades por tu progreso!",
     "continue": "Continuar"
+  },
+  "dailyVerse": {
+    "title": "Versículo del Día",
+    "save": "Guardar",
+    "saved": "Guardado",
+    "savedToFavorites": "Versículo guardado en favoritos",
+    "removedFromFavorites": "Versículo eliminado de favoritos"
   }
 }

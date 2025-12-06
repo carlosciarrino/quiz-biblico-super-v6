@@ -297,5 +297,12 @@
     "newTitle": "Nouveau Titre",
     "congratulations": "Félicitations pour vos progrès !",
     "continue": "Continuer"
+  },
+  "dailyVerse": {
+    "title": "Verset du Jour",
+    "save": "Enregistrer",
+    "saved": "Enregistré",
+    "savedToFavorites": "Verset enregistré dans les favoris",
+    "removedFromFavorites": "Verset supprimé des favoris"
   }
 }
