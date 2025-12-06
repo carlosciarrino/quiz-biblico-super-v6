@@ -302,7 +302,18 @@
     "title": "Versículo del Día",
     "save": "Guardar",
     "saved": "Guardado",
+    "share": "Compartir",
     "savedToFavorites": "Versículo guardado en favoritos",
     "removedFromFavorites": "Versículo eliminado de favoritos"
+  },
+  "verseSearch": {
+    "title": "Buscar Versículos",
+    "description": "Busca versículos bíblicos por palabras clave o temas",
+    "placeholder": "Buscar amor, esperanza, fe...",
+    "noResults": "No se encontraron versículos. Intenta otras palabras clave.",
+    "resultsCount": "{{count}} versículo(s) encontrado(s)",
+    "readMore": "Leer más",
+    "hint": "Introduce palabras clave para encontrar versículos inspiradores",
+    "alreadyFavorite": "Este versículo ya está en tus favoritos"
   }
 }

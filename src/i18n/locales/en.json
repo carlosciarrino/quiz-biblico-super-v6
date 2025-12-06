@@ -302,7 +302,18 @@
     "title": "Daily Verse",
     "save": "Save",
     "saved": "Saved",
+    "share": "Share",
     "savedToFavorites": "Verse saved to favorites",
     "removedFromFavorites": "Verse removed from favorites"
+  },
+  "verseSearch": {
+    "title": "Search Verses",
+    "description": "Search for Bible verses by keywords or topics",
+    "placeholder": "Search for love, hope, faith...",
+    "noResults": "No verses found. Try different keywords.",
+    "resultsCount": "{{count}} verse(s) found",
+    "readMore": "Read more",
+    "hint": "Enter keywords to find inspiring verses",
+    "alreadyFavorite": "This verse is already in your favorites"
   }
 }
