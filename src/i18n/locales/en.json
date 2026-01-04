@@ -315,5 +315,29 @@
     "readMore": "Read more",
     "hint": "Enter keywords to find inspiring verses",
     "alreadyFavorite": "This verse is already in your favorites"
+  },
+  "timedChallenge": {
+    "title": "Timed Challenge",
+    "shortDesc": "Race against the clock with progressive difficulty!",
+    "description": "Answer as many questions as possible before time runs out. Questions get harder as you build your streak!",
+    "start": "Start Challenge",
+    "gameOver": "Time's Up!",
+    "finalScore": "Final Score",
+    "questions": "Questions",
+    "bestStreak": "Best Streak",
+    "maxDifficulty": "Max Difficulty",
+    "playAgain": "Play Again",
+    "highScore": "High Score",
+    "newHighScore": "New High Score!",
+    "streak": "Streak",
+    "multiplierLabel": "Multiplier",
+    "rules": {
+      "time": "60 Seconds",
+      "timeDesc": "Correct answers add +3s, wrong answers cost -5s",
+      "difficulty": "Progressive Difficulty",
+      "difficultyDesc": "Build a streak to face harder questions for more points",
+      "multiplier": "Score Multiplier",
+      "multiplierDesc": "Higher difficulty and longer streaks multiply your points"
+    }
   }
 }

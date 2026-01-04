@@ -319,5 +319,29 @@
     "readMore": "Leggi di più",
     "hint": "Inserisci parole chiave per trovare versetti ispiratori",
     "alreadyFavorite": "Questo versetto è già nei tuoi preferiti"
+  },
+  "timedChallenge": {
+    "title": "Sfida a Tempo",
+    "shortDesc": "Corri contro il tempo con difficoltà progressiva!",
+    "description": "Rispondi a quante più domande possibili prima che scada il tempo. Le domande diventano più difficili man mano che costruisci la tua serie!",
+    "start": "Inizia Sfida",
+    "gameOver": "Tempo Scaduto!",
+    "finalScore": "Punteggio Finale",
+    "questions": "Domande",
+    "bestStreak": "Miglior Serie",
+    "maxDifficulty": "Difficoltà Max",
+    "playAgain": "Gioca Ancora",
+    "highScore": "Record",
+    "newHighScore": "Nuovo Record!",
+    "streak": "Serie",
+    "multiplierLabel": "Moltiplicatore",
+    "rules": {
+      "time": "60 Secondi",
+      "timeDesc": "Risposte corrette +3s, sbagliate -5s",
+      "difficulty": "Difficoltà Progressiva",
+      "difficultyDesc": "Costruisci una serie per affrontare domande più difficili per più punti",
+      "multiplier": "Moltiplicatore Punti",
+      "multiplierDesc": "Difficoltà maggiore e serie più lunghe moltiplicano i tuoi punti"
+    }
   }
 }

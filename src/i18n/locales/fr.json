@@ -315,5 +315,29 @@
     "readMore": "Lire la suite",
     "hint": "Entrez des mots-clés pour trouver des versets inspirants",
     "alreadyFavorite": "Ce verset est déjà dans vos favoris"
+  },
+  "timedChallenge": {
+    "title": "Défi Chronométré",
+    "shortDesc": "Courez contre la montre avec difficulté progressive !",
+    "description": "Répondez à autant de questions que possible avant la fin du temps. Les questions deviennent plus difficiles à mesure que vous construisez votre série !",
+    "start": "Commencer le Défi",
+    "gameOver": "Temps Écoulé !",
+    "finalScore": "Score Final",
+    "questions": "Questions",
+    "bestStreak": "Meilleure Série",
+    "maxDifficulty": "Difficulté Max",
+    "playAgain": "Rejouer",
+    "highScore": "Record",
+    "newHighScore": "Nouveau Record !",
+    "streak": "Série",
+    "multiplierLabel": "Multiplicateur",
+    "rules": {
+      "time": "60 Secondes",
+      "timeDesc": "Bonnes réponses +3s, mauvaises -5s",
+      "difficulty": "Difficulté Progressive",
+      "difficultyDesc": "Construisez une série pour affronter des questions plus difficiles pour plus de points",
+      "multiplier": "Multiplicateur de Points",
+      "multiplierDesc": "Difficulté plus élevée et séries plus longues multiplient vos points"
+    }
   }
 }

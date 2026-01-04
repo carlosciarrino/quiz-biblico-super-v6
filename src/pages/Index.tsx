@@ -10,7 +10,7 @@ import DailyRewardPopup from "@/components/DailyRewardPopup";
 import LevelUpAnimation from "@/components/LevelUpAnimation";
 import DailyVerseCard from "@/components/DailyVerseCard";
 import { categories } from "@/data/questions";
-import { Book, Sparkles, BookOpen, Shuffle, BarChart3, Trophy, GraduationCap, LayoutDashboard } from "lucide-react";
+import { Book, Sparkles, BookOpen, Shuffle, BarChart3, Trophy, GraduationCap, LayoutDashboard, Zap } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
 import { Button } from "@/components/ui/button";
@@ -181,6 +181,23 @@ const Index = () => {
               <Leaderboard entries={entries} />
             </div>
           )}
+
+          {/* Timed Challenge Mode */}
+          <div className="mb-12 max-w-lg mx-auto">
+            <Button
+              variant="outline"
+              className="w-full h-auto p-6 flex items-center gap-4 bg-gradient-to-r from-orange-500/10 via-red-500/10 to-pink-500/10 hover:from-orange-500/20 hover:via-red-500/20 hover:to-pink-500/20 border-orange-500/30"
+              onClick={() => navigate("/timed-challenge")}
+            >
+              <div className="w-14 h-14 rounded-full bg-gradient-to-br from-orange-500 to-red-500 flex items-center justify-center text-white shrink-0">
+                <Zap className="w-7 h-7" />
+              </div>
+              <div className="text-left">
+                <div className="font-bold text-lg">{t('timedChallenge.title')}</div>
+                <div className="text-sm text-muted-foreground">{t('timedChallenge.shortDesc')}</div>
+              </div>
+            </Button>
+          </div>
 
           {/* Special Quiz Types */}
           <div className="mb-12 space-y-6">

@@ -315,5 +315,29 @@
     "readMore": "Ler mais",
     "hint": "Digite palavras-chave para encontrar versículos inspiradores",
     "alreadyFavorite": "Este versículo já está nos seus favoritos"
+  },
+  "timedChallenge": {
+    "title": "Desafio Cronometrado",
+    "shortDesc": "Corra contra o relógio com dificuldade progressiva!",
+    "description": "Responda o máximo de perguntas possível antes do tempo acabar. As perguntas ficam mais difíceis à medida que você constrói sua sequência!",
+    "start": "Iniciar Desafio",
+    "gameOver": "Tempo Esgotado!",
+    "finalScore": "Pontuação Final",
+    "questions": "Perguntas",
+    "bestStreak": "Melhor Sequência",
+    "maxDifficulty": "Dificuldade Máx",
+    "playAgain": "Jogar Novamente",
+    "highScore": "Recorde",
+    "newHighScore": "Novo Recorde!",
+    "streak": "Sequência",
+    "multiplierLabel": "Multiplicador",
+    "rules": {
+      "time": "60 Segundos",
+      "timeDesc": "Respostas corretas +3s, erradas -5s",
+      "difficulty": "Dificuldade Progressiva",
+      "difficultyDesc": "Construa uma sequência para enfrentar perguntas mais difíceis por mais pontos",
+      "multiplier": "Multiplicador de Pontos",
+      "multiplierDesc": "Maior dificuldade e sequências mais longas multiplicam seus pontos"
+    }
   }
 }
