@@ -339,5 +339,35 @@
       "multiplier": "Multiplicador de Pontos",
       "multiplierDesc": "Maior dificuldade e sequências mais longas multiplicam seus pontos"
     }
+  },
+  "timedChallengeAchievements": {
+    "title": "Conquistas",
+    "unlocked": "Conquista Desbloqueada!",
+    "categories": {
+      "score": "Marcos de Pontuação",
+      "streak": "Mestres das Sequências",
+      "games": "Jogos Jogados",
+      "questions": "Perguntas Respondidas",
+      "special": "Conquistas Especiais"
+    },
+    "rookie_scorer": { "name": "Iniciante", "desc": "Obtenha 100+ pontos" },
+    "rising_star": { "name": "Estrela em Ascensão", "desc": "Obtenha 250+ pontos" },
+    "point_hunter": { "name": "Caçador de Pontos", "desc": "Obtenha 500+ pontos" },
+    "score_master": { "name": "Mestre da Pontuação", "desc": "Obtenha 1000+ pontos" },
+    "legendary_scorer": { "name": "Lendário", "desc": "Obtenha 2000+ pontos" },
+    "hot_streak": { "name": "Sequência Quente", "desc": "Consiga uma sequência de 5+ respostas" },
+    "on_fire": { "name": "Pegando Fogo!", "desc": "Consiga uma sequência de 10+ respostas" },
+    "unstoppable": { "name": "Imparável", "desc": "Consiga uma sequência de 15+ respostas" },
+    "streak_legend": { "name": "Lenda das Sequências", "desc": "Consiga uma sequência de 20+ respostas" },
+    "first_challenge": { "name": "Primeiro Desafio", "desc": "Complete seu primeiro jogo" },
+    "challenger": { "name": "Desafiante", "desc": "Jogue 5 partidas" },
+    "dedicated": { "name": "Dedicado", "desc": "Jogue 20 partidas" },
+    "challenge_addict": { "name": "Viciado em Desafios", "desc": "Jogue 50 partidas" },
+    "quick_thinker": { "name": "Pensador Rápido", "desc": "Responda 50 perguntas" },
+    "knowledge_seeker": { "name": "Buscador de Conhecimento", "desc": "Responda 200 perguntas" },
+    "bible_scholar": { "name": "Estudioso da Bíblia", "desc": "Responda 500 perguntas" },
+    "hard_mode": { "name": "Modo Difícil", "desc": "Alcance a dificuldade difícil" },
+    "perfectionist": { "name": "Perfeccionista", "desc": "Jogo perfeito com 10+ perguntas" },
+    "flawless": { "name": "Impecável", "desc": "Consiga 5 jogos perfeitos" }
   }
 }

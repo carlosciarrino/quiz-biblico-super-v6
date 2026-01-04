@@ -339,5 +339,35 @@
       "multiplier": "Multiplicador de Puntos",
       "multiplierDesc": "Mayor dificultad y rachas más largas multiplican tus puntos"
     }
+  },
+  "timedChallengeAchievements": {
+    "title": "Logros",
+    "unlocked": "¡Logro Desbloqueado!",
+    "categories": {
+      "score": "Hitos de Puntuación",
+      "streak": "Maestros de Rachas",
+      "games": "Partidas Jugadas",
+      "questions": "Preguntas Respondidas",
+      "special": "Logros Especiales"
+    },
+    "rookie_scorer": { "name": "Principiante", "desc": "Obtén 100+ puntos" },
+    "rising_star": { "name": "Estrella en Ascenso", "desc": "Obtén 250+ puntos" },
+    "point_hunter": { "name": "Cazador de Puntos", "desc": "Obtén 500+ puntos" },
+    "score_master": { "name": "Maestro del Puntaje", "desc": "Obtén 1000+ puntos" },
+    "legendary_scorer": { "name": "Legendario", "desc": "Obtén 2000+ puntos" },
+    "hot_streak": { "name": "Racha Caliente", "desc": "Consigue una racha de 5+ respuestas" },
+    "on_fire": { "name": "¡En Llamas!", "desc": "Consigue una racha de 10+ respuestas" },
+    "unstoppable": { "name": "Imparable", "desc": "Consigue una racha de 15+ respuestas" },
+    "streak_legend": { "name": "Leyenda de las Rachas", "desc": "Consigue una racha de 20+ respuestas" },
+    "first_challenge": { "name": "Primer Desafío", "desc": "Completa tu primera partida" },
+    "challenger": { "name": "Retador", "desc": "Juega 5 partidas" },
+    "dedicated": { "name": "Dedicado", "desc": "Juega 20 partidas" },
+    "challenge_addict": { "name": "Adicto a los Desafíos", "desc": "Juega 50 partidas" },
+    "quick_thinker": { "name": "Pensador Rápido", "desc": "Responde 50 preguntas" },
+    "knowledge_seeker": { "name": "Buscador de Conocimiento", "desc": "Responde 200 preguntas" },
+    "bible_scholar": { "name": "Erudito Bíblico", "desc": "Responde 500 preguntas" },
+    "hard_mode": { "name": "Modo Difícil", "desc": "Alcanza la dificultad difícil" },
+    "perfectionist": { "name": "Perfeccionista", "desc": "Partida perfecta con 10+ preguntas" },
+    "flawless": { "name": "Impecable", "desc": "Consigue 5 partidas perfectas" }
   }
 }

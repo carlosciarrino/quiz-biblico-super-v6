@@ -2,14 +2,17 @@ import { useState, useEffect, useCallback, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import { questions, Question } from "@/data/questions";
 import QuestionCard from "@/components/QuestionCard";
+import TimedChallengeAchievements from "@/components/TimedChallengeAchievements";
+import AchievementUnlockedToast from "@/components/AchievementUnlockedToast";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Progress } from "@/components/ui/progress";
-import { ArrowLeft, Trophy, Clock, Zap, Target, Star, Play } from "lucide-react";
+import { ArrowLeft, Trophy, Clock, Zap, Target, Star, Play, Award } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
 import { useSoundEffects } from "@/hooks/useSoundEffects";
 import { fireCorrectAnswer } from "@/lib/confetti";
+import { useTimedChallengeAchievements } from "@/hooks/useTimedChallengeAchievements";
 
 type Difficulty = "easy" | "medium" | "hard";
 
@@ -19,9 +22,11 @@ interface GameState {
   streak: number;
   bestStreak: number;
   questionsAnswered: number;
+  correctAnswers: number;
   currentDifficulty: Difficulty;
   timeRemaining: number;
   multiplier: number;
+  reachedHard: boolean;
 }
 
 const INITIAL_TIME = 60; // 60 seconds total game time
@@ -34,26 +39,33 @@ const TimedChallenge = () => {
   const { playCorrect, playIncorrect } = useSoundEffects();
   const timerRef = useRef<NodeJS.Timeout | null>(null);
 
+  const { 
+    stats: achievementStats, 
+    unlockedAchievements, 
+    newlyUnlocked, 
+    recordGameResult, 
+    clearNewlyUnlocked,
+    getAchievementProgress 
+  } = useTimedChallengeAchievements();
+
   const [gameState, setGameState] = useState<GameState>({
     status: "intro",
     score: 0,
     streak: 0,
     bestStreak: 0,
     questionsAnswered: 0,
+    correctAnswers: 0,
     currentDifficulty: "easy",
     timeRemaining: INITIAL_TIME,
     multiplier: 1,
+    reachedHard: false,
   });
 
   const [currentQuestion, setCurrentQuestion] = useState<Question | null>(null);
   const [answeredIds, setAnsweredIds] = useState<number[]>([]);
-  const [highScore, setHighScore] = useState(0);
+  const [showAchievements, setShowAchievements] = useState(false);
+  const highScore = achievementStats.highScore;
 
-  // Load high score
-  useEffect(() => {
-    const saved = localStorage.getItem("timed_challenge_high_score");
-    if (saved) setHighScore(parseInt(saved, 10));
-  }, []);
 
   // Get next question based on difficulty
   const getNextQuestion = useCallback((difficulty: Difficulty, answered: number[]): Question | null => {
@@ -82,9 +94,11 @@ const TimedChallenge = () => {
       streak: 0,
       bestStreak: 0,
       questionsAnswered: 0,
+      correctAnswers: 0,
       currentDifficulty: "easy",
       timeRemaining: INITIAL_TIME,
       multiplier: 1,
+      reachedHard: false,
     });
   }, [getNextQuestion]);
 
@@ -106,13 +120,20 @@ const TimedChallenge = () => {
     };
   }, [gameState.status]);
 
-  // Save high score on game over
+  // Record game result on game over
   useEffect(() => {
-    if (gameState.status === "gameOver" && gameState.score > highScore) {
-      setHighScore(gameState.score);
-      localStorage.setItem("timed_challenge_high_score", gameState.score.toString());
+    if (gameState.status === "gameOver" && gameState.questionsAnswered > 0) {
+      const isPerfect = gameState.correctAnswers === gameState.questionsAnswered && gameState.questionsAnswered >= 10;
+      recordGameResult({
+        score: gameState.score,
+        bestStreak: gameState.bestStreak,
+        questionsAnswered: gameState.questionsAnswered,
+        correctAnswers: gameState.correctAnswers,
+        reachedHard: gameState.reachedHard,
+        isPerfect,
+      });
     }
-  }, [gameState.status, gameState.score, highScore]);
+  }, [gameState.status]);
 
   // Calculate new difficulty based on streak
   const calculateDifficulty = (streak: number): Difficulty => {
@@ -157,9 +178,11 @@ const TimedChallenge = () => {
         streak: newStreak,
         bestStreak: newBestStreak,
         questionsAnswered: prev.questionsAnswered + 1,
+        correctAnswers: prev.correctAnswers + (isCorrect ? 1 : 0),
         currentDifficulty: newDifficulty,
         timeRemaining: newTime,
         multiplier: newMultiplier,
+        reachedHard: prev.reachedHard || newDifficulty === "hard",
         status: newTime <= 0 ? "gameOver" : "playing",
       };
     });
@@ -256,10 +279,30 @@ const TimedChallenge = () => {
               </Card>
             )}
 
-            <Button size="lg" onClick={startGame} className="gap-2 text-lg px-8">
-              <Play className="w-5 h-5" />
-              {t('timedChallenge.start')}
-            </Button>
+            <div className="flex gap-4 justify-center">
+              <Button size="lg" onClick={startGame} className="gap-2 text-lg px-8">
+                <Play className="w-5 h-5" />
+                {t('timedChallenge.start')}
+              </Button>
+              <Button 
+                size="lg" 
+                variant="outline" 
+                onClick={() => setShowAchievements(!showAchievements)} 
+                className="gap-2"
+              >
+                <Award className="w-5 h-5" />
+                {t('timedChallengeAchievements.title')}
+              </Button>
+            </div>
+
+            {showAchievements && (
+              <div className="animate-fade-in">
+                <TimedChallengeAchievements 
+                  unlockedAchievements={unlockedAchievements}
+                  getProgress={getAchievementProgress}
+                />
+              </div>
+            )}
           </div>
         </div>
       </div>
@@ -308,7 +351,7 @@ const TimedChallenge = () => {
               </div>
             </Card>
 
-            <div className="flex gap-4 justify-center">
+            <div className="flex gap-4 justify-center flex-wrap">
               <Button variant="outline" onClick={() => navigate("/")} className="gap-2">
                 <ArrowLeft className="w-4 h-4" />
                 {t('common.back')}
@@ -317,9 +360,32 @@ const TimedChallenge = () => {
                 <Play className="w-4 h-4" />
                 {t('timedChallenge.playAgain')}
               </Button>
+              <Button 
+                variant="outline"
+                onClick={() => setShowAchievements(!showAchievements)} 
+                className="gap-2"
+              >
+                <Award className="w-4 h-4" />
+                {t('timedChallengeAchievements.title')}
+              </Button>
             </div>
+
+            {showAchievements && (
+              <div className="animate-fade-in">
+                <TimedChallengeAchievements 
+                  unlockedAchievements={unlockedAchievements}
+                  getProgress={getAchievementProgress}
+                />
+              </div>
+            )}
           </div>
         </div>
+
+        {/* Achievement Unlocked Toast */}
+        <AchievementUnlockedToast 
+          achievements={newlyUnlocked} 
+          onClose={clearNewlyUnlocked} 
+        />
       </div>
     );
   }

@@ -339,5 +339,35 @@
       "multiplier": "Multiplicateur de Points",
       "multiplierDesc": "Difficulté plus élevée et séries plus longues multiplient vos points"
     }
+  },
+  "timedChallengeAchievements": {
+    "title": "Succès",
+    "unlocked": "Succès Débloqué !",
+    "categories": {
+      "score": "Jalons de Score",
+      "streak": "Maîtres des Séries",
+      "games": "Parties Jouées",
+      "questions": "Questions Répondues",
+      "special": "Succès Spéciaux"
+    },
+    "rookie_scorer": { "name": "Débutant", "desc": "Obtenez 100+ points" },
+    "rising_star": { "name": "Étoile Montante", "desc": "Obtenez 250+ points" },
+    "point_hunter": { "name": "Chasseur de Points", "desc": "Obtenez 500+ points" },
+    "score_master": { "name": "Maître du Score", "desc": "Obtenez 1000+ points" },
+    "legendary_scorer": { "name": "Légendaire", "desc": "Obtenez 2000+ points" },
+    "hot_streak": { "name": "Série Chaude", "desc": "Obtenez une série de 5+ réponses" },
+    "on_fire": { "name": "En Feu !", "desc": "Obtenez une série de 10+ réponses" },
+    "unstoppable": { "name": "Inarrêtable", "desc": "Obtenez une série de 15+ réponses" },
+    "streak_legend": { "name": "Légende des Séries", "desc": "Obtenez une série de 20+ réponses" },
+    "first_challenge": { "name": "Premier Défi", "desc": "Complétez votre première partie" },
+    "challenger": { "name": "Challenger", "desc": "Jouez 5 parties" },
+    "dedicated": { "name": "Dévoué", "desc": "Jouez 20 parties" },
+    "challenge_addict": { "name": "Accro aux Défis", "desc": "Jouez 50 parties" },
+    "quick_thinker": { "name": "Penseur Rapide", "desc": "Répondez à 50 questions" },
+    "knowledge_seeker": { "name": "Chercheur de Savoir", "desc": "Répondez à 200 questions" },
+    "bible_scholar": { "name": "Érudit Biblique", "desc": "Répondez à 500 questions" },
+    "hard_mode": { "name": "Mode Difficile", "desc": "Atteignez la difficulté difficile" },
+    "perfectionist": { "name": "Perfectionniste", "desc": "Partie parfaite avec 10+ questions" },
+    "flawless": { "name": "Impeccable", "desc": "Obtenez 5 parties parfaites" }
   }
 }
