@@ -343,5 +343,35 @@
       "multiplier": "Moltiplicatore Punti",
       "multiplierDesc": "Difficoltà maggiore e serie più lunghe moltiplicano i tuoi punti"
     }
+  },
+  "timedChallengeAchievements": {
+    "title": "Obiettivi",
+    "unlocked": "Obiettivo Sbloccato!",
+    "categories": {
+      "score": "Traguardi Punteggio",
+      "streak": "Maestri delle Serie",
+      "games": "Partite Giocate",
+      "questions": "Domande Risposte",
+      "special": "Obiettivi Speciali"
+    },
+    "rookie_scorer": { "name": "Principiante", "desc": "Ottieni 100+ punti" },
+    "rising_star": { "name": "Stella Nascente", "desc": "Ottieni 250+ punti" },
+    "point_hunter": { "name": "Cacciatore di Punti", "desc": "Ottieni 500+ punti" },
+    "score_master": { "name": "Maestro del Punteggio", "desc": "Ottieni 1000+ punti" },
+    "legendary_scorer": { "name": "Leggendario", "desc": "Ottieni 2000+ punti" },
+    "hot_streak": { "name": "Serie Calda", "desc": "Ottieni una serie di 5+ risposte" },
+    "on_fire": { "name": "In Fiamme!", "desc": "Ottieni una serie di 10+ risposte" },
+    "unstoppable": { "name": "Inarrestabile", "desc": "Ottieni una serie di 15+ risposte" },
+    "streak_legend": { "name": "Leggenda delle Serie", "desc": "Ottieni una serie di 20+ risposte" },
+    "first_challenge": { "name": "Prima Sfida", "desc": "Completa la tua prima partita" },
+    "challenger": { "name": "Sfidante", "desc": "Gioca 5 partite" },
+    "dedicated": { "name": "Dedicato", "desc": "Gioca 20 partite" },
+    "challenge_addict": { "name": "Dipendente dalle Sfide", "desc": "Gioca 50 partite" },
+    "quick_thinker": { "name": "Pensatore Veloce", "desc": "Rispondi a 50 domande" },
+    "knowledge_seeker": { "name": "Cercatore di Conoscenza", "desc": "Rispondi a 200 domande" },
+    "bible_scholar": { "name": "Studioso della Bibbia", "desc": "Rispondi a 500 domande" },
+    "hard_mode": { "name": "Modalità Difficile", "desc": "Raggiungi la difficoltà difficile" },
+    "perfectionist": { "name": "Perfezionista", "desc": "Partita perfetta con 10+ domande" },
+    "flawless": { "name": "Impeccabile", "desc": "Ottieni 5 partite perfette" }
   }
 }

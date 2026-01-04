@@ -339,5 +339,35 @@
       "multiplier": "Score Multiplier",
       "multiplierDesc": "Higher difficulty and longer streaks multiply your points"
     }
+  },
+  "timedChallengeAchievements": {
+    "title": "Achievements",
+    "unlocked": "Achievement Unlocked!",
+    "categories": {
+      "score": "Score Milestones",
+      "streak": "Streak Masters",
+      "games": "Games Played",
+      "questions": "Questions Answered",
+      "special": "Special Achievements"
+    },
+    "rookie_scorer": { "name": "Rookie Scorer", "desc": "Score 100+ points" },
+    "rising_star": { "name": "Rising Star", "desc": "Score 250+ points" },
+    "point_hunter": { "name": "Point Hunter", "desc": "Score 500+ points" },
+    "score_master": { "name": "Score Master", "desc": "Score 1000+ points" },
+    "legendary_scorer": { "name": "Legendary Scorer", "desc": "Score 2000+ points" },
+    "hot_streak": { "name": "Hot Streak", "desc": "Get a 5+ answer streak" },
+    "on_fire": { "name": "On Fire!", "desc": "Get a 10+ answer streak" },
+    "unstoppable": { "name": "Unstoppable", "desc": "Get a 15+ answer streak" },
+    "streak_legend": { "name": "Streak Legend", "desc": "Get a 20+ answer streak" },
+    "first_challenge": { "name": "First Challenge", "desc": "Complete your first game" },
+    "challenger": { "name": "Challenger", "desc": "Play 5 games" },
+    "dedicated": { "name": "Dedicated", "desc": "Play 20 games" },
+    "challenge_addict": { "name": "Challenge Addict", "desc": "Play 50 games" },
+    "quick_thinker": { "name": "Quick Thinker", "desc": "Answer 50 questions" },
+    "knowledge_seeker": { "name": "Knowledge Seeker", "desc": "Answer 200 questions" },
+    "bible_scholar": { "name": "Bible Scholar", "desc": "Answer 500 questions" },
+    "hard_mode": { "name": "Hard Mode", "desc": "Reach hard difficulty" },
+    "perfectionist": { "name": "Perfectionist", "desc": "Perfect game with 10+ questions" },
+    "flawless": { "name": "Flawless", "desc": "Get 5 perfect games" }
   }
 }
