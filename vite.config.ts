@@ -17,6 +17,9 @@ export default defineConfig(({ mode }) => ({
     dedupe: [
       "react", 
       "react-dom",
+      "react/jsx-runtime",
+      "react/jsx-dev-runtime",
+      "scheduler",
       "@radix-ui/react-tooltip",
       "@radix-ui/react-context",
       "@radix-ui/react-primitive",
@@ -26,8 +29,12 @@ export default defineConfig(({ mode }) => ({
     include: [
       "react", 
       "react-dom", 
+      "react/jsx-runtime",
+      "react/jsx-dev-runtime",
+      "scheduler",
       "@radix-ui/react-tooltip",
       "@radix-ui/react-context",
     ],
+    force: true,
   },
 }));
