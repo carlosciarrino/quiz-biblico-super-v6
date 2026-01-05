@@ -343,6 +343,7 @@
   "timedChallengeAchievements": {
     "title": "Logros",
     "unlocked": "¡Logro Desbloqueado!",
+    "shareMessage": "{{icon}} ¡Desbloqueé la insignia \"{{achievement}}\" en el Desafío Cronometrado del Quiz Bíblico! ¿Puedes superar mi puntuación?",
     "categories": {
       "score": "Hitos de Puntuación",
       "streak": "Maestros de Rachas",

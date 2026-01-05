@@ -347,6 +347,7 @@
   "timedChallengeAchievements": {
     "title": "Obiettivi",
     "unlocked": "Obiettivo Sbloccato!",
+    "shareMessage": "{{icon}} Ho sbloccato il badge \"{{achievement}}\" nella Sfida a Tempo del Quiz Biblico! Riesci a battere il mio punteggio?",
     "categories": {
       "score": "Traguardi Punteggio",
       "streak": "Maestri delle Serie",

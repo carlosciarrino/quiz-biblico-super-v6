@@ -343,6 +343,7 @@
   "timedChallengeAchievements": {
     "title": "Succès",
     "unlocked": "Succès Débloqué !",
+    "shareMessage": "{{icon}} J'ai débloqué le badge \"{{achievement}}\" dans le Défi Chronométré du Quiz Biblique ! Pouvez-vous battre mon score ?",
     "categories": {
       "score": "Jalons de Score",
       "streak": "Maîtres des Séries",
