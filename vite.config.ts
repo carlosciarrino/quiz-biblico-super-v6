@@ -14,10 +14,20 @@ export default defineConfig(({ mode }) => ({
     alias: {
       "@": path.resolve(__dirname, "./src"),
     },
-    dedupe: ["react", "react-dom", "@radix-ui/react-tooltip"],
+    dedupe: [
+      "react", 
+      "react-dom",
+      "@radix-ui/react-tooltip",
+      "@radix-ui/react-context",
+      "@radix-ui/react-primitive",
+    ],
   },
   optimizeDeps: {
-    include: ["react", "react-dom", "@radix-ui/react-tooltip"],
-    force: true,
+    include: [
+      "react", 
+      "react-dom", 
+      "@radix-ui/react-tooltip",
+      "@radix-ui/react-context",
+    ],
   },
 }));
