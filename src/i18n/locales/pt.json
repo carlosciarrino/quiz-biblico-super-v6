@@ -343,6 +343,7 @@
   "timedChallengeAchievements": {
     "title": "Conquistas",
     "unlocked": "Conquista Desbloqueada!",
+    "shareMessage": "{{icon}} Desbloqueei o distintivo \"{{achievement}}\" no Desafio Cronometrado do Quiz Bíblico! Consegue superar minha pontuação?",
     "categories": {
       "score": "Marcos de Pontuação",
       "streak": "Mestres das Sequências",

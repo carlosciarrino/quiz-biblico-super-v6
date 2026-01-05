@@ -1,8 +1,10 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Progress } from "@/components/ui/progress";
+import { Button } from "@/components/ui/button";
 import { useTranslation } from "react-i18next";
-import { Award, Lock } from "lucide-react";
+import { Award, Lock, Share2, Twitter, Facebook, MessageCircle } from "lucide-react";
 import { timedChallengeAchievements, TimedChallengeAchievement } from "@/hooks/useTimedChallengeAchievements";
+import { toast } from "sonner";
 
 interface TimedChallengeAchievementsProps {
   unlockedAchievements: string[];
@@ -40,6 +42,28 @@ const TimedChallengeAchievements = ({
     { key: 'questions', ids: ['quick_thinker', 'knowledge_seeker', 'bible_scholar'] },
     { key: 'special', ids: ['hard_mode', 'perfectionist', 'flawless'] },
   ];
+
+  const shareAchievement = (achievement: TimedChallengeAchievement, platform: 'twitter' | 'facebook' | 'whatsapp' | 'copy') => {
+    const achievementName = t(`timedChallengeAchievements.${achievement.id}.name`);
+    const shareText = t('timedChallengeAchievements.shareMessage', { 
+      achievement: achievementName, 
+      icon: achievement.icon 
+    });
+    const shareUrl = window.location.origin;
+
+    const urls: Record<string, string> = {
+      twitter: `https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}&url=${encodeURIComponent(shareUrl)}`,
+      facebook: `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareUrl)}&quote=${encodeURIComponent(shareText)}`,
+      whatsapp: `https://wa.me/?text=${encodeURIComponent(shareText + ' ' + shareUrl)}`,
+    };
+
+    if (platform === 'copy') {
+      navigator.clipboard.writeText(`${shareText}\n${shareUrl}`);
+      toast.success(t('share.copied'));
+    } else {
+      window.open(urls[platform], '_blank', 'width=600,height=400');
+    }
+  };
 
   const renderAchievement = (achievement: TimedChallengeAchievement) => {
     const isUnlocked = unlockedAchievements.includes(achievement.id);
@@ -79,6 +103,47 @@ const TimedChallengeAchievements = ({
                 <p className="text-xs text-muted-foreground">
                   {progress.current} / {progress.target}
                 </p>
+              </div>
+            )}
+            {/* Share buttons for unlocked achievements */}
+            {isUnlocked && (
+              <div className="flex items-center gap-1 mt-2">
+                <Button
+                  variant="ghost"
+                  size="icon"
+                  className="h-6 w-6 rounded-full hover:bg-[#1DA1F2]/20 hover:text-[#1DA1F2]"
+                  onClick={() => shareAchievement(achievement, 'twitter')}
+                  title="Twitter"
+                >
+                  <Twitter className="w-3 h-3" />
+                </Button>
+                <Button
+                  variant="ghost"
+                  size="icon"
+                  className="h-6 w-6 rounded-full hover:bg-[#4267B2]/20 hover:text-[#4267B2]"
+                  onClick={() => shareAchievement(achievement, 'facebook')}
+                  title="Facebook"
+                >
+                  <Facebook className="w-3 h-3" />
+                </Button>
+                <Button
+                  variant="ghost"
+                  size="icon"
+                  className="h-6 w-6 rounded-full hover:bg-[#25D366]/20 hover:text-[#25D366]"
+                  onClick={() => shareAchievement(achievement, 'whatsapp')}
+                  title="WhatsApp"
+                >
+                  <MessageCircle className="w-3 h-3" />
+                </Button>
+                <Button
+                  variant="ghost"
+                  size="icon"
+                  className="h-6 w-6 rounded-full hover:bg-primary/20 hover:text-primary"
+                  onClick={() => shareAchievement(achievement, 'copy')}
+                  title={t('share.copyLink')}
+                >
+                  <Share2 className="w-3 h-3" />
+                </Button>
               </div>
             )}
           </div>

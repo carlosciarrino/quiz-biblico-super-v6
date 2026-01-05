@@ -343,6 +343,7 @@
   "timedChallengeAchievements": {
     "title": "Achievements",
     "unlocked": "Achievement Unlocked!",
+    "shareMessage": "{{icon}} I unlocked the \"{{achievement}}\" badge in Bible Quiz Timed Challenge! Can you beat my score?",
     "categories": {
       "score": "Score Milestones",
       "streak": "Streak Masters",
