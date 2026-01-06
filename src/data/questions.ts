@@ -4446,7 +4446,21 @@ export const questions: Question[] = [
   {
     id: 201,
     question: "Dove avvenne la discesa dello Spirito Santo sugli apostoli?",
+    questions: {
+      it: "Dove avvenne la discesa dello Spirito Santo sugli apostoli?",
+      en: "Where did the descent of the Holy Spirit on the apostles occur?",
+      es: "¿Dónde ocurrió el descenso del Espíritu Santo sobre los apóstoles?",
+      pt: "Onde ocorreu a descida do Espírito Santo sobre os apóstolos?",
+      fr: "Où s'est produite la descente du Saint-Esprit sur les apôtres?"
+    },
     options: ["Nel tempio", "Nel cenacolo", "Sul monte degli Ulivi", "A Betania"],
+    optionsTranslated: {
+      it: ["Nel tempio", "Nel cenacolo", "Sul monte degli Ulivi", "A Betania"],
+      en: ["In the temple", "In the upper room", "On the Mount of Olives", "In Bethany"],
+      es: ["En el templo", "En el cenáculo", "En el Monte de los Olivos", "En Betania"],
+      pt: ["No templo", "No cenáculo", "No Monte das Oliveiras", "Em Betânia"],
+      fr: ["Dans le temple", "Dans la chambre haute", "Sur le Mont des Oliviers", "À Béthanie"]
+    },
     correctAnswer: 1,
     category: "Chiesa Primitiva",
     difficulty: "easy",
@@ -4454,7 +4468,21 @@ export const questions: Question[] = [
   {
     id: 202,
     question: "Quante persone si convertirono dopo il discorso di Pietro a Pentecoste?",
+    questions: {
+      it: "Quante persone si convertirono dopo il discorso di Pietro a Pentecoste?",
+      en: "How many people were converted after Peter's speech at Pentecost?",
+      es: "¿Cuántas personas se convirtieron después del discurso de Pedro en Pentecostés?",
+      pt: "Quantas pessoas se converteram após o discurso de Pedro no Pentecostes?",
+      fr: "Combien de personnes se sont converties après le discours de Pierre à la Pentecôte?"
+    },
     options: ["500", "1000", "3000", "5000"],
+    optionsTranslated: {
+      it: ["500", "1000", "3000", "5000"],
+      en: ["500", "1000", "3000", "5000"],
+      es: ["500", "1000", "3000", "5000"],
+      pt: ["500", "1000", "3000", "5000"],
+      fr: ["500", "1000", "3000", "5000"]
+    },
     correctAnswer: 2,
     category: "Chiesa Primitiva",
     difficulty: "medium",
@@ -4462,7 +4490,21 @@ export const questions: Question[] = [
   {
     id: 203,
     question: "Chi fu scelto per sostituire Giuda tra i dodici apostoli?",
+    questions: {
+      it: "Chi fu scelto per sostituire Giuda tra i dodici apostoli?",
+      en: "Who was chosen to replace Judas among the twelve apostles?",
+      es: "¿Quién fue elegido para reemplazar a Judas entre los doce apóstoles?",
+      pt: "Quem foi escolhido para substituir Judas entre os doze apóstolos?",
+      fr: "Qui a été choisi pour remplacer Judas parmi les douze apôtres?"
+    },
     options: ["Paolo", "Barnaba", "Mattia", "Timoteo"],
+    optionsTranslated: {
+      it: ["Paolo", "Barnaba", "Mattia", "Timoteo"],
+      en: ["Paul", "Barnabas", "Matthias", "Timothy"],
+      es: ["Pablo", "Bernabé", "Matías", "Timoteo"],
+      pt: ["Paulo", "Barnabé", "Matias", "Timóteo"],
+      fr: ["Paul", "Barnabé", "Matthias", "Timothée"]
+    },
     correctAnswer: 2,
     category: "Chiesa Primitiva",
     difficulty: "medium",
@@ -4470,7 +4512,21 @@ export const questions: Question[] = [
   {
     id: 204,
     question: "Chi erano Anania e Saffira?",
+    questions: {
+      it: "Chi erano Anania e Saffira?",
+      en: "Who were Ananias and Sapphira?",
+      es: "¿Quiénes eran Ananías y Safira?",
+      pt: "Quem eram Ananias e Safira?",
+      fr: "Qui étaient Ananias et Saphira?"
+    },
     options: ["Due apostoli", "Una coppia che mentì allo Spirito Santo", "I genitori di Paolo", "Due profeti"],
+    optionsTranslated: {
+      it: ["Due apostoli", "Una coppia che mentì allo Spirito Santo", "I genitori di Paolo", "Due profeti"],
+      en: ["Two apostles", "A couple who lied to the Holy Spirit", "Paul's parents", "Two prophets"],
+      es: ["Dos apóstoles", "Una pareja que mintió al Espíritu Santo", "Los padres de Pablo", "Dos profetas"],
+      pt: ["Dois apóstolos", "Um casal que mentiu ao Espírito Santo", "Os pais de Paulo", "Dois profetas"],
+      fr: ["Deux apôtres", "Un couple qui a menti au Saint-Esprit", "Les parents de Paul", "Deux prophètes"]
+    },
     correctAnswer: 1,
     category: "Chiesa Primitiva",
     difficulty: "medium",
@@ -4478,7 +4534,21 @@ export const questions: Question[] = [
   {
     id: 205,
     question: "Chi fu il primo diacono martire?",
+    questions: {
+      it: "Chi fu il primo diacono martire?",
+      en: "Who was the first deacon martyr?",
+      es: "¿Quién fue el primer diácono mártir?",
+      pt: "Quem foi o primeiro diácono mártir?",
+      fr: "Qui fut le premier diacre martyr?"
+    },
     options: ["Filippo", "Stefano", "Procoro", "Nicola"],
+    optionsTranslated: {
+      it: ["Filippo", "Stefano", "Procoro", "Nicola"],
+      en: ["Philip", "Stephen", "Prochorus", "Nicolas"],
+      es: ["Felipe", "Esteban", "Prócoro", "Nicolás"],
+      pt: ["Filipe", "Estêvão", "Prócoro", "Nicolau"],
+      fr: ["Philippe", "Étienne", "Prochore", "Nicolas"]
+    },
     correctAnswer: 1,
     category: "Chiesa Primitiva",
     difficulty: "easy",
@@ -4486,7 +4556,21 @@ export const questions: Question[] = [
   {
     id: 206,
     question: "Chi battezzò l'eunuco etiope?",
+    questions: {
+      it: "Chi battezzò l'eunuco etiope?",
+      en: "Who baptized the Ethiopian eunuch?",
+      es: "¿Quién bautizó al eunuco etíope?",
+      pt: "Quem batizou o eunuco etíope?",
+      fr: "Qui a baptisé l'eunuque éthiopien?"
+    },
     options: ["Pietro", "Paolo", "Filippo", "Giovanni"],
+    optionsTranslated: {
+      it: ["Pietro", "Paolo", "Filippo", "Giovanni"],
+      en: ["Peter", "Paul", "Philip", "John"],
+      es: ["Pedro", "Pablo", "Felipe", "Juan"],
+      pt: ["Pedro", "Paulo", "Filipe", "João"],
+      fr: ["Pierre", "Paul", "Philippe", "Jean"]
+    },
     correctAnswer: 2,
     category: "Chiesa Primitiva",
     difficulty: "medium",
@@ -4494,7 +4578,21 @@ export const questions: Question[] = [
   {
     id: 207,
     question: "Sulla via di quale città Paolo ebbe la visione di Cristo?",
+    questions: {
+      it: "Sulla via di quale città Paolo ebbe la visione di Cristo?",
+      en: "On the road to which city did Paul have the vision of Christ?",
+      es: "¿En el camino a qué ciudad Pablo tuvo la visión de Cristo?",
+      pt: "No caminho de qual cidade Paulo teve a visão de Cristo?",
+      fr: "Sur le chemin de quelle ville Paul a-t-il eu la vision du Christ?"
+    },
     options: ["Gerusalemme", "Damasco", "Antiochia", "Tarso"],
+    optionsTranslated: {
+      it: ["Gerusalemme", "Damasco", "Antiochia", "Tarso"],
+      en: ["Jerusalem", "Damascus", "Antioch", "Tarsus"],
+      es: ["Jerusalén", "Damasco", "Antioquía", "Tarso"],
+      pt: ["Jerusalém", "Damasco", "Antioquia", "Tarso"],
+      fr: ["Jérusalem", "Damas", "Antioche", "Tarse"]
+    },
     correctAnswer: 1,
     category: "Chiesa Primitiva",
     difficulty: "easy",
@@ -4502,7 +4600,21 @@ export const questions: Question[] = [
   {
     id: 208,
     question: "Chi impose le mani a Paolo perché riacquistasse la vista?",
+    questions: {
+      it: "Chi impose le mani a Paolo perché riacquistasse la vista?",
+      en: "Who laid hands on Paul so that he might regain his sight?",
+      es: "¿Quién impuso las manos a Pablo para que recobrara la vista?",
+      pt: "Quem impôs as mãos a Paulo para que recuperasse a visão?",
+      fr: "Qui a imposé les mains à Paul pour qu'il retrouve la vue?"
+    },
     options: ["Pietro", "Barnaba", "Anania", "Giacomo"],
+    optionsTranslated: {
+      it: ["Pietro", "Barnaba", "Anania", "Giacomo"],
+      en: ["Peter", "Barnabas", "Ananias", "James"],
+      es: ["Pedro", "Bernabé", "Ananías", "Santiago"],
+      pt: ["Pedro", "Barnabé", "Ananias", "Tiago"],
+      fr: ["Pierre", "Barnabé", "Ananias", "Jacques"]
+    },
     correctAnswer: 2,
     category: "Chiesa Primitiva",
     difficulty: "medium",
@@ -4510,7 +4622,21 @@ export const questions: Question[] = [
   {
     id: 209,
     question: "Qual era il nome di Paolo prima della conversione?",
+    questions: {
+      it: "Qual era il nome di Paolo prima della conversione?",
+      en: "What was Paul's name before his conversion?",
+      es: "¿Cuál era el nombre de Pablo antes de su conversión?",
+      pt: "Qual era o nome de Paulo antes de sua conversão?",
+      fr: "Quel était le nom de Paul avant sa conversion?"
+    },
     options: ["Simone", "Saulo", "Silvano", "Sila"],
+    optionsTranslated: {
+      it: ["Simone", "Saulo", "Silvano", "Sila"],
+      en: ["Simon", "Saul", "Silvanus", "Silas"],
+      es: ["Simón", "Saulo", "Silvano", "Silas"],
+      pt: ["Simão", "Saulo", "Silvano", "Silas"],
+      fr: ["Simon", "Saul", "Silvain", "Silas"]
+    },
     correctAnswer: 1,
     category: "Chiesa Primitiva",
     difficulty: "easy",
@@ -4518,7 +4644,21 @@ export const questions: Question[] = [
   {
     id: 210,
     question: "Chi fu il primo centurione romano a convertirsi?",
+    questions: {
+      it: "Chi fu il primo centurione romano a convertirsi?",
+      en: "Who was the first Roman centurion to convert?",
+      es: "¿Quién fue el primer centurión romano en convertirse?",
+      pt: "Quem foi o primeiro centurião romano a se converter?",
+      fr: "Qui fut le premier centurion romain à se convertir?"
+    },
     options: ["Cornelio", "Sergio Paolo", "Giulio", "Longino"],
+    optionsTranslated: {
+      it: ["Cornelio", "Sergio Paolo", "Giulio", "Longino"],
+      en: ["Cornelius", "Sergius Paulus", "Julius", "Longinus"],
+      es: ["Cornelio", "Sergio Paulo", "Julio", "Longino"],
+      pt: ["Cornélio", "Sérgio Paulo", "Júlio", "Longino"],
+      fr: ["Corneille", "Sergius Paulus", "Julius", "Longin"]
+    },
     correctAnswer: 0,
     category: "Chiesa Primitiva",
     difficulty: "medium",
@@ -4526,7 +4666,21 @@ export const questions: Question[] = [
   {
     id: 211,
     question: "Chi accompagnò Paolo nel primo viaggio missionario?",
+    questions: {
+      it: "Chi accompagnò Paolo nel primo viaggio missionario?",
+      en: "Who accompanied Paul on his first missionary journey?",
+      es: "¿Quién acompañó a Pablo en su primer viaje misionero?",
+      pt: "Quem acompanhou Paulo em sua primeira viagem missionária?",
+      fr: "Qui a accompagné Paul dans son premier voyage missionnaire?"
+    },
     options: ["Sila", "Timoteo", "Barnaba", "Luca"],
+    optionsTranslated: {
+      it: ["Sila", "Timoteo", "Barnaba", "Luca"],
+      en: ["Silas", "Timothy", "Barnabas", "Luke"],
+      es: ["Silas", "Timoteo", "Bernabé", "Lucas"],
+      pt: ["Silas", "Timóteo", "Barnabé", "Lucas"],
+      fr: ["Silas", "Timothée", "Barnabé", "Luc"]
+    },
     correctAnswer: 2,
     category: "Chiesa Primitiva",
     difficulty: "medium",
@@ -4534,7 +4688,21 @@ export const questions: Question[] = [
   {
     id: 212,
     question: "In quale città Paolo e Sila furono imprigionati e liberati da un terremoto?",
+    questions: {
+      it: "In quale città Paolo e Sila furono imprigionati e liberati da un terremoto?",
+      en: "In which city were Paul and Silas imprisoned and freed by an earthquake?",
+      es: "¿En qué ciudad Pablo y Silas fueron encarcelados y liberados por un terremoto?",
+      pt: "Em qual cidade Paulo e Silas foram presos e libertados por um terremoto?",
+      fr: "Dans quelle ville Paul et Silas ont-ils été emprisonnés et libérés par un tremblement de terre?"
+    },
     options: ["Tessalonica", "Filippi", "Corinto", "Efeso"],
+    optionsTranslated: {
+      it: ["Tessalonica", "Filippi", "Corinto", "Efeso"],
+      en: ["Thessalonica", "Philippi", "Corinth", "Ephesus"],
+      es: ["Tesalónica", "Filipos", "Corinto", "Éfeso"],
+      pt: ["Tessalônica", "Filipos", "Corinto", "Éfeso"],
+      fr: ["Thessalonique", "Philippes", "Corinthe", "Éphèse"]
+    },
     correctAnswer: 1,
     category: "Chiesa Primitiva",
     difficulty: "medium",
@@ -4542,7 +4710,21 @@ export const questions: Question[] = [
   {
     id: 213,
     question: "Chi era Lidia di cui si parla negli Atti?",
+    questions: {
+      it: "Chi era Lidia di cui si parla negli Atti?",
+      en: "Who was Lydia mentioned in Acts?",
+      es: "¿Quién era Lidia mencionada en Hechos?",
+      pt: "Quem era Lídia mencionada em Atos?",
+      fr: "Qui était Lydie mentionnée dans les Actes?"
+    },
     options: ["Una profetessa", "Una venditrice di porpora", "Una diaconessa", "Una regina"],
+    optionsTranslated: {
+      it: ["Una profetessa", "Una venditrice di porpora", "Una diaconessa", "Una regina"],
+      en: ["A prophetess", "A seller of purple cloth", "A deaconess", "A queen"],
+      es: ["Una profetisa", "Una vendedora de púrpura", "Una diaconisa", "Una reina"],
+      pt: ["Uma profetisa", "Uma vendedora de púrpura", "Uma diaconisa", "Uma rainha"],
+      fr: ["Une prophétesse", "Une marchande de pourpre", "Une diaconesse", "Une reine"]
+    },
     correctAnswer: 1,
     category: "Chiesa Primitiva",
     difficulty: "medium",
@@ -4550,7 +4732,21 @@ export const questions: Question[] = [
   {
     id: 214,
     question: "Dove Paolo predicò all'Areopago?",
+    questions: {
+      it: "Dove Paolo predicò all'Areopago?",
+      en: "Where did Paul preach at the Areopagus?",
+      es: "¿Dónde predicó Pablo en el Areópago?",
+      pt: "Onde Paulo pregou no Areópago?",
+      fr: "Où Paul a-t-il prêché à l'Aréopage?"
+    },
     options: ["Roma", "Corinto", "Atene", "Efeso"],
+    optionsTranslated: {
+      it: ["Roma", "Corinto", "Atene", "Efeso"],
+      en: ["Rome", "Corinth", "Athens", "Ephesus"],
+      es: ["Roma", "Corinto", "Atenas", "Éfeso"],
+      pt: ["Roma", "Corinto", "Atenas", "Éfeso"],
+      fr: ["Rome", "Corinthe", "Athènes", "Éphèse"]
+    },
     correctAnswer: 2,
     category: "Chiesa Primitiva",
     difficulty: "medium",
@@ -4558,7 +4754,21 @@ export const questions: Question[] = [
   {
     id: 215,
     question: "Su quale isola Paolo naufragò durante il viaggio verso Roma?",
+    questions: {
+      it: "Su quale isola Paolo naufragò durante il viaggio verso Roma?",
+      en: "On which island did Paul shipwreck during his journey to Rome?",
+      es: "¿En qué isla naufragó Pablo durante su viaje a Roma?",
+      pt: "Em qual ilha Paulo naufragou durante sua viagem a Roma?",
+      fr: "Sur quelle île Paul a-t-il fait naufrage pendant son voyage vers Rome?"
+    },
     options: ["Creta", "Cipro", "Malta", "Sicilia"],
+    optionsTranslated: {
+      it: ["Creta", "Cipro", "Malta", "Sicilia"],
+      en: ["Crete", "Cyprus", "Malta", "Sicily"],
+      es: ["Creta", "Chipre", "Malta", "Sicilia"],
+      pt: ["Creta", "Chipre", "Malta", "Sicília"],
+      fr: ["Crète", "Chypre", "Malte", "Sicile"]
+    },
     correctAnswer: 2,
     category: "Chiesa Primitiva",
     difficulty: "medium",
@@ -4566,7 +4776,21 @@ export const questions: Question[] = [
   {
     id: 216,
     question: "Quanti viaggi missionari fece Paolo?",
+    questions: {
+      it: "Quanti viaggi missionari fece Paolo?",
+      en: "How many missionary journeys did Paul make?",
+      es: "¿Cuántos viajes misioneros hizo Pablo?",
+      pt: "Quantas viagens missionárias Paulo fez?",
+      fr: "Combien de voyages missionnaires Paul a-t-il effectués?"
+    },
     options: ["2", "3", "4", "5"],
+    optionsTranslated: {
+      it: ["2", "3", "4", "5"],
+      en: ["2", "3", "4", "5"],
+      es: ["2", "3", "4", "5"],
+      pt: ["2", "3", "4", "5"],
+      fr: ["2", "3", "4", "5"]
+    },
     correctAnswer: 1,
     category: "Chiesa Primitiva",
     difficulty: "medium",
@@ -4574,7 +4798,21 @@ export const questions: Question[] = [
   {
     id: 217,
     question: "A chi Paolo scrisse la Lettera ai Romani?",
+    questions: {
+      it: "A chi Paolo scrisse la Lettera ai Romani?",
+      en: "To whom did Paul write the Letter to the Romans?",
+      es: "¿A quién escribió Pablo la Carta a los Romanos?",
+      pt: "Para quem Paulo escreveu a Carta aos Romanos?",
+      fr: "À qui Paul a-t-il écrit la Lettre aux Romains?"
+    },
     options: ["A una singola persona", "Alla chiesa di Roma", "All'imperatore", "Ai giudei di Roma"],
+    optionsTranslated: {
+      it: ["A una singola persona", "Alla chiesa di Roma", "All'imperatore", "Ai giudei di Roma"],
+      en: ["To a single person", "To the church in Rome", "To the emperor", "To the Jews in Rome"],
+      es: ["A una sola persona", "A la iglesia de Roma", "Al emperador", "A los judíos de Roma"],
+      pt: ["A uma única pessoa", "À igreja de Roma", "Ao imperador", "Aos judeus de Roma"],
+      fr: ["À une seule personne", "À l'église de Rome", "À l'empereur", "Aux Juifs de Rome"]
+    },
     correctAnswer: 1,
     category: "Lettere Paoline",
     difficulty: "easy",
@@ -4582,7 +4820,21 @@ export const questions: Question[] = [
   {
     id: 218,
     question: "Quante lettere scrisse Paolo ai Corinzi?",
+    questions: {
+      it: "Quante lettere scrisse Paolo ai Corinzi?",
+      en: "How many letters did Paul write to the Corinthians?",
+      es: "¿Cuántas cartas escribió Pablo a los Corintios?",
+      pt: "Quantas cartas Paulo escreveu aos Coríntios?",
+      fr: "Combien de lettres Paul a-t-il écrites aux Corinthiens?"
+    },
     options: ["1", "2", "3", "4"],
+    optionsTranslated: {
+      it: ["1", "2", "3", "4"],
+      en: ["1", "2", "3", "4"],
+      es: ["1", "2", "3", "4"],
+      pt: ["1", "2", "3", "4"],
+      fr: ["1", "2", "3", "4"]
+    },
     correctAnswer: 1,
     category: "Lettere Paoline",
     difficulty: "easy",
@@ -4590,7 +4842,21 @@ export const questions: Question[] = [
   {
     id: 219,
     question: "In quale lettera Paolo parla dell'inno all'amore?",
+    questions: {
+      it: "In quale lettera Paolo parla dell'inno all'amore?",
+      en: "In which letter does Paul speak of the hymn to love?",
+      es: "¿En qué carta Pablo habla del himno al amor?",
+      pt: "Em qual carta Paulo fala do hino ao amor?",
+      fr: "Dans quelle lettre Paul parle-t-il de l'hymne à l'amour?"
+    },
     options: ["Romani", "1 Corinzi", "Efesini", "Filippesi"],
+    optionsTranslated: {
+      it: ["Romani", "1 Corinzi", "Efesini", "Filippesi"],
+      en: ["Romans", "1 Corinthians", "Ephesians", "Philippians"],
+      es: ["Romanos", "1 Corintios", "Efesios", "Filipenses"],
+      pt: ["Romanos", "1 Coríntios", "Efésios", "Filipenses"],
+      fr: ["Romains", "1 Corinthiens", "Éphésiens", "Philippiens"]
+    },
     correctAnswer: 1,
     category: "Lettere Paoline",
     difficulty: "easy",
@@ -4598,7 +4864,21 @@ export const questions: Question[] = [
   {
     id: 220,
     question: "Quale capitolo di 1 Corinzi contiene l'inno all'amore?",
+    questions: {
+      it: "Quale capitolo di 1 Corinzi contiene l'inno all'amore?",
+      en: "Which chapter of 1 Corinthians contains the hymn to love?",
+      es: "¿Qué capítulo de 1 Corintios contiene el himno al amor?",
+      pt: "Qual capítulo de 1 Coríntios contém o hino ao amor?",
+      fr: "Quel chapitre de 1 Corinthiens contient l'hymne à l'amour?"
+    },
     options: ["Capitolo 10", "Capitolo 12", "Capitolo 13", "Capitolo 15"],
+    optionsTranslated: {
+      it: ["Capitolo 10", "Capitolo 12", "Capitolo 13", "Capitolo 15"],
+      en: ["Chapter 10", "Chapter 12", "Chapter 13", "Chapter 15"],
+      es: ["Capítulo 10", "Capítulo 12", "Capítulo 13", "Capítulo 15"],
+      pt: ["Capítulo 10", "Capítulo 12", "Capítulo 13", "Capítulo 15"],
+      fr: ["Chapitre 10", "Chapitre 12", "Chapitre 13", "Chapitre 15"]
+    },
     correctAnswer: 2,
     category: "Lettere Paoline",
     difficulty: "medium",
@@ -4606,7 +4886,21 @@ export const questions: Question[] = [
   {
     id: 221,
     question: "Qual è il tema principale della Lettera ai Galati?",
+    questions: {
+      it: "Qual è il tema principale della Lettera ai Galati?",
+      en: "What is the main theme of the Letter to the Galatians?",
+      es: "¿Cuál es el tema principal de la Carta a los Gálatas?",
+      pt: "Qual é o tema principal da Carta aos Gálatas?",
+      fr: "Quel est le thème principal de la Lettre aux Galates?"
+    },
     options: ["L'amore", "La libertà in Cristo dalla legge", "La preghiera", "Il matrimonio"],
+    optionsTranslated: {
+      it: ["L'amore", "La libertà in Cristo dalla legge", "La preghiera", "Il matrimonio"],
+      en: ["Love", "Freedom in Christ from the law", "Prayer", "Marriage"],
+      es: ["El amor", "La libertad en Cristo de la ley", "La oración", "El matrimonio"],
+      pt: ["O amor", "A liberdade em Cristo da lei", "A oração", "O casamento"],
+      fr: ["L'amour", "La liberté en Christ de la loi", "La prière", "Le mariage"]
+    },
     correctAnswer: 1,
     category: "Lettere Paoline",
     difficulty: "medium",
@@ -4614,7 +4908,21 @@ export const questions: Question[] = [
   {
     id: 222,
     question: "Qual è il frutto dello Spirito secondo Galati 5?",
+    questions: {
+      it: "Qual è il frutto dello Spirito secondo Galati 5?",
+      en: "What is the fruit of the Spirit according to Galatians 5?",
+      es: "¿Cuál es el fruto del Espíritu según Gálatas 5?",
+      pt: "Qual é o fruto do Espírito segundo Gálatas 5?",
+      fr: "Quel est le fruit de l'Esprit selon Galates 5?"
+    },
     options: ["Ricchezza e potere", "Amore, gioia, pace...", "Saggezza e conoscenza", "Miracoli e prodigi"],
+    optionsTranslated: {
+      it: ["Ricchezza e potere", "Amore, gioia, pace...", "Saggezza e conoscenza", "Miracoli e prodigi"],
+      en: ["Wealth and power", "Love, joy, peace...", "Wisdom and knowledge", "Miracles and wonders"],
+      es: ["Riqueza y poder", "Amor, gozo, paz...", "Sabiduría y conocimiento", "Milagros y prodigios"],
+      pt: ["Riqueza e poder", "Amor, alegria, paz...", "Sabedoria e conhecimento", "Milagres e prodígios"],
+      fr: ["Richesse et pouvoir", "Amour, joie, paix...", "Sagesse et connaissance", "Miracles et prodiges"]
+    },
     correctAnswer: 1,
     category: "Lettere Paoline",
     difficulty: "easy",
@@ -4622,7 +4930,21 @@ export const questions: Question[] = [
   {
     id: 223,
     question: "Quale lettera Paolo scrisse dalla prigione chiamata 'lettera della gioia'?",
+    questions: {
+      it: "Quale lettera Paolo scrisse dalla prigione chiamata 'lettera della gioia'?",
+      en: "Which letter did Paul write from prison called the 'letter of joy'?",
+      es: "¿Qué carta escribió Pablo desde la prisión llamada 'carta del gozo'?",
+      pt: "Qual carta Paulo escreveu da prisão chamada 'carta da alegria'?",
+      fr: "Quelle lettre Paul a-t-il écrite depuis la prison appelée 'lettre de la joie'?"
+    },
     options: ["Efesini", "Filippesi", "Colossesi", "Filemone"],
+    optionsTranslated: {
+      it: ["Efesini", "Filippesi", "Colossesi", "Filemone"],
+      en: ["Ephesians", "Philippians", "Colossians", "Philemon"],
+      es: ["Efesios", "Filipenses", "Colosenses", "Filemón"],
+      pt: ["Efésios", "Filipenses", "Colossenses", "Filemom"],
+      fr: ["Éphésiens", "Philippiens", "Colossiens", "Philémon"]
+    },
     correctAnswer: 1,
     category: "Lettere Paoline",
     difficulty: "medium",
@@ -4630,7 +4952,21 @@ export const questions: Question[] = [
   {
     id: 224,
     question: "In quale lettera Paolo parla dell'armatura di Dio?",
+    questions: {
+      it: "In quale lettera Paolo parla dell'armatura di Dio?",
+      en: "In which letter does Paul speak of the armor of God?",
+      es: "¿En qué carta Pablo habla de la armadura de Dios?",
+      pt: "Em qual carta Paulo fala da armadura de Deus?",
+      fr: "Dans quelle lettre Paul parle-t-il de l'armure de Dieu?"
+    },
     options: ["Romani", "Galati", "Efesini", "Colossesi"],
+    optionsTranslated: {
+      it: ["Romani", "Galati", "Efesini", "Colossesi"],
+      en: ["Romans", "Galatians", "Ephesians", "Colossians"],
+      es: ["Romanos", "Gálatas", "Efesios", "Colosenses"],
+      pt: ["Romanos", "Gálatas", "Efésios", "Colossenses"],
+      fr: ["Romains", "Galates", "Éphésiens", "Colossiens"]
+    },
     correctAnswer: 2,
     category: "Lettere Paoline",
     difficulty: "medium",
@@ -4638,7 +4974,21 @@ export const questions: Question[] = [
   {
     id: 225,
     question: "Chi era Filemone?",
+    questions: {
+      it: "Chi era Filemone?",
+      en: "Who was Philemon?",
+      es: "¿Quién era Filemón?",
+      pt: "Quem era Filemom?",
+      fr: "Qui était Philémon?"
+    },
     options: ["Un apostolo", "Un padrone di uno schiavo", "Un diacono", "Un profeta"],
+    optionsTranslated: {
+      it: ["Un apostolo", "Un padrone di uno schiavo", "Un diacono", "Un profeta"],
+      en: ["An apostle", "A slave owner", "A deacon", "A prophet"],
+      es: ["Un apóstol", "Un dueño de un esclavo", "Un diácono", "Un profeta"],
+      pt: ["Um apóstolo", "Um dono de escravo", "Um diácono", "Um profeta"],
+      fr: ["Un apôtre", "Un maître d'esclave", "Un diacre", "Un prophète"]
+    },
     correctAnswer: 1,
     category: "Lettere Paoline",
     difficulty: "medium",
@@ -4646,7 +4996,21 @@ export const questions: Question[] = [
   {
     id: 226,
     question: "Chi era Onesimo nella Lettera a Filemone?",
+    questions: {
+      it: "Chi era Onesimo nella Lettera a Filemone?",
+      en: "Who was Onesimus in the Letter to Philemon?",
+      es: "¿Quién era Onésimo en la Carta a Filemón?",
+      pt: "Quem era Onésimo na Carta a Filemom?",
+      fr: "Qui était Onésime dans la Lettre à Philémon?"
+    },
     options: ["Un apostolo", "Uno schiavo fuggitivo convertito", "Un diacono", "Un profeta"],
+    optionsTranslated: {
+      it: ["Un apostolo", "Uno schiavo fuggitivo convertito", "Un diacono", "Un profeta"],
+      en: ["An apostle", "A converted runaway slave", "A deacon", "A prophet"],
+      es: ["Un apóstol", "Un esclavo fugitivo convertido", "Un diácono", "Un profeta"],
+      pt: ["Um apóstolo", "Um escravo fugitivo convertido", "Um diácono", "Um profeta"],
+      fr: ["Un apôtre", "Un esclave fugitif converti", "Un diacre", "Un prophète"]
+    },
     correctAnswer: 1,
     category: "Lettere Paoline",
     difficulty: "medium",
@@ -4654,7 +5018,21 @@ export const questions: Question[] = [
   {
     id: 227,
     question: "Quali sono le 'lettere pastorali' di Paolo?",
+    questions: {
+      it: "Quali sono le 'lettere pastorali' di Paolo?",
+      en: "What are Paul's 'pastoral letters'?",
+      es: "¿Cuáles son las 'cartas pastorales' de Pablo?",
+      pt: "Quais são as 'cartas pastorais' de Paulo?",
+      fr: "Quelles sont les 'lettres pastorales' de Paul?"
+    },
     options: ["Romani, Galati", "Efesini, Filippesi", "1-2 Timoteo, Tito", "1-2 Tessalonicesi"],
+    optionsTranslated: {
+      it: ["Romani, Galati", "Efesini, Filippesi", "1-2 Timoteo, Tito", "1-2 Tessalonicesi"],
+      en: ["Romans, Galatians", "Ephesians, Philippians", "1-2 Timothy, Titus", "1-2 Thessalonians"],
+      es: ["Romanos, Gálatas", "Efesios, Filipenses", "1-2 Timoteo, Tito", "1-2 Tesalonicenses"],
+      pt: ["Romanos, Gálatas", "Efésios, Filipenses", "1-2 Timóteo, Tito", "1-2 Tessalonicenses"],
+      fr: ["Romains, Galates", "Éphésiens, Philippiens", "1-2 Timothée, Tite", "1-2 Thessaloniciens"]
+    },
     correctAnswer: 2,
     category: "Lettere Paoline",
     difficulty: "medium",
@@ -4662,7 +5040,21 @@ export const questions: Question[] = [
   {
     id: 228,
     question: "Chi era Timoteo per Paolo?",
+    questions: {
+      it: "Chi era Timoteo per Paolo?",
+      en: "Who was Timothy to Paul?",
+      es: "¿Quién era Timoteo para Pablo?",
+      pt: "Quem era Timóteo para Paulo?",
+      fr: "Qui était Timothée pour Paul?"
+    },
     options: ["Suo nemico", "Suo figlio spirituale e collaboratore", "Suo fratello carnale", "Suo persecutore"],
+    optionsTranslated: {
+      it: ["Suo nemico", "Suo figlio spirituale e collaboratore", "Suo fratello carnale", "Suo persecutore"],
+      en: ["His enemy", "His spiritual son and collaborator", "His blood brother", "His persecutor"],
+      es: ["Su enemigo", "Su hijo espiritual y colaborador", "Su hermano carnal", "Su perseguidor"],
+      pt: ["Seu inimigo", "Seu filho espiritual e colaborador", "Seu irmão carnal", "Seu perseguidor"],
+      fr: ["Son ennemi", "Son fils spirituel et collaborateur", "Son frère de sang", "Son persécuteur"]
+    },
     correctAnswer: 1,
     category: "Lettere Paoline",
     difficulty: "easy",
@@ -4670,7 +5062,21 @@ export const questions: Question[] = [
   {
     id: 229,
     question: "Quale versetto dice 'Tutta la Scrittura è ispirata da Dio'?",
+    questions: {
+      it: "Quale versetto dice 'Tutta la Scrittura è ispirata da Dio'?",
+      en: "Which verse says 'All Scripture is inspired by God'?",
+      es: "¿Qué versículo dice 'Toda la Escritura es inspirada por Dios'?",
+      pt: "Qual versículo diz 'Toda a Escritura é inspirada por Deus'?",
+      fr: "Quel verset dit 'Toute Écriture est inspirée de Dieu'?"
+    },
     options: ["Romani 1:16", "1 Corinzi 13:13", "2 Timoteo 3:16", "Galati 5:22"],
+    optionsTranslated: {
+      it: ["Romani 1:16", "1 Corinzi 13:13", "2 Timoteo 3:16", "Galati 5:22"],
+      en: ["Romans 1:16", "1 Corinthians 13:13", "2 Timothy 3:16", "Galatians 5:22"],
+      es: ["Romanos 1:16", "1 Corintios 13:13", "2 Timoteo 3:16", "Gálatas 5:22"],
+      pt: ["Romanos 1:16", "1 Coríntios 13:13", "2 Timóteo 3:16", "Gálatas 5:22"],
+      fr: ["Romains 1:16", "1 Corinthiens 13:13", "2 Timothée 3:16", "Galates 5:22"]
+    },
     correctAnswer: 2,
     category: "Lettere Paoline",
     difficulty: "hard",
@@ -4678,7 +5084,21 @@ export const questions: Question[] = [
   {
     id: 230,
     question: "Quale lettera parla del 'rapimento' dei credenti?",
+    questions: {
+      it: "Quale lettera parla del 'rapimento' dei credenti?",
+      en: "Which letter speaks of the 'rapture' of believers?",
+      es: "¿Qué carta habla del 'arrebatamiento' de los creyentes?",
+      pt: "Qual carta fala do 'arrebatamento' dos crentes?",
+      fr: "Quelle lettre parle de l'enlèvement des croyants?"
+    },
     options: ["Romani", "1 Corinzi", "1 Tessalonicesi", "Efesini"],
+    optionsTranslated: {
+      it: ["Romani", "1 Corinzi", "1 Tessalonicesi", "Efesini"],
+      en: ["Romans", "1 Corinthians", "1 Thessalonians", "Ephesians"],
+      es: ["Romanos", "1 Corintios", "1 Tesalonicenses", "Efesios"],
+      pt: ["Romanos", "1 Coríntios", "1 Tessalonicenses", "Efésios"],
+      fr: ["Romains", "1 Corinthiens", "1 Thessaloniciens", "Éphésiens"]
+    },
     correctAnswer: 2,
     category: "Lettere Paoline",
     difficulty: "medium",
@@ -4686,7 +5106,21 @@ export const questions: Question[] = [
   {
     id: 231,
     question: "Quale concetto teologico è centrale in Romani?",
+    questions: {
+      it: "Quale concetto teologico è centrale in Romani?",
+      en: "What theological concept is central in Romans?",
+      es: "¿Qué concepto teológico es central en Romanos?",
+      pt: "Qual conceito teológico é central em Romanos?",
+      fr: "Quel concept théologique est central dans Romains?"
+    },
     options: ["La grazia per le opere", "La giustificazione per fede", "La salvezza per la legge", "Il giudizio immediato"],
+    optionsTranslated: {
+      it: ["La grazia per le opere", "La giustificazione per fede", "La salvezza per la legge", "Il giudizio immediato"],
+      en: ["Grace by works", "Justification by faith", "Salvation by the law", "Immediate judgment"],
+      es: ["La gracia por las obras", "La justificación por fe", "La salvación por la ley", "El juicio inmediato"],
+      pt: ["A graça pelas obras", "A justificação pela fé", "A salvação pela lei", "O juízo imediato"],
+      fr: ["La grâce par les œuvres", "La justification par la foi", "Le salut par la loi", "Le jugement immédiat"]
+    },
     correctAnswer: 1,
     category: "Lettere Paoline",
     difficulty: "easy",
@@ -4694,7 +5128,21 @@ export const questions: Question[] = [
   {
     id: 232,
     question: "In quale lettera Paolo elenca i doni spirituali?",
+    questions: {
+      it: "In quale lettera Paolo elenca i doni spirituali?",
+      en: "In which letter does Paul list the spiritual gifts?",
+      es: "¿En qué carta Pablo enumera los dones espirituales?",
+      pt: "Em qual carta Paulo lista os dons espirituais?",
+      fr: "Dans quelle lettre Paul énumère-t-il les dons spirituels?"
+    },
     options: ["Romani", "1 Corinzi", "Galati", "Efesini"],
+    optionsTranslated: {
+      it: ["Romani", "1 Corinzi", "Galati", "Efesini"],
+      en: ["Romans", "1 Corinthians", "Galatians", "Ephesians"],
+      es: ["Romanos", "1 Corintios", "Gálatas", "Efesios"],
+      pt: ["Romanos", "1 Coríntios", "Gálatas", "Efésios"],
+      fr: ["Romains", "1 Corinthiens", "Galates", "Éphésiens"]
+    },
     correctAnswer: 1,
     category: "Lettere Paoline",
     difficulty: "medium",
@@ -4702,7 +5150,21 @@ export const questions: Question[] = [
   {
     id: 233,
     question: "Quale metafora usa Paolo per descrivere la chiesa?",
+    questions: {
+      it: "Quale metafora usa Paolo per descrivere la chiesa?",
+      en: "What metaphor does Paul use to describe the church?",
+      es: "¿Qué metáfora usa Pablo para describir la iglesia?",
+      pt: "Qual metáfora Paulo usa para descrever a igreja?",
+      fr: "Quelle métaphore Paul utilise-t-il pour décrire l'église?"
+    },
     options: ["Un edificio", "Un corpo", "Un gregge", "Tutte le precedenti"],
+    optionsTranslated: {
+      it: ["Un edificio", "Un corpo", "Un gregge", "Tutte le precedenti"],
+      en: ["A building", "A body", "A flock", "All of the above"],
+      es: ["Un edificio", "Un cuerpo", "Un rebaño", "Todas las anteriores"],
+      pt: ["Um edifício", "Um corpo", "Um rebanho", "Todas as anteriores"],
+      fr: ["Un bâtiment", "Un corps", "Un troupeau", "Toutes les précédentes"]
+    },
     correctAnswer: 3,
     category: "Lettere Paoline",
     difficulty: "medium",
@@ -4710,7 +5172,21 @@ export const questions: Question[] = [
   {
     id: 234,
     question: "Quale lettera contiene l'insegnamento sulla risurrezione dei morti?",
+    questions: {
+      it: "Quale lettera contiene l'insegnamento sulla risurrezione dei morti?",
+      en: "Which letter contains the teaching on the resurrection of the dead?",
+      es: "¿Qué carta contiene la enseñanza sobre la resurrección de los muertos?",
+      pt: "Qual carta contém o ensinamento sobre a ressurreição dos mortos?",
+      fr: "Quelle lettre contient l'enseignement sur la résurrection des morts?"
+    },
     options: ["Romani 8", "1 Corinzi 15", "Galati 3", "Efesini 2"],
+    optionsTranslated: {
+      it: ["Romani 8", "1 Corinzi 15", "Galati 3", "Efesini 2"],
+      en: ["Romans 8", "1 Corinthians 15", "Galatians 3", "Ephesians 2"],
+      es: ["Romanos 8", "1 Corintios 15", "Gálatas 3", "Efesios 2"],
+      pt: ["Romanos 8", "1 Coríntios 15", "Gálatas 3", "Efésios 2"],
+      fr: ["Romains 8", "1 Corinthiens 15", "Galates 3", "Éphésiens 2"]
+    },
     correctAnswer: 1,
     category: "Lettere Paoline",
     difficulty: "medium",
@@ -4718,7 +5194,21 @@ export const questions: Question[] = [
   {
     id: 235,
     question: "Cosa significa 'grazia' nel pensiero paolino?",
+    questions: {
+      it: "Cosa significa 'grazia' nel pensiero paolino?",
+      en: "What does 'grace' mean in Pauline thought?",
+      es: "¿Qué significa 'gracia' en el pensamiento paulino?",
+      pt: "O que significa 'graça' no pensamento paulino?",
+      fr: "Que signifie 'grâce' dans la pensée paulinienne?"
+    },
     options: ["Merito umano", "Favore immeritato di Dio", "Obbedienza alla legge", "Sacrifici rituali"],
+    optionsTranslated: {
+      it: ["Merito umano", "Favore immeritato di Dio", "Obbedienza alla legge", "Sacrifici rituali"],
+      en: ["Human merit", "Unmerited favor of God", "Obedience to the law", "Ritual sacrifices"],
+      es: ["Mérito humano", "Favor inmerecido de Dios", "Obediencia a la ley", "Sacrificios rituales"],
+      pt: ["Mérito humano", "Favor imerecido de Deus", "Obediência à lei", "Sacrifícios rituais"],
+      fr: ["Mérite humain", "Faveur imméritée de Dieu", "Obéissance à la loi", "Sacrifices rituels"]
+    },
     correctAnswer: 1,
     category: "Lettere Paoline",
     difficulty: "easy",
@@ -4726,7 +5216,21 @@ export const questions: Question[] = [
   {
     id: 236,
     question: "Quale versetto dice 'Ho combattuto il buon combattimento'?",
+    questions: {
+      it: "Quale versetto dice 'Ho combattuto il buon combattimento'?",
+      en: "Which verse says 'I have fought the good fight'?",
+      es: "¿Qué versículo dice 'He peleado la buena batalla'?",
+      pt: "Qual versículo diz 'Combati o bom combate'?",
+      fr: "Quel verset dit 'J'ai combattu le bon combat'?"
+    },
     options: ["Romani 8:28", "1 Corinzi 13:13", "2 Timoteo 4:7", "Filippesi 4:13"],
+    optionsTranslated: {
+      it: ["Romani 8:28", "1 Corinzi 13:13", "2 Timoteo 4:7", "Filippesi 4:13"],
+      en: ["Romans 8:28", "1 Corinthians 13:13", "2 Timothy 4:7", "Philippians 4:13"],
+      es: ["Romanos 8:28", "1 Corintios 13:13", "2 Timoteo 4:7", "Filipenses 4:13"],
+      pt: ["Romanos 8:28", "1 Coríntios 13:13", "2 Timóteo 4:7", "Filipenses 4:13"],
+      fr: ["Romains 8:28", "1 Corinthiens 13:13", "2 Timothée 4:7", "Philippiens 4:13"]
+    },
     correctAnswer: 2,
     category: "Lettere Paoline",
     difficulty: "medium",
@@ -4734,7 +5238,21 @@ export const questions: Question[] = [
   {
     id: 237,
     question: "Quale versetto afferma 'Posso ogni cosa in colui che mi fortifica'?",
+    questions: {
+      it: "Quale versetto afferma 'Posso ogni cosa in colui che mi fortifica'?",
+      en: "Which verse states 'I can do all things through him who strengthens me'?",
+      es: "¿Qué versículo afirma 'Todo lo puedo en aquel que me fortalece'?",
+      pt: "Qual versículo afirma 'Tudo posso naquele que me fortalece'?",
+      fr: "Quel verset affirme 'Je puis tout par celui qui me fortifie'?"
+    },
     options: ["Romani 8:28", "Efesini 2:8", "Filippesi 4:13", "Colossesi 3:17"],
+    optionsTranslated: {
+      it: ["Romani 8:28", "Efesini 2:8", "Filippesi 4:13", "Colossesi 3:17"],
+      en: ["Romans 8:28", "Ephesians 2:8", "Philippians 4:13", "Colossians 3:17"],
+      es: ["Romanos 8:28", "Efesios 2:8", "Filipenses 4:13", "Colosenses 3:17"],
+      pt: ["Romanos 8:28", "Efésios 2:8", "Filipenses 4:13", "Colossenses 3:17"],
+      fr: ["Romains 8:28", "Éphésiens 2:8", "Philippiens 4:13", "Colossiens 3:17"]
+    },
     correctAnswer: 2,
     category: "Lettere Paoline",
     difficulty: "easy",
@@ -4742,7 +5260,21 @@ export const questions: Question[] = [
   {
     id: 238,
     question: "Quante lettere di Paolo sono nel Nuovo Testamento?",
+    questions: {
+      it: "Quante lettere di Paolo sono nel Nuovo Testamento?",
+      en: "How many letters of Paul are in the New Testament?",
+      es: "¿Cuántas cartas de Pablo hay en el Nuevo Testamento?",
+      pt: "Quantas cartas de Paulo estão no Novo Testamento?",
+      fr: "Combien de lettres de Paul sont dans le Nouveau Testament?"
+    },
     options: ["7", "10", "13", "15"],
+    optionsTranslated: {
+      it: ["7", "10", "13", "15"],
+      en: ["7", "10", "13", "15"],
+      es: ["7", "10", "13", "15"],
+      pt: ["7", "10", "13", "15"],
+      fr: ["7", "10", "13", "15"]
+    },
     correctAnswer: 2,
     category: "Lettere Paoline",
     difficulty: "medium",
@@ -4750,7 +5282,21 @@ export const questions: Question[] = [
   {
     id: 239,
     question: "Dove si trovava Paolo quando scrisse le lettere dalla prigionia?",
+    questions: {
+      it: "Dove si trovava Paolo quando scrisse le lettere dalla prigionia?",
+      en: "Where was Paul when he wrote the prison letters?",
+      es: "¿Dónde estaba Pablo cuando escribió las cartas desde la prisión?",
+      pt: "Onde estava Paulo quando escreveu as cartas da prisão?",
+      fr: "Où était Paul quand il a écrit les lettres de prison?"
+    },
     options: ["Gerusalemme", "Cesarea", "Roma", "Efeso"],
+    optionsTranslated: {
+      it: ["Gerusalemme", "Cesarea", "Roma", "Efeso"],
+      en: ["Jerusalem", "Caesarea", "Rome", "Ephesus"],
+      es: ["Jerusalén", "Cesarea", "Roma", "Éfeso"],
+      pt: ["Jerusalém", "Cesareia", "Roma", "Éfeso"],
+      fr: ["Jérusalem", "Césarée", "Rome", "Éphèse"]
+    },
     correctAnswer: 2,
     category: "Lettere Paoline",
     difficulty: "medium",
@@ -4758,7 +5304,21 @@ export const questions: Question[] = [
   {
     id: 240,
     question: "Chi erano Aquila e Priscilla?",
+    questions: {
+      it: "Chi erano Aquila e Priscilla?",
+      en: "Who were Aquila and Priscilla?",
+      es: "¿Quiénes eran Aquila y Priscila?",
+      pt: "Quem eram Áquila e Priscila?",
+      fr: "Qui étaient Aquilas et Priscille?"
+    },
     options: ["Due apostoli", "Una coppia di fabbricanti di tende", "Fratelli di Paolo", "Sacerdoti convertiti"],
+    optionsTranslated: {
+      it: ["Due apostoli", "Una coppia di fabbricanti di tende", "Fratelli di Paolo", "Sacerdoti convertiti"],
+      en: ["Two apostles", "A couple of tentmakers", "Paul's brothers", "Converted priests"],
+      es: ["Dos apóstoles", "Una pareja de fabricantes de tiendas", "Hermanos de Pablo", "Sacerdotes convertidos"],
+      pt: ["Dois apóstolos", "Um casal de fabricantes de tendas", "Irmãos de Paulo", "Sacerdotes convertidos"],
+      fr: ["Deux apôtres", "Un couple de fabricants de tentes", "Frères de Paul", "Prêtres convertis"]
+    },
     correctAnswer: 1,
     category: "Chiesa Primitiva",
     difficulty: "medium",
@@ -4766,7 +5326,21 @@ export const questions: Question[] = [
   {
     id: 241,
     question: "Quale giovane cadde dalla finestra mentre Paolo predicava?",
+    questions: {
+      it: "Quale giovane cadde dalla finestra mentre Paolo predicava?",
+      en: "Which young man fell from the window while Paul was preaching?",
+      es: "¿Qué joven cayó de la ventana mientras Pablo predicaba?",
+      pt: "Qual jovem caiu da janela enquanto Paulo pregava?",
+      fr: "Quel jeune homme est tombé de la fenêtre pendant que Paul prêchait?"
+    },
     options: ["Timoteo", "Eutico", "Tito", "Trofimo"],
+    optionsTranslated: {
+      it: ["Timoteo", "Eutico", "Tito", "Trofimo"],
+      en: ["Timothy", "Eutychus", "Titus", "Trophimus"],
+      es: ["Timoteo", "Eutico", "Tito", "Trófimo"],
+      pt: ["Timóteo", "Êutico", "Tito", "Trófimo"],
+      fr: ["Timothée", "Eutyque", "Tite", "Trophime"]
+    },
     correctAnswer: 1,
     category: "Chiesa Primitiva",
     difficulty: "hard",
@@ -4774,7 +5348,21 @@ export const questions: Question[] = [
   {
     id: 242,
     question: "Davanti a quale re Paolo raccontò la sua conversione?",
+    questions: {
+      it: "Davanti a quale re Paolo raccontò la sua conversione?",
+      en: "Before which king did Paul recount his conversion?",
+      es: "¿Ante qué rey Pablo contó su conversión?",
+      pt: "Diante de qual rei Paulo contou sua conversão?",
+      fr: "Devant quel roi Paul a-t-il raconté sa conversion?"
+    },
     options: ["Erode", "Agrippa", "Nerone", "Cesare"],
+    optionsTranslated: {
+      it: ["Erode", "Agrippa", "Nerone", "Cesare"],
+      en: ["Herod", "Agrippa", "Nero", "Caesar"],
+      es: ["Herodes", "Agripa", "Nerón", "César"],
+      pt: ["Herodes", "Agripa", "Nero", "César"],
+      fr: ["Hérode", "Agrippa", "Néron", "César"]
+    },
     correctAnswer: 1,
     category: "Chiesa Primitiva",
     difficulty: "medium",
@@ -4782,7 +5370,21 @@ export const questions: Question[] = [
   {
     id: 243,
     question: "Quale decisione importante fu presa al Concilio di Gerusalemme?",
+    questions: {
+      it: "Quale decisione importante fu presa al Concilio di Gerusalemme?",
+      en: "What important decision was made at the Council of Jerusalem?",
+      es: "¿Qué decisión importante se tomó en el Concilio de Jerusalén?",
+      pt: "Qual decisão importante foi tomada no Concílio de Jerusalém?",
+      fr: "Quelle décision importante a été prise au Concile de Jérusalem?"
+    },
     options: ["I gentili dovevano circoncidersi", "I gentili non dovevano circoncidersi", "Solo gli ebrei potevano convertirsi", "Il sabato era obbligatorio"],
+    optionsTranslated: {
+      it: ["I gentili dovevano circoncidersi", "I gentili non dovevano circoncidersi", "Solo gli ebrei potevano convertirsi", "Il sabato era obbligatorio"],
+      en: ["Gentiles had to be circumcised", "Gentiles did not have to be circumcised", "Only Jews could convert", "The Sabbath was mandatory"],
+      es: ["Los gentiles debían circuncidarse", "Los gentiles no debían circuncidarse", "Solo los judíos podían convertirse", "El sábado era obligatorio"],
+      pt: ["Os gentios deviam ser circuncidados", "Os gentios não precisavam ser circuncidados", "Somente judeus podiam se converter", "O sábado era obrigatório"],
+      fr: ["Les païens devaient être circoncis", "Les païens n'avaient pas besoin d'être circoncis", "Seuls les Juifs pouvaient se convertir", "Le sabbat était obligatoire"]
+    },
     correctAnswer: 1,
     category: "Chiesa Primitiva",
     difficulty: "hard",
@@ -4790,7 +5392,21 @@ export const questions: Question[] = [
   {
     id: 244,
     question: "Quale famoso inno cristologico si trova in Filippesi 2?",
+    questions: {
+      it: "Quale famoso inno cristologico si trova in Filippesi 2?",
+      en: "What famous Christological hymn is found in Philippians 2?",
+      es: "¿Qué famoso himno cristológico se encuentra en Filipenses 2?",
+      pt: "Qual famoso hino cristológico está em Filipenses 2?",
+      fr: "Quel célèbre hymne christologique se trouve dans Philippiens 2?"
+    },
     options: ["L'inno all'amore", "L'inno della kenosi", "L'inno della creazione", "L'inno della risurrezione"],
+    optionsTranslated: {
+      it: ["L'inno all'amore", "L'inno della kenosi", "L'inno della creazione", "L'inno della risurrezione"],
+      en: ["The hymn to love", "The kenosis hymn", "The creation hymn", "The resurrection hymn"],
+      es: ["El himno al amor", "El himno de la kenosis", "El himno de la creación", "El himno de la resurrección"],
+      pt: ["O hino ao amor", "O hino da kenosis", "O hino da criação", "O hino da ressurreição"],
+      fr: ["L'hymne à l'amour", "L'hymne de la kénose", "L'hymne de la création", "L'hymne de la résurrection"]
+    },
     correctAnswer: 1,
     category: "Lettere Paoline",
     difficulty: "hard",
@@ -4798,7 +5414,21 @@ export const questions: Question[] = [
   {
     id: 245,
     question: "Quale lettera fu scritta per affrontare l'eresia proto-gnostica?",
+    questions: {
+      it: "Quale lettera fu scritta per affrontare l'eresia proto-gnostica?",
+      en: "Which letter was written to address proto-gnostic heresy?",
+      es: "¿Qué carta fue escrita para abordar la herejía proto-gnóstica?",
+      pt: "Qual carta foi escrita para enfrentar a heresia proto-gnóstica?",
+      fr: "Quelle lettre a été écrite pour répondre à l'hérésie proto-gnostique?"
+    },
     options: ["Romani", "Galati", "Colossesi", "Filemone"],
+    optionsTranslated: {
+      it: ["Romani", "Galati", "Colossesi", "Filemone"],
+      en: ["Romans", "Galatians", "Colossians", "Philemon"],
+      es: ["Romanos", "Gálatas", "Colosenses", "Filemón"],
+      pt: ["Romanos", "Gálatas", "Colossenses", "Filemom"],
+      fr: ["Romains", "Galates", "Colossiens", "Philémon"]
+    },
     correctAnswer: 2,
     category: "Lettere Paoline",
     difficulty: "hard",
@@ -4806,7 +5436,21 @@ export const questions: Question[] = [
   {
     id: 246,
     question: "Quale città era famosa per la sua immoralità e fu destinataria di due lettere?",
+    questions: {
+      it: "Quale città era famosa per la sua immoralità e fu destinataria di due lettere?",
+      en: "Which city was famous for its immorality and received two letters?",
+      es: "¿Qué ciudad era famosa por su inmoralidad y fue destinataria de dos cartas?",
+      pt: "Qual cidade era famosa por sua imoralidade e recebeu duas cartas?",
+      fr: "Quelle ville était célèbre pour son immoralité et a reçu deux lettres?"
+    },
     options: ["Roma", "Efeso", "Corinto", "Tessalonica"],
+    optionsTranslated: {
+      it: ["Roma", "Efeso", "Corinto", "Tessalonica"],
+      en: ["Rome", "Ephesus", "Corinth", "Thessalonica"],
+      es: ["Roma", "Éfeso", "Corinto", "Tesalónica"],
+      pt: ["Roma", "Éfeso", "Corinto", "Tessalônica"],
+      fr: ["Rome", "Éphèse", "Corinthe", "Thessalonique"]
+    },
     correctAnswer: 2,
     category: "Lettere Paoline",
     difficulty: "medium",
@@ -4814,7 +5458,21 @@ export const questions: Question[] = [
   {
     id: 247,
     question: "Quale lettera Paolo scrisse prima di tutte le altre?",
+    questions: {
+      it: "Quale lettera Paolo scrisse prima di tutte le altre?",
+      en: "Which letter did Paul write first of all?",
+      es: "¿Qué carta escribió Pablo primero que todas las demás?",
+      pt: "Qual carta Paulo escreveu primeiro que todas as outras?",
+      fr: "Quelle lettre Paul a-t-il écrite en premier?"
+    },
     options: ["Romani", "Galati", "1 Tessalonicesi", "1 Corinzi"],
+    optionsTranslated: {
+      it: ["Romani", "Galati", "1 Tessalonicesi", "1 Corinzi"],
+      en: ["Romans", "Galatians", "1 Thessalonians", "1 Corinthians"],
+      es: ["Romanos", "Gálatas", "1 Tesalonicenses", "1 Corintios"],
+      pt: ["Romanos", "Gálatas", "1 Tessalonicenses", "1 Coríntios"],
+      fr: ["Romains", "Galates", "1 Thessaloniciens", "1 Corinthiens"]
+    },
     correctAnswer: 2,
     category: "Lettere Paoline",
     difficulty: "hard",
@@ -4822,7 +5480,21 @@ export const questions: Question[] = [
   {
     id: 248,
     question: "A chi Paolo scrisse riguardo ai requisiti per vescovi e diaconi?",
+    questions: {
+      it: "A chi Paolo scrisse riguardo ai requisiti per vescovi e diaconi?",
+      en: "To whom did Paul write regarding the requirements for bishops and deacons?",
+      es: "¿A quién escribió Pablo sobre los requisitos para obispos y diáconos?",
+      pt: "Para quem Paulo escreveu sobre os requisitos para bispos e diáconos?",
+      fr: "À qui Paul a-t-il écrit concernant les exigences pour les évêques et les diacres?"
+    },
     options: ["Filemone", "Tito", "Timoteo", "Tito e Timoteo"],
+    optionsTranslated: {
+      it: ["Filemone", "Tito", "Timoteo", "Tito e Timoteo"],
+      en: ["Philemon", "Titus", "Timothy", "Titus and Timothy"],
+      es: ["Filemón", "Tito", "Timoteo", "Tito y Timoteo"],
+      pt: ["Filemom", "Tito", "Timóteo", "Tito e Timóteo"],
+      fr: ["Philémon", "Tite", "Timothée", "Tite et Timothée"]
+    },
     correctAnswer: 3,
     category: "Lettere Paoline",
     difficulty: "hard",
@@ -4830,7 +5502,21 @@ export const questions: Question[] = [
   {
     id: 249,
     question: "In quale lettera Paolo afferma la supremazia di Cristo su tutto?",
+    questions: {
+      it: "In quale lettera Paolo afferma la supremazia di Cristo su tutto?",
+      en: "In which letter does Paul affirm the supremacy of Christ over all?",
+      es: "¿En qué carta Pablo afirma la supremacía de Cristo sobre todo?",
+      pt: "Em qual carta Paulo afirma a supremacia de Cristo sobre tudo?",
+      fr: "Dans quelle lettre Paul affirme-t-il la suprématie du Christ sur tout?"
+    },
     options: ["Romani", "Efesini", "Colossesi", "Efesini e Colossesi"],
+    optionsTranslated: {
+      it: ["Romani", "Efesini", "Colossesi", "Efesini e Colossesi"],
+      en: ["Romans", "Ephesians", "Colossians", "Ephesians and Colossians"],
+      es: ["Romanos", "Efesios", "Colosenses", "Efesios y Colosenses"],
+      pt: ["Romanos", "Efésios", "Colossenses", "Efésios e Colossenses"],
+      fr: ["Romains", "Éphésiens", "Colossiens", "Éphésiens et Colossiens"]
+    },
     correctAnswer: 3,
     category: "Lettere Paoline",
     difficulty: "hard",
@@ -4838,7 +5524,21 @@ export const questions: Question[] = [
   {
     id: 250,
     question: "Qual è il versetto più famoso di Romani sulla giustificazione?",
+    questions: {
+      it: "Qual è il versetto più famoso di Romani sulla giustificazione?",
+      en: "What is the most famous verse in Romans about justification?",
+      es: "¿Cuál es el versículo más famoso de Romanos sobre la justificación?",
+      pt: "Qual é o versículo mais famoso de Romanos sobre a justificação?",
+      fr: "Quel est le verset le plus célèbre de Romains sur la justification?"
+    },
     options: ["Romani 1:1", "Romani 3:23-24", "Romani 8:28", "Romani 12:1"],
+    optionsTranslated: {
+      it: ["Romani 1:1", "Romani 3:23-24", "Romani 8:28", "Romani 12:1"],
+      en: ["Romans 1:1", "Romans 3:23-24", "Romans 8:28", "Romans 12:1"],
+      es: ["Romanos 1:1", "Romanos 3:23-24", "Romanos 8:28", "Romanos 12:1"],
+      pt: ["Romanos 1:1", "Romanos 3:23-24", "Romanos 8:28", "Romanos 12:1"],
+      fr: ["Romains 1:1", "Romains 3:23-24", "Romains 8:28", "Romains 12:1"]
+    },
     correctAnswer: 1,
     category: "Lettere Paoline",
     difficulty: "hard",
