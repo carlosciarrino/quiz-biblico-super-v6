@@ -176,7 +176,16 @@
   "review": {
     "smartSuggestion": "Repaso Inteligente",
     "suggestionText": "Según tus resultados, te sugerimos repasar estas categorías:",
-    "practice": "Practicar"
+    "practice": "Practicar",
+    "title": "Revisión de Errores",
+    "subtitle": "{{remaining}} preguntas para repasar",
+    "noErrors": "¡Sin Errores que Repasar!",
+    "noErrorsDesc": "Respondiste correctamente todas las preguntas. ¡Sigue así!",
+    "complete": "¡Revisión Completada!",
+    "masteredCount": "Dominaste {{count}} de {{total}} preguntas",
+    "accuracy": "Precisión",
+    "continueReview": "Continuar Revisión",
+    "startReview": "Repasar Errores"
   },
   "leaderboard": {
     "title": "Clasificación",

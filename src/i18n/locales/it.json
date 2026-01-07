@@ -174,7 +174,16 @@
   "review": {
     "smartSuggestion": "Ripasso Intelligente",
     "suggestionText": "Basandoci sui tuoi risultati, ti suggeriamo di ripassare queste categorie:",
-    "practice": "Ripassa"
+    "practice": "Ripassa",
+    "title": "Revisione Errori",
+    "subtitle": "{{remaining}} domande da ripassare",
+    "noErrors": "Nessun Errore da Ripassare!",
+    "noErrorsDesc": "Hai risposto correttamente a tutte le domande. Continua così!",
+    "complete": "Revisione Completata!",
+    "masteredCount": "Hai padroneggiato {{count}} domande su {{total}}",
+    "accuracy": "Precisione",
+    "continueReview": "Continua Revisione",
+    "startReview": "Ripassa Errori"
   },
   "leaderboard": {
     "title": "Classifica",

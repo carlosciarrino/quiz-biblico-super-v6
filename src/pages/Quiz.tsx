@@ -11,12 +11,14 @@ import { useTranslation } from "react-i18next";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
 import { useSoundEffects } from "@/hooks/useSoundEffects";
 import { fireCorrectAnswer } from "@/lib/confetti";
+import { useWrongAnswers } from "@/hooks/useWrongAnswers";
 
 const Quiz = () => {
   const { t } = useTranslation();
   const [searchParams] = useSearchParams();
   const navigate = useNavigate();
   const { playCorrect, playIncorrect } = useSoundEffects();
+  const { recordWrongAnswer } = useWrongAnswers();
   
   const category = searchParams.get("category") || "Antico Testamento";
   const quizType = searchParams.get("type") || "thematic";
@@ -93,13 +95,19 @@ const Quiz = () => {
     }
   }, [consecutiveCorrect, difficulty, recentAnswers]);
 
-  const handleAnswer = (isCorrect: boolean) => {
+  const handleAnswer = (isCorrect: boolean, selectedAnswerIndex?: number) => {
+    const currentQuestion = questions[currentQuestionIndex];
+    
     // Play sound and confetti for correct answers
     if (isCorrect) {
       playCorrect();
       fireCorrectAnswer();
     } else {
       playIncorrect();
+      // Record the wrong answer for review
+      if (selectedAnswerIndex !== undefined) {
+        recordWrongAnswer(currentQuestion.id, selectedAnswerIndex, currentQuestion.correctAnswer);
+      }
     }
     
     // Scoring: +5 for correct, -1 for wrong
