@@ -10,7 +10,7 @@ import DailyRewardPopup from "@/components/DailyRewardPopup";
 import LevelUpAnimation from "@/components/LevelUpAnimation";
 import DailyVerseCard from "@/components/DailyVerseCard";
 import { categories } from "@/data/questions";
-import { Book, Sparkles, BookOpen, Shuffle, BarChart3, Trophy, GraduationCap, LayoutDashboard, Zap } from "lucide-react";
+import { Book, Sparkles, BookOpen, Shuffle, BarChart3, Trophy, GraduationCap, LayoutDashboard, Zap, RotateCcw } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
 import { Button } from "@/components/ui/button";
@@ -20,6 +20,7 @@ import { useLeaderboard } from "@/hooks/useLeaderboard";
 import { useChallenge } from "@/hooks/useChallenge";
 import { useDailyLoginReward } from "@/hooks/useDailyLoginReward";
 import { useLevelUpDetector } from "@/hooks/useLevelUpDetector";
+import { useWrongAnswers } from "@/hooks/useWrongAnswers";
 import { useState } from "react";
 import { toast } from "sonner";
 const Index = () => {
@@ -32,6 +33,7 @@ const Index = () => {
   const { getChallenge } = useChallenge();
   const { state: loginState, showRewardPopup, claimReward, closePopup } = useDailyLoginReward();
   const { showLevelUp, newLevel, newTitle, closeLevelUp } = useLevelUpDetector(stats);
+  const { totalWrongAnswers } = useWrongAnswers();
   const [showStats, setShowStats] = useState(false);
   const [showLeaderboard, setShowLeaderboard] = useState(false);
   
@@ -179,6 +181,27 @@ const Index = () => {
           {showLeaderboard && (
             <div className="mb-12 animate-fade-in">
               <Leaderboard entries={entries} />
+            </div>
+          )}
+
+          {/* Smart Review Button */}
+          {totalWrongAnswers > 0 && (
+            <div className="mb-12 max-w-lg mx-auto">
+              <Button
+                variant="outline"
+                className="w-full h-auto p-6 flex items-center gap-4 bg-gradient-to-r from-red-500/10 via-orange-500/10 to-amber-500/10 hover:from-red-500/20 hover:via-orange-500/20 hover:to-amber-500/20 border-red-500/30"
+                onClick={() => navigate("/review")}
+              >
+                <div className="w-14 h-14 rounded-full bg-gradient-to-br from-red-500 to-orange-500 flex items-center justify-center text-white shrink-0">
+                  <RotateCcw className="w-7 h-7" />
+                </div>
+                <div className="text-left flex-1">
+                  <div className="font-bold text-lg">{t('review.startReview')}</div>
+                  <div className="text-sm text-muted-foreground">
+                    {t('review.subtitle', { remaining: totalWrongAnswers })}
+                  </div>
+                </div>
+              </Button>
             </div>
           )}
 

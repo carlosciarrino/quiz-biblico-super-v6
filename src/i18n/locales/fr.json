@@ -176,7 +176,16 @@
   "review": {
     "smartSuggestion": "Révision Intelligente",
     "suggestionText": "Selon vos résultats, nous vous suggérons de réviser ces catégories :",
-    "practice": "Pratiquer"
+    "practice": "Pratiquer",
+    "title": "Révision des Erreurs",
+    "subtitle": "{{remaining}} questions à réviser",
+    "noErrors": "Aucune Erreur à Réviser !",
+    "noErrorsDesc": "Vous avez répondu correctement à toutes les questions. Continuez ainsi !",
+    "complete": "Révision Terminée !",
+    "masteredCount": "Vous avez maîtrisé {{count}} questions sur {{total}}",
+    "accuracy": "Précision",
+    "continueReview": "Continuer la Révision",
+    "startReview": "Réviser les Erreurs"
   },
   "leaderboard": {
     "title": "Classement",

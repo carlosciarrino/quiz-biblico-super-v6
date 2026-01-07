@@ -176,7 +176,16 @@
   "review": {
     "smartSuggestion": "Smart Review",
     "suggestionText": "Based on your results, we suggest reviewing these categories:",
-    "practice": "Practice"
+    "practice": "Practice",
+    "title": "Error Review",
+    "subtitle": "{{remaining}} questions to review",
+    "noErrors": "No Errors to Review!",
+    "noErrorsDesc": "You answered all questions correctly. Keep it up!",
+    "complete": "Review Complete!",
+    "masteredCount": "You mastered {{count}} out of {{total}} questions",
+    "accuracy": "Accuracy",
+    "continueReview": "Continue Review",
+    "startReview": "Review Errors"
   },
   "leaderboard": {
     "title": "Leaderboard",

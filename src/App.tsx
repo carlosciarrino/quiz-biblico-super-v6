@@ -10,6 +10,7 @@ import BibleReader from "./pages/BibleReader";
 import StudyPage from "./pages/StudyPage";
 import Dashboard from "./pages/Dashboard";
 import TimedChallenge from "./pages/TimedChallenge";
+import ReviewQuiz from "./pages/ReviewQuiz";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -28,6 +29,7 @@ const App = () => (
           <Route path="/study" element={<StudyPage />} />
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/timed-challenge" element={<TimedChallenge />} />
+          <Route path="/review" element={<ReviewQuiz />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

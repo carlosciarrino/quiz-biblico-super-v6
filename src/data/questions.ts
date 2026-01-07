@@ -5637,6 +5637,18 @@ export const categories = [
 ];
 
 // Get all questions for full Bible quiz (100 questions)
+// Get question by ID
+export const getQuestionById = (id: number): Question | undefined => {
+  return questions.find(q => q.id === id);
+};
+
+// Get multiple questions by IDs
+export const getQuestionsByIds = (ids: number[]): Question[] => {
+  return ids
+    .map(id => questions.find(q => q.id === id))
+    .filter((q): q is Question => q !== undefined);
+};
+
 export const getFullBibleQuestions = (count: number = 100): Question[] => {
   const shuffled = [...questions].sort(() => Math.random() - 0.5);
   return shuffled.slice(0, Math.min(count, questions.length));

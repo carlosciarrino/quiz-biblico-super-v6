@@ -8,7 +8,7 @@ import BibleExplanation from "./BibleExplanation";
 
 interface QuestionCardProps {
   question: Question;
-  onAnswer: (isCorrect: boolean) => void;
+  onAnswer: (isCorrect: boolean, selectedAnswerIndex?: number) => void;
   questionNumber: number;
   totalQuestions: number;
 }
@@ -36,7 +36,7 @@ const QuestionCard = ({ question, onAnswer, questionNumber, totalQuestions }: Qu
     if (!isCorrect) {
       setShowExplanation(true);
       setTimeout(() => {
-        onAnswer(isCorrect);
+        onAnswer(isCorrect, index);
         setSelectedAnswer(null);
         setShowResult(false);
         setShowExplanation(false);
