@@ -285,6 +285,19 @@
     "apostle": "Apostolo",
     "patriarch": "Patriarca"
   },
+  "explanation": {
+    "correct": "Risposta Corretta! 🎉",
+    "incorrect": "Risposta Sbagliata"
+  },
+  "wrongAnswersStats": {
+    "title": "Analisi Errori",
+    "questionsToReview": "Domande da ripassare",
+    "totalAttempts": "Tentativi totali",
+    "byCategory": "Errori per Categoria",
+    "byDifficulty": "Errori per Difficoltà",
+    "mostFailed": "Domande Più Sbagliate",
+    "attempts": "tentativi"
+  },
   "dashboard": {
     "title": "La Tua Dashboard",
     "subtitle": "Visualizza i tuoi progressi settimanali e mensili",
@@ -294,7 +307,9 @@
     "quizzes": "Quiz",
     "avgScore": "Punteggio Medio",
     "correctAnswers": "Risposte Corrette",
-    "week": "Sett."
+    "week": "Sett.",
+    "progressTab": "Progressi",
+    "errorsTab": "Errori"
   },
   "dailyReward": {
     "title": "Ricompensa Giornaliera!",
