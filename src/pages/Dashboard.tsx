@@ -1,10 +1,12 @@
 import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { Button } from "@/components/ui/button";
-import { ArrowLeft } from "lucide-react";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { ArrowLeft, BarChart3, AlertTriangle } from "lucide-react";
 import { useUserStats } from "@/hooks/useUserStats";
 import { useUserLevel } from "@/hooks/useUserLevel";
 import ProgressDashboard from "@/components/ProgressDashboard";
+import WrongAnswersStats from "@/components/WrongAnswersStats";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
 
 const Dashboard = () => {
@@ -39,7 +41,24 @@ const Dashboard = () => {
         </header>
 
         <main className="max-w-4xl mx-auto">
-          <ProgressDashboard stats={stats} levelInfo={levelInfo} />
+          <Tabs defaultValue="progress" className="w-full">
+            <TabsList className="grid w-full grid-cols-2 mb-6">
+              <TabsTrigger value="progress" className="gap-2">
+                <BarChart3 className="w-4 h-4" />
+                {t('dashboard.progressTab')}
+              </TabsTrigger>
+              <TabsTrigger value="errors" className="gap-2">
+                <AlertTriangle className="w-4 h-4" />
+                {t('dashboard.errorsTab')}
+              </TabsTrigger>
+            </TabsList>
+            <TabsContent value="progress">
+              <ProgressDashboard stats={stats} levelInfo={levelInfo} />
+            </TabsContent>
+            <TabsContent value="errors">
+              <WrongAnswersStats />
+            </TabsContent>
+          </Tabs>
         </main>
       </div>
     </div>

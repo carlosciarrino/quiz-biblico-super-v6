@@ -281,6 +281,19 @@
     "apostle": "Apostle",
     "patriarch": "Patriarch"
   },
+  "explanation": {
+    "correct": "Correct Answer! 🎉",
+    "incorrect": "Wrong Answer"
+  },
+  "wrongAnswersStats": {
+    "title": "Error Analysis",
+    "questionsToReview": "Questions to review",
+    "totalAttempts": "Total attempts",
+    "byCategory": "Errors by Category",
+    "byDifficulty": "Errors by Difficulty",
+    "mostFailed": "Most Failed Questions",
+    "attempts": "attempts"
+  },
   "dashboard": {
     "title": "Your Dashboard",
     "subtitle": "View your weekly and monthly progress",
@@ -290,7 +303,9 @@
     "quizzes": "Quizzes",
     "avgScore": "Average Score",
     "correctAnswers": "Correct Answers",
-    "week": "Week"
+    "week": "Week",
+    "progressTab": "Progress",
+    "errorsTab": "Errors"
   },
   "dailyReward": {
     "title": "Daily Reward!",

@@ -32,25 +32,18 @@ const QuestionCard = ({ question, onAnswer, questionNumber, totalQuestions }: Qu
     const isCorrect = index === question.correctAnswer;
     setWasIncorrect(!isCorrect);
 
-    // Show explanation for wrong answers, then continue
-    if (!isCorrect) {
-      setShowExplanation(true);
-      setTimeout(() => {
-        onAnswer(isCorrect, index);
-        setSelectedAnswer(null);
-        setShowResult(false);
-        setShowExplanation(false);
-        setWasIncorrect(false);
-      }, 4000); // Longer delay to read explanation
-    } else {
-      setTimeout(() => {
-        onAnswer(isCorrect);
-        setSelectedAnswer(null);
-        setShowResult(false);
-        setShowExplanation(false);
-        setWasIncorrect(false);
-      }, 1500);
-    }
+    // Show explanation for ALL answers (correct and incorrect)
+    setShowExplanation(true);
+    
+    const delay = isCorrect ? 3500 : 5000; // Longer delay for wrong answers
+    
+    setTimeout(() => {
+      onAnswer(isCorrect, isCorrect ? undefined : index);
+      setSelectedAnswer(null);
+      setShowResult(false);
+      setShowExplanation(false);
+      setWasIncorrect(false);
+    }, delay);
   };
 
   const getButtonVariant = (index: number) => {
@@ -116,11 +109,12 @@ const QuestionCard = ({ question, onAnswer, questionNumber, totalQuestions }: Qu
           ))}
         </div>
 
-        {/* Bible Explanation for wrong answers */}
+        {/* Bible Explanation for all answers */}
         <BibleExplanation
           reference={reference}
           explanation={explanation}
-          show={showExplanation && wasIncorrect}
+          show={showExplanation}
+          isCorrect={!wasIncorrect}
         />
       </div>
     </div>
