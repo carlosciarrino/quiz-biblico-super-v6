@@ -147,13 +147,13 @@ export const bibleReferences: Record<number, BibleReference> = {
     }
   },
   13: {
-    reference: "Ezekiel 1:4-28",
+    reference: "2 Kings 2:11",
     explanations: {
-      it: "Ezechiele ebbe una visione straordinaria del trono di Dio, che includeva esseri viventi, ruote con ruote e un carro di fuoco. Questa visione è nota come il 'Carro di Dio' o Merkabah.",
-      en: "Ezekiel had an extraordinary vision of God's throne, which included living creatures, wheels within wheels, and a chariot of fire. This vision is known as 'God's Chariot' or Merkabah.",
-      es: "Ezequiel tuvo una visión extraordinaria del trono de Dios, que incluía seres vivientes, ruedas dentro de ruedas y un carro de fuego. Esta visión se conoce como el 'Carro de Dios' o Merkabah.",
-      pt: "Ezequiel teve uma visão extraordinária do trono de Deus, que incluía seres viventes, rodas dentro de rodas e um carro de fogo. Esta visão é conhecida como 'Carro de Deus' ou Merkabah.",
-      fr: "Ézéchiel eut une vision extraordinaire du trône de Dieu, qui comprenait des créatures vivantes, des roues dans des roues et un char de feu. Cette vision est connue comme le 'Char de Dieu' ou Merkabah."
+      it: "Mentre Elia ed Eliseo camminavano insieme, un carro di fuoco con cavalli di fuoco li separò, e Elia salì al cielo in un turbine. Eliseo raccolse il mantello di Elia e ricevette una doppia porzione del suo spirito.",
+      en: "As Elijah and Elisha were walking together, a chariot of fire with horses of fire separated them, and Elijah went up to heaven in a whirlwind. Elisha picked up Elijah's mantle and received a double portion of his spirit.",
+      es: "Mientras Elías y Eliseo caminaban juntos, un carro de fuego con caballos de fuego los separó, y Elías subió al cielo en un torbellino. Eliseo recogió el manto de Elías y recibió una doble porción de su espíritu.",
+      pt: "Enquanto Elias e Eliseu caminhavam juntos, um carro de fogo com cavalos de fogo os separou, e Elias subiu ao céu em um redemoinho. Eliseu apanhou o manto de Elias e recebeu uma porção dobrada de seu espírito.",
+      fr: "Alors qu'Élie et Élisée marchaient ensemble, un char de feu avec des chevaux de feu les sépara, et Élie monta au ciel dans un tourbillon. Élisée ramassa le manteau d'Élie et reçut une double portion de son esprit."
     }
   },
   14: {

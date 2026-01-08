@@ -14,6 +14,24 @@
     },
     "startQuiz": "Start Quiz"
   },
+  "studyMode": {
+    "title": "Study Mode",
+    "subtitle": "Learn before answering",
+    "learnFirst": "First read and learn",
+    "hint": "Read this explanation carefully. You will then be asked a question about this topic!",
+    "readyToAnswer": "Ready to answer",
+    "correct": "Correct!",
+    "incorrect": "Incorrect",
+    "next": "Next question",
+    "complete": "Study complete!",
+    "score": "Score",
+    "perfect": "Perfect! You memorized everything!",
+    "good": "Great job! Keep it up!",
+    "keepPracticing": "Keep studying to improve!",
+    "restart": "Restart",
+    "startStudy": "Start Study",
+    "studyDescription": "Read biblical explanations before answering"
+  },
   "quiz": {
     "backToMenu": "Back to Menu",
     "question": "Question",

@@ -289,21 +289,21 @@ export const questions: Question[] = [
   },
   {
     id: 13,
-    question: "Quale profeta vide il carro di fuoco?",
+    question: "Quale profeta fu portato in cielo con un carro di fuoco?",
     questions: {
-      it: "Quale profeta vide il carro di fuoco?",
-      en: "Which prophet saw the chariot of fire?",
-      es: "¿Qué profeta vio el carro de fuego?",
-      pt: "Qual profeta viu o carro de fogo?",
-      fr: "Quel prophète a vu le char de feu?"
+      it: "Quale profeta fu portato in cielo con un carro di fuoco?",
+      en: "Which prophet was taken up to heaven in a chariot of fire?",
+      es: "¿Qué profeta fue llevado al cielo en un carro de fuego?",
+      pt: "Qual profeta foi levado ao céu em um carro de fogo?",
+      fr: "Quel prophète a été enlevé au ciel dans un char de feu?"
     },
-    options: ["Isaia", "Geremia", "Ezechiele", "Daniele"],
+    options: ["Isaia", "Geremia", "Elia", "Eliseo"],
     optionsTranslated: {
-      it: ["Isaia", "Geremia", "Ezechiele", "Daniele"],
-      en: ["Isaiah", "Jeremiah", "Ezekiel", "Daniel"],
-      es: ["Isaías", "Jeremías", "Ezequiel", "Daniel"],
-      pt: ["Isaías", "Jeremias", "Ezequiel", "Daniel"],
-      fr: ["Isaïe", "Jérémie", "Ézéchiel", "Daniel"]
+      it: ["Isaia", "Geremia", "Elia", "Eliseo"],
+      en: ["Isaiah", "Jeremiah", "Elijah", "Elisha"],
+      es: ["Isaías", "Jeremías", "Elías", "Eliseo"],
+      pt: ["Isaías", "Jeremias", "Elias", "Eliseu"],
+      fr: ["Isaïe", "Jérémie", "Élie", "Élisée"]
     },
     correctAnswer: 2,
     category: "Antico Testamento",

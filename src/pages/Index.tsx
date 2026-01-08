@@ -10,7 +10,7 @@ import DailyRewardPopup from "@/components/DailyRewardPopup";
 import LevelUpAnimation from "@/components/LevelUpAnimation";
 import DailyVerseCard from "@/components/DailyVerseCard";
 import { categories } from "@/data/questions";
-import { Book, Sparkles, BookOpen, Shuffle, BarChart3, Trophy, GraduationCap, LayoutDashboard, Zap, RotateCcw } from "lucide-react";
+import { Book, Sparkles, BookOpen, Shuffle, BarChart3, Trophy, GraduationCap, LayoutDashboard, Zap, RotateCcw, Lightbulb } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
 import { Button } from "@/components/ui/button";
@@ -204,6 +204,25 @@ const Index = () => {
               </Button>
             </div>
           )}
+
+          {/* Study Mode Button */}
+          <div className="mb-8 max-w-lg mx-auto">
+            <Button
+              variant="outline"
+              className="w-full h-auto p-6 flex items-center gap-4 bg-gradient-to-r from-amber-500/10 via-orange-500/10 to-yellow-500/10 hover:from-amber-500/20 hover:via-orange-500/20 hover:to-yellow-500/20 border-amber-500/30"
+              onClick={() => navigate("/study-mode")}
+            >
+              <div className="w-14 h-14 rounded-full bg-gradient-to-br from-amber-500 to-orange-600 flex items-center justify-center text-white shrink-0">
+                <Lightbulb className="w-7 h-7" />
+              </div>
+              <div className="text-left flex-1">
+                <div className="font-bold text-lg">{t('studyMode.startStudy', 'Modalità Studio')}</div>
+                <div className="text-sm text-muted-foreground">
+                  {t('studyMode.studyDescription', 'Leggi le spiegazioni bibliche prima di rispondere')}
+                </div>
+              </div>
+            </Button>
+          </div>
 
           {/* Timed Challenge Mode */}
           <div className="mb-12 max-w-lg mx-auto">
