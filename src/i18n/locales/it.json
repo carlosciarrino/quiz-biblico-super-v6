@@ -14,6 +14,24 @@
     },
     "startQuiz": "Inizia Quiz"
   },
+  "studyMode": {
+    "title": "Modalità Studio",
+    "subtitle": "Impara prima di rispondere",
+    "learnFirst": "Prima leggi e impara",
+    "hint": "Leggi attentamente questa spiegazione. Poi ti verrà fatta una domanda su questo argomento!",
+    "readyToAnswer": "Sono pronto a rispondere",
+    "correct": "Corretto!",
+    "incorrect": "Sbagliato",
+    "next": "Prossima domanda",
+    "complete": "Studio completato!",
+    "score": "Punteggio",
+    "perfect": "Perfetto! Hai memorizzato tutto!",
+    "good": "Ottimo lavoro! Continua così!",
+    "keepPracticing": "Continua a studiare per migliorare!",
+    "restart": "Ricomincia",
+    "startStudy": "Inizia Studio",
+    "studyDescription": "Leggi le spiegazioni bibliche prima di rispondere"
+  },
   "quiz": {
     "backToMenu": "Torna al Menu",
     "question": "Domanda",
