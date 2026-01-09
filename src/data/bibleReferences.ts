@@ -288,6 +288,16 @@ export const bibleReferences: Record<number, BibleReference> = {
       fr: "Jean 3:16 est considéré comme le verset le plus célèbre de la Bible, résumant tout le message de l'Évangile: l'amour de Dieu pour le monde et le don de la vie éternelle à travers Jésus."
     }
   },
+  53: {
+    reference: "Genesis 35:8",
+    explanations: {
+      it: "Debora era la nutrice di Rebecca. Quando morì, fu sepolta sotto una quercia presso Betel, chiamata 'Quercia del Pianto' (Allon-Bacuth).",
+      en: "Deborah was Rebekah's nurse. When she died, she was buried under an oak tree near Bethel, called the 'Oak of Weeping' (Allon-Bacuth).",
+      es: "Débora era la nodriza de Rebeca. Cuando murió, fue sepultada bajo una encina cerca de Betel, llamada 'Encina del Llanto' (Alón-Bacut).",
+      pt: "Débora era a ama de Rebeca. Quando morreu, foi sepultada sob um carvalho perto de Betel, chamado 'Carvalho do Pranto' (Alon-Bacute).",
+      fr: "Débora était la nourrice de Rebecca. Quand elle mourut, elle fut enterrée sous un chêne près de Béthel, appelé le 'Chêne des Pleurs' (Allon-Bacuth)."
+    }
+  },
 };
 
 export const getBibleReference = (questionId: number): BibleReference => {
