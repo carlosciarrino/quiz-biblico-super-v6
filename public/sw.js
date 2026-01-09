@@ -1,4 +1,4 @@
-const CACHE_NAME = 'bible-quiz-v2';
+const CACHE_NAME = 'bible-quiz-v3';
 const STATIC_ASSETS = [
   '/',
   '/index.html',
@@ -27,18 +27,73 @@ self.addEventListener('activate', (event) => {
   self.clients.claim();
 });
 
-// Fetch event
-// - Navigation: serve app shell (cached '/') when offline
-// - Other requests: always go to network (avoid stale JS chunks causing runtime crashes)
+// Fetch event - Network first, fallback to cache
 self.addEventListener('fetch', (event) => {
-  if (event.request.mode === 'navigate') {
+  const { request } = event;
+  
+  // Skip non-GET requests
+  if (request.method !== 'GET') return;
+  
+  // Skip chrome-extension and other non-http requests
+  if (!request.url.startsWith('http')) return;
+
+  // Navigation requests - serve app shell when offline
+  if (request.mode === 'navigate') {
     event.respondWith(
-      fetch(event.request).catch(() => caches.match('/'))
+      fetch(request)
+        .then((response) => {
+          // Cache the latest version
+          const responseClone = response.clone();
+          caches.open(CACHE_NAME).then((cache) => {
+            cache.put(request, responseClone);
+          });
+          return response;
+        })
+        .catch(() => caches.match('/'))
     );
     return;
   }
 
-  // For non-navigation requests, do not cache at runtime.
-  event.respondWith(fetch(event.request));
+  // For JS, CSS, and other assets - cache first, then network
+  if (request.url.match(/\.(js|css|png|jpg|jpeg|gif|svg|ico|woff|woff2)$/)) {
+    event.respondWith(
+      caches.match(request).then((cachedResponse) => {
+        const fetchPromise = fetch(request).then((networkResponse) => {
+          // Update cache with new version
+          if (networkResponse.ok) {
+            const responseClone = networkResponse.clone();
+            caches.open(CACHE_NAME).then((cache) => {
+              cache.put(request, responseClone);
+            });
+          }
+          return networkResponse;
+        }).catch(() => cachedResponse);
+        
+        return cachedResponse || fetchPromise;
+      })
+    );
+    return;
+  }
+
+  // Default: network first, cache fallback
+  event.respondWith(
+    fetch(request)
+      .then((response) => {
+        if (response.ok) {
+          const responseClone = response.clone();
+          caches.open(CACHE_NAME).then((cache) => {
+            cache.put(request, responseClone);
+          });
+        }
+        return response;
+      })
+      .catch(() => caches.match(request))
+  );
 });
 
+// Listen for messages from the client
+self.addEventListener('message', (event) => {
+  if (event.data === 'skipWaiting') {
+    self.skipWaiting();
+  }
+});
