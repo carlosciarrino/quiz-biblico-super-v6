@@ -286,7 +286,9 @@
   },
   "offline": {
     "ready": "App pronta per uso offline",
-    "updated": "Nuovi contenuti disponibili"
+    "updated": "Nuovi contenuti disponibili",
+    "message": "Sei offline - L'app funziona comunque!",
+    "reconnected": "Connessione ripristinata"
   },
   "levels": {
     "level": "Livello",

@@ -282,7 +282,9 @@
   },
   "offline": {
     "ready": "App ready for offline use",
-    "updated": "New content available"
+    "updated": "New content available",
+    "message": "You're offline - App still works!",
+    "reconnected": "Connection restored"
   },
   "levels": {
     "level": "Level",
