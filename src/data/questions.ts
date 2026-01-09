@@ -1173,13 +1173,13 @@ export const questions: Question[] = [
   },
   {
     id: 53,
-    question: "Chi era la nutrice di Esaù e Giacobbe?",
+    question: "Chi era la nutrice di Rebecca?",
     questions: {
-      it: "Chi era la nutrice di Esaù e Giacobbe?",
-      en: "Who was the nurse of Esau and Jacob?",
-      es: "¿Quién fue la nodriza de Esaú y Jacob?",
-      pt: "Quem foi a ama de Esaú e Jacó?",
-      fr: "Qui était la nourrice d'Ésaü et Jacob?"
+      it: "Chi era la nutrice di Rebecca?",
+      en: "Who was Rebekah's nurse?",
+      es: "¿Quién era la nodriza de Rebeca?",
+      pt: "Quem era a ama de Rebeca?",
+      fr: "Qui était la nourrice de Rebecca?"
     },
     options: ["Debora", "Anna", "Agar", "Sara"],
     optionsTranslated: {
