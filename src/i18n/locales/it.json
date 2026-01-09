@@ -418,5 +418,16 @@
     "hard_mode": { "name": "Modalità Difficile", "desc": "Raggiungi la difficoltà difficile" },
     "perfectionist": { "name": "Perfezionista", "desc": "Partita perfetta con 10+ domande" },
     "flawless": { "name": "Impeccabile", "desc": "Ottieni 5 partite perfette" }
+  },
+  "sync": {
+    "syncing": "Sincronizzazione in corso...",
+    "success": "Sincronizzato!",
+    "progressSynced": "I tuoi progressi sono stati sincronizzati",
+    "error": "Errore di sincronizzazione",
+    "syncFailed": "Impossibile sincronizzare i progressi",
+    "offline": "Sei offline",
+    "waitForConnection": "Attendi la connessione per sincronizzare",
+    "pendingChanges": "Modifiche in attesa di sincronizzazione",
+    "reconnectedAndSynced": "Connesso e sincronizzato!"
   }
 }
