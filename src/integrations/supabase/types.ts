@@ -14,7 +14,36 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      user_progress: {
+        Row: {
+          created_at: string
+          device_id: string
+          id: string
+          last_synced_at: string
+          stats: Json
+          updated_at: string
+          wrong_answers: Json
+        }
+        Insert: {
+          created_at?: string
+          device_id: string
+          id?: string
+          last_synced_at?: string
+          stats?: Json
+          updated_at?: string
+          wrong_answers?: Json
+        }
+        Update: {
+          created_at?: string
+          device_id?: string
+          id?: string
+          last_synced_at?: string
+          stats?: Json
+          updated_at?: string
+          wrong_answers?: Json
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never

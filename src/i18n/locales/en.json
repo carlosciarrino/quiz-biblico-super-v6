@@ -414,5 +414,16 @@
     "hard_mode": { "name": "Hard Mode", "desc": "Reach hard difficulty" },
     "perfectionist": { "name": "Perfectionist", "desc": "Perfect game with 10+ questions" },
     "flawless": { "name": "Flawless", "desc": "Get 5 perfect games" }
+  },
+  "sync": {
+    "syncing": "Syncing...",
+    "success": "Synced!",
+    "progressSynced": "Your progress has been synced",
+    "error": "Sync error",
+    "syncFailed": "Could not sync progress",
+    "offline": "You're offline",
+    "waitForConnection": "Wait for connection to sync",
+    "pendingChanges": "Changes pending sync",
+    "reconnectedAndSynced": "Connected and synced!"
   }
 }
