@@ -426,19 +426,26 @@
     "point_hunter": { "name": "Cazador de Puntos", "desc": "Obtén 500+ puntos" },
     "score_master": { "name": "Maestro del Puntaje", "desc": "Obtén 1000+ puntos" },
     "legendary_scorer": { "name": "Legendario", "desc": "Obtén 2000+ puntos" },
+    "mythical_scorer": { "name": "Mítico", "desc": "Obtén 5000+ puntos" },
     "hot_streak": { "name": "Racha Caliente", "desc": "Consigue una racha de 5+ respuestas" },
     "on_fire": { "name": "¡En Llamas!", "desc": "Consigue una racha de 10+ respuestas" },
     "unstoppable": { "name": "Imparable", "desc": "Consigue una racha de 15+ respuestas" },
     "streak_legend": { "name": "Leyenda de las Rachas", "desc": "Consigue una racha de 20+ respuestas" },
+    "streak_god": { "name": "Dios de las Rachas", "desc": "Consigue una racha de 30+ respuestas" },
     "first_challenge": { "name": "Primer Desafío", "desc": "Completa tu primera partida" },
     "challenger": { "name": "Retador", "desc": "Juega 5 partidas" },
     "dedicated": { "name": "Dedicado", "desc": "Juega 20 partidas" },
     "challenge_addict": { "name": "Adicto a los Desafíos", "desc": "Juega 50 partidas" },
+    "challenge_master": { "name": "Maestro de Desafíos", "desc": "Juega 100 partidas" },
     "quick_thinker": { "name": "Pensador Rápido", "desc": "Responde 50 preguntas" },
     "knowledge_seeker": { "name": "Buscador de Conocimiento", "desc": "Responde 200 preguntas" },
     "bible_scholar": { "name": "Erudito Bíblico", "desc": "Responde 500 preguntas" },
+    "bible_master": { "name": "Maestro de la Biblia", "desc": "Responde 1000 preguntas" },
     "hard_mode": { "name": "Modo Difícil", "desc": "Alcanza la dificultad difícil" },
     "perfectionist": { "name": "Perfeccionista", "desc": "Partida perfecta con 10+ preguntas" },
-    "flawless": { "name": "Impecable", "desc": "Consigue 5 partidas perfectas" }
+    "flawless": { "name": "Impecable", "desc": "Consigue 5 partidas perfectas" },
+    "divine_perfection": { "name": "Perfección Divina", "desc": "Consigue 10 partidas perfectas" },
+    "daily_warrior": { "name": "Guerrero Diario", "desc": "Juega 7 días consecutivos" },
+    "monthly_devotion": { "name": "Devoción Mensual", "desc": "Juega 30 días consecutivos" }
   }
 }
