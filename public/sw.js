@@ -97,3 +97,48 @@ self.addEventListener('message', (event) => {
     self.skipWaiting();
   }
 });
+
+// Handle push notifications
+self.addEventListener('push', (event) => {
+  const data = event.data ? event.data.json() : {};
+  
+  const options = {
+    body: data.body || 'Nuova notifica dal Quiz Biblico',
+    icon: '/favicon.ico',
+    badge: '/favicon.ico',
+    tag: data.tag || 'bible-quiz-notification',
+    data: data.data || {},
+    actions: data.actions || [],
+    vibrate: [200, 100, 200],
+  };
+
+  event.waitUntil(
+    self.registration.showNotification(data.title || 'Quiz Biblico', options)
+  );
+});
+
+// Handle notification click
+self.addEventListener('notificationclick', (event) => {
+  event.notification.close();
+
+  const urlToOpen = event.notification.data?.url || '/';
+
+  event.waitUntil(
+    clients.matchAll({ type: 'window', includeUncontrolled: true }).then((windowClients) => {
+      // Check if there's already an open window
+      for (const client of windowClients) {
+        if (client.url.includes(self.location.origin) && 'focus' in client) {
+          client.focus();
+          if (urlToOpen !== '/') {
+            client.navigate(urlToOpen);
+          }
+          return;
+        }
+      }
+      // Open a new window
+      if (clients.openWindow) {
+        return clients.openWindow(urlToOpen);
+      }
+    })
+  );
+});

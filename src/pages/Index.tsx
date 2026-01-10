@@ -9,8 +9,9 @@ import LevelDisplay from "@/components/LevelDisplay";
 import DailyRewardPopup from "@/components/DailyRewardPopup";
 import LevelUpAnimation from "@/components/LevelUpAnimation";
 import DailyVerseCard from "@/components/DailyVerseCard";
+import NotificationSettings from "@/components/NotificationSettings";
 import { categories } from "@/data/questions";
-import { Book, Sparkles, BookOpen, Shuffle, BarChart3, Trophy, GraduationCap, LayoutDashboard, Zap, RotateCcw, Lightbulb } from "lucide-react";
+import { Book, Sparkles, BookOpen, Shuffle, BarChart3, Trophy, GraduationCap, LayoutDashboard, Zap, RotateCcw, Lightbulb, Bell } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
 import { Button } from "@/components/ui/button";
@@ -21,8 +22,9 @@ import { useChallenge } from "@/hooks/useChallenge";
 import { useDailyLoginReward } from "@/hooks/useDailyLoginReward";
 import { useLevelUpDetector } from "@/hooks/useLevelUpDetector";
 import { useWrongAnswers } from "@/hooks/useWrongAnswers";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { toast } from "sonner";
+import { initializeNotifications } from "@/services/notificationService";
 const Index = () => {
   const { t } = useTranslation();
   const navigate = useNavigate();
@@ -36,6 +38,12 @@ const Index = () => {
   const { totalWrongAnswers } = useWrongAnswers();
   const [showStats, setShowStats] = useState(false);
   const [showLeaderboard, setShowLeaderboard] = useState(false);
+  const [showNotifications, setShowNotifications] = useState(false);
+
+  // Initialize notifications on mount
+  useEffect(() => {
+    initializeNotifications();
+  }, []);
   
   const challengeId = searchParams.get("challenge");
   const challenge = challengeId ? getChallenge(challengeId) : null;
@@ -160,6 +168,14 @@ const Index = () => {
               <Trophy className="w-4 h-4" />
               {t('leaderboard.title')}
             </Button>
+            <Button
+              onClick={() => setShowNotifications(!showNotifications)}
+              variant="outline"
+              className="gap-2"
+            >
+              <Bell className="w-4 h-4" />
+              {t('notifications.title')}
+            </Button>
           </div>
 
           {/* User Stats Display */}
@@ -181,6 +197,13 @@ const Index = () => {
           {showLeaderboard && (
             <div className="mb-12 animate-fade-in">
               <Leaderboard entries={entries} />
+            </div>
+          )}
+
+          {/* Notification Settings */}
+          {showNotifications && (
+            <div className="mb-12 max-w-md mx-auto animate-fade-in">
+              <NotificationSettings />
             </div>
           )}
 

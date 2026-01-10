@@ -429,5 +429,18 @@
     "waitForConnection": "Attendi la connessione per sincronizzare",
     "pendingChanges": "Modifiche in attesa di sincronizzazione",
     "reconnectedAndSynced": "Connesso e sincronizzato!"
+  },
+  "notifications": {
+    "title": "Notifiche",
+    "enable": "Attiva Notifiche",
+    "disable": "Disattiva Notifiche",
+    "enabled": "Notifiche attivate!",
+    "denied": "Notifiche rifiutate",
+    "dailyChallenge": "La tua sfida giornaliera ti aspetta!",
+    "studyReminder": "È ora di studiare la Bibbia",
+    "streakReminder": "Non perdere la tua serie di {{days}} giorni!",
+    "settings": "Impostazioni Notifiche",
+    "dailyChallengeTime": "Ora Sfida Giornaliera",
+    "studyReminderTime": "Ora Promemoria Studio"
   }
 }
