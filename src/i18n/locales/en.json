@@ -425,5 +425,18 @@
     "waitForConnection": "Wait for connection to sync",
     "pendingChanges": "Changes pending sync",
     "reconnectedAndSynced": "Connected and synced!"
+  },
+  "notifications": {
+    "title": "Notifications",
+    "enable": "Enable Notifications",
+    "disable": "Disable Notifications",
+    "enabled": "Notifications enabled!",
+    "denied": "Notifications denied",
+    "dailyChallenge": "Your daily challenge awaits!",
+    "studyReminder": "Time to study the Bible",
+    "streakReminder": "Don't lose your {{days}} day streak!",
+    "settings": "Notification Settings",
+    "dailyChallengeTime": "Daily Challenge Time",
+    "studyReminderTime": "Study Reminder Time"
   }
 }

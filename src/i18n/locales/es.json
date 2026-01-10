@@ -264,7 +264,68 @@
   },
   "offline": {
     "ready": "App lista para uso sin conexión",
-    "updated": "Nuevos contenidos disponibles"
+    "updated": "Nuevos contenidos disponibles",
+    "message": "Estás sin conexión - ¡La app sigue funcionando!",
+    "reconnected": "Conexión restaurada"
+  },
+  "studyMode": {
+    "title": "Modo Estudio",
+    "subtitle": "Aprende antes de responder",
+    "learnFirst": "Primero lee y aprende",
+    "hint": "Lee esta explicación atentamente. ¡Luego te harán una pregunta sobre este tema!",
+    "readyToAnswer": "Listo para responder",
+    "correct": "¡Correcto!",
+    "incorrect": "Incorrecto",
+    "next": "Siguiente pregunta",
+    "complete": "¡Estudio completado!",
+    "score": "Puntuación",
+    "perfect": "¡Perfecto! ¡Memorizaste todo!",
+    "good": "¡Gran trabajo! ¡Sigue así!",
+    "keepPracticing": "¡Sigue estudiando para mejorar!",
+    "restart": "Reiniciar",
+    "startStudy": "Iniciar Estudio",
+    "studyDescription": "Lee las explicaciones bíblicas antes de responder"
+  },
+  "explanation": {
+    "correct": "¡Respuesta Correcta! 🎉",
+    "incorrect": "Respuesta Incorrecta"
+  },
+  "wrongAnswersStats": {
+    "title": "Análisis de Errores",
+    "questionsToReview": "Preguntas para repasar",
+    "totalAttempts": "Intentos totales",
+    "byCategory": "Errores por Categoría",
+    "byDifficulty": "Errores por Dificultad",
+    "mostFailed": "Preguntas Más Falladas",
+    "attempts": "intentos"
+  },
+  "dashboard": {
+    "progressTab": "Progreso",
+    "errorsTab": "Errores"
+  },
+  "sync": {
+    "syncing": "Sincronizando...",
+    "success": "¡Sincronizado!",
+    "progressSynced": "Tu progreso ha sido sincronizado",
+    "error": "Error de sincronización",
+    "syncFailed": "No se pudo sincronizar el progreso",
+    "offline": "Estás sin conexión",
+    "waitForConnection": "Espera la conexión para sincronizar",
+    "pendingChanges": "Cambios pendientes de sincronización",
+    "reconnectedAndSynced": "¡Conectado y sincronizado!"
+  },
+  "notifications": {
+    "title": "Notificaciones",
+    "enable": "Activar Notificaciones",
+    "disable": "Desactivar Notificaciones",
+    "enabled": "¡Notificaciones activadas!",
+    "denied": "Notificaciones denegadas",
+    "dailyChallenge": "¡Tu desafío diario te espera!",
+    "studyReminder": "Es hora de estudiar la Biblia",
+    "streakReminder": "¡No pierdas tu racha de {{days}} días!",
+    "settings": "Configuración de Notificaciones",
+    "dailyChallengeTime": "Hora del Desafío Diario",
+    "studyReminderTime": "Hora del Recordatorio de Estudio"
   },
   "levels": {
     "level": "Nivel",
