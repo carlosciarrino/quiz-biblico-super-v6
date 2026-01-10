@@ -3,8 +3,10 @@ import { useState, useEffect, useCallback } from 'react';
 export interface TimedChallengeAchievement {
   id: string;
   icon: string;
-  tier: 'bronze' | 'silver' | 'gold' | 'platinum';
+  tier: 'bronze' | 'silver' | 'gold' | 'platinum' | 'diamond';
+  xpReward: number;
   condition: (stats: TimedChallengeStats) => boolean;
+  category: 'score' | 'streak' | 'games' | 'questions' | 'special';
 }
 
 export interface TimedChallengeStats {
@@ -14,7 +16,10 @@ export interface TimedChallengeStats {
   totalQuestionsAnswered: number;
   totalCorrectAnswers: number;
   reachedHardDifficulty: boolean;
-  perfectGames: number; // Games with 0 wrong answers and 10+ questions
+  perfectGames: number;
+  totalXpEarned: number;
+  consecutiveDaysPlayed: number;
+  lastPlayedDate: string | null;
 }
 
 const STORAGE_KEY = 'timed_challenge_stats';
@@ -22,33 +27,40 @@ const ACHIEVEMENTS_KEY = 'timed_challenge_achievements';
 
 export const timedChallengeAchievements: TimedChallengeAchievement[] = [
   // Score-based achievements
-  { id: 'rookie_scorer', icon: '🎯', tier: 'bronze', condition: (s) => s.highScore >= 100 },
-  { id: 'rising_star', icon: '⭐', tier: 'bronze', condition: (s) => s.highScore >= 250 },
-  { id: 'point_hunter', icon: '🏹', tier: 'silver', condition: (s) => s.highScore >= 500 },
-  { id: 'score_master', icon: '👑', tier: 'gold', condition: (s) => s.highScore >= 1000 },
-  { id: 'legendary_scorer', icon: '🏆', tier: 'platinum', condition: (s) => s.highScore >= 2000 },
+  { id: 'rookie_scorer', icon: '🎯', tier: 'bronze', xpReward: 25, category: 'score', condition: (s) => s.highScore >= 100 },
+  { id: 'rising_star', icon: '⭐', tier: 'bronze', xpReward: 50, category: 'score', condition: (s) => s.highScore >= 250 },
+  { id: 'point_hunter', icon: '🏹', tier: 'silver', xpReward: 100, category: 'score', condition: (s) => s.highScore >= 500 },
+  { id: 'score_master', icon: '👑', tier: 'gold', xpReward: 200, category: 'score', condition: (s) => s.highScore >= 1000 },
+  { id: 'legendary_scorer', icon: '🏆', tier: 'platinum', xpReward: 500, category: 'score', condition: (s) => s.highScore >= 2000 },
+  { id: 'mythical_scorer', icon: '💫', tier: 'diamond', xpReward: 1000, category: 'score', condition: (s) => s.highScore >= 5000 },
   
   // Streak-based achievements
-  { id: 'hot_streak', icon: '🔥', tier: 'bronze', condition: (s) => s.bestStreak >= 5 },
-  { id: 'on_fire', icon: '💥', tier: 'silver', condition: (s) => s.bestStreak >= 10 },
-  { id: 'unstoppable', icon: '⚡', tier: 'gold', condition: (s) => s.bestStreak >= 15 },
-  { id: 'streak_legend', icon: '🌟', tier: 'platinum', condition: (s) => s.bestStreak >= 20 },
+  { id: 'hot_streak', icon: '🔥', tier: 'bronze', xpReward: 25, category: 'streak', condition: (s) => s.bestStreak >= 5 },
+  { id: 'on_fire', icon: '💥', tier: 'silver', xpReward: 75, category: 'streak', condition: (s) => s.bestStreak >= 10 },
+  { id: 'unstoppable', icon: '⚡', tier: 'gold', xpReward: 150, category: 'streak', condition: (s) => s.bestStreak >= 15 },
+  { id: 'streak_legend', icon: '🌟', tier: 'platinum', xpReward: 300, category: 'streak', condition: (s) => s.bestStreak >= 20 },
+  { id: 'streak_god', icon: '🌈', tier: 'diamond', xpReward: 750, category: 'streak', condition: (s) => s.bestStreak >= 30 },
   
   // Games played achievements
-  { id: 'first_challenge', icon: '🎮', tier: 'bronze', condition: (s) => s.totalGamesPlayed >= 1 },
-  { id: 'challenger', icon: '🎲', tier: 'bronze', condition: (s) => s.totalGamesPlayed >= 5 },
-  { id: 'dedicated', icon: '💪', tier: 'silver', condition: (s) => s.totalGamesPlayed >= 20 },
-  { id: 'challenge_addict', icon: '🤩', tier: 'gold', condition: (s) => s.totalGamesPlayed >= 50 },
+  { id: 'first_challenge', icon: '🎮', tier: 'bronze', xpReward: 10, category: 'games', condition: (s) => s.totalGamesPlayed >= 1 },
+  { id: 'challenger', icon: '🎲', tier: 'bronze', xpReward: 30, category: 'games', condition: (s) => s.totalGamesPlayed >= 5 },
+  { id: 'dedicated', icon: '💪', tier: 'silver', xpReward: 100, category: 'games', condition: (s) => s.totalGamesPlayed >= 20 },
+  { id: 'challenge_addict', icon: '🤩', tier: 'gold', xpReward: 250, category: 'games', condition: (s) => s.totalGamesPlayed >= 50 },
+  { id: 'challenge_master', icon: '🎖️', tier: 'platinum', xpReward: 500, category: 'games', condition: (s) => s.totalGamesPlayed >= 100 },
   
   // Questions answered achievements
-  { id: 'quick_thinker', icon: '🧠', tier: 'bronze', condition: (s) => s.totalQuestionsAnswered >= 50 },
-  { id: 'knowledge_seeker', icon: '📖', tier: 'silver', condition: (s) => s.totalQuestionsAnswered >= 200 },
-  { id: 'bible_scholar', icon: '📚', tier: 'gold', condition: (s) => s.totalQuestionsAnswered >= 500 },
+  { id: 'quick_thinker', icon: '🧠', tier: 'bronze', xpReward: 25, category: 'questions', condition: (s) => s.totalQuestionsAnswered >= 50 },
+  { id: 'knowledge_seeker', icon: '📖', tier: 'silver', xpReward: 75, category: 'questions', condition: (s) => s.totalQuestionsAnswered >= 200 },
+  { id: 'bible_scholar', icon: '📚', tier: 'gold', xpReward: 200, category: 'questions', condition: (s) => s.totalQuestionsAnswered >= 500 },
+  { id: 'bible_master', icon: '🎓', tier: 'platinum', xpReward: 400, category: 'questions', condition: (s) => s.totalQuestionsAnswered >= 1000 },
   
   // Special achievements
-  { id: 'hard_mode', icon: '😈', tier: 'silver', condition: (s) => s.reachedHardDifficulty },
-  { id: 'perfectionist', icon: '💎', tier: 'gold', condition: (s) => s.perfectGames >= 1 },
-  { id: 'flawless', icon: '✨', tier: 'platinum', condition: (s) => s.perfectGames >= 5 },
+  { id: 'hard_mode', icon: '😈', tier: 'silver', xpReward: 50, category: 'special', condition: (s) => s.reachedHardDifficulty },
+  { id: 'perfectionist', icon: '💎', tier: 'gold', xpReward: 150, category: 'special', condition: (s) => s.perfectGames >= 1 },
+  { id: 'flawless', icon: '✨', tier: 'platinum', xpReward: 300, category: 'special', condition: (s) => s.perfectGames >= 5 },
+  { id: 'divine_perfection', icon: '👼', tier: 'diamond', xpReward: 750, category: 'special', condition: (s) => s.perfectGames >= 10 },
+  { id: 'daily_warrior', icon: '📅', tier: 'silver', xpReward: 100, category: 'special', condition: (s) => s.consecutiveDaysPlayed >= 7 },
+  { id: 'monthly_devotion', icon: '🗓️', tier: 'gold', xpReward: 300, category: 'special', condition: (s) => s.consecutiveDaysPlayed >= 30 },
 ];
 
 const defaultStats: TimedChallengeStats = {
@@ -59,6 +71,9 @@ const defaultStats: TimedChallengeStats = {
   totalCorrectAnswers: 0,
   reachedHardDifficulty: false,
   perfectGames: 0,
+  totalXpEarned: 0,
+  consecutiveDaysPlayed: 0,
+  lastPlayedDate: null,
 };
 
 export const useTimedChallengeAchievements = () => {
@@ -71,7 +86,7 @@ export const useTimedChallengeAchievements = () => {
     const savedStats = localStorage.getItem(STORAGE_KEY);
     if (savedStats) {
       try {
-        setStats(JSON.parse(savedStats));
+        setStats({ ...defaultStats, ...JSON.parse(savedStats) });
       } catch {
         setStats(defaultStats);
       }
@@ -102,10 +117,53 @@ export const useTimedChallengeAchievements = () => {
       setUnlockedAchievements(newUnlockedIds);
       localStorage.setItem(ACHIEVEMENTS_KEY, JSON.stringify(newUnlockedIds));
       setNewlyUnlocked(newUnlocks);
+      
+      // Award XP for achievements
+      const totalXpReward = newUnlocks.reduce((sum, a) => sum + a.xpReward, 0);
+      if (totalXpReward > 0) {
+        const updatedStats = {
+          ...currentStats,
+          totalXpEarned: currentStats.totalXpEarned + totalXpReward,
+        };
+        setStats(updatedStats);
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(updatedStats));
+        
+        // Also update main user stats XP
+        try {
+          const mainStats = localStorage.getItem('bible_quiz_stats');
+          if (mainStats) {
+            const parsed = JSON.parse(mainStats);
+            parsed.totalXP = (parsed.totalXP || 0) + totalXpReward;
+            localStorage.setItem('bible_quiz_stats', JSON.stringify(parsed));
+          }
+        } catch {
+          // Ignore errors
+        }
+      }
     }
 
     return newUnlocks;
   }, [unlockedAchievements]);
+
+  // Check consecutive days
+  const checkConsecutiveDays = useCallback((lastDate: string | null): number => {
+    const today = new Date().toDateString();
+    
+    if (!lastDate) {
+      return 1;
+    }
+    
+    const yesterday = new Date();
+    yesterday.setDate(yesterday.getDate() - 1);
+    
+    if (lastDate === today) {
+      return stats.consecutiveDaysPlayed;
+    } else if (lastDate === yesterday.toDateString()) {
+      return stats.consecutiveDaysPlayed + 1;
+    } else {
+      return 1;
+    }
+  }, [stats.consecutiveDaysPlayed]);
 
   // Record game result
   const recordGameResult = useCallback((result: {
@@ -116,6 +174,9 @@ export const useTimedChallengeAchievements = () => {
     reachedHard: boolean;
     isPerfect: boolean;
   }) => {
+    const today = new Date().toDateString();
+    const consecutiveDays = checkConsecutiveDays(stats.lastPlayedDate);
+    
     const newStats: TimedChallengeStats = {
       highScore: Math.max(stats.highScore, result.score),
       bestStreak: Math.max(stats.bestStreak, result.bestStreak),
@@ -124,6 +185,9 @@ export const useTimedChallengeAchievements = () => {
       totalCorrectAnswers: stats.totalCorrectAnswers + result.correctAnswers,
       reachedHardDifficulty: stats.reachedHardDifficulty || result.reachedHard,
       perfectGames: stats.perfectGames + (result.isPerfect ? 1 : 0),
+      totalXpEarned: stats.totalXpEarned,
+      consecutiveDaysPlayed: consecutiveDays,
+      lastPlayedDate: today,
     };
 
     setStats(newStats);
@@ -135,7 +199,7 @@ export const useTimedChallengeAchievements = () => {
     }
 
     return checkAchievements(newStats);
-  }, [stats, checkAchievements]);
+  }, [stats, checkAchievements, checkConsecutiveDays]);
 
   const clearNewlyUnlocked = useCallback(() => {
     setNewlyUnlocked([]);
@@ -148,20 +212,42 @@ export const useTimedChallengeAchievements = () => {
       case 'point_hunter': return { current: stats.highScore, target: 500 };
       case 'score_master': return { current: stats.highScore, target: 1000 };
       case 'legendary_scorer': return { current: stats.highScore, target: 2000 };
+      case 'mythical_scorer': return { current: stats.highScore, target: 5000 };
       case 'hot_streak': return { current: stats.bestStreak, target: 5 };
       case 'on_fire': return { current: stats.bestStreak, target: 10 };
       case 'unstoppable': return { current: stats.bestStreak, target: 15 };
       case 'streak_legend': return { current: stats.bestStreak, target: 20 };
+      case 'streak_god': return { current: stats.bestStreak, target: 30 };
       case 'first_challenge': return { current: stats.totalGamesPlayed, target: 1 };
       case 'challenger': return { current: stats.totalGamesPlayed, target: 5 };
       case 'dedicated': return { current: stats.totalGamesPlayed, target: 20 };
       case 'challenge_addict': return { current: stats.totalGamesPlayed, target: 50 };
+      case 'challenge_master': return { current: stats.totalGamesPlayed, target: 100 };
       case 'quick_thinker': return { current: stats.totalQuestionsAnswered, target: 50 };
       case 'knowledge_seeker': return { current: stats.totalQuestionsAnswered, target: 200 };
       case 'bible_scholar': return { current: stats.totalQuestionsAnswered, target: 500 };
+      case 'bible_master': return { current: stats.totalQuestionsAnswered, target: 1000 };
+      case 'perfectionist': return { current: stats.perfectGames, target: 1 };
+      case 'flawless': return { current: stats.perfectGames, target: 5 };
+      case 'divine_perfection': return { current: stats.perfectGames, target: 10 };
+      case 'daily_warrior': return { current: stats.consecutiveDaysPlayed, target: 7 };
+      case 'monthly_devotion': return { current: stats.consecutiveDaysPlayed, target: 30 };
       default: return null;
     }
   }, [stats]);
+
+  const getTotalXpFromAchievements = useCallback(() => {
+    return unlockedAchievements.reduce((total, id) => {
+      const achievement = timedChallengeAchievements.find(a => a.id === id);
+      return total + (achievement?.xpReward || 0);
+    }, 0);
+  }, [unlockedAchievements]);
+
+  const getNextAchievementsByCategory = useCallback((category: string, limit = 2) => {
+    return timedChallengeAchievements
+      .filter(a => a.category === category && !unlockedAchievements.includes(a.id))
+      .slice(0, limit);
+  }, [unlockedAchievements]);
 
   return {
     stats,
@@ -170,5 +256,7 @@ export const useTimedChallengeAchievements = () => {
     recordGameResult,
     clearNewlyUnlocked,
     getAchievementProgress,
+    getTotalXpFromAchievements,
+    getNextAchievementsByCategory,
   };
 };

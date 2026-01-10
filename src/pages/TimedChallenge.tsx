@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { questions, Question } from "@/data/questions";
 import QuestionCard from "@/components/QuestionCard";
 import TimedChallengeAchievements from "@/components/TimedChallengeAchievements";
+import AchievementBadgeDisplay from "@/components/AchievementBadgeDisplay";
 import AchievementUnlockedToast from "@/components/AchievementUnlockedToast";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
@@ -12,7 +13,7 @@ import { useTranslation } from "react-i18next";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
 import { useSoundEffects } from "@/hooks/useSoundEffects";
 import { fireCorrectAnswer } from "@/lib/confetti";
-import { useTimedChallengeAchievements } from "@/hooks/useTimedChallengeAchievements";
+import { useTimedChallengeAchievements, timedChallengeAchievements } from "@/hooks/useTimedChallengeAchievements";
 
 type Difficulty = "easy" | "medium" | "hard";
 
@@ -296,10 +297,18 @@ const TimedChallenge = () => {
             </div>
 
             {showAchievements && (
-              <div className="animate-fade-in">
+              <div className="animate-fade-in space-y-6">
+                {/* Badge Display */}
+                <AchievementBadgeDisplay 
+                  stats={achievementStats}
+                  unlockedCount={unlockedAchievements.length}
+                  totalCount={timedChallengeAchievements.length}
+                />
+                
                 <TimedChallengeAchievements 
                   unlockedAchievements={unlockedAchievements}
                   getProgress={getAchievementProgress}
+                  stats={achievementStats}
                 />
               </div>
             )}
@@ -371,10 +380,18 @@ const TimedChallenge = () => {
             </div>
 
             {showAchievements && (
-              <div className="animate-fade-in">
+              <div className="animate-fade-in space-y-6">
+                {/* Badge Display */}
+                <AchievementBadgeDisplay 
+                  stats={achievementStats}
+                  unlockedCount={unlockedAchievements.length}
+                  totalCount={timedChallengeAchievements.length}
+                />
+                
                 <TimedChallengeAchievements 
                   unlockedAchievements={unlockedAchievements}
                   getProgress={getAchievementProgress}
+                  stats={achievementStats}
                 />
               </div>
             )}
