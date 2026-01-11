@@ -49,7 +49,22 @@ export type Database = {
       [_ in never]: never
     }
     Functions: {
-      [_ in never]: never
+      get_user_progress: {
+        Args: { p_device_id: string }
+        Returns: {
+          created_at: string
+          device_id: string
+          id: string
+          last_synced_at: string
+          stats: Json
+          updated_at: string
+          wrong_answers: Json
+        }[]
+      }
+      upsert_user_progress: {
+        Args: { p_device_id: string; p_stats?: Json; p_wrong_answers?: Json }
+        Returns: boolean
+      }
     }
     Enums: {
       [_ in never]: never

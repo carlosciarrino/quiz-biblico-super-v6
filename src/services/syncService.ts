@@ -31,7 +31,7 @@ export const hasPendingSync = (): boolean => {
   return queue.length > 0;
 };
 
-// Sync progress to Supabase
+// Sync progress to Supabase using secure RPC function
 export const syncProgressToServer = async (): Promise<boolean> => {
   if (!navigator.onLine) return false;
 
@@ -40,47 +40,27 @@ export const syncProgressToServer = async (): Promise<boolean> => {
   const wrongAnswers = localStorage.getItem('bible_quiz_wrong_answers');
 
   try {
-    // Check if record exists
-    const { data: existing } = await supabase
-      .from('user_progress')
-      .select('id')
-      .eq('device_id', deviceId)
-      .single();
+    // Use secure RPC function to upsert progress
+    const { data, error } = await supabase.rpc('upsert_user_progress', {
+      p_device_id: deviceId,
+      p_stats: stats ? JSON.parse(stats) : {},
+      p_wrong_answers: wrongAnswers ? JSON.parse(wrongAnswers) : [],
+    });
 
-    const progressData = {
-      device_id: deviceId,
-      stats: stats ? JSON.parse(stats) : {},
-      wrong_answers: wrongAnswers ? JSON.parse(wrongAnswers) : [],
-      last_synced_at: new Date().toISOString(),
-    };
-
-    if (existing) {
-      const { error } = await supabase
-        .from('user_progress')
-        .update(progressData)
-        .eq('device_id', deviceId);
-
-      if (error) throw error;
-    } else {
-      const { error } = await supabase
-        .from('user_progress')
-        .insert(progressData);
-
-      if (error) throw error;
-    }
+    if (error) throw error;
 
     // Clear sync queue on success
     localStorage.removeItem(SYNC_QUEUE_KEY);
     localStorage.setItem(LAST_SYNC_KEY, new Date().toISOString());
     
-    return true;
+    return data === true;
   } catch (error) {
     console.error('Sync error:', error);
     return false;
   }
 };
 
-// Load progress from Supabase
+// Load progress from Supabase using secure RPC function
 export const loadProgressFromServer = async (): Promise<{
   stats: unknown;
   wrongAnswers: unknown;
@@ -90,17 +70,17 @@ export const loadProgressFromServer = async (): Promise<{
   const deviceId = getDeviceId();
 
   try {
-    const { data, error } = await supabase
-      .from('user_progress')
-      .select('stats, wrong_answers, last_synced_at')
-      .eq('device_id', deviceId)
-      .single();
+    // Use secure RPC function to get progress
+    const { data, error } = await supabase.rpc('get_user_progress', {
+      p_device_id: deviceId,
+    });
 
-    if (error || !data) return null;
+    if (error || !data || data.length === 0) return null;
 
+    const record = data[0];
     return {
-      stats: data.stats,
-      wrongAnswers: data.wrong_answers,
+      stats: record.stats,
+      wrongAnswers: record.wrong_answers,
     };
   } catch {
     return null;
