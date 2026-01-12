@@ -13,6 +13,7 @@ import { readingPlans } from "@/data/readingPlans";
 import { useReadingPlans } from "@/hooks/useReadingPlans";
 import { useDailyGoals } from "@/hooks/useDailyGoals";
 import { useUserStats } from "@/hooks/useUserStats";
+import bgMain from "@/assets/bg-main.webp";
 
 const StudyPage = () => {
   const { t } = useTranslation();
@@ -39,9 +40,17 @@ const StudyPage = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-background via-background to-secondary/20">
-      <div className="container mx-auto px-4 py-8">
-        <div className="absolute top-4 right-4">
+    <div className="min-h-screen relative">
+      {/* Background Image */}
+      <div 
+        className="fixed inset-0 bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: `url(${bgMain})` }}
+      >
+        <div className="absolute inset-0 bg-background/85 backdrop-blur-sm" />
+      </div>
+      
+      <div className="relative container mx-auto px-4 py-8">
+        <div className="absolute top-4 right-4 z-10">
           <LanguageSwitcher />
         </div>
 

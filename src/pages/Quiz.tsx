@@ -12,6 +12,7 @@ import LanguageSwitcher from "@/components/LanguageSwitcher";
 import { useSoundEffects } from "@/hooks/useSoundEffects";
 import { fireCorrectAnswer } from "@/lib/confetti";
 import { useWrongAnswers } from "@/hooks/useWrongAnswers";
+import bgMain from "@/assets/bg-main.webp";
 
 const Quiz = () => {
   const { t } = useTranslation();
@@ -158,8 +159,16 @@ const Quiz = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-background via-background to-secondary/20">
-      <div className="container mx-auto px-4 py-8">
+    <div className="min-h-screen relative">
+      {/* Background Image */}
+      <div 
+        className="fixed inset-0 bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: `url(${bgMain})` }}
+      >
+        <div className="absolute inset-0 bg-background/85 backdrop-blur-sm" />
+      </div>
+      
+      <div className="relative container mx-auto px-4 py-8">
         <div className="mb-6 flex items-center justify-between">
           <Button
             variant="ghost"
