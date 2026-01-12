@@ -120,12 +120,14 @@ const Index = () => {
             </div>
           )}
 
-          {/* Level Display on Home */}
-          {stats.totalQuizzesCompleted > 0 && (
-            <div className="mb-8 max-w-md mx-auto animate-fade-in">
-              <LevelDisplay levelInfo={levelInfo} />
-            </div>
-          )}
+          {/* Level Display on Home - min-height to prevent CLS */}
+          <div className="mb-8 max-w-md mx-auto min-h-[72px]">
+            {stats.totalQuizzesCompleted > 0 && (
+              <div className="animate-fade-in">
+                <LevelDisplay levelInfo={levelInfo} />
+              </div>
+            )}
+          </div>
 
           <div className="mb-8 flex flex-wrap justify-center gap-3">
             <Button
