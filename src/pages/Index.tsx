@@ -1,15 +1,5 @@
 import { useNavigate, useSearchParams } from "react-router-dom";
-import CategoryCard from "@/components/CategoryCard";
-import QuizTypeSelector from "@/components/QuizTypeSelector";
-import UserStatsDisplay from "@/components/UserStatsDisplay";
-import SmartReviewSuggestion from "@/components/SmartReviewSuggestion";
-import Leaderboard from "@/components/Leaderboard";
-import ChallengeCard from "@/components/ChallengeCard";
-import LevelDisplay from "@/components/LevelDisplay";
-import DailyRewardPopup from "@/components/DailyRewardPopup";
-import LevelUpAnimation from "@/components/LevelUpAnimation";
-import DailyVerseCard from "@/components/DailyVerseCard";
-import NotificationSettings from "@/components/NotificationSettings";
+import { lazy, Suspense, useState, useEffect } from "react";
 import { categories } from "@/data/questions";
 import { Book, Sparkles, BookOpen, Shuffle, BarChart3, Trophy, GraduationCap, LayoutDashboard, Zap, RotateCcw, Lightbulb, Bell } from "lucide-react";
 import { useTranslation } from "react-i18next";
@@ -22,9 +12,26 @@ import { useChallenge } from "@/hooks/useChallenge";
 import { useDailyLoginReward } from "@/hooks/useDailyLoginReward";
 import { useLevelUpDetector } from "@/hooks/useLevelUpDetector";
 import { useWrongAnswers } from "@/hooks/useWrongAnswers";
-import { useState, useEffect } from "react";
 import { toast } from "sonner";
 import { initializeNotifications } from "@/services/notificationService";
+import DailyVerseCard from "@/components/DailyVerseCard";
+import LevelDisplay from "@/components/LevelDisplay";
+
+// Lazy load below-the-fold components
+const CategoryCard = lazy(() => import("@/components/CategoryCard"));
+const UserStatsDisplay = lazy(() => import("@/components/UserStatsDisplay"));
+const SmartReviewSuggestion = lazy(() => import("@/components/SmartReviewSuggestion"));
+const Leaderboard = lazy(() => import("@/components/Leaderboard"));
+const ChallengeCard = lazy(() => import("@/components/ChallengeCard"));
+const DailyRewardPopup = lazy(() => import("@/components/DailyRewardPopup"));
+const LevelUpAnimation = lazy(() => import("@/components/LevelUpAnimation"));
+const NotificationSettings = lazy(() => import("@/components/NotificationSettings"));
+
+// Loading fallback component
+const LoadingFallback = () => (
+  <div className="animate-pulse bg-muted/50 rounded-lg h-24 w-full" />
+);
+
 const Index = () => {
   const { t } = useTranslation();
   const navigate = useNavigate();
@@ -116,7 +123,9 @@ const Index = () => {
           {/* Challenge Card */}
           {challenge && (
             <div className="mb-12 max-w-md mx-auto">
-              <ChallengeCard challenge={challenge} onAccept={handleAcceptChallenge} />
+              <Suspense fallback={<LoadingFallback />}>
+                <ChallengeCard challenge={challenge} onAccept={handleAcceptChallenge} />
+              </Suspense>
             </div>
           )}
 
@@ -186,26 +195,32 @@ const Index = () => {
               <h2 className="text-2xl font-bold text-center text-foreground">
                 {t('stats.yourProgress')}
               </h2>
-              <UserStatsDisplay
-                stats={stats}
-                strongestCategory={getStrongestCategory()}
-                weakestCategory={getWeakestCategory()}
-              />
-              <SmartReviewSuggestion stats={stats} />
+              <Suspense fallback={<LoadingFallback />}>
+                <UserStatsDisplay
+                  stats={stats}
+                  strongestCategory={getStrongestCategory()}
+                  weakestCategory={getWeakestCategory()}
+                />
+                <SmartReviewSuggestion stats={stats} />
+              </Suspense>
             </div>
           )}
 
           {/* Leaderboard */}
           {showLeaderboard && (
             <div className="mb-12 animate-fade-in">
-              <Leaderboard entries={entries} />
+              <Suspense fallback={<LoadingFallback />}>
+                <Leaderboard entries={entries} />
+              </Suspense>
             </div>
           )}
 
           {/* Notification Settings */}
           {showNotifications && (
             <div className="mb-12 max-w-md mx-auto animate-fade-in">
-              <NotificationSettings />
+              <Suspense fallback={<LoadingFallback />}>
+                <NotificationSettings />
+              </Suspense>
             </div>
           )}
 
@@ -311,22 +326,24 @@ const Index = () => {
           </p>
           
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {categories.map((category, index) => (
-              <div
-                key={category.id}
-                style={{
-                  animationDelay: `${index * 100}ms`,
-                }}
-              >
-                <CategoryCard
-                  name={category.name}
-                  description={category.description}
-                  icon={category.icon}
-                  color={category.color}
-                  onClick={() => handleCategoryClick(category.name)}
-                />
-              </div>
-            ))}
+            <Suspense fallback={<LoadingFallback />}>
+              {categories.map((category, index) => (
+                <div
+                  key={category.id}
+                  style={{
+                    animationDelay: `${index * 100}ms`,
+                  }}
+                >
+                  <CategoryCard
+                    name={category.name}
+                    description={category.description}
+                    icon={category.icon}
+                    color={category.color}
+                    onClick={() => handleCategoryClick(category.name)}
+                  />
+                </div>
+              ))}
+            </Suspense>
           </div>
 
           <div className="mt-16 text-center">
@@ -350,21 +367,25 @@ const Index = () => {
         </main>
 
         {/* Daily Reward Popup */}
-        <DailyRewardPopup
-          open={showRewardPopup && !loginState.todayRewardClaimed}
-          onClose={closePopup}
-          onClaim={handleClaimReward}
-          reward={loginState.currentReward}
-          consecutiveDays={loginState.consecutiveDays}
-        />
+        <Suspense fallback={null}>
+          <DailyRewardPopup
+            open={showRewardPopup && !loginState.todayRewardClaimed}
+            onClose={closePopup}
+            onClaim={handleClaimReward}
+            reward={loginState.currentReward}
+            consecutiveDays={loginState.consecutiveDays}
+          />
+        </Suspense>
 
         {/* Level Up Animation */}
-        <LevelUpAnimation
-          open={showLevelUp}
-          onClose={closeLevelUp}
-          newLevel={newLevel}
-          title={newTitle}
-        />
+        <Suspense fallback={null}>
+          <LevelUpAnimation
+            open={showLevelUp}
+            onClose={closeLevelUp}
+            newLevel={newLevel}
+            title={newTitle}
+          />
+        </Suspense>
       </div>
     </div>
   );
