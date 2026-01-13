@@ -3,7 +3,8 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
+import { AnimatePresence, motion } from "framer-motion";
 import OfflineIndicator from "@/components/OfflineIndicator";
 
 // Lazy load all pages for code splitting
@@ -30,6 +31,40 @@ const PageLoader = () => (
   </div>
 );
 
+// Page transition wrapper
+const PageTransition = ({ children }: { children: React.ReactNode }) => (
+  <motion.div
+    initial={{ opacity: 0, y: 20 }}
+    animate={{ opacity: 1, y: 0 }}
+    exit={{ opacity: 0, y: -20 }}
+    transition={{ duration: 0.3, ease: "easeInOut" }}
+  >
+    {children}
+  </motion.div>
+);
+
+// Animated routes component
+const AnimatedRoutes = () => {
+  const location = useLocation();
+  
+  return (
+    <AnimatePresence mode="wait">
+      <Routes location={location} key={location.pathname}>
+        <Route path="/" element={<PageTransition><Index /></PageTransition>} />
+        <Route path="/quiz" element={<PageTransition><Quiz /></PageTransition>} />
+        <Route path="/results" element={<PageTransition><Results /></PageTransition>} />
+        <Route path="/bible" element={<PageTransition><BibleReader /></PageTransition>} />
+        <Route path="/study" element={<PageTransition><StudyPage /></PageTransition>} />
+        <Route path="/dashboard" element={<PageTransition><Dashboard /></PageTransition>} />
+        <Route path="/timed-challenge" element={<PageTransition><TimedChallenge /></PageTransition>} />
+        <Route path="/review" element={<PageTransition><ReviewQuiz /></PageTransition>} />
+        <Route path="/study-mode" element={<PageTransition><StudyMode /></PageTransition>} />
+        <Route path="*" element={<PageTransition><NotFound /></PageTransition>} />
+      </Routes>
+    </AnimatePresence>
+  );
+};
+
 const App = () => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
@@ -38,18 +73,7 @@ const App = () => (
       <OfflineIndicator />
       <BrowserRouter>
         <Suspense fallback={<PageLoader />}>
-          <Routes>
-            <Route path="/" element={<Index />} />
-            <Route path="/quiz" element={<Quiz />} />
-            <Route path="/results" element={<Results />} />
-            <Route path="/bible" element={<BibleReader />} />
-            <Route path="/study" element={<StudyPage />} />
-            <Route path="/dashboard" element={<Dashboard />} />
-            <Route path="/timed-challenge" element={<TimedChallenge />} />
-            <Route path="/review" element={<ReviewQuiz />} />
-            <Route path="/study-mode" element={<StudyMode />} />
-            <Route path="*" element={<NotFound />} />
-          </Routes>
+          <AnimatedRoutes />
         </Suspense>
       </BrowserRouter>
     </TooltipProvider>

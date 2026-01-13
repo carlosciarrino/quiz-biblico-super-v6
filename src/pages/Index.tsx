@@ -4,6 +4,7 @@ import { categories } from "@/data/questions";
 import { Book, Sparkles, BookOpen, Shuffle, BarChart3, Trophy, GraduationCap, LayoutDashboard, Zap, RotateCcw, Lightbulb, Bell } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
+import ThemeToggle from "@/components/ThemeToggle";
 import { Button } from "@/components/ui/button";
 import { useUserStats } from "@/hooks/useUserStats";
 import { useUserLevel } from "@/hooks/useUserLevel";
@@ -96,7 +97,8 @@ const Index = () => {
       </div>
       
       <div className="relative container mx-auto px-4 py-12">
-        <div className="absolute top-4 right-4 z-10">
+        <div className="absolute top-4 right-4 z-10 flex items-center gap-2">
+          <ThemeToggle />
           <LanguageSwitcher />
         </div>
         
