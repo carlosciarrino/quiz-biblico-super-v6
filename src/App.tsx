@@ -17,6 +17,7 @@ const Dashboard = lazy(() => import("./pages/Dashboard"));
 const TimedChallenge = lazy(() => import("./pages/TimedChallenge"));
 const ReviewQuiz = lazy(() => import("./pages/ReviewQuiz"));
 const StudyMode = lazy(() => import("./pages/StudyMode"));
+const Settings = lazy(() => import("./pages/Settings"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 
 const queryClient = new QueryClient();
@@ -59,6 +60,7 @@ const AnimatedRoutes = () => {
         <Route path="/timed-challenge" element={<PageTransition><TimedChallenge /></PageTransition>} />
         <Route path="/review" element={<PageTransition><ReviewQuiz /></PageTransition>} />
         <Route path="/study-mode" element={<PageTransition><StudyMode /></PageTransition>} />
+        <Route path="/settings" element={<PageTransition><Settings /></PageTransition>} />
         <Route path="*" element={<PageTransition><NotFound /></PageTransition>} />
       </Routes>
     </AnimatePresence>
