@@ -1,7 +1,7 @@
 import { useNavigate, useSearchParams } from "react-router-dom";
 import { lazy, Suspense, useState, useEffect } from "react";
 import { categories } from "@/data/questions";
-import { Book, Sparkles, BookOpen, Shuffle, BarChart3, Trophy, GraduationCap, LayoutDashboard, Zap, RotateCcw, Lightbulb, Bell } from "lucide-react";
+import { Book, Sparkles, BookOpen, Shuffle, BarChart3, Trophy, GraduationCap, LayoutDashboard, Zap, RotateCcw, Lightbulb, Bell, Settings } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
 import ThemeToggle from "@/components/ThemeToggle";
@@ -153,7 +153,7 @@ const Index = () => {
             <Button
               onClick={() => navigate("/dashboard")}
               variant="default"
-              className="gap-2"
+              className="gap-2 btn-interactive"
             >
               <LayoutDashboard className="w-4 h-4" />
               {t('dashboard.title')}
@@ -161,7 +161,7 @@ const Index = () => {
             <Button
               onClick={() => navigate("/study")}
               variant="outline"
-              className="gap-2"
+              className="gap-2 btn-interactive"
             >
               <GraduationCap className="w-4 h-4" />
               {t('study.title')}
@@ -169,7 +169,7 @@ const Index = () => {
             <Button
               onClick={() => navigate("/bible")}
               variant="outline"
-              className="gap-2"
+              className="gap-2 btn-interactive"
             >
               <Book className="w-4 h-4" />
               {t('bible.title')}
@@ -177,7 +177,7 @@ const Index = () => {
             <Button
               onClick={() => setShowStats(!showStats)}
               variant="outline"
-              className="gap-2"
+              className="gap-2 btn-interactive"
             >
               <BarChart3 className="w-4 h-4" />
               {t('stats.yourProgress')}
@@ -185,7 +185,7 @@ const Index = () => {
             <Button
               onClick={() => setShowLeaderboard(!showLeaderboard)}
               variant="outline"
-              className="gap-2"
+              className="gap-2 btn-interactive"
             >
               <Trophy className="w-4 h-4" />
               {t('leaderboard.title')}
@@ -193,10 +193,18 @@ const Index = () => {
             <Button
               onClick={() => setShowNotifications(!showNotifications)}
               variant="outline"
-              className="gap-2"
+              className="gap-2 btn-interactive"
             >
               <Bell className="w-4 h-4" />
               {t('notifications.title')}
+            </Button>
+            <Button
+              onClick={() => navigate("/settings")}
+              variant="outline"
+              className="gap-2 btn-interactive"
+            >
+              <Settings className="w-4 h-4" />
+              {t('settings.title', 'Settings')}
             </Button>
           </div>
 
@@ -240,7 +248,7 @@ const Index = () => {
             <div className="mb-12 max-w-lg mx-auto">
               <Button
                 variant="outline"
-                className="w-full h-auto p-6 flex items-center gap-4 bg-gradient-to-r from-red-500/10 via-orange-500/10 to-amber-500/10 hover:from-red-500/20 hover:via-orange-500/20 hover:to-amber-500/20 border-red-500/30"
+                className="w-full h-auto p-6 flex items-center gap-4 bg-gradient-to-r from-red-500/10 via-orange-500/10 to-amber-500/10 hover:from-red-500/20 hover:via-orange-500/20 hover:to-amber-500/20 border-red-500/30 card-interactive"
                 onClick={() => navigate("/review")}
               >
                 <div className="w-14 h-14 rounded-full bg-gradient-to-br from-red-500 to-orange-500 flex items-center justify-center text-white shrink-0">
@@ -260,7 +268,7 @@ const Index = () => {
           <div className="mb-8 max-w-lg mx-auto">
             <Button
               variant="outline"
-              className="w-full h-auto p-6 flex items-center gap-4 bg-gradient-to-r from-amber-500/10 via-orange-500/10 to-yellow-500/10 hover:from-amber-500/20 hover:via-orange-500/20 hover:to-yellow-500/20 border-amber-500/30"
+              className="w-full h-auto p-6 flex items-center gap-4 bg-gradient-to-r from-amber-500/10 via-orange-500/10 to-yellow-500/10 hover:from-amber-500/20 hover:via-orange-500/20 hover:to-yellow-500/20 border-amber-500/30 card-interactive"
               onClick={() => navigate("/study-mode")}
             >
               <div className="w-14 h-14 rounded-full bg-gradient-to-br from-amber-500 to-orange-600 flex items-center justify-center text-white shrink-0">
@@ -279,7 +287,7 @@ const Index = () => {
           <div className="mb-12 max-w-lg mx-auto">
             <Button
               variant="outline"
-              className="w-full h-auto p-6 flex items-center gap-4 bg-gradient-to-r from-orange-500/10 via-red-500/10 to-pink-500/10 hover:from-orange-500/20 hover:via-red-500/20 hover:to-pink-500/20 border-orange-500/30"
+              className="w-full h-auto p-6 flex items-center gap-4 bg-gradient-to-r from-orange-500/10 via-red-500/10 to-pink-500/10 hover:from-orange-500/20 hover:via-red-500/20 hover:to-pink-500/20 border-orange-500/30 card-interactive"
               onClick={() => navigate("/timed-challenge")}
             >
               <div className="w-14 h-14 rounded-full bg-gradient-to-br from-orange-500 to-red-500 flex items-center justify-center text-white shrink-0">
@@ -301,7 +309,7 @@ const Index = () => {
             <div className="grid gap-4 md:grid-cols-2 max-w-2xl mx-auto">
               <Button
                 variant="outline"
-                className="h-auto p-6 flex flex-col items-center gap-3 bg-gradient-to-br from-primary/10 to-accent/10 hover:from-primary/20 hover:to-accent/20 border-primary/30"
+                className="h-auto p-6 flex flex-col items-center gap-3 bg-gradient-to-br from-primary/10 to-accent/10 hover:from-primary/20 hover:to-accent/20 border-primary/30 card-interactive"
                 onClick={() => handleQuizTypeSelect("fullBible")}
               >
                 <div className="w-12 h-12 rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center text-white">
@@ -315,7 +323,7 @@ const Index = () => {
 
               <Button
                 variant="outline"
-                className="h-auto p-6 flex flex-col items-center gap-3 bg-gradient-to-br from-accent/10 to-secondary/10 hover:from-accent/20 hover:to-secondary/20 border-accent/30"
+                className="h-auto p-6 flex flex-col items-center gap-3 bg-gradient-to-br from-accent/10 to-secondary/10 hover:from-accent/20 hover:to-secondary/20 border-accent/30 card-interactive"
                 onClick={() => handleQuizTypeSelect("random")}
               >
                 <div className="w-12 h-12 rounded-full bg-gradient-to-br from-accent to-primary flex items-center justify-center text-white">

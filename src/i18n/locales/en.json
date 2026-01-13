@@ -445,5 +445,22 @@
     "settings": "Notification Settings",
     "dailyChallengeTime": "Daily Challenge Time",
     "studyReminderTime": "Study Reminder Time"
+  },
+  "settings": {
+    "title": "Settings",
+    "appearance": "Appearance",
+    "appearanceDesc": "Customize the look and feel of the app",
+    "theme": "Theme",
+    "language": "Language",
+    "sound": "Sound",
+    "soundDesc": "Manage sound effects and audio feedback",
+    "enableSound": "Enable Sound Effects",
+    "volume": "Volume",
+    "gamePreferences": "Game Preferences",
+    "gamePreferencesDesc": "Customize your quiz experience",
+    "showTimer": "Show Timer",
+    "showHints": "Show Bible References",
+    "autoAdvance": "Auto-advance to Next Question",
+    "questionsPerQuiz": "Questions per Quiz"
   }
 }
