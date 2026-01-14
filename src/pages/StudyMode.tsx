@@ -8,6 +8,7 @@ import { Progress } from "@/components/ui/progress";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
 import { questions, Question, getTranslatedQuestion, getTranslatedOptions, getQuestionsByCategory } from "@/data/questions";
 import { getTranslatedExplanation } from "@/data/bibleReferences";
+import bgStudyMode from "@/assets/bg-study-mode.webp";
 
 const StudyMode = () => {
   const { t, i18n } = useTranslation();
@@ -29,7 +30,6 @@ const StudyMode = () => {
     if (category) {
       selectedQuestions = getQuestionsByCategory(category);
     } else {
-      // Default: random 10 questions for study
       const shuffled = [...questions].sort(() => Math.random() - 0.5);
       selectedQuestions = shuffled.slice(0, 10);
     }
@@ -77,7 +77,6 @@ const StudyMode = () => {
     setCorrectCount(0);
     setIncorrectCount(0);
     
-    // Reshuffle questions
     const shuffled = [...studyQuestions].sort(() => Math.random() - 0.5);
     setStudyQuestions(shuffled);
   };
@@ -87,15 +86,30 @@ const StudyMode = () => {
   
   if (studyQuestions.length === 0) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-background via-background to-secondary/20 flex items-center justify-center">
-        <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-primary"></div>
+      <div className="min-h-screen relative">
+        <div 
+          className="fixed inset-0 bg-cover bg-center bg-no-repeat"
+          style={{ backgroundImage: `url(${bgStudyMode})` }}
+        >
+          <div className="absolute inset-0 bg-background/85 backdrop-blur-sm" />
+        </div>
+        <div className="relative flex items-center justify-center min-h-screen">
+          <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-primary"></div>
+        </div>
       </div>
     );
   }
   
   return (
-    <div className="min-h-screen bg-gradient-to-br from-background via-background to-secondary/20">
-      <div className="container mx-auto px-4 py-8">
+    <div className="min-h-screen relative">
+      <div 
+        className="fixed inset-0 bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: `url(${bgStudyMode})` }}
+      >
+        <div className="absolute inset-0 bg-background/85 backdrop-blur-sm" />
+      </div>
+
+      <div className="relative container mx-auto px-4 py-8">
         <div className="absolute top-4 right-4">
           <LanguageSwitcher />
         </div>
@@ -104,14 +118,14 @@ const StudyMode = () => {
           <Button
             variant="ghost"
             onClick={() => navigate("/")}
-            className="mb-4 gap-2"
+            className="mb-4 gap-2 hover-lift"
           >
             <ArrowLeft className="w-4 h-4" />
             {t('common.back')}
           </Button>
 
           <div className="flex items-center gap-3 mb-4">
-            <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-amber-500 to-orange-600 flex items-center justify-center text-white">
+            <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-amber-500 to-orange-600 flex items-center justify-center text-white shadow-lg">
               <Lightbulb className="w-6 h-6" />
             </div>
             <div>
@@ -144,7 +158,7 @@ const StudyMode = () => {
         <div className="max-w-3xl mx-auto">
           {/* PHASE 1: Show Explanation BEFORE Question */}
           {phase === 'explanation' && (
-            <Card className="animate-fade-in border-amber-200 bg-gradient-to-br from-amber-50/50 to-orange-50/30 dark:from-amber-950/20 dark:to-orange-950/10">
+            <Card className="animate-fade-in border-amber-200 bg-gradient-to-br from-amber-50/50 to-orange-50/30 dark:from-amber-950/20 dark:to-orange-950/10 backdrop-blur-sm hover-card-lift">
               <CardHeader>
                 <CardTitle className="flex items-center gap-3 text-amber-700 dark:text-amber-400">
                   <BookOpen className="w-6 h-6" />
@@ -172,7 +186,7 @@ const StudyMode = () => {
                 
                 <Button 
                   onClick={handleReadyToAnswer}
-                  className="w-full h-14 text-lg bg-gradient-to-r from-amber-500 to-orange-600 hover:from-amber-600 hover:to-orange-700"
+                  className="w-full h-14 text-lg bg-gradient-to-r from-amber-500 to-orange-600 hover:from-amber-600 hover:to-orange-700 btn-interactive"
                 >
                   {t('studyMode.readyToAnswer', 'Sono pronto a rispondere')}
                   <ChevronRight className="w-5 h-5 ml-2" />
@@ -183,7 +197,7 @@ const StudyMode = () => {
           
           {/* PHASE 2: Show Question */}
           {phase === 'question' && (
-            <Card className="animate-fade-in">
+            <Card className="animate-fade-in backdrop-blur-sm bg-card/90 hover-card-lift">
               <CardHeader>
                 <CardTitle className="text-xl leading-relaxed">
                   {translatedQuestion}
@@ -195,7 +209,7 @@ const StudyMode = () => {
                     key={index}
                     variant="outline"
                     size="lg"
-                    className="w-full justify-start text-left h-auto py-4 px-6 text-base font-medium transition-all hover:scale-[1.02] hover:bg-primary/10"
+                    className="w-full justify-start text-left h-auto py-4 px-6 text-base font-medium transition-all hover:scale-[1.02] hover:bg-primary/10 hover-lift"
                     onClick={() => handleSelectAnswer(index)}
                   >
                     <span className="flex items-center gap-3 w-full">
@@ -212,7 +226,7 @@ const StudyMode = () => {
           
           {/* PHASE 3: Show Result */}
           {phase === 'result' && (
-            <Card className={`animate-fade-in ${
+            <Card className={`animate-fade-in backdrop-blur-sm ${
               selectedAnswer === currentQuestion.correctAnswer 
                 ? 'border-green-500 bg-green-50/30 dark:bg-green-950/20' 
                 : 'border-red-500 bg-red-50/30 dark:bg-red-950/20'
@@ -243,7 +257,7 @@ const StudyMode = () => {
                     {translatedOptions.map((option, index) => (
                       <div
                         key={index}
-                        className={`flex items-center gap-3 p-3 rounded-lg ${
+                        className={`flex items-center gap-3 p-3 rounded-lg transition-all ${
                           index === currentQuestion.correctAnswer
                             ? 'bg-green-100 dark:bg-green-900/30 border border-green-300'
                             : index === selectedAnswer
@@ -301,14 +315,14 @@ const StudyMode = () => {
                       <Button
                         onClick={handleRestart}
                         variant="outline"
-                        className="flex-1"
+                        className="flex-1 hover-lift"
                       >
                         <RotateCcw className="w-4 h-4 mr-2" />
                         {t('studyMode.restart', 'Ricomincia')}
                       </Button>
                       <Button
                         onClick={() => navigate("/")}
-                        className="flex-1"
+                        className="flex-1 btn-interactive"
                       >
                         {t('common.home', 'Home')}
                       </Button>
@@ -317,7 +331,7 @@ const StudyMode = () => {
                 ) : (
                   <Button 
                     onClick={handleNext}
-                    className="w-full h-12 text-lg mt-4"
+                    className="w-full h-12 text-lg mt-4 btn-interactive"
                   >
                     {t('studyMode.next', 'Prossima domanda')}
                     <ChevronRight className="w-5 h-5 ml-2" />

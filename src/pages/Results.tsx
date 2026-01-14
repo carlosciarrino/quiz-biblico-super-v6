@@ -13,6 +13,7 @@ import { useLeaderboard } from "@/hooks/useLeaderboard";
 import { useChallenge } from "@/hooks/useChallenge";
 import { useSoundEffects } from "@/hooks/useSoundEffects";
 import { fireConfetti, fireGoldConfetti } from "@/lib/confetti";
+import bgResults from "@/assets/bg-results.webp";
 
 const Results = () => {
   const { t } = useTranslation();
@@ -20,7 +21,7 @@ const Results = () => {
   const navigate = useNavigate();
   const { recordQuizResult } = useUserStats();
   const { addEntry, isHighScore } = useLeaderboard();
-  const { createChallenge, addAttempt, getChallenge, getChallengeUrl } = useChallenge();
+  const { createChallenge, getChallengeUrl } = useChallenge();
   const { playComplete } = useSoundEffects();
   
   const score = parseInt(searchParams.get("score") || "0");
@@ -42,7 +43,6 @@ const Results = () => {
   useEffect(() => {
     setShowConfetti(true);
     
-    // Fire confetti and play sound
     if (percentage >= 70) {
       fireGoldConfetti();
     } else {
@@ -61,7 +61,6 @@ const Results = () => {
       setHasRecorded(true);
     }
 
-    // Check for high score (only if not a challenge)
     if (!highScoreChecked && total > 0 && !challengeId) {
       if (isHighScore(percentage)) {
         setShowHighScoreDialog(true);
@@ -114,15 +113,23 @@ const Results = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-background via-background to-secondary/20 flex items-center justify-center p-4">
-      <div className="absolute top-4 right-4">
+    <div className="min-h-screen relative flex items-center justify-center p-4">
+      {/* Background Image */}
+      <div 
+        className="fixed inset-0 bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: `url(${bgResults})` }}
+      >
+        <div className="absolute inset-0 bg-background/80 backdrop-blur-sm" />
+      </div>
+
+      <div className="absolute top-4 right-4 z-10">
         <LanguageSwitcher />
       </div>
       
-      <div className={`w-full max-w-2xl animate-scale-in ${showConfetti ? "animate-fade-in" : ""}`}>
-        <div className="bg-gradient-to-br from-card to-card/80 rounded-3xl p-8 md:p-12 shadow-2xl border">
+      <div className={`relative w-full max-w-2xl animate-scale-in ${showConfetti ? "animate-fade-in" : ""}`}>
+        <div className="bg-gradient-to-br from-card/95 to-card/90 backdrop-blur-sm rounded-3xl p-8 md:p-12 shadow-2xl border">
           <div className="text-center mb-8">
-            <div className="inline-flex items-center justify-center w-24 h-24 rounded-full bg-gradient-to-br from-primary to-accent text-white mb-6 animate-scale-in">
+            <div className="inline-flex items-center justify-center w-24 h-24 rounded-full bg-gradient-to-br from-primary to-accent text-white mb-6 animate-scale-in shadow-lg">
               <Trophy className="w-12 h-12" />
             </div>
             
@@ -156,7 +163,7 @@ const Results = () => {
               {Array.from({ length: 5 }).map((_, i) => (
                 <Star
                   key={i}
-                  className={`w-8 h-8 ${
+                  className={`w-8 h-8 transition-all ${
                     i < Math.ceil(percentage / 20)
                       ? "text-primary fill-primary"
                       : "text-muted"
@@ -179,7 +186,7 @@ const Results = () => {
             <Button
               onClick={() => setShowChallengeDialog(true)}
               variant="outline"
-              className="w-full gap-2 bg-gradient-to-r from-primary/10 to-accent/10 border-primary/30 hover:from-primary/20 hover:to-accent/20"
+              className="w-full gap-2 bg-gradient-to-r from-primary/10 to-accent/10 border-primary/30 hover:from-primary/20 hover:to-accent/20 hover-lift"
             >
               <Swords className="w-5 h-5" />
               {t('challenge.challengeFriends')}
@@ -189,7 +196,7 @@ const Results = () => {
           <div className="grid gap-3 sm:grid-cols-2">
             <Button
               size="lg"
-              className="w-full gap-2"
+              className="w-full gap-2 btn-interactive"
               onClick={() => navigate(getRetryPath())}
             >
               <RotateCcw className="w-5 h-5" />
@@ -199,7 +206,7 @@ const Results = () => {
             <Button
               size="lg"
               variant="outline"
-              className="w-full gap-2"
+              className="w-full gap-2 hover-lift"
               onClick={() => navigate("/")}
             >
               <Home className="w-5 h-5" />
