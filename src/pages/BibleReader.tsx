@@ -8,6 +8,7 @@ import { useTranslation } from "react-i18next";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
 import VerseSearch from "@/components/VerseSearch";
 import { useToast } from "@/hooks/use-toast";
+import bgBibleReader from "@/assets/bg-bible-reader.webp";
 
 interface FavoriteVerse {
   id: string;
@@ -68,13 +69,21 @@ const BibleReader = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-background via-background to-secondary/20">
-      <div className="container mx-auto px-4 py-8">
+    <div className="min-h-screen relative">
+      {/* Background Image */}
+      <div 
+        className="fixed inset-0 bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: `url(${bgBibleReader})` }}
+      >
+        <div className="absolute inset-0 bg-background/85 backdrop-blur-sm" />
+      </div>
+
+      <div className="relative container mx-auto px-4 py-8">
         <div className="flex items-center justify-between mb-8">
           <Button
             variant="ghost"
             onClick={() => navigate("/")}
-            className="gap-2"
+            className="gap-2 hover-lift"
           >
             <ArrowLeft className="w-4 h-4" />
             {t('quiz.backToMenu')}
@@ -84,7 +93,7 @@ const BibleReader = () => {
 
         <div className="max-w-4xl mx-auto space-y-8">
           <header className="text-center animate-fade-in">
-            <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br from-primary to-accent text-white mb-4">
+            <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br from-primary to-accent text-white mb-4 shadow-lg">
               <Book className="w-8 h-8" />
             </div>
             <h1 className="text-4xl font-bold mb-2">{t('bible.title')}</h1>
@@ -97,7 +106,7 @@ const BibleReader = () => {
           </div>
 
           {/* Link to Bible.com */}
-          <Card className="p-6 animate-scale-in" style={{ animationDelay: "50ms" }}>
+          <Card className="p-6 animate-scale-in hover-card-lift backdrop-blur-sm bg-card/90" style={{ animationDelay: "50ms" }}>
             <h2 className="text-xl font-bold mb-4 flex items-center gap-2">
               <Book className="w-5 h-5 text-primary" />
               {t('bible.readOnline')}
@@ -107,7 +116,7 @@ const BibleReader = () => {
             </p>
             <Button
               onClick={() => window.open('https://www.bible.com', '_blank')}
-              className="w-full gap-2"
+              className="w-full gap-2 btn-interactive"
             >
               {t('bible.openBible')}
               <ExternalLink className="w-4 h-4" />
@@ -115,7 +124,7 @@ const BibleReader = () => {
           </Card>
 
           {/* Favorite Verses Section */}
-          <Card className="p-6 animate-scale-in" style={{ animationDelay: "100ms" }}>
+          <Card className="p-6 animate-scale-in hover-card-lift backdrop-blur-sm bg-card/90" style={{ animationDelay: "100ms" }}>
             <h2 className="text-xl font-bold mb-4 flex items-center gap-2">
               <Heart className="w-5 h-5 text-primary" />
               {t('bible.favorites')}
@@ -127,14 +136,16 @@ const BibleReader = () => {
                 value={newReference}
                 onChange={(e) => setNewReference(e.target.value)}
                 onKeyPress={(e) => e.key === 'Enter' && addFavorite()}
+                className="bg-background/50"
               />
               <Input
                 placeholder={t('bible.notePlaceholder')}
                 value={newNote}
                 onChange={(e) => setNewNote(e.target.value)}
                 onKeyPress={(e) => e.key === 'Enter' && addFavorite()}
+                className="bg-background/50"
               />
-              <Button onClick={addFavorite} className="w-full">
+              <Button onClick={addFavorite} className="w-full btn-interactive">
                 {t('bible.addFavorite')}
               </Button>
             </div>
@@ -148,7 +159,7 @@ const BibleReader = () => {
                 {favorites.map((favorite) => (
                   <div
                     key={favorite.id}
-                    className="flex items-start justify-between p-4 bg-secondary/50 rounded-lg"
+                    className="flex items-start justify-between p-4 bg-secondary/50 rounded-lg hover-lift transition-all"
                   >
                     <div className="flex-1">
                       <p className="font-semibold text-foreground">{favorite.reference}</p>
@@ -160,7 +171,7 @@ const BibleReader = () => {
                       variant="ghost"
                       size="sm"
                       onClick={() => deleteFavorite(favorite.id)}
-                      className="ml-2"
+                      className="ml-2 hover:bg-destructive/20"
                     >
                       <Trash2 className="w-4 h-4 text-destructive" />
                     </Button>

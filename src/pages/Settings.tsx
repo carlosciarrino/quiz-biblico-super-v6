@@ -12,7 +12,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Separator } from "@/components/ui/separator";
 import ThemeToggle from "@/components/ThemeToggle";
 import NotificationSettings from "@/components/NotificationSettings";
-import bgMain from "@/assets/bg-main.webp";
+import bgSettings from "@/assets/bg-settings.webp";
 
 const Settings = () => {
   const navigate = useNavigate();
@@ -90,16 +90,14 @@ const Settings = () => {
   };
 
   return (
-    <div 
-      className="min-h-screen bg-background relative"
-      style={{
-        backgroundImage: `url(${bgMain})`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundAttachment: 'fixed'
-      }}
-    >
-      <div className="absolute inset-0 bg-background/85 dark:bg-background/90" />
+    <div className="min-h-screen relative">
+      {/* Background Image */}
+      <div 
+        className="fixed inset-0 bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: `url(${bgSettings})` }}
+      >
+        <div className="absolute inset-0 bg-background/85 backdrop-blur-sm" />
+      </div>
       
       <div className="relative z-10 container mx-auto px-4 py-8 max-w-2xl">
         <motion.div

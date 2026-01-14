@@ -14,6 +14,7 @@ import LanguageSwitcher from "@/components/LanguageSwitcher";
 import { useSoundEffects } from "@/hooks/useSoundEffects";
 import { fireCorrectAnswer } from "@/lib/confetti";
 import { useTimedChallengeAchievements, timedChallengeAchievements } from "@/hooks/useTimedChallengeAchievements";
+import bgTimedChallenge from "@/assets/bg-timed-challenge.webp";
 
 type Difficulty = "easy" | "medium" | "hard";
 
@@ -30,9 +31,9 @@ interface GameState {
   reachedHard: boolean;
 }
 
-const INITIAL_TIME = 60; // 60 seconds total game time
-const TIME_BONUS_CORRECT = 3; // +3 seconds for correct answer
-const TIME_PENALTY_WRONG = 5; // -5 seconds for wrong answer
+const INITIAL_TIME = 60;
+const TIME_BONUS_CORRECT = 3;
+const TIME_PENALTY_WRONG = 5;
 
 const TimedChallenge = () => {
   const { t } = useTranslation();
@@ -67,15 +68,12 @@ const TimedChallenge = () => {
   const [showAchievements, setShowAchievements] = useState(false);
   const highScore = achievementStats.highScore;
 
-
-  // Get next question based on difficulty
   const getNextQuestion = useCallback((difficulty: Difficulty, answered: number[]): Question | null => {
     const available = questions.filter(
       (q) => !answered.includes(q.id) && q.difficulty === difficulty
     );
     
     if (available.length === 0) {
-      // Fallback to any unanswered question
       const fallback = questions.filter((q) => !answered.includes(q.id));
       if (fallback.length === 0) return null;
       return fallback[Math.floor(Math.random() * fallback.length)];
@@ -84,7 +82,6 @@ const TimedChallenge = () => {
     return available[Math.floor(Math.random() * available.length)];
   }, []);
 
-  // Start game
   const startGame = useCallback(() => {
     const firstQuestion = getNextQuestion("easy", []);
     setCurrentQuestion(firstQuestion);
@@ -103,7 +100,6 @@ const TimedChallenge = () => {
     });
   }, [getNextQuestion]);
 
-  // Timer effect
   useEffect(() => {
     if (gameState.status !== "playing") return;
 
@@ -121,7 +117,6 @@ const TimedChallenge = () => {
     };
   }, [gameState.status]);
 
-  // Record game result on game over
   useEffect(() => {
     if (gameState.status === "gameOver" && gameState.questionsAnswered > 0) {
       const isPerfect = gameState.correctAnswers === gameState.questionsAnswered && gameState.questionsAnswered >= 10;
@@ -136,21 +131,18 @@ const TimedChallenge = () => {
     }
   }, [gameState.status]);
 
-  // Calculate new difficulty based on streak
   const calculateDifficulty = (streak: number): Difficulty => {
     if (streak >= 6) return "hard";
     if (streak >= 3) return "medium";
     return "easy";
   };
 
-  // Calculate multiplier based on difficulty and streak
   const calculateMultiplier = (difficulty: Difficulty, streak: number): number => {
     const difficultyMultiplier = difficulty === "hard" ? 3 : difficulty === "medium" ? 2 : 1;
-    const streakBonus = Math.min(Math.floor(streak / 2), 3); // Max +3 from streak
+    const streakBonus = Math.min(Math.floor(streak / 2), 3);
     return difficultyMultiplier + streakBonus;
   };
 
-  // Handle answer
   const handleAnswer = useCallback((isCorrect: boolean) => {
     if (gameState.status !== "playing") return;
 
@@ -188,7 +180,6 @@ const TimedChallenge = () => {
       };
     });
 
-    // Get next question
     if (currentQuestion) {
       const newAnswered = [...answeredIds, currentQuestion.id];
       setAnsweredIds(newAnswered);
@@ -223,10 +214,17 @@ const TimedChallenge = () => {
   // Intro screen
   if (gameState.status === "intro") {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-background via-background to-secondary/20">
-        <div className="container mx-auto px-4 py-8">
+      <div className="min-h-screen relative">
+        <div 
+          className="fixed inset-0 bg-cover bg-center bg-no-repeat"
+          style={{ backgroundImage: `url(${bgTimedChallenge})` }}
+        >
+          <div className="absolute inset-0 bg-background/80 backdrop-blur-sm" />
+        </div>
+        
+        <div className="relative container mx-auto px-4 py-8">
           <div className="mb-6 flex items-center justify-between">
-            <Button variant="ghost" onClick={() => navigate("/")} className="gap-2">
+            <Button variant="ghost" onClick={() => navigate("/")} className="gap-2 hover-lift">
               <ArrowLeft className="w-4 h-4" />
               {t('common.back')}
             </Button>
@@ -235,7 +233,7 @@ const TimedChallenge = () => {
 
           <div className="max-w-2xl mx-auto text-center space-y-8">
             <div className="space-y-4">
-              <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-primary/10">
+              <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-primary/10 shadow-lg animate-scale-in">
                 <Zap className="w-10 h-10 text-primary" />
               </div>
               <h1 className="text-4xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
@@ -247,21 +245,21 @@ const TimedChallenge = () => {
             </div>
 
             <div className="grid gap-4 text-left">
-              <Card className="p-4 flex items-start gap-3">
+              <Card className="p-4 flex items-start gap-3 hover-card-lift backdrop-blur-sm bg-card/90">
                 <Clock className="w-5 h-5 text-primary mt-0.5" />
                 <div>
                   <p className="font-medium">{t('timedChallenge.rules.time')}</p>
                   <p className="text-sm text-muted-foreground">{t('timedChallenge.rules.timeDesc')}</p>
                 </div>
               </Card>
-              <Card className="p-4 flex items-start gap-3">
+              <Card className="p-4 flex items-start gap-3 hover-card-lift backdrop-blur-sm bg-card/90">
                 <Target className="w-5 h-5 text-primary mt-0.5" />
                 <div>
                   <p className="font-medium">{t('timedChallenge.rules.difficulty')}</p>
                   <p className="text-sm text-muted-foreground">{t('timedChallenge.rules.difficultyDesc')}</p>
                 </div>
               </Card>
-              <Card className="p-4 flex items-start gap-3">
+              <Card className="p-4 flex items-start gap-3 hover-card-lift backdrop-blur-sm bg-card/90">
                 <Star className="w-5 h-5 text-primary mt-0.5" />
                 <div>
                   <p className="font-medium">{t('timedChallenge.rules.multiplier')}</p>
@@ -271,7 +269,7 @@ const TimedChallenge = () => {
             </div>
 
             {highScore > 0 && (
-              <Card className="p-4 bg-primary/5 border-primary/20">
+              <Card className="p-4 bg-primary/5 border-primary/20 backdrop-blur-sm">
                 <div className="flex items-center justify-center gap-2">
                   <Trophy className="w-5 h-5 text-primary" />
                   <span className="text-muted-foreground">{t('timedChallenge.highScore')}:</span>
@@ -281,7 +279,7 @@ const TimedChallenge = () => {
             )}
 
             <div className="flex gap-4 justify-center">
-              <Button size="lg" onClick={startGame} className="gap-2 text-lg px-8">
+              <Button size="lg" onClick={startGame} className="gap-2 text-lg px-8 btn-interactive">
                 <Play className="w-5 h-5" />
                 {t('timedChallenge.start')}
               </Button>
@@ -289,7 +287,7 @@ const TimedChallenge = () => {
                 size="lg" 
                 variant="outline" 
                 onClick={() => setShowAchievements(!showAchievements)} 
-                className="gap-2"
+                className="gap-2 hover-lift"
               >
                 <Award className="w-5 h-5" />
                 {t('timedChallengeAchievements.title')}
@@ -298,7 +296,6 @@ const TimedChallenge = () => {
 
             {showAchievements && (
               <div className="animate-fade-in space-y-6">
-                {/* Badge Display */}
                 <AchievementBadgeDisplay 
                   stats={achievementStats}
                   unlockedCount={unlockedAchievements.length}
@@ -323,8 +320,15 @@ const TimedChallenge = () => {
     const isNewHighScore = gameState.score >= highScore && gameState.score > 0;
 
     return (
-      <div className="min-h-screen bg-gradient-to-br from-background via-background to-secondary/20">
-        <div className="container mx-auto px-4 py-8">
+      <div className="min-h-screen relative">
+        <div 
+          className="fixed inset-0 bg-cover bg-center bg-no-repeat"
+          style={{ backgroundImage: `url(${bgTimedChallenge})` }}
+        >
+          <div className="absolute inset-0 bg-background/80 backdrop-blur-sm" />
+        </div>
+        
+        <div className="relative container mx-auto px-4 py-8">
           <div className="max-w-2xl mx-auto text-center space-y-8">
             <div className="space-y-4">
               {isNewHighScore && (
@@ -336,7 +340,7 @@ const TimedChallenge = () => {
               <h1 className="text-4xl font-bold">{t('timedChallenge.gameOver')}</h1>
             </div>
 
-            <Card className="p-8 space-y-6">
+            <Card className="p-8 space-y-6 backdrop-blur-sm bg-card/90">
               <div className="text-center">
                 <p className="text-muted-foreground mb-2">{t('timedChallenge.finalScore')}</p>
                 <p className="text-6xl font-bold text-primary">{gameState.score}</p>
@@ -361,18 +365,18 @@ const TimedChallenge = () => {
             </Card>
 
             <div className="flex gap-4 justify-center flex-wrap">
-              <Button variant="outline" onClick={() => navigate("/")} className="gap-2">
+              <Button variant="outline" onClick={() => navigate("/")} className="gap-2 hover-lift">
                 <ArrowLeft className="w-4 h-4" />
                 {t('common.back')}
               </Button>
-              <Button onClick={startGame} className="gap-2">
+              <Button onClick={startGame} className="gap-2 btn-interactive">
                 <Play className="w-4 h-4" />
                 {t('timedChallenge.playAgain')}
               </Button>
               <Button 
                 variant="outline"
                 onClick={() => setShowAchievements(!showAchievements)} 
-                className="gap-2"
+                className="gap-2 hover-lift"
               >
                 <Award className="w-4 h-4" />
                 {t('timedChallengeAchievements.title')}
@@ -381,7 +385,6 @@ const TimedChallenge = () => {
 
             {showAchievements && (
               <div className="animate-fade-in space-y-6">
-                {/* Badge Display */}
                 <AchievementBadgeDisplay 
                   stats={achievementStats}
                   unlockedCount={unlockedAchievements.length}
@@ -398,7 +401,6 @@ const TimedChallenge = () => {
           </div>
         </div>
 
-        {/* Achievement Unlocked Toast */}
         <AchievementUnlockedToast 
           achievements={newlyUnlocked} 
           onClose={clearNewlyUnlocked} 
@@ -409,17 +411,24 @@ const TimedChallenge = () => {
 
   // Playing screen
   return (
-    <div className="min-h-screen bg-gradient-to-br from-background via-background to-secondary/20">
-      <div className="container mx-auto px-4 py-8">
+    <div className="min-h-screen relative">
+      <div 
+        className="fixed inset-0 bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: `url(${bgTimedChallenge})` }}
+      >
+        <div className="absolute inset-0 bg-background/80 backdrop-blur-sm" />
+      </div>
+
+      <div className="relative container mx-auto px-4 py-8">
         {/* Header */}
         <div className="mb-6 flex items-center justify-between">
-          <Button variant="ghost" onClick={() => navigate("/")} className="gap-2">
+          <Button variant="ghost" onClick={() => navigate("/")} className="gap-2 hover-lift">
             <ArrowLeft className="w-4 h-4" />
             {t('common.back')}
           </Button>
 
           <div className="flex items-center gap-3">
-            <div className="flex items-center gap-2 bg-card px-4 py-2 rounded-lg border shadow-sm">
+            <div className="flex items-center gap-2 bg-card/90 backdrop-blur-sm px-4 py-2 rounded-lg border shadow-sm">
               <Trophy className="w-5 h-5 text-primary" />
               <span className="font-bold text-lg">{gameState.score}</span>
             </div>
@@ -450,15 +459,13 @@ const TimedChallenge = () => {
 
         {/* Stats row */}
         <div className="mb-6 flex items-center justify-center gap-6">
-          <div className="flex items-center gap-2 text-sm">
+          <div className="flex items-center gap-2 text-sm bg-card/90 backdrop-blur-sm px-3 py-1.5 rounded-lg">
             <Zap className="w-4 h-4 text-primary" />
-            <span className="text-muted-foreground">{t('timedChallenge.streak')}:</span>
-            <span className="font-bold">{gameState.streak}</span>
+            <span className="font-medium">{t('timedChallenge.streak')}: {gameState.streak}</span>
           </div>
-          <div className="flex items-center gap-2 text-sm">
-            <Star className="w-4 h-4 text-primary" />
-            <span className="text-muted-foreground">{t('timedChallenge.multiplierLabel')}:</span>
-            <span className="font-bold">x{gameState.multiplier}</span>
+          <div className="flex items-center gap-2 text-sm bg-card/90 backdrop-blur-sm px-3 py-1.5 rounded-lg">
+            <Star className="w-4 h-4 text-yellow-500" />
+            <span className="font-medium">{gameState.multiplier}x</span>
           </div>
         </div>
 
@@ -468,7 +475,7 @@ const TimedChallenge = () => {
             question={currentQuestion}
             onAnswer={handleAnswer}
             questionNumber={gameState.questionsAnswered + 1}
-            totalQuestions={0} // Hide total in timed mode
+            totalQuestions={0}
           />
         )}
       </div>

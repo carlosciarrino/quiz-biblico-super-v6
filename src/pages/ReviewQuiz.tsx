@@ -10,6 +10,7 @@ import LanguageSwitcher from "@/components/LanguageSwitcher";
 import { useSoundEffects } from "@/hooks/useSoundEffects";
 import { fireCorrectAnswer } from "@/lib/confetti";
 import { useWrongAnswers } from "@/hooks/useWrongAnswers";
+import bgReview from "@/assets/bg-review.webp";
 
 const ReviewQuiz = () => {
   const { t } = useTranslation();
@@ -45,13 +46,11 @@ const ReviewQuiz = () => {
       playCorrect();
       fireCorrectAnswer();
       setScore((prev) => prev + 5);
-      // Remove from wrong answers if answered correctly
       removeWrongAnswer(currentQuestion.id);
       setMasteredCount(prev => prev + 1);
     } else {
       playIncorrect();
       setScore((prev) => Math.max(0, prev - 1));
-      // Record the wrong answer again
       recordWrongAnswer(currentQuestion.id, -1, currentQuestion.correctAnswer);
     }
 
@@ -80,19 +79,27 @@ const ReviewQuiz = () => {
   // No wrong answers to review
   if (wrongAnswers.length === 0) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-background via-background to-secondary/20 flex items-center justify-center">
-        <div className="text-center max-w-md mx-auto p-8">
-          <div className="w-20 h-20 bg-green-500/20 rounded-full flex items-center justify-center mx-auto mb-6">
-            <CheckCircle2 className="w-10 h-10 text-green-500" />
+      <div className="min-h-screen relative">
+        <div 
+          className="fixed inset-0 bg-cover bg-center bg-no-repeat"
+          style={{ backgroundImage: `url(${bgReview})` }}
+        >
+          <div className="absolute inset-0 bg-background/85 backdrop-blur-sm" />
+        </div>
+        <div className="relative flex items-center justify-center min-h-screen">
+          <div className="text-center max-w-md mx-auto p-8">
+            <div className="w-20 h-20 bg-green-500/20 rounded-full flex items-center justify-center mx-auto mb-6 animate-scale-in">
+              <CheckCircle2 className="w-10 h-10 text-green-500" />
+            </div>
+            <h1 className="text-3xl font-bold mb-4">{t('review.noErrors')}</h1>
+            <p className="text-muted-foreground mb-8">
+              {t('review.noErrorsDesc')}
+            </p>
+            <Button onClick={() => navigate("/")} className="gap-2 btn-interactive">
+              <ArrowLeft className="w-4 h-4" />
+              {t('quiz.backToMenu')}
+            </Button>
           </div>
-          <h1 className="text-3xl font-bold mb-4">{t('review.noErrors')}</h1>
-          <p className="text-muted-foreground mb-8">
-            {t('review.noErrorsDesc')}
-          </p>
-          <Button onClick={() => navigate("/")} className="gap-2">
-            <ArrowLeft className="w-4 h-4" />
-            {t('quiz.backToMenu')}
-          </Button>
         </div>
       </div>
     );
@@ -102,32 +109,40 @@ const ReviewQuiz = () => {
   if (isComplete) {
     const percentage = Math.round((masteredCount / questions.length) * 100);
     return (
-      <div className="min-h-screen bg-gradient-to-br from-background via-background to-secondary/20 flex items-center justify-center">
-        <div className="text-center max-w-md mx-auto p-8">
-          <div className="w-20 h-20 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-6">
-            <Trophy className="w-10 h-10 text-primary" />
-          </div>
-          <h1 className="text-3xl font-bold mb-2">{t('review.complete')}</h1>
-          <p className="text-muted-foreground mb-6">
-            {t('review.masteredCount', { count: masteredCount, total: questions.length })}
-          </p>
-          
-          <div className="bg-card rounded-xl p-6 mb-6 border">
-            <div className="text-4xl font-bold text-primary mb-2">{percentage}%</div>
-            <div className="text-sm text-muted-foreground">{t('review.accuracy')}</div>
-          </div>
+      <div className="min-h-screen relative">
+        <div 
+          className="fixed inset-0 bg-cover bg-center bg-no-repeat"
+          style={{ backgroundImage: `url(${bgReview})` }}
+        >
+          <div className="absolute inset-0 bg-background/85 backdrop-blur-sm" />
+        </div>
+        <div className="relative flex items-center justify-center min-h-screen">
+          <div className="text-center max-w-md mx-auto p-8">
+            <div className="w-20 h-20 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-6 animate-scale-in">
+              <Trophy className="w-10 h-10 text-primary" />
+            </div>
+            <h1 className="text-3xl font-bold mb-2">{t('review.complete')}</h1>
+            <p className="text-muted-foreground mb-6">
+              {t('review.masteredCount', { count: masteredCount, total: questions.length })}
+            </p>
+            
+            <div className="bg-card/90 backdrop-blur-sm rounded-xl p-6 mb-6 border shadow-lg">
+              <div className="text-4xl font-bold text-primary mb-2">{percentage}%</div>
+              <div className="text-sm text-muted-foreground">{t('review.accuracy')}</div>
+            </div>
 
-          <div className="flex gap-3 justify-center">
-            <Button variant="outline" onClick={() => navigate("/")} className="gap-2">
-              <ArrowLeft className="w-4 h-4" />
-              {t('quiz.backToMenu')}
-            </Button>
-            {wrongAnswers.length > 0 && (
-              <Button onClick={handleRestart} className="gap-2">
-                <RotateCcw className="w-4 h-4" />
-                {t('review.continueReview')}
+            <div className="flex gap-3 justify-center">
+              <Button variant="outline" onClick={() => navigate("/")} className="gap-2 hover-lift">
+                <ArrowLeft className="w-4 h-4" />
+                {t('quiz.backToMenu')}
               </Button>
-            )}
+              {wrongAnswers.length > 0 && (
+                <Button onClick={handleRestart} className="gap-2 btn-interactive">
+                  <RotateCcw className="w-4 h-4" />
+                  {t('review.continueReview')}
+                </Button>
+              )}
+            </div>
           </div>
         </div>
       </div>
@@ -141,20 +156,27 @@ const ReviewQuiz = () => {
   const currentQuestion = questions[currentQuestionIndex];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-background via-background to-secondary/20">
-      <div className="container mx-auto px-4 py-8">
+    <div className="min-h-screen relative">
+      <div 
+        className="fixed inset-0 bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: `url(${bgReview})` }}
+      >
+        <div className="absolute inset-0 bg-background/85 backdrop-blur-sm" />
+      </div>
+
+      <div className="relative container mx-auto px-4 py-8">
         <div className="mb-6 flex items-center justify-between">
           <Button
             variant="ghost"
             onClick={() => navigate("/")}
-            className="gap-2"
+            className="gap-2 hover-lift"
           >
             <ArrowLeft className="w-4 h-4" />
             {t('quiz.backToMenu')}
           </Button>
 
           <div className="flex items-center gap-3">
-            <div className="flex items-center gap-2 bg-card px-4 py-2 rounded-lg border shadow-sm">
+            <div className="flex items-center gap-2 bg-card/90 backdrop-blur-sm px-4 py-2 rounded-lg border shadow-sm">
               <Trophy className="w-5 h-5 text-primary" />
               <span className="font-bold text-lg">{score}</span>
             </div>
