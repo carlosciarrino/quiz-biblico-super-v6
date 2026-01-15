@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
-import { ArrowLeft, Volume2, VolumeX, Bell, BellOff, Gamepad2, Palette, Languages } from "lucide-react";
+import { ArrowLeft, Volume2, VolumeX, Bell, BellOff, Gamepad2, Palette, Languages, Play } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Switch } from "@/components/ui/switch";
@@ -12,11 +12,13 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Separator } from "@/components/ui/separator";
 import ThemeToggle from "@/components/ThemeToggle";
 import NotificationSettings from "@/components/NotificationSettings";
+import { useSoundEffects } from "@/hooks/useSoundEffects";
 import bgSettings from "@/assets/bg-settings.webp";
 
 const Settings = () => {
   const navigate = useNavigate();
   const { t, i18n } = useTranslation();
+  const { playBells, playCorrect, playChoir } = useSoundEffects();
   
   // Sound settings
   const [soundEnabled, setSoundEnabled] = useState(() => {
@@ -204,16 +206,53 @@ const Settings = () => {
                     initial={{ opacity: 0, height: 0 }}
                     animate={{ opacity: 1, height: "auto" }}
                     exit={{ opacity: 0, height: 0 }}
-                    className="space-y-2"
+                    className="space-y-4"
                   >
-                    <Label>{t("settings.volume", "Volume")}: {soundVolume}%</Label>
-                    <Slider
-                      value={[soundVolume]}
-                      onValueChange={(value) => setSoundVolume(value[0])}
-                      max={100}
-                      step={5}
-                      className="w-full"
-                    />
+                    <div className="space-y-2">
+                      <Label>{t("settings.volume", "Volume")}: {soundVolume}%</Label>
+                      <Slider
+                        value={[soundVolume]}
+                        onValueChange={(value) => setSoundVolume(value[0])}
+                        max={100}
+                        step={5}
+                        className="w-full"
+                      />
+                    </div>
+                    
+                    <Separator />
+                    
+                    <div className="space-y-2">
+                      <Label>{t("settings.testSounds", "Test Sounds")}</Label>
+                      <div className="flex flex-wrap gap-2">
+                        <Button
+                          variant="outline"
+                          size="sm"
+                          onClick={playCorrect}
+                          className="gap-2"
+                        >
+                          <Play className="h-3 w-3" />
+                          {t("settings.correctSound", "Correct")}
+                        </Button>
+                        <Button
+                          variant="outline"
+                          size="sm"
+                          onClick={playBells}
+                          className="gap-2"
+                        >
+                          <Play className="h-3 w-3" />
+                          {t("settings.bellsSound", "Bells")}
+                        </Button>
+                        <Button
+                          variant="outline"
+                          size="sm"
+                          onClick={playChoir}
+                          className="gap-2"
+                        >
+                          <Play className="h-3 w-3" />
+                          {t("settings.choirSound", "Choir")}
+                        </Button>
+                      </div>
+                    </div>
                   </motion.div>
                 )}
               </CardContent>
