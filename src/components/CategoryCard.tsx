@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { BookOpen, Scroll, Users, ArrowRight, Sparkles, Flame, Eye } from "lucide-react";
 import { useTranslation } from "react-i18next";
+import { useSoundEffects } from "@/hooks/useSoundEffects";
 
 // Import category images
 import oldTestamentImg from "@/assets/category-old-testament.webp";
@@ -22,8 +23,25 @@ interface CategoryCardProps {
   onClick: () => void;
 }
 
+const getCategoryKey = (categoryName: string) => {
+  const map: Record<string, string> = {
+    "Antico Testamento": "oldTestament",
+    "Nuovo Testamento": "newTestament",
+    "Personaggi Biblici": "biblicalCharacters",
+    "Pentateuco": "pentateuch",
+    "Profeti Minori": "minorProphets",
+    "Quattro Vangeli": "fourGospels",
+    "Lettere Paoline": "paulineLetters",
+    "Letteratura Sapienziale": "wisdomLiterature",
+    "Atti degli Apostoli": "actsApostles",
+    "Apocalisse": "revelation"
+  };
+  return map[categoryName] || "oldTestament";
+};
+
 const CategoryCard = ({ name, description, icon, color, onClick }: CategoryCardProps) => {
   const { t } = useTranslation();
+  const { playCategorySound } = useSoundEffects();
   
   const getIcon = () => {
     switch (icon) {
@@ -61,10 +79,16 @@ const CategoryCard = ({ name, description, icon, color, onClick }: CategoryCardP
     return imageMap[key] || oldTestamentImg;
   };
 
+  const handleClick = () => {
+    const categoryKey = getCategoryKey(name);
+    playCategorySound(categoryKey);
+    onClick();
+  };
+
   return (
     <div
       className="group relative overflow-hidden rounded-2xl border shadow-md hover:shadow-xl transition-all duration-300 cursor-pointer animate-scale-in h-64"
-      onClick={onClick}
+      onClick={handleClick}
     >
       {/* Background Image */}
       <img
@@ -104,22 +128,6 @@ const CategoryCard = ({ name, description, icon, color, onClick }: CategoryCardP
       </div>
     </div>
   );
-};
-
-const getCategoryKey = (categoryName: string) => {
-  const map: Record<string, string> = {
-    "Antico Testamento": "oldTestament",
-    "Nuovo Testamento": "newTestament",
-    "Personaggi Biblici": "biblicalCharacters",
-    "Pentateuco": "pentateuch",
-    "Profeti Minori": "minorProphets",
-    "Quattro Vangeli": "fourGospels",
-    "Lettere Paoline": "paulineLetters",
-    "Letteratura Sapienziale": "wisdomLiterature",
-    "Atti degli Apostoli": "actsApostles",
-    "Apocalisse": "revelation"
-  };
-  return map[categoryName] || "oldTestament";
 };
 
 export default CategoryCard;
