@@ -1,4 +1,4 @@
-import { useCallback, useRef } from 'react';
+import { useCallback, useRef, useMemo } from 'react';
 
 type SoundType = 'correct' | 'incorrect' | 'complete' | 'click';
 type CategorySound = 'bells' | 'harp' | 'choir' | 'organ' | 'trumpet' | 'shofar';
@@ -79,6 +79,20 @@ const CATEGORY_SOUND_MAP: Record<string, CategorySound> = {
   revelation: 'trumpet',
 };
 
+// Helper to get sound settings from localStorage
+const getSoundSettings = () => {
+  try {
+    const enabled = localStorage.getItem("bible-quiz-sound-enabled");
+    const volume = localStorage.getItem("bible-quiz-sound-volume");
+    return {
+      enabled: enabled !== null ? JSON.parse(enabled) : true,
+      volume: volume !== null ? JSON.parse(volume) / 100 : 0.8, // Convert 0-100 to 0-1
+    };
+  } catch {
+    return { enabled: true, volume: 0.8 };
+  }
+};
+
 export const useSoundEffects = () => {
   const audioContextRef = useRef<AudioContext | null>(null);
 
@@ -90,6 +104,9 @@ export const useSoundEffects = () => {
   }, []);
 
   const playSound = useCallback((type: SoundType) => {
+    const { enabled, volume } = getSoundSettings();
+    if (!enabled || volume === 0) return;
+
     try {
       const audioContext = getAudioContext();
       const sounds = SOUNDS[type];
@@ -102,7 +119,8 @@ export const useSoundEffects = () => {
         oscillator.type = sound.type;
         oscillator.frequency.setValueAtTime(sound.frequency, startTime);
 
-        gainNode.gain.setValueAtTime(0.3, startTime);
+        const baseGain = 0.3 * volume;
+        gainNode.gain.setValueAtTime(baseGain, startTime);
         gainNode.gain.exponentialRampToValueAtTime(0.01, startTime + sound.duration);
 
         oscillator.connect(gainNode);
@@ -119,6 +137,9 @@ export const useSoundEffects = () => {
   }, [getAudioContext]);
 
   const playCategorySound = useCallback((categoryKey: string) => {
+    const { enabled, volume } = getSoundSettings();
+    if (!enabled || volume === 0) return;
+
     try {
       const audioContext = getAudioContext();
       const soundType = CATEGORY_SOUND_MAP[categoryKey] || 'bells';
@@ -157,29 +178,29 @@ export const useSoundEffects = () => {
         switch (config.envelope) {
           case 'bell':
             gainNode.gain.setValueAtTime(0, noteStart);
-            gainNode.gain.linearRampToValueAtTime(0.2, noteStart + 0.01);
+            gainNode.gain.linearRampToValueAtTime(0.2 * volume, noteStart + 0.01);
             gainNode.gain.exponentialRampToValueAtTime(0.01, noteEnd);
             break;
           case 'harp':
             gainNode.gain.setValueAtTime(0, noteStart);
-            gainNode.gain.linearRampToValueAtTime(0.25, noteStart + 0.02);
+            gainNode.gain.linearRampToValueAtTime(0.25 * volume, noteStart + 0.02);
             gainNode.gain.exponentialRampToValueAtTime(0.01, noteEnd);
             break;
           case 'choir':
             gainNode.gain.setValueAtTime(0, noteStart);
-            gainNode.gain.linearRampToValueAtTime(0.15, noteStart + 0.3);
-            gainNode.gain.setValueAtTime(0.15, noteEnd - 0.4);
+            gainNode.gain.linearRampToValueAtTime(0.15 * volume, noteStart + 0.3);
+            gainNode.gain.setValueAtTime(0.15 * volume, noteEnd - 0.4);
             gainNode.gain.linearRampToValueAtTime(0.01, noteEnd);
             break;
           case 'organ':
             gainNode.gain.setValueAtTime(0, noteStart);
-            gainNode.gain.linearRampToValueAtTime(0.12, noteStart + 0.1);
-            gainNode.gain.setValueAtTime(0.12, noteEnd - 0.2);
+            gainNode.gain.linearRampToValueAtTime(0.12 * volume, noteStart + 0.1);
+            gainNode.gain.setValueAtTime(0.12 * volume, noteEnd - 0.2);
             gainNode.gain.linearRampToValueAtTime(0.01, noteEnd);
             break;
           case 'brass':
             gainNode.gain.setValueAtTime(0, noteStart);
-            gainNode.gain.linearRampToValueAtTime(0.25, noteStart + 0.05);
+            gainNode.gain.linearRampToValueAtTime(0.25 * volume, noteStart + 0.05);
             gainNode.gain.exponentialRampToValueAtTime(0.01, noteEnd);
             break;
         }
