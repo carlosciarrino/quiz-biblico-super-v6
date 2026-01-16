@@ -305,6 +305,13 @@
     "correct": "Correct Answer! 🎉",
     "incorrect": "Wrong Answer"
   },
+  "verification": {
+    "verifiedAnswer": "NR2006 Verified Answer",
+    "yourAnswer": "Your answer",
+    "correctAnswer": "Correct answer",
+    "verifyNR2006": "Verify on NR2006",
+    "source": "Source: Nuova Riveduta 2006 (NR2006)"
+  },
   "wrongAnswersStats": {
     "title": "Error Analysis",
     "questionsToReview": "Questions to review",

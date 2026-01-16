@@ -290,6 +290,13 @@
     "correct": "¡Respuesta Correcta! 🎉",
     "incorrect": "Respuesta Incorrecta"
   },
+  "verification": {
+    "verifiedAnswer": "Respuesta Verificada NR2006",
+    "yourAnswer": "Tu respuesta",
+    "correctAnswer": "Respuesta correcta",
+    "verifyNR2006": "Verificar en NR2006",
+    "source": "Fuente: Nuova Riveduta 2006 (NR2006)"
+  },
   "wrongAnswersStats": {
     "title": "Análisis de Errores",
     "questionsToReview": "Preguntas para repasar",
