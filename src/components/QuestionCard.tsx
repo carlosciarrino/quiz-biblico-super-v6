@@ -4,7 +4,7 @@ import { Check, X } from "lucide-react";
 import { Question, getTranslatedQuestion, getTranslatedOptions } from "@/data/questions";
 import { getTranslatedExplanation } from "@/data/bibleReferences";
 import { useTranslation } from "react-i18next";
-import BibleExplanation from "./BibleExplanation";
+import VerseVerification from "./VerseVerification";
 
 interface QuestionCardProps {
   question: Question;
@@ -35,7 +35,7 @@ const QuestionCard = ({ question, onAnswer, questionNumber, totalQuestions }: Qu
     // Show explanation for ALL answers (correct and incorrect)
     setShowExplanation(true);
     
-    const delay = isCorrect ? 3500 : 5000; // Longer delay for wrong answers
+    const delay = isCorrect ? 4000 : 6000; // Longer delay for wrong answers to read verification
     
     setTimeout(() => {
       onAnswer(isCorrect, isCorrect ? undefined : index);
@@ -59,6 +59,10 @@ const QuestionCard = ({ question, onAnswer, questionNumber, totalQuestions }: Qu
     if (index === selectedAnswer) return <X className="w-5 h-5" />;
     return null;
   };
+
+  // Get the correct answer text for verification display
+  const correctAnswerText = translatedOptions[question.correctAnswer];
+  const selectedAnswerText = selectedAnswer !== null ? translatedOptions[selectedAnswer] : undefined;
 
   return (
     <div className="w-full max-w-2xl mx-auto animate-fade-in">
@@ -109,12 +113,14 @@ const QuestionCard = ({ question, onAnswer, questionNumber, totalQuestions }: Qu
           ))}
         </div>
 
-        {/* Bible Explanation for all answers */}
-        <BibleExplanation
+        {/* Enhanced Bible Verification */}
+        <VerseVerification
           reference={reference}
           explanation={explanation}
           show={showExplanation}
           isCorrect={!wasIncorrect}
+          correctAnswer={correctAnswerText}
+          selectedAnswer={wasIncorrect ? selectedAnswerText : undefined}
         />
       </div>
     </div>
