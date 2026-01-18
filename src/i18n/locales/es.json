@@ -310,6 +310,19 @@
     "progressTab": "Progreso",
     "errorsTab": "Errores"
   },
+  "keyVerses": {
+    "title": "Versiculos Clave",
+    "subtitle": "Los versiculos mas importantes para cada categoria",
+    "searchPlaceholder": "Buscar versiculos...",
+    "allCategories": "Todas las categorias",
+    "favoritesOnly": "Solo favoritos",
+    "noResults": "No se encontraron versiculos",
+    "copySuccess": "Versiculo copiado!",
+    "addedToFavorites": "Anadido a favoritos",
+    "removedFromFavorites": "Eliminado de favoritos",
+    "readOnBibleGateway": "Leer en BibleGateway",
+    "verses": "versiculos"
+  },
   "sync": {
     "syncing": "Sincronizando...",
     "success": "¡Sincronizado!",
