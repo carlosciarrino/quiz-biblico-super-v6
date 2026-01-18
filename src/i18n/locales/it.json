@@ -433,6 +433,19 @@
     "daily_warrior": { "name": "Guerriero Quotidiano", "desc": "Gioca 7 giorni consecutivi" },
     "monthly_devotion": { "name": "Devozione Mensile", "desc": "Gioca 30 giorni consecutivi" }
   },
+  "keyVerses": {
+    "title": "Versetti Chiave",
+    "subtitle": "I versetti più importanti per ogni categoria",
+    "searchPlaceholder": "Cerca versetti...",
+    "allCategories": "Tutte le categorie",
+    "favoritesOnly": "Solo preferiti",
+    "noResults": "Nessun versetto trovato",
+    "copySuccess": "Versetto copiato!",
+    "addedToFavorites": "Aggiunto ai preferiti",
+    "removedFromFavorites": "Rimosso dai preferiti",
+    "readOnBibleGateway": "Leggi su BibleGateway",
+    "verses": "versetti"
+  },
   "sync": {
     "syncing": "Sincronizzazione in corso...",
     "success": "Sincronizzato!",

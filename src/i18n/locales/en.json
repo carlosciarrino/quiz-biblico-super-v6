@@ -429,6 +429,19 @@
     "daily_warrior": { "name": "Daily Warrior", "desc": "Play 7 consecutive days" },
     "monthly_devotion": { "name": "Monthly Devotion", "desc": "Play 30 consecutive days" }
   },
+  "keyVerses": {
+    "title": "Key Verses",
+    "subtitle": "The most important verses for each category",
+    "searchPlaceholder": "Search verses...",
+    "allCategories": "All categories",
+    "favoritesOnly": "Favorites only",
+    "noResults": "No verses found",
+    "copySuccess": "Verse copied!",
+    "addedToFavorites": "Added to favorites",
+    "removedFromFavorites": "Removed from favorites",
+    "readOnBibleGateway": "Read on BibleGateway",
+    "verses": "verses"
+  },
   "sync": {
     "syncing": "Syncing...",
     "success": "Synced!",

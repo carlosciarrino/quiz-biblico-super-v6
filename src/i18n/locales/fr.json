@@ -310,6 +310,19 @@
     "progressTab": "Progrès",
     "errorsTab": "Erreurs"
   },
+  "keyVerses": {
+    "title": "Versets Cles",
+    "subtitle": "Les versets les plus importants pour chaque categorie",
+    "searchPlaceholder": "Rechercher des versets...",
+    "allCategories": "Toutes les categories",
+    "favoritesOnly": "Favoris uniquement",
+    "noResults": "Aucun verset trouve",
+    "copySuccess": "Verset copie!",
+    "addedToFavorites": "Ajoute aux favoris",
+    "removedFromFavorites": "Supprime des favoris",
+    "readOnBibleGateway": "Lire sur BibleGateway",
+    "verses": "versets"
+  },
   "sync": {
     "syncing": "Synchronisation...",
     "success": "Synchronisé !",
