@@ -475,6 +475,28 @@
     "showAnswer": "Mostra Risposta",
     "endSession": "Termina Sessione"
   },
+  "flashcardStats": {
+    "cardsTab": "Carte",
+    "statsTab": "Statistiche",
+    "noData": "Nessun Dato",
+    "noDataDesc": "Importa le risposte sbagliate e inizia a studiare per vedere le statistiche.",
+    "currentStreak": "Serie Attuale",
+    "avgAccuracy": "Precisione Media",
+    "masteryProgress": "Progresso Padronanza",
+    "cardsLearned": "Carte Apprese",
+    "complete": "completato",
+    "weeklyActivity": "Attività Settimanale",
+    "cardsReviewed": "Carte Ripassate",
+    "correct": "Corrette",
+    "dailyAccuracy": "Precisione Giornaliera",
+    "accuracy": "Precisione",
+    "weeklySummary": "Riepilogo Settimanale",
+    "sessions": "Sessioni",
+    "daysActive": "Giorni Attivi",
+    "studyStreak": "Serie di Studio",
+    "bestStreak": "Record",
+    "days": "giorni"
+  },
   "sync": {
     "syncing": "Sincronizzazione in corso...",
     "success": "Sincronizzato!",

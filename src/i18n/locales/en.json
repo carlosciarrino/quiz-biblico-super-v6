@@ -471,6 +471,28 @@
     "showAnswer": "Show Answer",
     "endSession": "End Session"
   },
+  "flashcardStats": {
+    "cardsTab": "Cards",
+    "statsTab": "Statistics",
+    "noData": "No Data",
+    "noDataDesc": "Import wrong answers and start studying to see statistics.",
+    "currentStreak": "Current Streak",
+    "avgAccuracy": "Avg Accuracy",
+    "masteryProgress": "Mastery Progress",
+    "cardsLearned": "Cards Learned",
+    "complete": "complete",
+    "weeklyActivity": "Weekly Activity",
+    "cardsReviewed": "Cards Reviewed",
+    "correct": "Correct",
+    "dailyAccuracy": "Daily Accuracy",
+    "accuracy": "Accuracy",
+    "weeklySummary": "Weekly Summary",
+    "sessions": "Sessions",
+    "daysActive": "Days Active",
+    "studyStreak": "Study Streak",
+    "bestStreak": "Best",
+    "days": "days"
+  },
   "sync": {
     "syncing": "Syncing...",
     "success": "Synced!",

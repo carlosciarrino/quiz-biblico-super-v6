@@ -489,5 +489,27 @@
     "no": "Não",
     "showAnswer": "Mostrar Resposta",
     "endSession": "Encerrar Sessão"
+  },
+  "flashcardStats": {
+    "cardsTab": "Cartões",
+    "statsTab": "Estatísticas",
+    "noData": "Sem Dados",
+    "noDataDesc": "Importe respostas erradas e comece a estudar para ver estatísticas.",
+    "currentStreak": "Sequência Atual",
+    "avgAccuracy": "Precisão Média",
+    "masteryProgress": "Progresso de Domínio",
+    "cardsLearned": "Cartões Aprendidos",
+    "complete": "completo",
+    "weeklyActivity": "Atividade Semanal",
+    "cardsReviewed": "Cartões Revisados",
+    "correct": "Corretas",
+    "dailyAccuracy": "Precisão Diária",
+    "accuracy": "Precisão",
+    "weeklySummary": "Resumo Semanal",
+    "sessions": "Sessões",
+    "daysActive": "Dias Ativos",
+    "studyStreak": "Sequência de Estudo",
+    "bestStreak": "Melhor",
+    "days": "dias"
   }
 }
