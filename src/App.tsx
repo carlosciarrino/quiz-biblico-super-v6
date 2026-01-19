@@ -19,6 +19,7 @@ const ReviewQuiz = lazy(() => import("./pages/ReviewQuiz"));
 const StudyMode = lazy(() => import("./pages/StudyMode"));
 const Settings = lazy(() => import("./pages/Settings"));
 const KeyVerses = lazy(() => import("./pages/KeyVerses"));
+const Flashcards = lazy(() => import("./pages/Flashcards"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 
 const queryClient = new QueryClient();
@@ -63,6 +64,7 @@ const AnimatedRoutes = () => {
         <Route path="/study-mode" element={<PageTransition><StudyMode /></PageTransition>} />
         <Route path="/settings" element={<PageTransition><Settings /></PageTransition>} />
         <Route path="/key-verses" element={<PageTransition><KeyVerses /></PageTransition>} />
+        <Route path="/flashcards" element={<PageTransition><Flashcards /></PageTransition>} />
         <Route path="*" element={<PageTransition><NotFound /></PageTransition>} />
       </Routes>
     </AnimatePresence>
