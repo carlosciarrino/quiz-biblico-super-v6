@@ -1,7 +1,7 @@
 import { useNavigate, useSearchParams } from "react-router-dom";
 import { lazy, Suspense, useState, useEffect } from "react";
 import { categories } from "@/data/questions";
-import { Book, Sparkles, BookOpen, Shuffle, BarChart3, Trophy, GraduationCap, LayoutDashboard, Zap, RotateCcw, Lightbulb, Bell, Settings, BookMarked } from "lucide-react";
+import { Book, Sparkles, BookOpen, Shuffle, BarChart3, Trophy, GraduationCap, LayoutDashboard, Zap, RotateCcw, Lightbulb, Bell, Settings, BookMarked, Brain } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
 import ThemeToggle from "@/components/ThemeToggle";
@@ -181,6 +181,14 @@ const Index = () => {
             >
               <BookMarked className="w-4 h-4" />
               {t('keyVerses.title')}
+            </Button>
+            <Button
+              onClick={() => navigate("/flashcards")}
+              variant="outline"
+              className="gap-2 btn-interactive"
+            >
+              <Brain className="w-4 h-4" />
+              {t('flashcards.title')}
             </Button>
             <Button
               onClick={() => setShowStats(!showStats)}
